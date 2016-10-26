@@ -27,6 +27,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
+    <font>fonts\fontArialSmall</font>
   </fonts>
   <objects name="objects">
     <object>objects\dgen</object>

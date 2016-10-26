@@ -41,7 +41,6 @@ for (i = 1; i &lt; 51; i++)
 }
 // font = 28 for sprites
 array[1] = false;
-
 </string>
           </argument>
         </arguments>
