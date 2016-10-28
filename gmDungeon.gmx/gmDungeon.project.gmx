@@ -24,7 +24,7 @@
     <script>scripts\wpn.gml</script>
     <script>scripts\sparsness.gml</script>
     <script>scripts\moveEntities.gml</script>
-    <script>scripts\print.gml</script>
+    <script>scripts\printToTextbox.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
