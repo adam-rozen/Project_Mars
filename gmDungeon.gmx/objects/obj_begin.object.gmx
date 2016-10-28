@@ -40,7 +40,6 @@ for (i = 1; i &lt; 51; i++)
     global.seeds[i] = random_get_seed();
 }
 // font = 28 for sprites
-array[1] = false;
 </string>
           </argument>
         </arguments>
