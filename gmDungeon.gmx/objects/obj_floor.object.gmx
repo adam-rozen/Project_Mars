@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x,y,obj_wall) || place_meeting(x,y,obj_item) || place_meeting(x,y,obj_entity) || place_meeting(x,y,obj_stair))
+            <string>if (place_meeting(x,y,obj_wall) || place_meeting(x,y,obj_item) || place_meeting(x,y,obj_stair))
 {
     instance_destroy();
 }
