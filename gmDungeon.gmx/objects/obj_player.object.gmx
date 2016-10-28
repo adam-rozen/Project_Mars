@@ -487,6 +487,10 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
     }
     global.toughness-=1;
 }
+if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
+{
+    print(x, y, "Hi!")
+}
 </string>
           </argument>
         </arguments>
