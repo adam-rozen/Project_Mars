@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
-random_set_seed(global.seeds[global.toughness]);
 // chance to change corridor direction, in %:
 rnd = 50
 // dead end reduction steps:

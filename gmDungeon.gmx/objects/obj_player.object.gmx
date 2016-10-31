@@ -49,6 +49,8 @@ with(instance_nearest(x, y, obj_floor))
           <argument>
             <kind>1</kind>
             <string>///Parameters
+instance_create(x,y,obj_textbox);
+turn = 0;
 gold = 0;
 counter = 0;
 maxHP = irandom_range(12,18);
@@ -176,7 +178,8 @@ if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')) &am
         {
             target.hp-=attack;
         }
-        counter += 1;
+        counter ++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -194,7 +197,8 @@ if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')) &am
         {
             target.hp-=attack;
         }
-        counter += 1;
+        counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -212,7 +216,8 @@ if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')) &am
         {
             target.hp-=attack;
         }
-        counter += 1;
+        counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -230,7 +235,8 @@ if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')) &am
         {
             target.hp-=attack;
         }
-        counter += 1;
+        counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -249,7 +255,8 @@ if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')) &am
         {
             target.hp-=attack;
         }
-        counter += 1;
+        counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -268,7 +275,8 @@ if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')) &am
         {
             target.hp-=attack;
         }
-        counter += 1;
+        counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -287,7 +295,8 @@ if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')) &am
         {
             target.hp-=attack;
         }
-        counter += 1;
+        counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -306,7 +315,8 @@ if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')) &am
         {
             target.hp-=attack;
         }
-        counter += 1;
+        counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -355,6 +365,7 @@ if (keyboard_check_released(vk_left) &amp;&amp; global.p_turn)
         }
         counter++;
         global.p_turn = false;
+        turn++;
     }
 }
 if (keyboard_check_released(vk_right) &amp;&amp; global.p_turn)
@@ -371,6 +382,7 @@ if (keyboard_check_released(vk_right) &amp;&amp; global.p_turn)
         {
             target.hp-=attack;
         }
+        turn++;
         counter++;
         global.p_turn = false;
     }
@@ -390,6 +402,7 @@ if (keyboard_check_released(vk_up) &amp;&amp; global.p_turn)
             target.hp-=attack;
         }
         counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -408,6 +421,7 @@ if (keyboard_check_released(vk_down) &amp;&amp; global.p_turn)
             target.hp-=attack;
         }
         counter++;
+        turn++;
         global.p_turn = false;
     }
 }
@@ -478,6 +492,8 @@ if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&am
         room_goto(room_next(room));
     }
     global.toughness+=1;
+    counter += 1;
+    global.p_turn = false;
 }
 if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp; keyboard_check_released(vk_shift) &amp;&amp; global.p_turn)
 {
@@ -486,10 +502,14 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
         room_goto(room_previous(room));
     }
     global.toughness-=1;
+    counter += 1;
+    global.p_turn = false;
 }
 if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
 {
     printToTextbox("Hi!");
+    counter += 1;
+    global.p_turn = false;
 }
 </string>
           </argument>
@@ -517,14 +537,12 @@ if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
 draw_self();
 draw_set_colour(c_black);
 draw_rectangle(x - 352, y + 256, x + 384, y + 224, false);
-draw_rectangle(x - 352, y - 224, x + 384, y - 192, false);
+//draw_rectangle(x - 352, y - 224, x + 384, y - 192, false);
 draw_set_colour(c_white);
 draw_text(x - 344, y + 224, string(hp) + " / " + string(maxHP));
 draw_text(x - 248, y + 224, "Floor:" + string(global.toughness));
-//draw_text(room_width - window_get_width()/2-344, room_height - window_get_height()-224, string(hp) + " / " + string(maxHP));
-//draw_text(room_width - window_get_width()/2-248, room_height - window_get_height()-224, "Floor:" + string(global.toughness));
-//draw_text(room_width - window_get_width()/2-152, room_height - window_get_height()-224, string(inventory[0,3]));
 draw_text(x - 152, y + 224, "Gold:" + string(inventory[0,3]));
+draw_text(x - 56, y + 224, "Turn:" + string(turn));
 </string>
           </argument>
         </arguments>

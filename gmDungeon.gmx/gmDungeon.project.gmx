@@ -15,6 +15,7 @@
     <sprite>sprites\spr_floor</sprite>
     <sprite>sprites\spr_food</sprite>
     <sprite>sprites\spr_potion</sprite>
+    <sprite>sprites\spr_black</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -46,6 +47,7 @@
     <object>objects\obj_stair</object>
     <object>objects\obj_begin</object>
     <object>objects\obj_inventory</object>
+    <object>objects\obj_textbox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
