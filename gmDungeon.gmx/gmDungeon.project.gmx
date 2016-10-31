@@ -45,6 +45,7 @@
     <object>objects\obj_entity</object>
     <object>objects\obj_stair</object>
     <object>objects\obj_begin</object>
+    <object>objects\obj_inventory</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
