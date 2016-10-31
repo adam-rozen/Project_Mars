@@ -407,7 +407,7 @@ repeat(rnum)
             _x = wsiz2 * irandom_range(rgx, rgx + rw);
             _y = wsiz2 * irandom_range(rgy, rgy + rh);
             target = instance_place(_x, _y, obj_entity);
-            if (target == noone || !target.active)
+            if (target == noone)
             {
                 target = instance_create(_x, _y, obj_orc);
             }
