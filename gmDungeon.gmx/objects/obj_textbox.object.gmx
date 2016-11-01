@@ -117,7 +117,7 @@ while(test!=-1)
     i++;
     test = phrases[i];
 }
-draw_text(x,y,phrases[i-1]);
+draw_text(x + 32,y,phrases[i-1]);
 </string>
           </argument>
         </arguments>
