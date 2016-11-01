@@ -64,10 +64,10 @@ if (hp &lt;= 0)
         target = instance_create(x, y, obj_gold);
         target.amount = gold;
     }
-    else
-    {    
+    //else
+    /*{    
         instance_create(x, y, obj_floor);
-    }
+    }*/
     instance_destroy();
 }
 else
@@ -132,7 +132,7 @@ else
                 if (!place_meeting(x - movespeed, y, obj_entity))
                 {
                     x -= movespeed;
-                    instance_create(x + movespeed, y, obj_floor);
+                    //instance_create(x + movespeed, y, obj_floor);
                     moved = true;
                     global.move += 1;
                 }
@@ -175,7 +175,7 @@ else
                 if (!place_meeting(x, y + movespeed, obj_entity))
                 {
                     y += movespeed;
-                    instance_create(x, y - movespeed, obj_floor);
+                    //instance_create(x, y - movespeed, obj_floor);
                     moved = true;
                     global.move += 1;
                 }
@@ -218,7 +218,7 @@ else
                 if (!place_meeting(x, y - movespeed, obj_entity))
                 {
                     y -= movespeed;
-                    instance_create(x, y + movespeed, obj_floor);
+                    //instance_create(x, y + movespeed, obj_floor);
                     moved = true;
                     global.move += 1;
                 }
@@ -263,7 +263,7 @@ else
                 {
                     x += movespeed;
                     y += movespeed;
-                    instance_create(x - movespeed, y - movespeed, obj_floor);
+                    //instance_create(x - movespeed, y - movespeed, obj_floor);
                     moved = true;
                     global.move += 1;
                 }
@@ -307,7 +307,7 @@ else
                 {
                     x += movespeed;
                     y -= movespeed;
-                    instance_create(x - movespeed, y + movespeed, obj_floor);
+                    //instance_create(x - movespeed, y + movespeed, obj_floor);
                     moved = true;
                     global.move += 1;
                 }
@@ -351,7 +351,7 @@ else
                 {
                     x -= movespeed;
                     y += movespeed;
-                    instance_create(x + movespeed, y - movespeed, obj_floor);
+                    //instance_create(x + movespeed, y - movespeed, obj_floor);
                     moved = true;
                     global.move += 1;
                 }
@@ -395,7 +395,7 @@ else
                 {
                     x -= movespeed;
                     y -= movespeed;
-                    instance_create(x + movespeed, y + movespeed, obj_floor);
+                    //instance_create(x + movespeed, y + movespeed, obj_floor);
                     moved = true;
                     global.move += 1;
                }
@@ -426,10 +426,10 @@ else
         moveEntities(1, 2, 3, 4, 6, 7, 8, 9);
     }
 }
-target = instance_place(x, y, obj_floor);
+/*target = instance_place(x, y, obj_floor);
 if (instance_exists(target))
     with(target)
-        instance_destroy();
+        instance_destroy();*/
 </string>
           </argument>
         </arguments>

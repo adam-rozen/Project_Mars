@@ -3,7 +3,7 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>-1</persistent>
   <parentName>obj_entity</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -175,7 +175,7 @@ if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')) &am
         if (target == noone)
         {
             y -= movespeed;
-            instance_create(x, y+movespeed, obj_floor);
+            //instance_create(x, y+movespeed, obj_floor);
         }
         else
         {
@@ -194,7 +194,7 @@ if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')) &am
         if(target == noone)
         {
             x += movespeed;
-            instance_create(x - movespeed, y, obj_floor);
+            //instance_create(x - movespeed, y, obj_floor);
         }
         else
         {
@@ -213,7 +213,7 @@ if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')) &am
         if(target == noone)
         {
             x -= movespeed;
-            instance_create(x + movespeed, y, obj_floor);
+           // instance_create(x + movespeed, y, obj_floor);
         }
         else
         {
@@ -232,7 +232,7 @@ if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')) &am
         if (target == noone)
         {
              y += movespeed;
-             instance_create(x, y - movespeed, obj_floor);
+         //    instance_create(x, y - movespeed, obj_floor);
         }
         else
         {
@@ -252,7 +252,7 @@ if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')) &am
         {
             x -= movespeed;
             y += movespeed;
-            instance_create(x + movespeed, y - movespeed, obj_floor);
+            //instance_create(x + movespeed, y - movespeed, obj_floor);
         }
         else
         {
@@ -272,7 +272,7 @@ if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')) &am
         {
             y += movespeed;
             x += movespeed;
-            instance_create(x - movespeed, y - movespeed, obj_floor);
+            //instance_create(x - movespeed, y - movespeed, obj_floor);
         }
         else
         {
@@ -292,7 +292,7 @@ if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')) &am
         {
             x -= movespeed;
             y -= movespeed;
-            instance_create(x + movespeed, y + movespeed, obj_floor);
+            //instance_create(x + movespeed, y + movespeed, obj_floor);
         }
         else
         {
@@ -312,7 +312,7 @@ if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')) &am
         {
             y -= movespeed;
             x += movespeed;
-            instance_create(x - movespeed, y + movespeed, obj_floor);
+            //instance_create(x - movespeed, y + movespeed, obj_floor);
         }
         else
         {
@@ -323,14 +323,14 @@ if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')) &am
         global.p_turn = false;
     }
 }
-target = instance_place(x, y, obj_floor);
+/*target = instance_place(x, y, obj_floor);
 if (instance_exists(target))
 {
     with(target)
     {
         instance_destroy();
     }
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -360,7 +360,7 @@ if (keyboard_check_released(vk_left) &amp;&amp; global.p_turn)
         if (target == noone)
         {
             x -= movespeed;
-            instance_create(x + movespeed, y, obj_floor);
+           // instance_create(x + movespeed, y, obj_floor);
         }
         else
         {
@@ -379,7 +379,7 @@ if (keyboard_check_released(vk_right) &amp;&amp; global.p_turn)
         if (target == noone)
         {
             x += movespeed;
-            instance_create(x - movespeed, y, obj_floor);
+            //instance_create(x - movespeed, y, obj_floor);
         }
         else
         {
@@ -398,7 +398,7 @@ if (keyboard_check_released(vk_up) &amp;&amp; global.p_turn)
         if (target == noone)
         {
             y -= movespeed;
-            instance_create(x, y + movespeed, obj_floor);
+            //instance_create(x, y + movespeed, obj_floor);
         }
         else
         {
@@ -417,7 +417,7 @@ if (keyboard_check_released(vk_down) &amp;&amp; global.p_turn)
         if (target == noone)
         {
             y += movespeed;
-            instance_create(x, y - movespeed, obj_floor);
+            //instance_create(x, y - movespeed, obj_floor);
         }
         else
         {
@@ -428,14 +428,14 @@ if (keyboard_check_released(vk_down) &amp;&amp; global.p_turn)
         global.p_turn = false;
     }
 }
-target = instance_place(x, y, obj_floor);
+/*target = instance_place(x, y, obj_floor);
 if (instance_exists(target))
 {
     with(target)
     {
         instance_destroy();
     }
-}
+}*/
 </string>
           </argument>
         </arguments>
