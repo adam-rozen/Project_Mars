@@ -55,7 +55,10 @@ gold = 0;
 counter = 0;
 maxHP = irandom_range(12,18);
 hp = maxHP;
-attack = 5;
+if (global.class = "Fighter")
+    attack = 10
+else
+    attack = 6
 global.move = 0;
 global.p_turn = true;
 inventory[0,0] = "Gold";
@@ -361,7 +364,7 @@ if (keyboard_check_released(vk_left) &amp;&amp; global.p_turn)
         }
         else
         {
-            target.hp-=attack;
+            target.hp-=irandom_range(1, attack);
         }
         counter++;
         global.p_turn = false;
@@ -380,7 +383,7 @@ if (keyboard_check_released(vk_right) &amp;&amp; global.p_turn)
         }
         else
         {
-            target.hp-=attack;
+            target.hp-=irandom_range(1, attack);
         }
         turn++;
         counter++;
@@ -399,7 +402,7 @@ if (keyboard_check_released(vk_up) &amp;&amp; global.p_turn)
         }
         else
         {
-            target.hp-=attack;
+            target.hp-=irandom_range(1, attack);
         }
         counter++;
         turn++;
@@ -418,7 +421,7 @@ if (keyboard_check_released(vk_down) &amp;&amp; global.p_turn)
         }
         else
         {
-            target.hp-=attack;
+            target.hp-=irandom_range(1, attack);
         }
         counter++;
         turn++;
