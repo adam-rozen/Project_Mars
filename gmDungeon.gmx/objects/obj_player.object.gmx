@@ -508,12 +508,6 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
     counter += 1;
     global.p_turn = false;
 }
-if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
-{
-    printToTextbox("Hi!");
-    counter += 1;
-    global.p_turn = false;
-}
 </string>
           </argument>
         </arguments>
