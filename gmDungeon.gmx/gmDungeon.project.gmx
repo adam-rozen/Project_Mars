@@ -16,6 +16,7 @@
     <sprite>sprites\spr_food</sprite>
     <sprite>sprites\spr_potion</sprite>
     <sprite>sprites\spr_black</sprite>
+    <sprite>sprites\spr_wand</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
