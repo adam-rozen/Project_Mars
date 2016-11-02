@@ -57,8 +57,6 @@ draw_set_font(fontArial);
           <argument>
             <kind>1</kind>
             <string>///Generate
-global.time = true;
-global.toughness = 1;
 if (keyboard_check_released(ord("F"))) {
     global.class = "Fighter";
     instance_create(x, y, obj_inventory);
