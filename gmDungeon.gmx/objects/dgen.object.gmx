@@ -376,7 +376,6 @@ repeat(rnum)
         {
             global.player.x = wsiz2 * irandom_range(rgx, rgx + rw);
             global.player.y = wsiz2 * irandom_range(rgy, rgy + rh);
-            global.time = false;
             if (global.toughness != 1)
             {
                 _x = wsiz2 * irandom_range(rgx, rgx + rw);
@@ -409,7 +408,7 @@ repeat(rnum)
             target = instance_place(_x, _y, obj_entity);
             if (target == noone)
             {
-                target = instance_create(_x, _y, obj_orc);
+                instance_create(_x, _y, obj_orc);
             }
         }
         window_set_caption("["+string(rdon)+"/"+string(rnum)+"] Rooms")

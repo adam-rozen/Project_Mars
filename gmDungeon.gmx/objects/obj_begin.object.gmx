@@ -61,6 +61,7 @@ global.time = true;
 global.toughness = 1;
 if (keyboard_check_released(ord("F"))) {
     global.class = "Fighter";
+    instance_create(x, y, obj_inventory);
     global.player = instance_create(x, y, obj_player);
     instance_create(x, y, dgen);
     instance_destroy();
