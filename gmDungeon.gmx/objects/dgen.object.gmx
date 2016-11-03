@@ -401,7 +401,7 @@ repeat(rnum)
         {
             instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
         }
-        repeat (choose(0,1,2,3))
+        repeat(choose(0,0,0,1,2,3))
         {
             _x = wsiz2 * irandom_range(rgx, rgx + rw);
             _y = wsiz2 * irandom_range(rgy, rgy + rh);
@@ -411,7 +411,16 @@ repeat(rnum)
                 instance_create(_x, _y, obj_orc);
             }
         }
-        window_set_caption("["+string(rdon)+"/"+string(rnum)+"] Rooms")
+        repeat(choose(0,1,2,3))
+        {
+            _x = wsiz2 * irandom_range(rgx, rgx + rw);
+            _y = wsiz2 * irandom_range(rgy, rgy + rh);
+            target = instance_place(_x, _y, obj_entity);
+            if (target == noone)
+            {
+                instance_create(_x, _y, obj_kobold);
+            }
+        }
 }
 </string>
           </argument>
