@@ -17,6 +17,7 @@
     <sprite>sprites\spr_potion</sprite>
     <sprite>sprites\spr_black</sprite>
     <sprite>sprites\spr_wand</sprite>
+    <sprite>sprites\spr_kobold</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -26,6 +27,7 @@
     <script>scripts\wpn.gml</script>
     <script>scripts\sparsness.gml</script>
     <script>scripts\moveEntities.gml</script>
+    <script>scripts\print.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
@@ -36,6 +38,7 @@
     <object>objects\obj_gold</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_kobold</object>
     <object>objects\obj_orc</object>
     <object>objects\obj_floor</object>
     <object>objects\obj_down</object>

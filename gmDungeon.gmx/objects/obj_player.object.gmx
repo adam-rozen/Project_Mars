@@ -335,14 +335,7 @@ else if (global.p_turn &amp;&amp; zap)
                 if (target != noone)
                 {
                    target.hp-=damage;
-                   i = 0;
-                   test = obj_textbox.phrases[i];
-                   while(test!=-1)
-                   {
-                        i++;
-                        test = obj_textbox.phrases[i];
-                   }
-                   obj_textbox.phrases[i] = "Kapow!";
+                   print("Kapow!");
                 }
                 target2 = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_wall);
                 if (target2 != noone)
@@ -369,14 +362,7 @@ else if (global.p_turn &amp;&amp; zap)
                 if (target != noone)
                 {
                    target.hp-=damage;
-                   i = 0;
-                   test = obj_textbox.phrases[i];
-                   while(test!=-1)
-                   {
-                        i++;
-                        test = obj_textbox.phrases[i];
-                   }
-                   obj_textbox.phrases[i] = "Kapow!";
+                   print("Kapow!");
                 }
                 target2 = instance_place(x - (_x*movespeed),y - (_y*movespeed), obj_wall);
                 if (target2 != noone)
@@ -403,14 +389,7 @@ else if (global.p_turn &amp;&amp; zap)
                 if (target != noone)
                 {
                    target.hp-=damage;
-                   i = 0;
-                   test = obj_textbox.phrases[i];
-                   while(test!=-1)
-                   {
-                        i++;
-                        test = obj_textbox.phrases[i];
-                   }
-                   obj_textbox.phrases[i] = "Kapow!";
+                   print("Kapow!");
                 }
                 target2 = instance_place(x + (_x*movespeed),y + (_y*movespeed), obj_wall);
                 if (target2 != noone)
@@ -437,14 +416,7 @@ else if (global.p_turn &amp;&amp; zap)
                 if (target != noone)
                 {
                    target.hp-=damage;
-                   i = 0;
-                   test = obj_textbox.phrases[i];
-                   while(test!=-1)
-                   {
-                        i++;
-                        test = obj_textbox.phrases[i];
-                   }
-                   obj_textbox.phrases[i] = "Kapow!";
+                   print("Kapow!");
                 }
                 target2 = instance_place(x - (_x*movespeed),y + (_y*movespeed), obj_wall);
                 if (target2 != noone)
@@ -469,14 +441,7 @@ else if (global.p_turn &amp;&amp; zap)
             if (target != noone)
             {
                target.hp-=damage;
-               i = 0;
-               test = obj_textbox.phrases[i];
-               while(test!=-1)
-               {
-                    i++;
-                    test = obj_textbox.phrases[i];
-               }
-               obj_textbox.phrases[i] = "Kapow!";
+               print("Kapow!");
             }
             target2 = instance_place(x,y + (_y*movespeed), obj_wall);
             if (target2 != noone)
@@ -500,14 +465,7 @@ else if (global.p_turn &amp;&amp; zap)
             if (target != noone)
             {
                target.hp-=damage;
-               i = 0;
-               test = obj_textbox.phrases[i];
-               while(test!=-1)
-               {
-                    i++;
-                    test = obj_textbox.phrases[i];
-               }
-               obj_textbox.phrases[i] = "Kapow!";
+               print("Kapow!");
             }
             target2 = instance_place(x - (_x*movespeed), y, obj_wall);
             if (target2 != noone)
@@ -531,14 +489,7 @@ else if (global.p_turn &amp;&amp; zap)
             if (target != noone)
             {
                target.hp-=damage;
-               i = 0;
-               test = obj_textbox.phrases[i];
-               while(test!=-1)
-               {
-                    i++;
-                    test = obj_textbox.phrases[i];
-               }
-               obj_textbox.phrases[i] = "Kapow!";
+               print("Kapow!");
             }
             target2 = instance_place(x + (_x*movespeed),y, obj_wall);
             if (target2 != noone)
@@ -562,14 +513,7 @@ else if (global.p_turn &amp;&amp; zap)
             if (target != noone)
             {
                target.hp-=damage;
-               i = 0;
-               test = obj_textbox.phrases[i];
-               while(test!=-1)
-               {
-                    i++;
-                    test = obj_textbox.phrases[i];
-               }
-               obj_textbox.phrases[i] = "Kapow!";
+               print("Kapow!");
             }
             target2 = instance_place(x, y + (_y*movespeed), obj_wall);
             if (target2 != noone)
@@ -749,14 +693,7 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
 if (keyboard_check_released(ord("Z")))
 {
     zap = true;
-    i = 0;
-    test = obj_textbox.phrases[i];
-    while(test!=-1)
-    {
-        i++;
-        test = obj_textbox.phrases[i];
-    }
-    obj_textbox.phrases[i] = "In what direction?";
+    print("In what direction?");
 }
 
 </string>
