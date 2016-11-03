@@ -61,6 +61,7 @@ if (global.class = "Fighter")
 else
     attack = 6
 global.move = 0;
+window_set_caption("The Diplomats");
 global.p_turn = true;
 inventory[0,0] = "Gold";
 inventory[0,1] = "Gold";
@@ -326,14 +327,14 @@ else if (global.p_turn &amp;&amp; zap)
         range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
-            for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+            for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
             {
                 target = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_entity);
-                /*if (target != noone)
+                if (target != noone)
                 {
-                 */  target.hp-=damage;
+                   target.hp-=damage;
                    i = 0;
                    test = obj_textbox.phrases[i];
                    while(test!=-1)
@@ -341,8 +342,8 @@ else if (global.p_turn &amp;&amp; zap)
                         i++;
                         test = obj_textbox.phrases[i];
                    }
-                   phrases[i] = "Kapow!";
-                //}
+                   obj_textbox.phrases[i] = "Kapow!";
+                }
                 target2 = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_wall);
                 if (target2 != noone)
                 {
@@ -360,9 +361,9 @@ else if (global.p_turn &amp;&amp; zap)
         range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
-            for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+            for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
             {
                 target = instance_place(x - (_x*movespeed),y - (_y*movespeed), obj_entity);
                 if (target != noone)
@@ -375,7 +376,7 @@ else if (global.p_turn &amp;&amp; zap)
                         i++;
                         test = obj_textbox.phrases[i];
                    }
-                   phrases[i] = "Kapow!";
+                   obj_textbox.phrases[i] = "Kapow!";
                 }
                 target2 = instance_place(x - (_x*movespeed),y - (_y*movespeed), obj_wall);
                 if (target2 != noone)
@@ -394,9 +395,9 @@ else if (global.p_turn &amp;&amp; zap)
         range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
-            for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+            for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
             {
                 target = instance_place(x + (_x*movespeed),y + (_y*movespeed), obj_entity);
                 if (target != noone)
@@ -409,7 +410,7 @@ else if (global.p_turn &amp;&amp; zap)
                         i++;
                         test = obj_textbox.phrases[i];
                    }
-                   phrases[i] = "Kapow!";
+                   obj_textbox.phrases[i] = "Kapow!";
                 }
                 target2 = instance_place(x + (_x*movespeed),y + (_y*movespeed), obj_wall);
                 if (target2 != noone)
@@ -428,9 +429,9 @@ else if (global.p_turn &amp;&amp; zap)
         range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
-            for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+            for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
             {
                 target = instance_place(x - (_x*movespeed),y + (_y*movespeed), obj_entity);
                 if (target != noone)
@@ -443,7 +444,7 @@ else if (global.p_turn &amp;&amp; zap)
                         i++;
                         test = obj_textbox.phrases[i];
                    }
-                   phrases[i] = "Kapow!";
+                   obj_textbox.phrases[i] = "Kapow!";
                 }
                 target2 = instance_place(x - (_x*movespeed),y + (_y*movespeed), obj_wall);
                 if (target2 != noone)
@@ -462,7 +463,7 @@ else if (global.p_turn &amp;&amp; zap)
         range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
-        for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+        for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
         {
             target = instance_place(x,y + (_y*movespeed), obj_entity);
             if (target != noone)
@@ -475,7 +476,7 @@ else if (global.p_turn &amp;&amp; zap)
                     i++;
                     test = obj_textbox.phrases[i];
                }
-               phrases[i] = "Kapow!";
+               obj_textbox.phrases[i] = "Kapow!";
             }
             target2 = instance_place(x,y + (_y*movespeed), obj_wall);
             if (target2 != noone)
@@ -493,7 +494,7 @@ else if (global.p_turn &amp;&amp; zap)
         range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
             target = instance_place(x - (_x*movespeed), y, obj_entity);
             if (target != noone)
@@ -506,7 +507,7 @@ else if (global.p_turn &amp;&amp; zap)
                     i++;
                     test = obj_textbox.phrases[i];
                }
-               phrases[i] = "Kapow!";
+               obj_textbox.phrases[i] = "Kapow!";
             }
             target2 = instance_place(x - (_x*movespeed), y, obj_wall);
             if (target2 != noone)
@@ -524,7 +525,7 @@ else if (global.p_turn &amp;&amp; zap)
         range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
             target = instance_place(x + (_x*movespeed), y, obj_entity);
             if (target != noone)
@@ -537,7 +538,7 @@ else if (global.p_turn &amp;&amp; zap)
                     i++;
                     test = obj_textbox.phrases[i];
                }
-               phrases[i] = "Kapow!";
+               obj_textbox.phrases[i] = "Kapow!";
             }
             target2 = instance_place(x + (_x*movespeed),y, obj_wall);
             if (target2 != noone)
@@ -555,7 +556,7 @@ else if (global.p_turn &amp;&amp; zap)
         range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
-        for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+        for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
         {
             target = instance_place(x, y - (_y*movespeed), obj_entity);
             if (target != noone)
@@ -568,7 +569,7 @@ else if (global.p_turn &amp;&amp; zap)
                     i++;
                     test = obj_textbox.phrases[i];
                }
-               phrases[i] = "Kapow!";
+               obj_textbox.phrases[i] = "Kapow!";
             }
             target2 = instance_place(x, y + (_y*movespeed), obj_wall);
             if (target2 != noone)
@@ -703,8 +704,6 @@ if(target!= noone)
     with(target)
         instance_destroy();
 }
-
-window_set_caption("The Diplomats");
 </string>
           </argument>
         </arguments>
