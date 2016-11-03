@@ -528,7 +528,7 @@ else if (zap &amp;&amp; global.p_turn)
             }
         }
     }
-    if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
+    if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')))
     {
         zap = false;
         range = irandom_range(7,9);
