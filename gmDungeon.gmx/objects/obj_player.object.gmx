@@ -325,7 +325,7 @@ else if (global.p_turn &amp;&amp; zap)
     {
         zap = false;
         range = irandom_range(6,13);
-        damage = irandom_range(1,6);
+        damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
@@ -359,7 +359,7 @@ else if (global.p_turn &amp;&amp; zap)
     {
         zap = false;
         range = irandom_range(6,13);
-        damage = irandom_range(1,6);
+        damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
@@ -393,7 +393,7 @@ else if (global.p_turn &amp;&amp; zap)
     {
         zap = false;
         range = irandom_range(6,13);
-        damage = irandom_range(1,6);
+        damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
@@ -427,7 +427,7 @@ else if (global.p_turn &amp;&amp; zap)
     {
         zap = false;
         range = irandom_range(6,13);
-        damage = irandom_range(1,6);
+        damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
@@ -461,7 +461,7 @@ else if (global.p_turn &amp;&amp; zap)
     {
         zap = false;
         range = irandom_range(6,13);
-        damage = irandom_range(1,6);
+        damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
         for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
         {
@@ -492,7 +492,7 @@ else if (global.p_turn &amp;&amp; zap)
     {
         zap = false;
         range = irandom_range(6,13);
-        damage = irandom_range(1,6);
+        damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
@@ -523,7 +523,7 @@ else if (global.p_turn &amp;&amp; zap)
     {
         zap = false;
         range = irandom_range(6,13);
-        damage = irandom_range(1,6);
+        damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
         {
@@ -554,7 +554,7 @@ else if (global.p_turn &amp;&amp; zap)
     {
         zap = false;
         range = irandom_range(6,13);
-        damage = irandom_range(1,6);
+        damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
         for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
         {
