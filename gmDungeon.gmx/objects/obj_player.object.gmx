@@ -325,7 +325,236 @@ else if (zap &amp;&amp; global.p_turn)
         zap = false;
         range = irandom_range(7,9);
         damage = irandom_range(1,6);
-                
+        tf = true;
+        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        {
+            for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+            {
+                target = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_entity);
+                if (target != noone)
+                {
+                   target.hp-=damage;
+                   i = 0;
+                   test = obj_textbox.phrases[i];
+                   while(test!=-1)
+                   {
+                        i++;
+                        test = obj_textbox.phrases[i];
+                   }
+                   phrases[i] = "Kapow!";
+                }
+                target2 = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_wall);
+                if (target2 != noone)
+                {
+                    tf = false;
+                }
+            }
+        }
+    }
+    if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')))
+    {
+        zap = false;
+        range = irandom_range(7,9);
+        damage = irandom_range(1,6);
+        tf = true;
+        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        {
+            for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+            {
+                target = instance_place(x - (_x*movespeed),y - (_y*movespeed), obj_entity);
+                if (target != noone)
+                {
+                   target.hp-=damage;
+                   i = 0;
+                   test = obj_textbox.phrases[i];
+                   while(test!=-1)
+                   {
+                        i++;
+                        test = obj_textbox.phrases[i];
+                   }
+                   phrases[i] = "Kapow!";
+                }
+                target2 = instance_place(x - (_x*movespeed),y - (_y*movespeed), obj_wall);
+                if (target2 != noone)
+                {
+                    tf = false;
+                }
+            }
+        }
+    }
+    if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')))
+    {
+        zap = false;
+        range = irandom_range(7,9);
+        damage = irandom_range(1,6);
+        tf = true;
+        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        {
+            for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+            {
+                target = instance_place(x + (_x*movespeed),y + (_y*movespeed), obj_entity);
+                if (target != noone)
+                {
+                   target.hp-=damage;
+                   i = 0;
+                   test = obj_textbox.phrases[i];
+                   while(test!=-1)
+                   {
+                        i++;
+                        test = obj_textbox.phrases[i];
+                   }
+                   phrases[i] = "Kapow!";
+                }
+                target2 = instance_place(x + (_x*movespeed),y + (_y*movespeed), obj_wall);
+                if (target2 != noone)
+                {
+                    tf = false;
+                }
+            }
+        }
+    }
+    if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
+    {
+        zap = false;
+        range = irandom_range(7,9);
+        damage = irandom_range(1,6);
+        tf = true;
+        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        {
+            for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+            {
+                target = instance_place(x - (_x*movespeed),y + (_y*movespeed), obj_entity);
+                if (target != noone)
+                {
+                   target.hp-=damage;
+                   i = 0;
+                   test = obj_textbox.phrases[i];
+                   while(test!=-1)
+                   {
+                        i++;
+                        test = obj_textbox.phrases[i];
+                   }
+                   phrases[i] = "Kapow!";
+                }
+                target2 = instance_place(x - (_x*movespeed),y + (_y*movespeed), obj_wall);
+                if (target2 != noone)
+                {
+                    tf = false;
+                }
+            }
+        }
+    }
+    if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')))
+    {
+        zap = false;
+        range = irandom_range(7,9);
+        damage = irandom_range(1,6);
+        tf = true;
+        for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+        {
+            target = instance_place(x,y + (_y*movespeed), obj_entity);
+            if (target != noone)
+            {
+               target.hp-=damage;
+               i = 0;
+               test = obj_textbox.phrases[i];
+               while(test!=-1)
+               {
+                    i++;
+                    test = obj_textbox.phrases[i];
+               }
+               phrases[i] = "Kapow!";
+            }
+            target2 = instance_place(x,y + (_y*movespeed), obj_wall);
+            if (target2 != noone)
+            {
+                tf = false;
+            }
+        }
+    }
+    if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')))
+    {
+        zap = false;
+        range = irandom_range(7,9);
+        damage = irandom_range(1,6);
+        tf = true;
+        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        {
+            target = instance_place(x - (_x*movespeed), y, obj_entity);
+            if (target != noone)
+            {
+               target.hp-=damage;
+               i = 0;
+               test = obj_textbox.phrases[i];
+               while(test!=-1)
+               {
+                    i++;
+                    test = obj_textbox.phrases[i];
+               }
+               phrases[i] = "Kapow!";
+            }
+            target2 = instance_place(x - (_x*movespeed), y, obj_wall);
+            if (target2 != noone)
+            {
+                tf = false;
+            }
+        }
+    }
+    if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')))
+    {
+        zap = false;
+        range = irandom_range(7,9);
+        damage = irandom_range(1,6);
+        tf = true;
+        for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
+        {
+            target = instance_place(x + (_x*movespeed), y, obj_entity);
+            if (target != noone)
+            {
+               target.hp-=damage;
+               i = 0;
+               test = obj_textbox.phrases[i];
+               while(test!=-1)
+               {
+                    i++;
+                    test = obj_textbox.phrases[i];
+               }
+               phrases[i] = "Kapow!";
+            }
+            target2 = instance_place(x + (_x*movespeed),y, obj_wall);
+            if (target2 != noone)
+            {
+                tf = false;
+            }
+        }
+    }
+    if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
+    {
+        zap = false;
+        range = irandom_range(7,9);
+        damage = irandom_range(1,6);
+        tf = true;
+        for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
+        {
+            target = instance_place(x, y - (_y*movespeed), obj_entity);
+            if (target != noone)
+            {
+               target.hp-=damage;
+               i = 0;
+               test = obj_textbox.phrases[i];
+               while(test!=-1)
+               {
+                    i++;
+                    test = obj_textbox.phrases[i];
+               }
+               phrases[i] = "Kapow!";
+            }
+            target2 = instance_place(x, y + (_y*movespeed), obj_wall);
+            if (target2 != noone)
+            {
+                tf = false;
+            }
+        }
     }
 }
 </string>
@@ -357,7 +586,6 @@ if (keyboard_check_released(vk_left) &amp;&amp; global.p_turn)
         if (target == noone)
         {
             x -= movespeed;
-           // instance_create(x + movespeed, y, obj_floor);
         }
         else
         {
@@ -376,7 +604,6 @@ if (keyboard_check_released(vk_right) &amp;&amp; global.p_turn)
         if (target == noone)
         {
             x += movespeed;
-            //instance_create(x - movespeed, y, obj_floor);
         }
         else
         {
@@ -395,7 +622,6 @@ if (keyboard_check_released(vk_up) &amp;&amp; global.p_turn)
         if (target == noone)
         {
             y -= movespeed;
-            //instance_create(x, y + movespeed, obj_floor);
         }
         else
         {
@@ -414,7 +640,6 @@ if (keyboard_check_released(vk_down) &amp;&amp; global.p_turn)
         if (target == noone)
         {
             y += movespeed;
-            //instance_create(x, y - movespeed, obj_floor);
         }
         else
         {
@@ -425,14 +650,6 @@ if (keyboard_check_released(vk_down) &amp;&amp; global.p_turn)
         global.p_turn = false;
     }
 }
-/*target = instance_place(x, y, obj_floor);
-if (instance_exists(target))
-{
-    with(target)
-    {
-        instance_destroy();
-    }
-}*/
 </string>
           </argument>
         </arguments>
@@ -505,11 +722,20 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
         global.p_turn = false;
         room_goto(room_previous(room));
     }
+}
 if (keyboard_check_released(ord("Z")))
 {
     zap = true;
+    i = 0;
+    test = obj_textbox.phrases[i];
+    while(test!=-1)
+    {
+        i++;
+        test = obj_textbox.phrases[i];
+    }
+    obj_textbox.phrases[i] = "In what direction?";
 }
-}
+
 </string>
           </argument>
         </arguments>

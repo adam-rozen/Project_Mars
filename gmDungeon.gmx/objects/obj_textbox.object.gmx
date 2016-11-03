@@ -75,7 +75,7 @@ y = obj_player.y - 224;
           <argument>
             <kind>1</kind>
             <string>///Text
-if(keyboard_check_released(ord("Z")))
+/*if(keyboard_check_released(ord("Z")))
 {
     i = 0;
     test = phrases[i];
@@ -85,7 +85,7 @@ if(keyboard_check_released(ord("Z")))
         test = phrases[i];
     }
     phrases[i] = "In what direction?";
-}
+}*/
 </string>
           </argument>
         </arguments>
