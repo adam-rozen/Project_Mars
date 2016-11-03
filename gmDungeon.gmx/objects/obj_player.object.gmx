@@ -318,12 +318,12 @@ if (global.p_turn &amp;&amp; !zap)
         }
     }
 }
-else if (zap &amp;&amp; global.p_turn)
+else if (global.p_turn &amp;&amp; zap)
 {
     if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')))
     {
         zap = false;
-        range = irandom_range(7,9);
+        range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
@@ -331,9 +331,9 @@ else if (zap &amp;&amp; global.p_turn)
             for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
             {
                 target = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_entity);
-                if (target != noone)
+                /*if (target != noone)
                 {
-                   target.hp-=damage;
+                 */  target.hp-=damage;
                    i = 0;
                    test = obj_textbox.phrases[i];
                    while(test!=-1)
@@ -342,7 +342,7 @@ else if (zap &amp;&amp; global.p_turn)
                         test = obj_textbox.phrases[i];
                    }
                    phrases[i] = "Kapow!";
-                }
+                //}
                 target2 = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_wall);
                 if (target2 != noone)
                 {
@@ -357,7 +357,7 @@ else if (zap &amp;&amp; global.p_turn)
     if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')))
     {
         zap = false;
-        range = irandom_range(7,9);
+        range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
@@ -391,7 +391,7 @@ else if (zap &amp;&amp; global.p_turn)
     if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')))
     {
         zap = false;
-        range = irandom_range(7,9);
+        range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
@@ -425,7 +425,7 @@ else if (zap &amp;&amp; global.p_turn)
     if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
     {
         zap = false;
-        range = irandom_range(7,9);
+        range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
@@ -459,7 +459,7 @@ else if (zap &amp;&amp; global.p_turn)
     if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')))
     {
         zap = false;
-        range = irandom_range(7,9);
+        range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
         for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
@@ -490,7 +490,7 @@ else if (zap &amp;&amp; global.p_turn)
     if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')))
     {
         zap = false;
-        range = irandom_range(7,9);
+        range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
@@ -521,7 +521,7 @@ else if (zap &amp;&amp; global.p_turn)
     if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')))
     {
         zap = false;
-        range = irandom_range(7,9);
+        range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
         for(_x = 1; _x &lt; range &amp;&amp; !tf; _x++)
@@ -552,7 +552,7 @@ else if (zap &amp;&amp; global.p_turn)
     if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')))
     {
         zap = false;
-        range = irandom_range(7,9);
+        range = irandom_range(6,13);
         damage = irandom_range(1,6);
         tf = true;
         for(_y = 1; _y &lt; range &amp;&amp; !tf; _y++)
@@ -704,7 +704,7 @@ if(target!= noone)
         instance_destroy();
 }
 
-window_set_caption(string(gold));
+window_set_caption("The Diplomats");
 </string>
           </argument>
         </arguments>
