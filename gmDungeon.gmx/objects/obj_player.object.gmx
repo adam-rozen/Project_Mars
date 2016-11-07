@@ -50,7 +50,7 @@ with(instance_nearest(x, y, obj_floor))
             <kind>1</kind>
             <string>///Parameters
 instance_create(x,y,obj_textbox);
-turn = 0;
+turn = -1;
 gold = 0;
 counter = 0;
 maxHP = irandom_range(12,18);
@@ -159,11 +159,11 @@ if (hp &lt;= 0)
           <argument>
             <kind>1</kind>
             <string>///Movement
-if(global.move == instance_number(obj_enemy) &amp;&amp; !global.p_turn)
+if(global.move &gt;= instance_number(obj_enemy) &amp;&amp; !global.p_turn)
 {
     global.p_turn = true;
     global.move = 0;
-    with(obj_orc)
+    with(obj_enemy)
     {
         moved = false;
     }

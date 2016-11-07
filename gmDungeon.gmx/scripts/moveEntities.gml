@@ -46,7 +46,6 @@ if(dir == 1)
         {
             x -= movespeed;
             y += movespeed;
-            instance_create(x + movespeed, y - movespeed, obj_floor);
             moved = true;
             global.move += 1;
         }
@@ -387,7 +386,6 @@ else if(dir == 2)
         if (!place_meeting(x, y + movespeed, obj_wall))
         {
             y += movespeed;
-            instance_create(x, y - movespeed, obj_floor);
             moved = true;
             global.move += 1;
         }
@@ -729,7 +727,6 @@ else if(dir == 3)
         {
             x += movespeed;
             y += movespeed;
-            instance_create(x - movespeed, y - movespeed, obj_floor);
             moved = true;
             global.move += 1;
         }
@@ -1070,7 +1067,6 @@ else if(dir == 4)
         if (!place_meeting(x - movespeed, y, obj_wall))
         {
             x -= movespeed;
-            instance_create(x + movespeed, y, obj_floor);
             moved = true;
             global.move += 1;
         }
@@ -1411,7 +1407,6 @@ else if(dir == 6)
         if (!place_meeting(x + movespeed, y, obj_wall))
         {
             x += movespeed;
-            instance_create(x - movespeed, y, obj_floor);
             moved = true;
             global.move += 1;
         }
@@ -1753,7 +1748,6 @@ else if(dir == 7)
         {
             x -= movespeed;
             y -= movespeed;
-            instance_create(x + movespeed, y + movespeed, obj_floor);
             moved = true;
             global.move += 1;
         }
@@ -2094,7 +2088,6 @@ else if(dir == 8)
         if (!place_meeting(x, y - movespeed, obj_wall))
         {
             y -= movespeed;
-            instance_create(x, y + movespeed, obj_floor);
             moved = true;
             global.move += 1;
         }
@@ -2436,7 +2429,6 @@ else if(dir == 9)
         {
             x += movespeed;
             y -= movespeed;
-            instance_create(x - movespeed, y + movespeed, obj_floor);
             moved = true;
             global.move += 1;
         }
