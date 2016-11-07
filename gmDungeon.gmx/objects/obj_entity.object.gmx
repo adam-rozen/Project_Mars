@@ -33,14 +33,6 @@ if (hp &lt;= 0)
         target = instance_create(x, y, obj_gold);
         target.amount = gold;
     }
-    i = 0;
-    test = obj_textbox.phrases[i];
-    while(test!=-1)
-    {
-        i++;
-        test = obj_textbox.phrases[i];
-    }
-    obj_textbox.phrases[i] = "A kobold dies";
     instance_destroy();
 }
 else

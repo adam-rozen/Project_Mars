@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_entity</parentName>
+  <parentName>obj_enemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
+name = "kobold";
 hp = irandom_range(1,4);
 attack = irandom_range(1,4);
 gold = 0;

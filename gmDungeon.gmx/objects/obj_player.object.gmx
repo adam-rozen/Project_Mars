@@ -159,7 +159,7 @@ if (hp &lt;= 0)
           <argument>
             <kind>1</kind>
             <string>///Movement
-if(global.move == instance_number(obj_orc) &amp;&amp; !global.p_turn)
+if(global.move == instance_number(obj_enemy) &amp;&amp; !global.p_turn)
 {
     global.p_turn = true;
     global.move = 0;
@@ -181,7 +181,15 @@ if (global.p_turn &amp;&amp; !zap)
             }
             else
             {
-                target.hp-=attack;
+                target.hp-=irandom_range(1, attack);
+                if (target.hp &gt; 0)
+                {
+                    print("You hit the " + target.name + "!");
+                }
+                else
+                {
+                    print("You kill the " + target.name + "!");
+                }
             }
             counter ++;
             turn++;
@@ -199,7 +207,15 @@ if (global.p_turn &amp;&amp; !zap)
             }
             else
             {
-                target.hp-=attack;
+                target.hp-=irandom_range(1, attack);
+                if (target.hp &gt; 0)
+                {
+                    print("You hit the " + target.name + "!");
+                }
+                else
+                {
+                    print("You kill the " + target.name + "!");
+                }
             }
             counter++;
             turn++;
@@ -217,7 +233,15 @@ if (global.p_turn &amp;&amp; !zap)
             }
             else
             {
-                target.hp-=attack;
+                target.hp-=irandom_range(1, attack);
+                if (target.hp &gt; 0)
+                {
+                    print("You hit the " + target.name + "!");
+                }
+                else
+                {
+                    print("You kill the " + target.name + "!");
+                }
             }
             counter++;
             turn++;
@@ -235,7 +259,15 @@ if (global.p_turn &amp;&amp; !zap)
             }
             else
             {
-                target.hp-=attack;
+                target.hp-=irandom_range(1, attack);
+                if (target.hp &gt; 0)
+                {
+                    print("You hit the " + target.name + "!");
+                }
+                else
+                {
+                    print("You kill the " + target.name + "!");
+                }
             }
             counter++;
             turn++;
@@ -254,7 +286,15 @@ if (global.p_turn &amp;&amp; !zap)
             }
             else
             {
-                target.hp-=attack;
+                target.hp-=irandom_range(1, attack);
+                if (target.hp &gt; 0)
+                {
+                    print("You hit the " + target.name + "!");
+                }
+                else
+                {
+                    print("You kill the " + target.name + "!");
+                }
             }
             counter++;
             turn++;
@@ -273,7 +313,15 @@ if (global.p_turn &amp;&amp; !zap)
             }
             else
             {
-                target.hp-=attack;
+                target.hp-=irandom_range(1, attack);
+                if (target.hp &gt; 0)
+                {
+                    print("You hit the " + target.name + "!");
+                }
+                else
+                {
+                    print("You kill the " + target.name + "!");
+                }
             }
             counter++;
             turn++;
@@ -292,7 +340,15 @@ if (global.p_turn &amp;&amp; !zap)
             }
             else
             {
-                target.hp-=attack;
+                target.hp-=irandom_range(1, attack);
+                if (target.hp &gt; 0)
+                {
+                    print("You hit the " + target.name + "!");
+                }
+                else
+                {
+                    print("You kill the " + target.name + "!");
+                }
             }
             counter++;
             turn++;
@@ -311,7 +367,15 @@ if (global.p_turn &amp;&amp; !zap)
             }
             else
             {
-                target.hp-=attack;
+                target.hp-=irandom_range(1, attack);
+                if (target.hp &gt; 0)
+                {
+                    print("You hit the " + target.name + "!");
+                }
+                else
+                {
+                    print("You kill the " + target.name + "!");
+                }
             }
             counter++;
             turn++;
@@ -677,6 +741,7 @@ if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&am
         counter += 1;
         global.p_turn = false;
         room_goto(room_next(room));
+        print("You go down the stairs.");
     }
     
 }
@@ -688,6 +753,7 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
         counter += 1;
         global.p_turn = false;
         room_goto(room_previous(room));
+        print("You go up the stairs.");
     }
 }
 if (keyboard_check_released(ord("Z")))
