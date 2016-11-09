@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>inventory["a", "test"] = -1;
+            <string>///Create Inventory
+for(i = 0; i &lt; 52; i++)
+{
+    inv[i] = -1;
+}
 </string>
           </argument>
         </arguments>

@@ -63,10 +63,6 @@ else
 global.move = 0;
 window_set_caption("The Diplomats");
 global.p_turn = true;
-inventory[0,0] = "Gold";
-inventory[0,1] = "Gold";
-inventory[0,2] = obj_item;
-inventory[0,3] = 0;
 </string>
           </argument>
         </arguments>
@@ -716,7 +712,13 @@ target = instance_place(x, y, obj_gold);
 if(target!= noone)
 {
     gold += target.amount;
-    inventory[0,3] += target.amount;
+    with(target)
+        instance_destroy();
+}
+target = instance_place(x,y, obj_item);
+if (target!=noone)
+{
+    addToInv(target);
     with(target)
         instance_destroy();
 }
@@ -800,7 +802,7 @@ draw_rectangle(x - 352, y + 256, x + 384, y + 224, false);
 draw_set_colour(c_white);
 draw_text(x - 344, y + 224, string(hp) + " / " + string(maxHP));
 draw_text(x - 248, y + 224, "Floor:" + string(global.toughness));
-draw_text(x - 152, y + 224, "Gold:" + string(inventory[0,3]));
+draw_text(x - 152, y + 224, "Gold:" + string(gold));
 draw_text(x - 56, y + 224, "Turn:" + string(turn));
 </string>
           </argument>

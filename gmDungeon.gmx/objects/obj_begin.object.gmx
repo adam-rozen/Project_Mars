@@ -65,11 +65,13 @@ if (keyboard_check_released(ord("F"))) {
     instance_destroy();
 } else if (keyboard_check_released(ord("R"))) {
     global.class = "Rogue";
+    instance_create(x, y, obj_inventory);
     global.player = instance_create(x, y, obj_player);
     instance_create(x, y, dgen);
     instance_destroy();
 } else if (keyboard_check_released(ord("W"))) {
     global.class = "Wizard";
+    instance_create(x, y, obj_inventory);
     global.player = instance_create(x, y, obj_player);
     instance_create(x, y, dgen);
     instance_destroy();

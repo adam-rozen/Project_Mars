@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Destroy if no health otherwise move
+found = true;
 if (global.class == "Rogue")
 {
     if (choose(1,2,3,4)==1)
