@@ -28,7 +28,7 @@
             <string>///Parameters
 for (i = 0; i &lt; 32000; i++)
     phrases[i] = -1;
-phrases[0] = "THE DIPLOMATS";
+phrases[0] = "";
 </string>
           </argument>
         </arguments>

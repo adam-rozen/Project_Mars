@@ -68,6 +68,7 @@ else if (found)
                 else if (place_meeting(x + movespeed, y, obj_player))
                 {
                     target = instance_place(x + movespeed, y, obj_player);
+                    print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
                     global.move+=1;
@@ -110,6 +111,7 @@ else if (found)
                 else if (place_meeting(x - movespeed, y, obj_player))
                 {
                     target = instance_place(x - movespeed, y, obj_player);
+                    print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
                     global.move+=1;
@@ -152,6 +154,7 @@ else if (found)
                 else if (place_meeting(x, y + movespeed, obj_player))
                 {
                     target = instance_place(x, y + movespeed, obj_player);
+                    print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
                     global.move+=1;
@@ -194,6 +197,7 @@ else if (found)
                 else if (place_meeting(x, y - movespeed, obj_player))
                 {
                     target = instance_place(x, y - movespeed, obj_player);
+                    print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
                     global.move+=1;
@@ -238,6 +242,7 @@ else if (found)
                 else if (place_meeting(x + movespeed, y + movespeed, obj_player))
                 {
                     target = instance_place(x + movespeed, y + movespeed, obj_player);
+                    print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
                     global.move+=1;
@@ -281,6 +286,7 @@ else if (found)
                 else if (place_meeting(x + movespeed, y - movespeed, obj_player))
                 {
                     target = instance_place(x + movespeed, y - movespeed, obj_player);
+                    print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
                     global.move+=1;
@@ -324,6 +330,7 @@ else if (found)
                 else if (place_meeting(x - movespeed, y + movespeed, obj_player))
                 {
                     target = instance_place(x - movespeed, y + movespeed, obj_player);
+                    print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
                     global.move+=1;
@@ -367,6 +374,7 @@ else if (found)
                else if (place_meeting(x - movespeed, y - movespeed, obj_player))
                {
                    target = instance_place(x - movespeed, y - movespeed, obj_player);
+                   print("The " + name + " hits!");
                    target.hp -= attack;
                    moved = true;
                    global.move+=1;
