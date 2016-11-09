@@ -25,82 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hlthAmount = irandom_range(1,5);
-//nme = irandom_range(1,25);
+            <string>///Parameters
+hlthAmount = irandom_range(1,5);
 name = choose("Ruby", "Pink", "Orange", "Yellow", "Emerald",
     "Dark Green", "Cyan", "Sky Blue", "Brilliant Blue", "Magenta",
     "Purple-Red", "Puce", "Milky", "Swirly", "Bubbly",
     "Smokey", "Cloudy", "Effervescent", "Black", "Golden",
     "Brown", "Fizzy", "Dark", "White", "Murkey"
     ) + " Potion";
-/*switch(nme)
-{
-    case 1:
-        name = "Ruby";
-        break;
-    case 2:
-        name = "Pink";
-        break;
-    case 3:
-        name = "Orange";
-        break;
-    case 4:
-        name = "Yellow";
-        break;
-    case 5:
-        name = "Emerald";
-        break;
-    case 6:
-        name = "Dark Green";
-        break;
-    case 7:
-        name = "Cyan";
-        break;
-    case 8:
-        name = "Sky Blue";
-        break;
-    case 9:
-        name = "Brilliant Blue";
-        break;
-    case 10:
-        name = "Magenta";
-        break;
-    case 11:
-        name = "Purple-Red";
-        break;
-    case 12:
-        name = "Puce";
-        break;
-    case 13:
-        name = "Bubbly";
-        break;
-    case 14:
-        name = "Milky";
-        break;
-    case 15:
-        name = "Swirly";
-        break;
-    case 16:
-        name = "Smokey";
-        break;
-    case 17:
-        name = "Ruby";
-        break;
-    case 18:
-        name = "Pink";
-        break;
-    case 19:
-        name = "Orange";
-        break;
-    case 20:
-        name = "Yellow";
-        break;
-    
-    
-
-}*/
 description = "Potion of ";
-type = obj_item;
 amount = 1;
 </string>
           </argument>

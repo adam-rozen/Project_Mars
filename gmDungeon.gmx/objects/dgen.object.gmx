@@ -395,7 +395,7 @@ repeat(rnum)
         }
         if (choose(0,1,2,3,4,5,6)==1)
         {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_food);
+            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_foodRation);
         }
         if (choose(0,1,2,3,4,5,6)==1)
         {

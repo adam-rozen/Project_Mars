@@ -44,7 +44,7 @@
     <object>objects\obj_floor</object>
     <object>objects\obj_down</object>
     <object>objects\obj_up</object>
-    <object>objects\obj_food</object>
+    <object>objects\obj_foodRation</object>
     <object>objects\obj_potion</object>
     <object>objects\obj_item</object>
     <object>objects\obj_entity</object>
@@ -67,6 +67,7 @@
     <room>rooms\room8</room>
     <room>rooms\room9</room>
     <room>rooms\room10</room>
+    <room>rooms\roomInv</room>
   </rooms>
   <constants number="10">
     <constant name="cf_room">128</constant>

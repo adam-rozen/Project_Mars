@@ -25,29 +25,6 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Delete floor
-with(instance_nearest(x, y, obj_floor))
-    instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Parameters
 instance_create(x,y,obj_textbox);
 turn = -1;
@@ -103,6 +80,40 @@ room_caption = 'Position: (' + string(x div 32) + '; ' + string(y div 32) + ')';
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>room_get_name(room) != "roomInv"</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -712,6 +723,7 @@ target = instance_place(x, y, obj_gold);
 if(target!= noone)
 {
     gold += target.amount;
+    print("You picked up " + string(target.amount) + " gold");
     with(target)
         instance_destroy();
 }
@@ -719,6 +731,7 @@ target = instance_place(x,y, obj_item);
 if (target!=noone)
 {
     addToInv(target);
+    print("You picked up " + target.name);
     with(target)
         instance_destroy();
 }
@@ -751,7 +764,7 @@ if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&am
         counter += 1;
         global.p_turn = false;
         room_goto(room_next(room));
-        print("You go down the stairs.");
+        print("You tumble down the stairs.");
     }
     
 }
@@ -763,7 +776,7 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
         counter += 1;
         global.p_turn = false;
         room_goto(room_previous(room));
-        print("You go up the stairs.");
+        print("You run too fast up the stairs.");
     }
 }
 if (keyboard_check_released(ord("Z")))
@@ -771,10 +784,27 @@ if (keyboard_check_released(ord("Z")))
     zap = true;
     print("In what direction?");
 }
-
+if (keyboard_check_released(ord("I")))
+{
+    room_goto(roomInv);
+}
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="8" enumb="0">
@@ -795,15 +825,17 @@ if (keyboard_check_released(ord("Z")))
           <argument>
             <kind>1</kind>
             <string>///Draw
-draw_self();
-draw_set_colour(c_black);
-draw_rectangle(x - 352, y + 256, x + 384, y + 224, false);
-//draw_rectangle(x - 352, y - 224, x + 384, y - 192, false);
-draw_set_colour(c_white);
-draw_text(x - 344, y + 224, string(hp) + " / " + string(maxHP));
-draw_text(x - 248, y + 224, "Floor:" + string(global.toughness));
-draw_text(x - 152, y + 224, "Gold:" + string(gold));
-draw_text(x - 56, y + 224, "Turn:" + string(turn));
+if (room_get_name(room) != "roomInv")
+{
+    draw_self();
+    draw_set_colour(c_black);
+    draw_rectangle(x - 352, y + 256, x + 384, y + 224, false);
+    draw_set_colour(c_white);
+    draw_text(x - 344, y + 224, string(hp) + " / " + string(maxHP));
+    draw_text(x - 248, y + 224, "Floor:" + string(global.toughness));
+    draw_text(x - 152, y + 224, "Gold:" + string(gold));
+    draw_text(x - 56, y + 224, "Turn:" + string(turn));
+}
 </string>
           </argument>
         </arguments>
