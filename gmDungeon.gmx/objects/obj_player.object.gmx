@@ -701,8 +701,7 @@ if (target!=noone)
 {
     addToInv(target);
     print("You picked up " + target.name);
-    with(target)
-        instance_destroy();
+    instance_deactivate_object(target);
 }
 </string>
           </argument>

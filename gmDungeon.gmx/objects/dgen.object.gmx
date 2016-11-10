@@ -389,15 +389,19 @@ repeat(rnum)
             _y = wsiz2 * irandom_range(rgy, rgy + rh);
             instance_create(_x, _y, obj_down);
         }
+        if (choose(0,1,2,3,4)==1)
+        {
+            
+        }
         if (choose(0,1,2)==1)
         {
             instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
         }
-        if (choose(0,1,2,3,4,5,6)==1)
+        if (choose(0,1,2,3,4)==1)
         {
             instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_foodRation);
         }
-        if (choose(0,1,2,3,4,5,6)==1)
+        if (choose(0,1,2,3,4)==1)
         {
             instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
         }
