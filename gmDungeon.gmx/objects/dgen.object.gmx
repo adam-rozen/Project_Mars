@@ -374,12 +374,12 @@ repeat(rnum)
         // Plug in your room-related code here:
         if (rdon == 1)
         {
-            global.player.x = wsiz2 * irandom_range(rgx, rgx + rw);
-            global.player.y = wsiz2 * irandom_range(rgy, rgy + rh);
+            _x = wsiz2 * irandom_range(rgx, rgx + rw);
+            _y = wsiz2 * irandom_range(rgy, rgy + rh);
+            global.player.x = _x;
+            global.player.y = _y;
             if (global.toughness != 1)
             {
-                _x = wsiz2 * irandom_range(rgx, rgx + rw);
-                _y = wsiz2 * irandom_range(rgy, rgy + rh);
                 instance_create(_x, _y, obj_up);
             }
         }
