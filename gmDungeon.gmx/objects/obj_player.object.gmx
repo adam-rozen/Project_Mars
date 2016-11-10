@@ -779,13 +779,14 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
         print("You run too fast up the stairs.");
     }
 }
-if (keyboard_check_released(ord("Z")))
+if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
 {
     zap = true;
     print("In what direction?");
 }
-if (keyboard_check_released(ord("I")))
+if (keyboard_check_released(ord("I")) &amp;&amp; global.p_turn)
 {
+    global.rm = room;
     room_goto(roomInv);
 }
 </string>
