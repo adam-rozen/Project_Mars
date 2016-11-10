@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Parameters
 instance_create(x,y,obj_textbox);
-turn = -1;
+turn = 0;
 gold = 0;
 counter = 0;
 maxHP = irandom_range(12,18);
