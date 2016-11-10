@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>name = "food ration";
+            <string>///Parameters
+name = "food ration";
 itemType = "food";
 nutrition = 800;
 </string>
