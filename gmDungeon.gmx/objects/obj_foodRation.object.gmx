@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>name = "a Food Ration";
+            <string>name = "food ration";
+itemType = "food";
+nutrition = 800;
 </string>
           </argument>
         </arguments>

@@ -32,6 +32,7 @@ gold = 0;
 counter = 0;
 maxHP = irandom_range(12,18);
 hp = maxHP;
+playerNutrition = 900;
 zap = false;
 if (global.class = "Fighter")
     attack = 10
@@ -199,9 +200,7 @@ if (global.p_turn &amp;&amp; !zap)
                     print("You kill the " + target.name + "!");
                 }
             }
-            counter++;
-            turn++;
-            global.p_turn = false;
+            endPlayerTurn();
         }
     }
     if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')))
@@ -226,9 +225,7 @@ if (global.p_turn &amp;&amp; !zap)
                     print("You kill the " + target.name + "!");
                 }
             }
-            counter++;
-            turn++;
-            global.p_turn = false;
+           endPlayerTurn();
         }
     }
     if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')))
@@ -253,9 +250,7 @@ if (global.p_turn &amp;&amp; !zap)
                     print("You kill the " + target.name + "!");
                 }
             }
-            counter++;
-            turn++;
-            global.p_turn = false;
+            endPlayerTurn();
         }
     }
     if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')) &amp;&amp; global.p_turn == true)
@@ -280,9 +275,7 @@ if (global.p_turn &amp;&amp; !zap)
                     print("You kill the " + target.name + "!");
                 }
             }
-            counter++;
-            turn++;
-            global.p_turn = false;
+            endPlayerTurn();
         }
     }
     if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
@@ -308,9 +301,7 @@ if (global.p_turn &amp;&amp; !zap)
                     print("You kill the " + target.name + "!");
                 }
             }
-            counter++;
-            turn++;
-            global.p_turn = false;
+            endPlayerTurn();
         }
     }
     if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')))
@@ -336,9 +327,7 @@ if (global.p_turn &amp;&amp; !zap)
                     print("You kill the " + target.name + "!");
                 }
             }
-            counter++;
-            turn++;
-            global.p_turn = false;
+            endPlayerTurn();
         }
     }
     if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')))
@@ -364,9 +353,7 @@ if (global.p_turn &amp;&amp; !zap)
                     print("You kill the " + target.name + "!");
                 }
             }
-            counter++;
-            turn++;
-            global.p_turn = false;
+            endPlayerTurn();
         }
     }
     if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')))
@@ -392,9 +379,7 @@ if (global.p_turn &amp;&amp; !zap)
                     print("You kill the " + target.name + "!");
                 }
             }
-            counter++;
-            turn++;
-            global.p_turn = false;
+            endPlayerTurn();
         }
     }
 }
@@ -423,9 +408,7 @@ else if (global.p_turn &amp;&amp; zap)
                 }
             }
         }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        endPlayerTurn();
     }
     if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')))
     {
@@ -450,9 +433,7 @@ else if (global.p_turn &amp;&amp; zap)
                 }
             }
         }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        endPlayerTurn();
     }
     if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')))
     {
@@ -477,9 +458,7 @@ else if (global.p_turn &amp;&amp; zap)
                 }
             }
         }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        endPlayerTurn();
     }
     if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
     {
@@ -504,9 +483,7 @@ else if (global.p_turn &amp;&amp; zap)
                 }
             }
         }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        endPlayerTurn();
     }
     if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')))
     {
@@ -528,9 +505,7 @@ else if (global.p_turn &amp;&amp; zap)
                 tf = false;
             }
         }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        endPlayerTurn();
     }
     if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')))
     {
@@ -552,9 +527,7 @@ else if (global.p_turn &amp;&amp; zap)
                 tf = false;
             }
         }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        endPlayerTurn();
     }
     if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')))
     {
@@ -576,9 +549,7 @@ else if (global.p_turn &amp;&amp; zap)
                 tf = false;
             }
         }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        endPlayerTurn();
     }
     if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')))
     {
@@ -600,9 +571,7 @@ else if (global.p_turn &amp;&amp; zap)
                 tf = false;
             }
         }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        endPlayerTurn();
     }
 }
 </string>

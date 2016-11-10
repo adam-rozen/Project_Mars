@@ -29,6 +29,7 @@
     <script>scripts\moveEntities.gml</script>
     <script>scripts\print.gml</script>
     <script>scripts\addToInv.gml</script>
+    <script>scripts\endPlayerTurn.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>

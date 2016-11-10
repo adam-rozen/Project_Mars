@@ -30,8 +30,8 @@ hlthAmount = irandom_range(1,5);
 name = choose("Ruby", "Pink", "Orange", "Yellow", "Emerald",
     "Dark Green", "Cyan", "Sky Blue", "Brilliant Blue", "Magenta",
     "Purple-Red", "Puce", "Milky", "Swirly", "Bubbly",
-    "Smokey", "Cloudy", "Effervescent", "Black", "Golden",
-    "Brown", "Fizzy", "Dark", "White", "Murkey"
+    "Smoky", "Cloudy", "Effervescent", "Black", "Golden",
+    "Brown", "Fizzy", "Dark", "White", "Murky"
     ) + " Potion";
 description = "Potion of ";
 amount = 1;
