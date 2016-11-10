@@ -28,7 +28,6 @@
             <string>name = "food ration";
 itemType = "food";
 nutrition = 800;
-            <string>name = "Food Ration";
 </string>
           </argument>
         </arguments>
