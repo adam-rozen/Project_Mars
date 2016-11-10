@@ -29,6 +29,11 @@
 instance_create(x,y,obj_textbox);
 turn = 0;
 gold = 0;
+if (global.class = "Wizard")
+    mana = irandom_range(5,7);
+else
+    mana = 1;
+maxMana = mana;
 counter = 0;
 maxHP = irandom_range(12,18);
 hp = maxHP;
@@ -132,15 +137,6 @@ room_caption = 'Position: (' + string(x div 32) + '; ' + string(y div 32) + ')';
           <argument>
             <kind>1</kind>
             <string>///HP
-if (counter == 10)
-{
-    if (hp &lt; maxHP)
-    {
-        hp += 1;
-    }
-    counter = 0;
-}
-
 if (hp &lt;= 0)
 {
    // show_message("Game Over");
@@ -388,6 +384,7 @@ else if (global.p_turn &amp;&amp; zap)
     if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')))
     {
         zap = false;
+        mana-=5;
         range = irandom_range(6,13);
         damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
@@ -413,6 +410,7 @@ else if (global.p_turn &amp;&amp; zap)
     if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')))
     {
         zap = false;
+        mana -= 5;
         range = irandom_range(6,13);
         damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
@@ -438,6 +436,7 @@ else if (global.p_turn &amp;&amp; zap)
     if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')))
     {
         zap = false;
+        mana -=5;
         range = irandom_range(6,13);
         damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
@@ -463,6 +462,7 @@ else if (global.p_turn &amp;&amp; zap)
     if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
     {
         zap = false;
+        mana -= 5;
         range = irandom_range(6,13);
         damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
@@ -488,6 +488,7 @@ else if (global.p_turn &amp;&amp; zap)
     if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')))
     {
         zap = false;
+        mana -= 5;
         range = irandom_range(6,13);
         damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
@@ -510,6 +511,7 @@ else if (global.p_turn &amp;&amp; zap)
     if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')))
     {
         zap = false;
+        mana -= 5;
         range = irandom_range(6,13);
         damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
@@ -532,6 +534,7 @@ else if (global.p_turn &amp;&amp; zap)
     if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')))
     {
         zap = false;
+        mana -= 5;
         range = irandom_range(6,13);
         damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
@@ -554,6 +557,7 @@ else if (global.p_turn &amp;&amp; zap)
     if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')))
     {
         zap = false;
+        mana -= 5;
         range = irandom_range(6,13);
         damage = irandom_range(1,12) + irandom_range(1,12);
         tf = true;
@@ -573,98 +577,19 @@ else if (global.p_turn &amp;&amp; zap)
         }
         endPlayerTurn();
     }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Arrow Key Movement
-if (keyboard_check_released(vk_left) &amp;&amp; global.p_turn)
-{
-    if (!place_meeting(x - movespeed, y, obj_wall))
+    if (keyboard_check_released(vk_numpad5) || keyboard_check_released(ord('5')))
     {
-        target = instance_place(x - movespeed, y, obj_entity);
-        if (target == noone)
-        {
-            x -= movespeed;
-        }
-        else
-        {
-            target.hp-=irandom_range(1, attack);
-        }
-        counter++;
-        global.p_turn = false;
-        turn++;
+        zap = false;
+        mana -= 5;
+        damage = irandom_range(1,12) + irandom_range(1,12);
+        target.hp-=damage;
+        print("Kapow!");
+        endPlayerTurn();
     }
-}
-if (keyboard_check_released(vk_right) &amp;&amp; global.p_turn)
-{
-    if (!place_meeting(x + movespeed, y, obj_wall))
+    if (keyboard_check_released(vk_escape))
     {
-        target = instance_place(x + movespeed, y, obj_entity);
-        if (target == noone)
-        {
-            x += movespeed;
-        }
-        else
-        {
-            target.hp-=irandom_range(1, attack);
-        }
-        turn++;
-        counter++;
-        global.p_turn = false;
-    }
-}
-if (keyboard_check_released(vk_up) &amp;&amp; global.p_turn)
-{
-    if (!place_meeting(x, y - movespeed, obj_wall))
-    {
-        target = instance_place(x, y - movespeed, obj_entity);
-        if (target == noone)
-        {
-            y -= movespeed;
-        }
-        else
-        {
-            target.hp-=irandom_range(1, attack);
-        }
-        counter++;
-        turn++;
-        global.p_turn = false;
-    }
-}
-if (keyboard_check_released(vk_down) &amp;&amp; global.p_turn)
-{
-    if (!place_meeting(x, y + movespeed, obj_wall))
-    {
-        target = instance_place(x, y + movespeed, obj_entity);
-        if (target == noone)
-        {
-            y += movespeed;
-        }
-        else
-        {
-            target.hp-=irandom_range(1, attack);
-        }
-        counter++;
-        turn++;
-        global.p_turn = false;
+        zap = false;
+        print("You decide not to fire");
     }
 }
 </string>
@@ -749,8 +674,15 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
 }
 if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
 {
-    zap = true;
-    print("In what direction?");
+    if (mana &gt; 5)
+    {
+        print("In what direction?");
+        zap = true;
+    }
+    else
+    {
+        print("You don't have enough mana");
+    }
 }
 if (keyboard_check_released(ord("I")) &amp;&amp; global.p_turn)
 {
@@ -804,6 +736,7 @@ if (room_get_name(room) != "roomInv")
     draw_text(x - 248, y + 224, "Floor:" + string(global.toughness));
     draw_text(x - 152, y + 224, "Gold:" + string(gold));
     draw_text(x - 56, y + 224, "Turn:" + string(turn));
+    draw_text(x + 40, y + 224, "Mana:" + string(mana));
 }
 </string>
           </argument>
