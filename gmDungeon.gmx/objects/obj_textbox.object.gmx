@@ -109,15 +109,18 @@ y = obj_player.y - 224;
           <argument>
             <kind>1</kind>
             <string>///Draw
-draw_self();
-i = 0;
-test = phrases[i];
-while(test!=-1)
+if (room_get_name(room) != "roomInv")
 {
-    i++;
+    draw_self();
+    i = 0;
     test = phrases[i];
+    while(test!=-1)
+    {
+        i++;
+        test = phrases[i];
+    }
+    draw_text(x + 32,y,phrases[i-1]);
 }
-draw_text(x + 32,y,phrases[i-1]);
 </string>
           </argument>
         </arguments>
