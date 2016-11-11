@@ -29,6 +29,7 @@
 instance_create(x,y,obj_textbox);
 turn = 0;
 gold = 0;
+level = 1;
 if (global.class = "Wizard")
     mana = irandom_range(5,7);
 else
@@ -194,6 +195,7 @@ if (global.p_turn &amp;&amp; !zap)
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
             endPlayerTurn();
@@ -219,6 +221,7 @@ if (global.p_turn &amp;&amp; !zap)
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
            endPlayerTurn();
@@ -244,6 +247,7 @@ if (global.p_turn &amp;&amp; !zap)
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
             endPlayerTurn();
@@ -269,6 +273,7 @@ if (global.p_turn &amp;&amp; !zap)
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
             endPlayerTurn();
@@ -295,6 +300,7 @@ if (global.p_turn &amp;&amp; !zap)
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
             endPlayerTurn();
@@ -321,6 +327,7 @@ if (global.p_turn &amp;&amp; !zap)
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
             endPlayerTurn();
@@ -347,6 +354,7 @@ if (global.p_turn &amp;&amp; !zap)
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
             endPlayerTurn();
@@ -373,6 +381,7 @@ if (global.p_turn &amp;&amp; !zap)
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
             endPlayerTurn();
