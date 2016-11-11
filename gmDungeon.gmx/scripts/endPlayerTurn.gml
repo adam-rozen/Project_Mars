@@ -1,18 +1,18 @@
 turn++;
 if (turn mod 10 == 0)
 {
-    if (obj_player.hp < obj_player.maxHP)
+    if (hp < maxHP)
     {
-        obj_player.hp += 1;
+        hp += 1;
     }
 }
 if (global.class == "wizard")
 {
     if (turn mod 18 == 0)
     {
-       if (obj_player.mana < obj_player.maxMana)
+       if (mana < maxMana)
        {
-           obj_player.mana += 1;
+           mana += 1;
        }
     }
 }
@@ -20,9 +20,9 @@ else
 {
     if (turn mod 24 == 0)
     {
-       if (obj_player.mana < obj_player.maxMana)
+       if (mana < maxMana)
        {
-           obj_player.mana += 1;
+           mana += 1;
        }
     }
 }

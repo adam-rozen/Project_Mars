@@ -1,9 +1,24 @@
-if (obj_player.xp > 20 && obj_player.level == 1)
+if (level == 1 && xp > 20)
 {
-    obj_player.level = 2;
-    if (global.class == "Wizard")
+    level = 2;
+    Hp = 0;
+    switch(global.class)
     {
-        obj_player.maxHp += irandom_range(1,8);
+        case "Wizard":
+            Hp = irandom_range(1,8);
+            maxHP += Hp;
+            hp += Hp;
+            break;
+        case "Fighter":
+            Hp = irandom_range(1,10);
+            maxHP += Hp;
+            hp += Hp;
+            break;
+        case "Rogue":
+            Hp = irandom_range(1,8);
+            break;
     }
+    maxHP += Hp;
+    hp += Hp;
     print("Welcome to level 2");
 }
