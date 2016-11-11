@@ -1,4 +1,3 @@
-counter++;
 turn++;
 if (turn mod 10 == 0)
 {
@@ -6,9 +5,8 @@ if (turn mod 10 == 0)
     {
         obj_player.hp += 1;
     }
-    counter = 0;
 }
-if (global.class == "wizard")
+if (global.class == "Wizard")
 {
     if (turn mod 18 == 0)
     {
@@ -28,11 +26,11 @@ else
        }
     }
 }
-if (playerNutrition > 0)
-    playerNutrition--;
+if (obj_player.playerNutrition > 0)
+    obj_player.playerNutrition--;
 else
 {
     print("Your hunger damages you.");
-    hp--;
+    obj_player.HP--;
 }
 global.p_turn = false;
