@@ -28,20 +28,32 @@
             <string>///Parameters
 instance_create(x,y,obj_textbox);
 turn = 0;
+level = 1;
+xp = 0;
 gold = 0;
-if (global.class = "Wizard")
-    maxMana = irandom_range(5,7);
-else
-    maxMana = 1;
+switch (global.class)
+{
+    case "Wizard":
+        maxMana = irandom_range(5,7);
+        maxHP = 10;
+        attack = 6;
+        break;
+    case "Fighter":
+        maxMana = 1;
+        maxHP = 14;
+        attack = 10;
+        break;
+    case "Rogue":
+        maxMana = 1;
+        maxHP = 10;
+        attack = 6;
+        break;
+}
 mana = maxMana;
 maxHP = irandom_range(12,18);
 hp = maxHP;
 playerNutrition = 900;
 zap = false;
-if (global.class = "Fighter")
-    attack = 10
-else
-    attack = 6
 global.move = 0;
 window_set_caption("The Diplomats");
 global.p_turn = true;
@@ -497,7 +509,6 @@ if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&am
     if (room_next(room) != -1)
     {
         global.toughness+=1;
-        counter += 1;
         global.p_turn = false;
         room_goto(room_next(room));
         print("You tumble down the stairs.");
@@ -509,7 +520,6 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
     if (room_previous(room) !=-1)
     {
         global.toughness-=1;
-        counter += 1;
         global.p_turn = false;
         room_goto(room_previous(room));
         print("You run too fast up the stairs.");
@@ -580,6 +590,8 @@ if (room_get_name(room) != "roomInv")
     draw_text(x - 152, y + 224, "Gold:" + string(gold));
     draw_text(x - 56, y + 224, "Turn:" + string(turn));
     draw_text(x + 40, y + 224, "Mana:" + string(mana));
+    draw_text(x + 136, y + 224, "Level:" + string(level));
+    draw_text(x + 232, y + 224, "XP:" + string(xp));
 }
 </string>
           </argument>

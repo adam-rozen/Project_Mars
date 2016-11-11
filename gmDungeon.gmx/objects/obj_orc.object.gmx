@@ -30,6 +30,7 @@ name = "orc";
 hp = irandom_range(1,8);
 attack = irandom_range(1,8);
 gold = 0;
+xp = 13;
 moved = false;
 if(choose(0,1,2) == 1)
 {
