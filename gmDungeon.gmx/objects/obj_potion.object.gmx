@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
-hlthAmount = irandom_range(1,5);
 name = choose("ruby", "pink", "orange", "yellow", "emerald",
     "dark green", "cyan", "sky blue", "brilliant blue", "magenta",
     "purple-red", "puce", "milky", "swirly", "bubbly",
@@ -34,7 +33,12 @@ name = choose("ruby", "pink", "orange", "yellow", "emerald",
     "brown", "fizzy", "dark", "white", "murky"
     ) + " potion";
 itemType = "potion";
-description = "potion of ";
+description = "potion of " + choose("water (uncursed)", "booze", "fruit juice",
+    "see invisible", "sickness", "confusion", "extra healing", "hallucination",
+    "healing", "holy water","unholy water", "restore ability", "sleeping", "blindness",
+    "gain energy","smoky", "cloudy", "effervescent", "black", "golden", "invisibility", 
+    "monster detection", "object detection", "enlightenment", "full healing", "levitation",
+    "polymorph", "speed", "acid", "oil", "gain ability", "gain level", "paralysis");
 amount = 1;
 </string>
           </argument>
