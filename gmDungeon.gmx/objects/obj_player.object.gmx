@@ -31,10 +31,10 @@ turn = 0;
 gold = 0;
 level = 1;
 if (global.class = "Wizard")
-    mana = irandom_range(5,7);
+    maxMana = irandom_range(5,7);
 else
-    mana = 1;
-maxMana = mana;
+    maxMana = 1;
+mana = maxMana;
 counter = 0;
 maxHP = irandom_range(12,18);
 hp = maxHP;
