@@ -17,6 +17,7 @@ if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
                 else
                 {
                     print("You kill the " + target.name + "!");
+                    xp += target.xp;
                 }
             }
             endPlayerTurn();
