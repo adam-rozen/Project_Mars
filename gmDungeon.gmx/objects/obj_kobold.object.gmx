@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Parameters
 name = "kobold";
+xp = 6;
 hp = irandom_range(1,4);
 attack = irandom_range(1,4);
 gold = 0;

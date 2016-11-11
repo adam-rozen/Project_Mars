@@ -28,21 +28,30 @@
             <string>///Parameters
 instance_create(x,y,obj_textbox);
 turn = 0;
+level = 1;
 gold = 0;
-if (global.class = "Wizard")
-    maxMana = irandom_range(5,7);
-else
-    maxMana = 1;
+switch (global.class)
+{
+    case "Wizard":
+        maxMana = irandom_range(5,7);
+        maxHP = 10;
+        attack = 6;
+        break;
+    case "Fighter":
+        maxMana = 1;
+        maxHP = 14;
+        attack = 10;
+        break;
+    case "Rogue":
+        maxMana = 1;
+        maxHP = 10;
+        attack = 6;
+        break;
+}
 mana = maxMana;
-counter = 0;
-maxHP = irandom_range(12,18);
 hp = maxHP;
 playerNutrition = 900;
 zap = false;
-if (global.class = "Fighter")
-    attack = 10
-else
-    attack = 6
 global.move = 0;
 window_set_caption("The Diplomats");
 global.p_turn = true;
