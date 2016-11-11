@@ -35,7 +35,6 @@ if(choose(0,1,2) == 1)
 {
     gold = irandom_range(1,10);
 }
-xp = 13;
 </string>
           </argument>
         </arguments>
