@@ -1,4 +1,3 @@
-counter++;
 turn++;
 if (turn mod 10 == 0)
 {
@@ -6,7 +5,6 @@ if (turn mod 10 == 0)
     {
         obj_player.hp += 1;
     }
-    counter = 0;
 }
 if (global.class == "wizard")
 {
