@@ -11,6 +11,7 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_gold</sprite>
     <sprite>sprites\spr_upstairs</sprite>
+    <sprite>sprites\spr_ring</sprite>
     <sprite>sprites\spr_downstairs</sprite>
     <sprite>sprites\spr_floor</sprite>
     <sprite>sprites\spr_food</sprite>
@@ -48,6 +49,7 @@
     <object>objects\obj_down</object>
     <object>objects\obj_up</object>
     <object>objects\obj_foodRation</object>
+    <object>objects\obj_ring</object>
     <object>objects\obj_potion</object>
     <object>objects\obj_item</object>
     <object>objects\obj_entity</object>
