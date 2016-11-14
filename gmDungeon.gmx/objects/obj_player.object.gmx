@@ -524,25 +524,25 @@ if (target!=noone)
           <argument>
             <kind>1</kind>
             <string>///Commands
-if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&amp; keyboard_check_released(vk_shift) &amp;&amp; global.p_turn)
+if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&amp; keyboard_check(vk_shift) &amp;&amp; global.p_turn)
 {
     if (room_next(room) != -1)
     {
         global.toughness+=1;
         global.p_turn = false;
         room_goto(room_next(room));
-        print("You tumble down the stairs.");
+        print("You go down the stairs.");
     }
     
 }
-if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp; keyboard_check_released(vk_shift) &amp;&amp; global.p_turn)
+if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp; keyboard_check(vk_shift) &amp;&amp; global.p_turn)
 {
     if (room_previous(room) !=-1)
     {
         global.toughness-=1;
         global.p_turn = false;
         room_goto(room_previous(room));
-        print("You run too fast up the stairs.");
+        print("You go up the stairs.");
     }
 }
 if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
