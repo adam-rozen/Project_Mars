@@ -30,7 +30,7 @@ else if (level == 2 && xp > 40)
             break;
         case "Fighter":
             Hp = irandom_range(1,10);
-\            break;
+            break;
         case "Rogue":
             Hp = irandom_range(1,8);
             break;
