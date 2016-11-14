@@ -31,7 +31,7 @@ name = choose("pearl", "engagement", "silver", "clay", "jade", "diamond", "iron"
     "black onyx", "topaz", "emerald", "steel", "brass", "granite", "moonstone",
     "sapphire", "wire", "copper", "opal", "tiger eye", "ruby") + " ring";
 itemType = "ring";
-description = "ring of " + choose("meat", "adornment", "hunger", "protection",
+description = "ring of " + choose("adornment", "hunger", "protection",
     "protection from shape changers", "stealth", "sustain ability", "warning",
     "aggravate monster", "cold resistance", "gain constitution", "gain strength",
     "increase accuracy", "increase damage", "invisibility", "poison resistance",
