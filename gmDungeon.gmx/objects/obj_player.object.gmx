@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Parameters
 global.textbox = instance_create(x,y,obj_textbox);
-global.statusbar = instance_create(x,y,obj_textbox);
+global.statusbar = instance_create(x,y,obj_statusBar);
 turn = 0;
 level = 1;
 xp = 0;
