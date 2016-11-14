@@ -1,8 +1,8 @@
 i = 0;
-test = obj_textbox.phrases[i];
+test = global.textbox.phrases[i];
 while(test!=-1)
 {
      i++;
-     test = obj_textbox.phrases[i];
+     test = global.textbox.phrases[i];
 }
-obj_textbox.phrases[i] = argument[0];
+global.textbox.phrases[i] = argument[0];

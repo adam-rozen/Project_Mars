@@ -57,6 +57,7 @@
     <object>objects\obj_textbox</object>
     <object>objects\obj_wand</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_statusBar</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

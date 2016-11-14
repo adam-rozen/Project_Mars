@@ -8,32 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Parameters
-for (i = 0; i &lt; 32000; i++)
-    phrases[i] = -1;
-phrases[0] = "";
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -53,7 +27,7 @@ phrases[0] = "";
             <kind>1</kind>
             <string>///Move
 x = obj_player.x - 352;
-y = obj_player.y - 224;
+y = obj_player.y + 192;
 </string>
           </argument>
         </arguments>
@@ -80,14 +54,13 @@ y = obj_player.y - 224;
 if (room_get_name(room) != "roomInv")
 {
     draw_self();
-    i = 0;
-    test = phrases[i];
-    while(test!=-1)
-    {
-        i++;
-        test = phrases[i];
-    }
-    draw_text(x + 8, y, phrases[i-1]);
+    draw_text(x+8, y, string(hp) + "/" + string(maxHP)
+        + "  Floor:" + string(global.toughness)
+        + "  $:" + string(gold)
+        + "  T:" + string(turn)
+        + "  Pw:" + string(mana) + "/" + string(maxMana)
+        + "  Level:" + string(level)
+        + "  XP:" + string(xp));
 }
 </string>
           </argument>
