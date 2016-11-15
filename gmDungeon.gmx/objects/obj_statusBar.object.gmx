@@ -54,12 +54,12 @@ y = obj_player.y + 224;
 if (room_get_name(room) != "roomInv")
 {
     draw_self();
-    draw_text(x+8, y, "Hp:" + string(obj_player.hp) + "/" + string(obj_player.maxHP)
-        + "  Floor:" + string(global.toughness)
+    draw_text(x + 8, y, "HP:" + string(obj_player.hp) + "/" + string(obj_player.maxHP)
+        + "  Dlvl:" + string(global.toughness)
         + "  $:" + string(obj_player.gold)
         + "  T:" + string(obj_player.turn)
-        + "  Pw:" + string(obj_player.mana) + "/" + string(obj_player.maxMana)
-        + "  Level:" + string(obj_player.level)
+        + "  PW:" + string(obj_player.mana) + "/" + string(obj_player.maxMana)
+        + "  Lvl:" + string(obj_player.level)
         + "  XP:" + string(obj_player.xp));
 }
 </string>
