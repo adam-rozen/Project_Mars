@@ -187,19 +187,19 @@ repeat (cut)
 {
     for (i = 0; i &lt;= world_w; i += 1)
     for (j = 0; j &lt;= world_h; j += 1)
-    w[i,j] &amp;= c_white ^ cf_proc
+    w[i, j] &amp;= c_white ^ cf_proc
     for (i = 0; i &lt;= world_w; i += 1)
     for (j = 0; j &lt;= world_h; j += 1)
     {
         pn = 0;
-        if w[i,j] &amp; cf_up { pn += 1; px[pn] =  0; py[pn] = -1; }
-        if w[i,j] &amp; cf_dn { pn += 1; px[pn] =  0; py[pn] =  1; }
-        if w[i,j] &amp; cf_lt { pn += 1; px[pn] = -1; py[pn] =  0; }
-        if w[i,j] &amp; cf_rt { pn += 1; px[pn] =  1; py[pn] =  0; }
-        if (pn = 1 &amp;&amp; !(w[i,j]&amp;cf_proc))
+        if w[i, j] &amp; cf_up { pn += 1; px[pn] =  0; py[pn] = -1; }
+        if w[i, j] &amp; cf_dn { pn += 1; px[pn] =  0; py[pn] =  1; }
+        if w[i, j] &amp; cf_lt { pn += 1; px[pn] = -1; py[pn] =  0; }
+        if w[i, j] &amp; cf_rt { pn += 1; px[pn] =  1; py[pn] =  0; }
+        if (pn = 1 &amp;&amp; !(w[i, j] &amp; cf_proc))
         {
-            wdc(i,j,px[pn],py[pn]);
-            w[i,j] |= cf_proc
+            wdc(i, j, px[pn], py[pn]);
+            w[i, j] |= cf_proc
             w[i + px[1], j + py[1]] |= cf_proc
         }
     }
@@ -226,32 +226,32 @@ room_caption = "Done reducing ends";
           <argument>
             <kind>1</kind>
             <string>///Make the maze loopable (connect the dead ends)
-for (i=0;i&lt;=world_w;i+=1)
-    for (j=0;j&lt;=world_h;j+=1)
-        w[i,j] &amp;= c_white ^ cf_proc
-for (i=0;i&lt;=world_w;i+=1)
-    for (j=0;j&lt;=world_h;j+=1)
+for (i = 0; i &lt;= world_w; i += 1)
+    for (j = 0; j &lt;= world_h; j += 1)
+        w[i, j] &amp;= c_white ^ cf_proc;
+for (i = 0; i &lt;= world_w; i += 1)
+    for (j = 0; j &lt;= world_h; j += 1)
     {
         pn = 0;
-        if (w[i,j] &amp; cf_up)
+        if (w[i, j] &amp; cf_up)
         {
             pn += 1;
             px[pn] = 0;
             py[pn] = -1;
         }
-        if (w[i,j] &amp; cf_dn)
+        if (w[i, j] &amp; cf_dn)
         {
             pn += 1;
             px[pn] = 0;
             py[pn] = +1;
         }
-        if (w[i,j] &amp; cf_lt)
+        if (w[i, j] &amp; cf_lt)
         {
             pn += 1; 
             px[pn] = -1;
             py[pn] = 0;
         }
-        if (w[i,j] &amp; cf_rt)
+        if (w[i, j] &amp; cf_rt)
         {
             pn += 1;
             px[pn] = +1;
@@ -261,15 +261,36 @@ for (i=0;i&lt;=world_w;i+=1)
         if (1)
         {
             pn = 0;
-            c_x = i;c_y = j;
+            c_x = i;
+            c_y = j;
             if (c_x &gt; 0)
-                if (w[c_x-1,c_y]&gt;33 &amp;&amp; !(w[c_x,c_y]&amp;cf_lt) ) { pn+=1; px[pn]=-1;py[pn]=0;}
+                if (w[c_x - 1, c_y] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_lt))
+                {
+                    pn += 1;
+                    px[pn] =- 1;
+                    py[pn] = 0;
+                }
             if (c_x &lt; world_w)
-                if (w[c_x+1,c_y]&gt;33 &amp;&amp; !(w[c_x,c_y]&amp;cf_rt) ) { pn+=1; px[pn]=1;py[pn]=0;}
+                if (w[c_x + 1,c_y] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_rt))
+                {
+                    pn += 1;
+                    px[pn] = 1;
+                    py[pn] = 0;
+                }
             if (c_y &gt; 0)
-                if (w[c_x,c_y-1]&gt;33 &amp;&amp; !(w[c_x,c_y]&amp;cf_up) ) { pn+=1; px[pn]=0;py[pn]=-1;}
+                if (w[c_x, c_y - 1] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_up))
+                {
+                    pn += 1;
+                    px[pn] = 0;
+                    py[pn] =-  1;
+                }
             if (c_y &lt; world_h)
-                if (w[c_x,c_y+1]&gt;33 &amp;&amp; !(w[c_x,c_y]&amp;cf_dn) ) { pn+=1; px[pn]=0;py[pn]=+1;}
+                if (w[c_x, c_y + 1] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_dn))
+                {
+                    pn += 1;
+                    px[pn] = 0;
+                    py[pn] =+ 1;
+                }
             pc = 1 + floor(random(pn));
             wcn(c_x, c_y, px[pc], py[pc]);
     }
@@ -476,7 +497,7 @@ repeat(rnum)
           <argument>
             <kind>1</kind>
             <string>///Sample code to create wall objects 
-for (i=0;i&lt;=world_w+1;i+=1)
+for (i = 0; i &lt;= world_w + 1; i += 1)
     for (j=0;j&lt;=world_h+1;j+=1)
     {
         if (i&lt;=world_w&amp;&amp;j&lt;=world_h)
