@@ -390,6 +390,10 @@ if (keyboard_check_released(ord("I")) &amp;&amp; global.p_turn)
     global.rm = room;
     room_goto(roomInv);
 }
+if (keyboard_check_released(ord("V")) &amp;&amp; global.p_turn)
+{
+    instance_create(x, y, obj_potion);
+}
 </string>
           </argument>
         </arguments>
