@@ -69,7 +69,6 @@ switch (global.class)
         break;
 }
 mana = maxMana;
-maxHP = irandom_range(12,18);
 hp = maxHP;
 playerNutrition = 900;
 zap = false;

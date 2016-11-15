@@ -19,6 +19,8 @@ if (level == 1 && xp > 20)
     }
     maxHP += hpGain;
     hp += hpGain;
+    maxMana += pwGain;
+    mana += pwGain;
     print("Welcome to experience level " + string(level) + ".");
 }
 else if (level == 2 && xp > 40)
@@ -42,6 +44,8 @@ else if (level == 2 && xp > 40)
     }
     maxHP += hpGain;
     hp += hpGain;
+    maxMana += pwGain;
+    mana += pwGain;
     print("Welcome to experience level " + string(level) + ".");
 }
 else if (level == 3 && xp > 80)
@@ -65,6 +69,8 @@ else if (level == 3 && xp > 80)
     }
     maxHP += hpGain;
     hp += hpGain;
+    maxMana += pwGain;
+    mana += pwGain;
     print("Welcome to experience level " + string(level) + ".");
 }
 if (level == 4 && xp > 160)
@@ -88,5 +94,7 @@ if (level == 4 && xp > 160)
     }
     maxHP += hpGain;
     hp += hpGain;
+    maxMana += pwGain;
+    mana += pwGain;
     print("Welcome to experience level " + string(level) + ".");
 }
