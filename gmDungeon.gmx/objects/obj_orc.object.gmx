@@ -32,9 +32,13 @@ attack = irandom_range(1,8);
 gold = 0;
 xp = 13;
 moved = false;
-if(choose(0,1,2) == 1)
+if(choose(0,1,2,3,4) == 1)
 {
-    gold = irandom_range(1,10);
+    gold = 0;
+    repeat(global.toughness)
+    {
+        gold = irandom_range(1,10);
+    }
 }
 </string>
           </argument>
