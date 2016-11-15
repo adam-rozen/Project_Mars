@@ -203,268 +203,95 @@ if(global.move &gt;= instance_number(obj_enemy) &amp;&amp; !global.p_turn)
         moved = false;
     }
 }
-if (global.p_turn &amp;&amp; !zap)
+if (global.p_turn)
 {
     if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')))
     {
         xMovespeed = 0;
         yMovespeed = -32;
-        playerMove(xMovespeed, yMovespeed);
+        if (zap)
+        {
+            forceBolt(xMovespeed, yMovespeed);
+        }
+        else
+            playerMove(xMovespeed, yMovespeed);
     }
     if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')))
     {
         xMovespeed = 32;
         yMovespeed = 0;
-        playerMove(xMovespeed, yMovespeed);
+        if (zap)
+        {
+            forceBolt(xMovespeed, yMovespeed);
+        }
+        else
+            playerMove(xMovespeed, yMovespeed);
     }
     if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')))
     {
         xMovespeed = -32;
         yMovespeed = 0;
-        playerMove(xMovespeed, yMovespeed);
+        if (zap)
+        {
+            forceBolt(xMovespeed, yMovespeed);
+        }
+        else
+            playerMove(xMovespeed, yMovespeed);
     }
     if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')) &amp;&amp; global.p_turn == true)
     {
         xMovespeed = 0;
         yMovespeed = 32;
-        playerMove(xMovespeed, yMovespeed);
+        if (zap)
+        {
+            forceBolt(xMovespeed, yMovespeed);
+        }
+        else
+            playerMove(xMovespeed, yMovespeed);
     }
     if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
     {
         xMovespeed = -32;
         yMovespeed = 32;
-        playerMove(xMovespeed, yMovespeed);
+        if (zap)
+        {
+            forceBolt(xMovespeed, yMovespeed);
+        }
+        else
+            playerMove(xMovespeed, yMovespeed);
     }
     if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')))
     {
         xMovespeed = 32;
         yMovespeed = 32;
-        playerMove(xMovespeed, yMovespeed);
+        if (zap)
+        {
+            forceBolt(xMovespeed, yMovespeed);
+        }
+        else
+            playerMove(xMovespeed, yMovespeed);
     }
     if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')))
     {
         xMovespeed = -32;
         yMovespeed = -32;
-        playerMove(xMovespeed, yMovespeed);
+        if (zap)
+        {
+            forceBolt(xMovespeed, yMovespeed);
+        }
+        else
+            playerMove(xMovespeed, yMovespeed);
     }
     if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')))
     {
         xMovespeed = 32;
         yMovespeed = -32;
-        playerMove(xMovespeed, yMovespeed);
-    }
-}
-else if (global.p_turn &amp;&amp; zap)
-{
-    if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')))
-    {
-        zap = false;
-        mana-=5;
-        range = irandom_range(6,13);
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
+        if (zap)
         {
-            for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
-            {
-                target = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_entity);
-                if (target != noone)
-                {
-                   target.hp-=damage;
-                   print("Kapow!");
-                }
-                target2 = instance_place(x + (_x*movespeed),y - (_y*movespeed), obj_wall);
-                if (target2 != noone)
-                {
-                    tf = false;
-                }
-            }
+            forceBolt(xMovespeed, yMovespeed);
         }
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')))
-    {
-        zap = false;
-        mana -= 5;
-        range = irandom_range(6,13);
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
-        {
-            for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
-            {
-                target = instance_place(x - (_x*movespeed),y - (_y*movespeed), obj_entity);
-                if (target != noone)
-                {
-                   target.hp-=damage;
-                   print("Kapow!");
-                }
-                target2 = instance_place(x - (_x*movespeed),y - (_y*movespeed), obj_wall);
-                if (target2 != noone)
-                {
-                    tf = false;
-                }
-            }
-        }
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')))
-    {
-        zap = false;
-        mana -=5;
-        range = irandom_range(6,13);
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
-        {
-            for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
-            {
-                target = instance_place(x + (_x*movespeed),y + (_y*movespeed), obj_entity);
-                if (target != noone)
-                {
-                   target.hp-=damage;
-                   print("Kapow!");
-                }
-                target2 = instance_place(x + (_x*movespeed),y + (_y*movespeed), obj_wall);
-                if (target2 != noone)
-                {
-                    tf = false;
-                }
-            }
-        }
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
-    {
-        zap = false;
-        mana -= 5;
-        range = irandom_range(6,13);
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
-        {
-            for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
-            {
-                target = instance_place(x - (_x*movespeed),y + (_y*movespeed), obj_entity);
-                if (target != noone)
-                {
-                   target.hp-=damage;
-                   print("Kapow!");
-                }
-                target2 = instance_place(x - (_x*movespeed),y + (_y*movespeed), obj_wall);
-                if (target2 != noone)
-                {
-                    tf = false;
-                }
-            }
-        }
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')))
-    {
-        zap = false;
-        mana -= 5;
-        range = irandom_range(6,13);
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        tf = true;
-        for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
-        {
-            target = instance_place(x,y + (_y*movespeed), obj_entity);
-            if (target != noone)
-            {
-               target.hp-=damage;
-               print("Kapow!");
-            }
-            target2 = instance_place(x,y + (_y*movespeed), obj_wall);
-            if (target2 != noone)
-            {
-                tf = false;
-            }
-        }
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')))
-    {
-        zap = false;
-        mana -= 5;
-        range = irandom_range(6,13);
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
-        {
-            target = instance_place(x - (_x*movespeed), y, obj_entity);
-            if (target != noone)
-            {
-               target.hp-=damage;
-               print("Kapow!");
-            }
-            target2 = instance_place(x - (_x*movespeed), y, obj_wall);
-            if (target2 != noone)
-            {
-                tf = false;
-            }
-        }
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')))
-    {
-        zap = false;
-        mana -= 5;
-        range = irandom_range(6,13);
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        tf = true;
-        for(_x = 1; _x &lt; range &amp;&amp; tf; _x++)
-        {
-            target = instance_place(x + (_x*movespeed), y, obj_entity);
-            if (target != noone)
-            {
-               target.hp-=damage;
-               print("Kapow!");
-            }
-            target2 = instance_place(x + (_x*movespeed),y, obj_wall);
-            if (target2 != noone)
-            {
-                tf = false;
-            }
-        }
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')))
-    {
-        zap = false;
-        mana -= 5;
-        range = irandom_range(6,13);
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        tf = true;
-        for(_y = 1; _y &lt; range &amp;&amp; tf; _y++)
-        {
-            target = instance_place(x, y - (_y*movespeed), obj_entity);
-            if (target != noone)
-            {
-               target.hp-=damage;
-               print("Kapow!");
-            }
-            target2 = instance_place(x, y + (_y*movespeed), obj_wall);
-            if (target2 != noone)
-            {
-                tf = false;
-            }
-        }
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_numpad5) || keyboard_check_released(ord('5')))
-    {
-        zap = false;
-        mana -= 5;
-        damage = irandom_range(1,12) + irandom_range(1,12);
-        target.hp-=damage;
-        print("Kapow!");
-        endPlayerTurn();
-    }
-    if (keyboard_check_released(vk_escape))
-    {
-        zap = false;
-        print("You decide not to fire");
+        else
+            playerMove(xMovespeed, yMovespeed);
     }
 }
 </string>
@@ -492,7 +319,7 @@ target = instance_place(x, y, obj_gold);
 if(target!= noone)
 {
     gold += target.amount;
-    print("You picked up " + string(target.amount) + " gold");
+    print("You picked up " + string(target.amount) + " gold.");
     with(target)
         instance_destroy();
 }
@@ -500,7 +327,7 @@ target = instance_place(x,y, obj_item);
 if (target!=noone)
 {
     addToInv(target);
-    print("You picked up " + target.name);
+    print("You picked up " + target.name + ".");
     instance_deactivate_object(target);
 }
 </string>
