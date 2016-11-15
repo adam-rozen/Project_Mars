@@ -387,11 +387,18 @@ repeat(rnum)
         {
             _x = wsiz2 * irandom_range(rgx, rgx + rw);
             _y = wsiz2 * irandom_range(rgy, rgy + rh);
+            if (up)
+            {
+                obj_player.x = _x;
+                obj_player.y = _y;
+                up = false;
+            }
             instance_create(_x, _y, obj_down);
         }
         repeat(choose(0,0,0,1))
         {
-            test = choose(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,
+            test = choose(0,1,2,3,4,5,6,7,8,9,
+                10,11,12,13,14,15,16,17,18,19,
                 20,21,22,23,24,25,26,27,28,29,
                 30,31,32,33,34,35,36,37,38,39,
                 40,41,42,43,44,45,46,47,48,49,
@@ -423,22 +430,10 @@ repeat(rnum)
             instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
             }
         }
-/*        if (choose(0,1,2,3)==1)
-        {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_ring);
-        }
         if (choose(0,1,2)==1)
         {
             instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
         }
-        if (choose(0,1,2,3)==1)
-        {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_foodRation);
-        }
-        if (choose(0,1,2,3)==1)
-        {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
-        }*/
         repeat(choose(0,0,1,2,3))
         {
             _x = wsiz2 * irandom_range(rgx, rgx + rw);
