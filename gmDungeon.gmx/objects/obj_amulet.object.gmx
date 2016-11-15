@@ -29,7 +29,7 @@
 name = choose("circular", "triangular", "concave", "spherical", "pyramidal",
     "hexagonal", "oval", "square", "octagonal") + " amulet";
 itemType = "amulet";
-description = "amulet of " + choose("change", "ESP", "life saving", "magical breathing"
+description = "amulet of " + choose("change", "ESP", "life saving", "magical breathing",
     "reflection", "restful sleep", "strangulation", "unchanging", "versus poison");
 amount = 1;
 </string>
