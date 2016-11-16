@@ -645,11 +645,7 @@ repeat(rnum)
                 || test == 32 || test == 33 || test == 34 || test == 35
                 || test == 36 || test == 37 || test == 38 || test == 39)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
-            }
-            else if (test == 40)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_amulet);
+            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
             }
         }
         if (choose(0, 1, 2) == 1)

@@ -92,7 +92,7 @@ if (room_get_name(room) == "roomInv")
     }
     for (i = 0; i &lt; b; i++)
     {
-        draw_text(32,(32*(i+2))+32, chr(i+65) + " " + inv[i].name);
+        draw_text(32,(32*(i+2))+32, chr(i+66) + inv[i].name);
     }
 }
 </string>
