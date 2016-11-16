@@ -63,7 +63,7 @@
 found = true;
 if (global.class == "Rogue")
 {
-    if (choose(1,2,3,4)==1)
+    if (choose(1, 2, 3, 4) == 1)
     {
         found = false;
     }
@@ -106,7 +106,7 @@ else if (found)
                     print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
-                    global.move+=1;
+                    global.move += 1;
                 }
                 _z = 0;
             }
@@ -149,7 +149,7 @@ else if (found)
                     print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
-                    global.move+=1;
+                    global.move += 1;
                 }
                 _z = 0;
             }
@@ -192,7 +192,7 @@ else if (found)
                     print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
-                    global.move+=1;
+                    global.move += 1;
                 }
                 _z = 0;
             }
@@ -235,7 +235,7 @@ else if (found)
                     print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
-                    global.move+=1;
+                    global.move += 1;
                 }
 
                 _z = 0;
@@ -280,7 +280,7 @@ else if (found)
                     print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
-                    global.move+=1;
+                    global.move += 1;
                 }
                 _z = 0;
             }
@@ -324,7 +324,7 @@ else if (found)
                     print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
-                    global.move+=1;
+                    global.move += 1;
                 }
                 _z = 0;
             }
@@ -368,7 +368,7 @@ else if (found)
                     print("The " + name + " hits!");
                     target.hp -= attack;
                     moved = true;
-                    global.move+=1;
+                    global.move += 1;
                 }
                 _z = 0;
             }
@@ -412,7 +412,7 @@ else if (found)
                    print("The " + name + " hits!");
                    target.hp -= attack;
                    moved = true;
-                   global.move+=1;
+                   global.move += 1;
                }
                _z = 0;
             }

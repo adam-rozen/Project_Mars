@@ -9,7 +9,7 @@ if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
             }
             else
             {
-                target.hp-=irandom_range(1, attack);
+                target.hp -= irandom_range(1, attack);
                 if (target.hp > 0)
                 {
                     print("You hit the " + target.name + "!");

@@ -128,7 +128,7 @@ while (!done)
             if !(w[c_x - 1, c_y] &amp; cf_visited)
             {
                 pn += 1;
-                px[pn] =- 1;
+                px[pn] = -1;
                 py[pn] = 0;
             }
         }
@@ -147,7 +147,7 @@ while (!done)
             {
                 pn += 1;
                 px[pn] = 0;
-                py[pn] =- 1;
+                py[pn] = -1;
             }
         }
         if (c_y &lt; world_h)
@@ -156,7 +156,7 @@ while (!done)
             {
                 pn += 1;
                 px[pn] = 0;
-                py[pn] =+ 1;
+                py[pn] = 1;
             }
         }
         // if it's possible to change direction, do it and move on:
@@ -321,9 +321,14 @@ room_caption = "Done reducing ends";
             <kind>1</kind>
             <string>///Make the maze loopable (connect the dead ends)
 for (i = 0; i &lt;= world_w; i += 1)
+{
     for (j = 0; j &lt;= world_h; j += 1)
+    {
         w[i, j] &amp;= c_white ^ cf_proc;
+    }
+}
 for (i = 0; i &lt;= world_w; i += 1)
+{
     for (j = 0; j &lt;= world_h; j += 1)
     {
         pn = 0;
@@ -337,7 +342,7 @@ for (i = 0; i &lt;= world_w; i += 1)
         {
             pn += 1;
             px[pn] = 0;
-            py[pn] = +1;
+            py[pn] += 1;
         }
         if (w[i, j] &amp; cf_lt)
         {
@@ -348,45 +353,56 @@ for (i = 0; i &lt;= world_w; i += 1)
         if (w[i, j] &amp; cf_rt)
         {
             pn += 1;
-            px[pn] = +1;
+            px[pn] += 1;
             py[pn] = 0;
         }
         if (pn == 1)
-        if (1)
         {
-            pn = 0;
-            c_x = i;
-            c_y = j;
-            if (c_x &gt; 0)
-                if (w[c_x - 1, c_y] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_lt))
+            if (1)
+            {
+                pn = 0;
+                c_x = i;
+                c_y = j;
+                if (c_x &gt; 0)
                 {
-                    pn += 1;
-                    px[pn] =- 1;
-                    py[pn] = 0;
+                    if (w[c_x - 1, c_y] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_lt))
+                    {
+                        pn += 1;
+                        px[pn] = -1;
+                        py[pn] = 0;
+                    }
                 }
-            if (c_x &lt; world_w)
-                if (w[c_x + 1,c_y] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_rt))
+                if (c_x &lt; world_w)
                 {
-                    pn += 1;
-                    px[pn] = 1;
-                    py[pn] = 0;
+                    if (w[c_x + 1,c_y] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_rt))
+                    {
+                        pn += 1;
+                        px[pn] = 1;
+                        py[pn] = 0;
+                    }
                 }
-            if (c_y &gt; 0)
-                if (w[c_x, c_y - 1] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_up))
+                if (c_y &gt; 0)
                 {
-                    pn += 1;
-                    px[pn] = 0;
-                    py[pn] =-  1;
+                    if (w[c_x, c_y - 1] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_up))
+                    {
+                        pn += 1;
+                        px[pn] = 0;
+                        py[pn] = -1;
+                    }
                 }
-            if (c_y &lt; world_h)
-                if (w[c_x, c_y + 1] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_dn))
+                if (c_y &lt; world_h)
                 {
-                    pn += 1;
-                    px[pn] = 0;
-                    py[pn] =+ 1;
+                    if (w[c_x, c_y + 1] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_dn))
+                    {
+                        pn += 1;
+                        px[pn] = 0;
+                        py[pn] += 1;
+                    }
                 }
-            pc = 1 + floor(random(pn));
-            wcn(c_x, c_y, px[pc], py[pc]);
+                pc = 1 + floor(random(pn));
+                wcn(c_x, c_y, px[pc], py[pc]);
+            }
+        }
     }
 }
 room_caption = "Done merging dead ends";
@@ -415,164 +431,182 @@ room_caption = "Done merging dead ends";
 //Technology is slow, because it picks the best suitable place for a room
 //The smaller is your maze, the better.
 rdon = 0;
-cf_temp = cf_full | cf_visited
+cf_temp = cf_full | cf_visited;
 repeat(rnum)
 {
-    rgb = 16777215
-    rgx = 0
-    rgy = 0
-    rw = wmin + floor(random(wmax - wmin + 1))
-    rh = hmin + floor(random(hmax - hmin + 1))
+    rgb = 16777215;
+    rgx = 0;
+    rgy = 0;
+    rw = wmin + floor(random(wmax - wmin + 1));
+    rh = hmin + floor(random(hmax - hmin + 1));
     for (i = 0; i &lt;= world_w - rw; i += 1)
+    {
         for (j = 0; j &lt;= world_h - rh; j += 1)
         {
             rgc = 0;
             for (k = i; k &lt;= i + rw; k += 1)
+            {
                 for (l = j; l &lt;= j + rh; l += 1)
                 {
                     if (w[k, l] &amp; cf_room)
                     {
-                        rgc += 100
-                        continue
+                        rgc += 100;
+                        continue;
                     }
-                if (w[k, l] &lt;= cf_temp)
-                    continue
-                if (k &gt; 0)
-                    if (w[k - 1, l] &gt; cf_temp)
+                    if (w[k, l] &lt;= cf_temp)
                     {
-                        rgc += 1
-                        continue
+                        continue;
                     }
-                if (k &lt; world_w)
-                if (w[k + 1, l] &gt; cf_temp)
-                {
-                    rgc += 1
-                    continue
+                    if (k &gt; 0)
+                    {
+                        if (w[k - 1, l] &gt; cf_temp)
+                        {
+                            rgc += 1;
+                            continue;
+                        }
+                    }
+                    if (k &lt; world_w)
+                    {
+                        if (w[k + 1, l] &gt; cf_temp)
+                        {
+                            rgc += 1;
+                            continue;
+                        }
+                    }
+                    if (l &gt; 0)
+                    {
+                        if (w[k, l - 1] &gt; cf_temp)
+                        {
+                            rgc += 1;
+                            continue;
+                        }
+                    }
+                    if (l &lt; world_h)
+                    {
+                        if (w[k, l + 1] &gt; cf_temp)
+                        {
+                            rgc += 1;
+                            continue;
+                        }
+                    }
                 }
-                if (l &gt; 0)
-                    if (w[k, l - 1] &gt; cf_temp)
-                    {
-                        rgc += 1
-                        continue
-                    }
-                if (l &lt; world_h)
-                    if (w[k, l + 1] &gt; cf_temp)
-                    {
-                        rgc += 1
-                        continue
-                    }
             }
             if (rgc != 0)
+            {
                 if ((rgc &lt; rgb) || (rgc == rgb &amp;&amp; random(100) &lt; 15))
                 {
                     rgx = i;
                     rgy = j;
                     rgb = rgc;
                 }
-        }
-        for (k = rgx; k &lt;= rgx + rw; k += 1) 
-            for (l = rgy; l &lt;= rgy + rh; l += 1)
-            {
-                w[k, l] |= cf_room
-                if (k &lt; rgx + rw)
-                {
-                    w[k, l] |= cf_rt
-                    w[k + 1, l] |= cf_lt
-                }
-                if (l &lt; rgy + rh)
-                {
-                    w[k, l] |= cf_dn
-                    w[k, l + 1] |= cf_up
-                }
             }
-        rdon += 1
-        // Plug in your room-related code here:
-        if (rdon == 1)
+        }
+    }
+    for (k = rgx; k &lt;= rgx + rw; k += 1)
+    {
+        for (l = rgy; l &lt;= rgy + rh; l += 1)
         {
-            _x = wsiz2 * irandom_range(rgx, rgx + rw);
-            _y = wsiz2 * irandom_range(rgy, rgy + rh);
+            w[k, l] |= cf_room;
+            if (k &lt; rgx + rw)
+            {
+                w[k, l] |= cf_rt;
+                w[k + 1, l] |= cf_lt;
+            }
+            if (l &lt; rgy + rh)
+            {
+                w[k, l] |= cf_dn;
+                w[k, l + 1] |= cf_up;
+            }
+        }
+    }
+    rdon += 1;
+    // Plug in your room-related code here:
+    if (rdon == 1)
+    {
+        _x = wsiz2 * irandom_range(rgx, rgx + rw);
+        _y = wsiz2 * irandom_range(rgy, rgy + rh);
+        obj_player.x = _x;
+        obj_player.y = _y;
+        if (global.toughness != 1)
+        {
+            instance_create(_x, _y, obj_up);
+        }
+    }
+    if (rdon == rnum)
+    {
+        _x = wsiz2 * irandom_range(rgx, rgx + rw);
+        _y = wsiz2 * irandom_range(rgy, rgy + rh);
+        if (obj_player.up)
+        {
             obj_player.x = _x;
             obj_player.y = _y;
-            if (global.toughness != 1)
-            {
-                instance_create(_x, _y, obj_up);
-            }
+            up = false;
         }
-        if (rdon == rnum)
+        instance_create(_x, _y, obj_down);
+    }
+    repeat(choose(0, 0, 0, 1))
+    {
+        test = choose(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+            10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+            20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+            30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+            40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+            50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+            60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
+            70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
+            80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
+            90, 91, 92, 93, 94, 95, 96, 97, 98, 99);
+        if (test == 0 || test == 1 || test == 2)
         {
-            _x = wsiz2 * irandom_range(rgx, rgx + rw);
-            _y = wsiz2 * irandom_range(rgy, rgy + rh);
-            if (obj_player.up)
-            {
-                obj_player.x = _x;
-                obj_player.y = _y;
-                up = false;
-            }
-            instance_create(_x, _y, obj_down);
+            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_ring);
         }
-        repeat(choose(0, 0, 0, 1))
+        else if (test == 3 || test == 4 || test == 5 || test == 6)
         {
-            test = choose(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-                10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-                20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
-                30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
-                40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
-                50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
-                60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
-                70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
-                80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-                90, 91, 92, 93, 94, 95, 96, 97, 98, 99);
-            if (test == 0 || test == 1 || test == 2)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_ring);
-            }
-            else if (test == 3 || test == 4 || test == 5 || test == 6)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_wand);
-            }
-            else if (test == 4 || test == 5 || test == 6 || test == 7 || test == 8
-                || test == 9 || test == 10 || test == 11 || test == 12 || test == 13
-                || test == 14 || test == 15 || test == 16 || test == 17 || test == 18
-                || test == 19 || test == 20 || test == 21 || test == 22 || test == 23)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_foodRation);
-            }
-            else if (test == 24 || test == 25 || test == 26 || test == 27
-                || test == 28 || test == 29 || test == 30 || test == 31
-                || test == 32 || test == 33 || test == 34 || test == 35
-                || test == 36 || test == 37 || test == 38 || test == 39)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
-            }
-            else if (test == 40)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_amulet);
-            }
+            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_wand);
         }
-        if (choose(0, 1, 2) == 1)
+        else if (test == 4 || test == 5 || test == 6 || test == 7 || test == 8
+            || test == 9 || test == 10 || test == 11 || test == 12 || test == 13
+            || test == 14 || test == 15 || test == 16 || test == 17 || test == 18
+            || test == 19 || test == 20 || test == 21 || test == 22 || test == 23)
         {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
+            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_foodRation);
         }
-        repeat(choose(0, 0, 1, 2, 3))
+        else if (test == 24 || test == 25 || test == 26 || test == 27
+            || test == 28 || test == 29 || test == 30 || test == 31
+            || test == 32 || test == 33 || test == 34 || test == 35
+            || test == 36 || test == 37 || test == 38 || test == 39)
         {
-            _x = wsiz2 * irandom_range(rgx, rgx + rw);
-            _y = wsiz2 * irandom_range(rgy, rgy + rh);
-            target = instance_place(_x, _y, obj_entity);
-            if (target == noone)
-            {
-                instance_create(_x, _y, obj_orc);
-            }
+            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
         }
-        repeat(choose(0, 1, 2, 3))
+        else if (test == 40)
         {
-            _x = wsiz2 * irandom_range(rgx, rgx + rw);
-            _y = wsiz2 * irandom_range(rgy, rgy + rh);
-            target = instance_place(_x, _y, obj_entity);
-            if (target == noone)
-            {
-                instance_create(_x, _y, obj_kobold);
-            }
+            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_amulet);
         }
+    }
+    if (choose(0, 1, 2) == 1)
+    {
+        instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
+    }
+    repeat(choose(0, 0, 1, 2, 3))
+    {
+        _x = wsiz2 * irandom_range(rgx, rgx + rw);
+        _y = wsiz2 * irandom_range(rgy, rgy + rh);
+        target = instance_place(_x, _y, obj_entity);
+        if (target == noone)
+        {
+            instance_create(_x, _y, obj_orc);
+        }
+    }
+    repeat(choose(0, 1, 2, 3))
+    {
+        _x = wsiz2 * irandom_range(rgx, rgx + rw);
+        _y = wsiz2 * irandom_range(rgy, rgy + rh);
+        target = instance_place(_x, _y, obj_entity);
+        if (target == noone)
+        {
+            instance_create(_x, _y, obj_kobold);
+        }
+    }
 }
 </string>
           </argument>

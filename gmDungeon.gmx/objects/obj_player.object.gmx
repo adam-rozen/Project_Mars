@@ -36,7 +36,7 @@ gold = 0;
 switch (global.class)
 {
     case "Wizard":
-        maxMana = irandom_range(5,7);
+        maxMana = irandom_range(5, 7);
         maxHP = 10;
         attack = 6;
         strength = 7;

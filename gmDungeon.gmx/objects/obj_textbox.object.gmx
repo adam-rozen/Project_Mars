@@ -82,12 +82,12 @@ if (room_get_name(room) != "roomInv")
     draw_self();
     i = 0;
     test = phrases[i];
-    while(test!=-1)
+    while(test!= -1)
     {
         i++;
         test = phrases[i];
     }
-    draw_text(x + 8, y, phrases[i-1]);
+    draw_text(x + 8, y, phrases[i - 1]);
 }
 </string>
           </argument>
