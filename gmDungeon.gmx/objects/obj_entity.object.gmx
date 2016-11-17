@@ -86,9 +86,13 @@ else if (found)
         _i = 1;
         _z = 0;
         if (target == noone)
+        {
             _z = 1;
+        }
         else
+        {
             _z = 0;
+        }
         while(_z == 1)
         {
             if(target2 != noone)
@@ -116,9 +120,13 @@ else if (found)
                 target = instance_place(x + (movespeed * _i), y, obj_wall);
                 target2 = instance_place(x + (movespeed * _i), y, obj_player);
                 if (target == noone)
+                {
                     _z = 1;
+                }
                 else
+                {
                     _z = 0;
+                }
             }
         }
     }
@@ -129,9 +137,13 @@ else if (found)
         _i = 1;
         _z = 0;
         if (target == noone)
+        {
             _z = 1;
+        }
         else
-            _z = 0;        
+        {
+            _z = 0;
+        }
         while(_z == 1)
         {
             if(target2 != noone)
@@ -158,9 +170,13 @@ else if (found)
                 target = instance_place(x - (movespeed * _i), y, obj_wall);
                 target2 = instance_place(x - (movespeed * _i), y, obj_player);
                 if (target == noone)
+                {
                     _z = 1;
+                }
                 else
+                {
                     _z = 0;
+                }
             }
         }
     }
@@ -171,9 +187,13 @@ else if (found)
         _i = 1;
         _z = 0;
         if (target == noone)
+        {
             _z = 1;
+        }
         else
+        {
             _z = 0;
+        }
         while(_z == 1)
         {
             if(target2 != noone)
@@ -200,9 +220,13 @@ else if (found)
                 target = instance_place(x, y + (movespeed * _i), obj_wall);
                 target2 = instance_place(x, y + (movespeed * _i), obj_player);
                 if (target == noone)
+                {
                     _z = 1;
+                }
                 else
+                {
                     _z = 0;
+                }
             }
         }
     }
@@ -214,9 +238,13 @@ else if (found)
         _i = 1;
         _z = 0;
         if (target == noone)
+        {
             _z = 1;
+        }
         else
+        {
             _z = 0;
+        }
         while(_z == 1)
         {
             if(target2 != noone)
@@ -244,9 +272,13 @@ else if (found)
                 target = instance_place(x, y - (movespeed * _i), obj_wall);
                 target2 = instance_place(x, y - (movespeed * _i), obj_player);
                 if (target == noone)
+                {
                     _z = 1;
+                }
                 else
+                {
                     _z = 0;
+                }
             }
         }
     }
@@ -257,9 +289,13 @@ else if (found)
         _i = 1;
         _z = 0;
         if (target == noone)
+        {
             _z = 1;
+        }
         else
+        {
             _z = 0;
+        }
         while(_z == 1)
         {
             if(target2 != noone)
@@ -287,9 +323,13 @@ else if (found)
                 target = instance_place(x + (movespeed * _i), y + (movespeed * _i), obj_wall);
                 target2 = instance_place(x + (movespeed * _i), y + (movespeed * _i), obj_player);
                 if (target == noone)
+                {
                     _z = 1;
+                }
                 else
+                {
                     _z = 0;
+                }
             }
         }
     }
@@ -300,9 +340,13 @@ else if (found)
         _i = 1;
         _z = 0;
         if (target == noone)
+        {
             _z = 1;
+        }
         else
+        {
             _z = 0;
+        }
         while(_z == 1)
         {
             if(target2 != noone)
@@ -330,9 +374,13 @@ else if (found)
                 target = instance_place(x + (movespeed * _i), y - (movespeed * _i), obj_wall);
                 target2 = instance_place(x + (movespeed * _i), y - (movespeed * _i), obj_player);
                 if (target == noone)
+                {
                     _z = 1;
+                }
                 else
+                {
                     _z = 0;
+                }
             }
         }
     }
@@ -343,9 +391,13 @@ else if (found)
         _i = 1;
         _z = 0;
         if (target == noone)
+        {
             _z = 1;
+        }
         else
+        {
             _z = 0;
+        }
         while(_z == 1)
         {
             if(target2 != noone)
@@ -373,9 +425,13 @@ else if (found)
                 target = instance_place(x - (movespeed * _i), y + (movespeed * _i), obj_wall);
                 target2 = instance_place(x - (movespeed * _i), y + (movespeed * _i), obj_player);
                 if (target == noone)
+                {
                     _z = 1;
+                }
                 else
+                {
                     _z = 0;
+                }
             }
         }
     }
@@ -386,9 +442,13 @@ else if (found)
         _i = 1;
         _z = 0;
         if (target == noone)
+        {
             _z = 1;
+        }
         else
+        {
             _z = 0;
+        }
         while(_z == 1)
         {
             if(target2 != noone)
@@ -416,9 +476,13 @@ else if (found)
                 target = instance_place(x - (movespeed * _i), y - (movespeed * _i), obj_wall);
                 target2 = instance_place(x - (movespeed * _i), y - (movespeed * _i), obj_player);
                 if (target == noone)
+                {
                     _z = 1;
+                }
                 else
+                {
                     _z = 0;
+                }
             }
         }
     }
