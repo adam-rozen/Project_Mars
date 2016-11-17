@@ -10,6 +10,7 @@
     <sprite>sprites\spr_orc</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_gold</sprite>
+    <sprite>sprites\spr_scroll</sprite>
     <sprite>sprites\spr_upstairs</sprite>
     <sprite>sprites\spr_downstairs</sprite>
     <sprite>sprites\spr_floor</sprite>
@@ -44,6 +45,7 @@
   <objects name="objects">
     <object>objects\dgen</object>
     <object>objects\obj_gold</object>
+    <object>objects\obj_scroll</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
     <object>objects\obj_kobold</object>
