@@ -27,8 +27,9 @@
             <kind>1</kind>
             <string>///Parameters
 name = "orc";
-hp = irandom_range(1, 8);
-attack = irandom_range(1, 8);
+maxHP = irandom_range(1, 8);
+hp = maxHP;
+attack = 8
 gold = 0;
 xp = 13;
 moved = false;

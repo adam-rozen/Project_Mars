@@ -104,7 +104,7 @@ else if (found)
                 {
                     target = instance_place(x + movespeed, y, obj_player);
                     print("The " + name + " hits!");
-                    target.hp -= attack;
+                    target.hp -= irandom_range(1, attack);
                     moved = true;
                     global.move += 1;
                 }
@@ -122,7 +122,6 @@ else if (found)
             }
         }
     }
-    
     if(!global.p_turn &amp;&amp; !moved)
     {
         target = instance_place(x - movespeed, y, obj_wall);
@@ -147,7 +146,7 @@ else if (found)
                 {
                     target = instance_place(x - movespeed, y, obj_player);
                     print("The " + name + " hits!");
-                    target.hp -= attack;
+                    target.hp -= irandom_range(1, attack);
                     moved = true;
                     global.move += 1;
                 }
@@ -165,7 +164,6 @@ else if (found)
             }
         }
     }
-    
     if(!global.p_turn &amp;&amp; !moved)
     {
         target = instance_place(x, y + movespeed, obj_wall);
@@ -190,7 +188,7 @@ else if (found)
                 {
                     target = instance_place(x, y + movespeed, obj_player);
                     print("The " + name + " hits!");
-                    target.hp -= attack;
+                    target.hp -= irandom_range(1, attack);
                     moved = true;
                     global.move += 1;
                 }
@@ -233,7 +231,7 @@ else if (found)
                 {
                     target = instance_place(x, y - movespeed, obj_player);
                     print("The " + name + " hits!");
-                    target.hp -= attack;
+                    target.hp -= irandom_range(1, attack);
                     moved = true;
                     global.move += 1;
                 }
@@ -252,7 +250,6 @@ else if (found)
             }
         }
     }
-
     if(!global.p_turn &amp;&amp; !moved)
     {
         target = instance_place(x + movespeed, y + movespeed, obj_wall);
@@ -278,7 +275,7 @@ else if (found)
                 {
                     target = instance_place(x + movespeed, y + movespeed, obj_player);
                     print("The " + name + " hits!");
-                    target.hp -= attack;
+                    target.hp -= irandom_range(1, attack);
                     moved = true;
                     global.move += 1;
                 }
@@ -296,7 +293,6 @@ else if (found)
             }
         }
     }
-
     if(!global.p_turn &amp;&amp; !moved)
     {
         target = instance_place(x + movespeed, y - movespeed, obj_wall);
@@ -322,7 +318,7 @@ else if (found)
                 {
                     target = instance_place(x + movespeed, y - movespeed, obj_player);
                     print("The " + name + " hits!");
-                    target.hp -= attack;
+                    target.hp -= irandom_range(1, attack);
                     moved = true;
                     global.move += 1;
                 }
@@ -340,7 +336,6 @@ else if (found)
             }
         }
     }
-    
     if(!global.p_turn &amp;&amp; !moved)
     {
         target = instance_place(x - movespeed, y + movespeed, obj_wall);
@@ -366,7 +361,7 @@ else if (found)
                 {
                     target = instance_place(x - movespeed, y + movespeed, obj_player);
                     print("The " + name + " hits!");
-                    target.hp -= attack;
+                    target.hp -= irandom_range(1, attack);
                     moved = true;
                     global.move += 1;
                 }
@@ -384,7 +379,6 @@ else if (found)
             }
         }
     }
-
     if(!global.p_turn &amp;&amp; !moved)
     {
         target = instance_place(x - movespeed, y - movespeed, obj_wall);
@@ -410,7 +404,7 @@ else if (found)
                {
                    target = instance_place(x - movespeed, y - movespeed, obj_player);
                    print("The " + name + " hits!");
-                   target.hp -= attack;
+                   target.hp -= irandom_range(1, attack);
                    moved = true;
                    global.move += 1;
                }
@@ -428,7 +422,6 @@ else if (found)
             }
         }
     }
-    
     if (!global.p_turn &amp;&amp; !moved)
     {
         moveEntities(1, 2, 3, 4, 6, 7, 8, 9);

@@ -28,8 +28,9 @@
             <string>///Parameters
 name = "kobold";
 xp = 6;
-hp = irandom_range(1, 4);
-attack = irandom_range(1, 4);
+maxHP = irandom_range(1, 4);
+hp = maxHP;
+attack = 4;
 moved = false;
 gold = 0;
 </string>

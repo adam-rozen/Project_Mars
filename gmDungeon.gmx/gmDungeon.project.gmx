@@ -35,6 +35,7 @@
     <script>scripts\levelUp.gml</script>
     <script>scripts\playerMove.gml</script>
     <script>scripts\forceBolt.gml</script>
+    <script>scripts\enemyMove.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
