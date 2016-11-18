@@ -15,8 +15,10 @@
     <sprite>sprites\spr_food</sprite>
     <sprite>sprites\spr_amulet</sprite>
     <sprite>sprites\spr_potion</sprite>
+    <sprite>sprites\spr_armor</sprite>
     <sprite>sprites\spr_ring</sprite>
     <sprite>sprites\spr_wand</sprite>
+    <sprite>sprites\spr_boulder</sprite>
     <sprite>sprites\spr_upstairs</sprite>
     <sprite>sprites\spr_downstairs</sprite>
     <sprite>sprites\spr_floor</sprite>
@@ -52,6 +54,7 @@
     <object>objects\obj_player</object>
     <object>objects\obj_kobold</object>
     <object>objects\obj_orc</object>
+    <object>objects\obj_armor</object>
     <object>objects\obj_floor</object>
     <object>objects\obj_down</object>
     <object>objects\obj_up</object>
