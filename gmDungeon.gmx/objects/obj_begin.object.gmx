@@ -34,6 +34,7 @@ randomize();
 // set font
 draw_set_font(fontArial);
 // font = 28 for sprites
+//show_message(string_ord_at("z", 1));
 </string>
           </argument>
         </arguments>
