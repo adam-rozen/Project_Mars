@@ -10,16 +10,17 @@
     <sprite>sprites\spr_orc</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_gold</sprite>
+    <sprite>sprites\spr_spellbook</sprite>
     <sprite>sprites\spr_scroll</sprite>
+    <sprite>sprites\spr_food</sprite>
+    <sprite>sprites\spr_amulet</sprite>
+    <sprite>sprites\spr_potion</sprite>
+    <sprite>sprites\spr_ring</sprite>
+    <sprite>sprites\spr_wand</sprite>
     <sprite>sprites\spr_upstairs</sprite>
     <sprite>sprites\spr_downstairs</sprite>
     <sprite>sprites\spr_floor</sprite>
-    <sprite>sprites\spr_ring</sprite>
-    <sprite>sprites\spr_amulet</sprite>
-    <sprite>sprites\spr_food</sprite>
-    <sprite>sprites\spr_potion</sprite>
     <sprite>sprites\spr_black</sprite>
-    <sprite>sprites\spr_wand</sprite>
     <sprite>sprites\spr_kobold</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -46,6 +47,7 @@
     <object>objects\dgen</object>
     <object>objects\obj_gold</object>
     <object>objects\obj_scroll</object>
+    <object>objects\obj_spellbook</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
     <object>objects\obj_kobold</object>
