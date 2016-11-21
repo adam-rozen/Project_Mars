@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_item</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -51,7 +51,7 @@ switch(type)
         name = choose("mummy wrapping", "orcish cloak", "dwarvish cloak", "leather cloak", 
             "oilskin cloak", "alchemy smock", "elven cloak", "robe",
         // Cloaks that have randomized appearances
-            "cloak of displacement", "cloak of invisibility", "cloak of invisibility", 
+            "cloak of displacement", "cloak of invisibility", "cloak of magic resistance", 
             "cloak of protection");
         
         if (name == "cloak of displacement")
@@ -88,9 +88,58 @@ switch(type)
         name = choose("fedora", "dunce cap", "cornuthaum", "dented pot", "elven leather helm",
             "orcish helm", "dwarvish iron helm",
         // Helms that have randomized appearances
-            "helmet", "helm of billiance", "helm of opposite alignment", "helm of telepathy");
+            "helmet", "helm of brilliance", "helm of opposite alignment", 
+            "helm of telepathy");
+        if (name == "helmet")
+            {
+                description = choose("plumed", "etched", "crested", "visored") + 
+                " helmet";
+            }
+            
+            else if (name == "helm of brilliance")
+                {
+                    description = choose("plumed", "etched", "crested", "visored") + 
+                    " helmet";
+                }
+                
+                else if (name == "helm of opposite alignment")
+                    {
+                        description = choose("plumed", "etched", "crested", "visored") + 
+                            " helmet";
+                    }
+                    
+                    else if (name == "helm of telepathy")
+                        {
+                            description = choose("plumed", "etched", "crested", "visored") + 
+                                " helmet";
+                        }
+        
+        else
+        {
+            description = name;
+        }
+        break;
+        
+    case "Glove":
+        name = choose("leather gloves", "gauntlets of dexterity", "gauntlets of fumbling",
+            "gauntlets of power");
+        description = choose("old gloves", "padded gloves", "riding gloves",
+            "fencing gloves");
+    
+    case "Shield":
+        name = choose("small shield", "orcish shield", "Uruk-hai shield", "elven shield", 
+            "dwarvish roundshield", "large shield", "shield of reflection");
+        description = name;
+        break;
+        
+    case "Boot":
+        name = choose("low boots", "elven boots", "kicking boots", "fumble boots", 
+            "levitation boots", "jumping boots", "speed boots", "water walking boots", 
+            "high boots", "iron shoes");
+        description = choose("mud", "hiking", "snow", "combat", "riding", 
+            "jungle", "buckled") + " boots";
 }
-
+amount = 1;
 
 
 
