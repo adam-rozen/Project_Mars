@@ -40,6 +40,8 @@
     <script>scripts\playerMove.gml</script>
     <script>scripts\forceBolt.gml</script>
     <script>scripts\enemyMove.gml</script>
+    <script>scripts\scr_save.gml</script>
+    <script>scripts\scr_load.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
