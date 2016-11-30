@@ -12,19 +12,27 @@ ini_write_real("Player Values", "xp", xp);
 ini_write_real("Player Values", "level", level);
 ini_write_real("Player Values", "gold", gold);
 ini_write_real("Player Values", "move", move);
+ini_write_real("Player Values", "seed", random_get_seed());
 i = 0;
 test = obj_inventory.inv[i];
 while(test!=-1)
 {
-    ini_write_real("Player Inventory", i, inv[i]);
+    ini_write_real("Player Inventory", i, test);
     i++;
     test = obj_inventory.inv[i];
 } 
 for (a = 0; a <= instance_number(obj_enemy); a++)
 {
     ida = instance_find(obj_enemy, a);
-    ini_write_real("Enemy Values", string(a) + string(x), ida.x);
-    ini_write_real("Enemy Values", "y", y);
+    ini_write_real("Enemy Values", string(a) + "x", ida.x);
+    ini_write_real("Enemy Values", string(a) + "y", ida.y);
+    ini_write_real("Enemy Values", string(a) + "hp", ida.hp);
+    ini_write_string("Enemy Values", string(a) + "name", ida.name);
+    ini_write_real("Enemy Values", string(a) + "gold", ida.gold);
+    ini_write_real("Enemy Values", string(a) + "moved", ida.moved);
+    ini_write_real("Enemy Values", string(a) + "attack", ida.attack);
+    ini_write_real("Enemy Values", string(a) + "maxHP", ida.maxHP);    
+    
 }
 ini_close();
 if (file_exists(argument0))

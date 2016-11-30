@@ -72,47 +72,31 @@ wsiz2 = wsiz1 * 2
             <string>///Generate a maze
 // Clear the world:
 for (i = 0; i &lt;= world_w; i += 1)
-{
     for (j = 0; j &lt;= world_h; j += 1)
-    {
-        w[i, j] = 0;
-    }
-}
+        w[i,j] = 0
 // Set cursor to random position:
 c_x = floor(random(world_w));
 c_y = floor(random(world_h));
 // Decide direction to move in:
 pn = 4
-px[1] =- 1; py[1] = 0
+px[1] =-1; py[1] = 0
 px[2] = 1; py[2] = 0
-px[3] = 0; py[3] =- 1
+px[3] = 0; py[3] =-1
 px[4] = 0; py[4] = 1
 pc = 1 + floor(random(pn));
 d_x = px[pc];
 d_y = py[pc];
 done = 0;
 //Current cell
-w[c_x, c_y] = cf_visited
+w[c_x,c_y] = cf_visited
 ve = world_w * world_h;
-while (!done)
+while !done
 {
     w[c_x, c_y] |= cf_visited
-    if (c_x &gt; 0)
-    {
-        wpn(c_x - 1, c_y, true);
-    }
-    if (c_x &lt; world_w)
-    {
-        wpn(c_x + 1, c_y, true);
-    }
-    if (c_y &gt; 0)
-    {
-        wpn(c_x, c_y - 1, true);
-    }
-    if (c_y &lt; world_h)
-    {
-        wpn(c_x, c_y + 1, true);
-    }
+    if (c_x &gt; 0) wpn(c_x-1,c_y,true);
+    if (c_x &lt; world_w) wpn(c_x+1,c_y,true);
+    if (c_y &gt; 0) wpn(c_x,c_y-1,true);
+    if (c_y &lt; world_h) wpn(c_x,c_y+1,true);
     if sparsness(rnd, random(100)) // Just move straight:
     {
         wcn(c_x, c_y, d_x, d_y);
@@ -123,42 +107,10 @@ while (!done)
     {
         // check, where it's possible to turn:
         pn = 0;
-        if (c_x &gt; 0) 
-        {
-            if !(w[c_x - 1, c_y] &amp; cf_visited)
-            {
-                pn += 1;
-                px[pn] = -1;
-                py[pn] = 0;
-            }
-        }
-        if (c_x &lt; world_w)
-        {
-            if !(w[c_x + 1, c_y] &amp; cf_visited)
-            {
-                pn += 1;
-                px[pn] = 1;
-                py[pn] = 0;
-            }
-        }
-        if (c_y &gt; 0)
-        {
-            if !(w[c_x, c_y - 1] &amp; cf_visited)
-            {
-                pn += 1;
-                px[pn] = 0;
-                py[pn] = -1;
-            }
-        }
-        if (c_y &lt; world_h)
-        {
-            if !(w[c_x, c_y + 1] &amp; cf_visited)
-            {
-                pn += 1;
-                px[pn] = 0;
-                py[pn] = 1;
-            }
-        }
+        if (c_x &gt; 0) if !(w[c_x-1,c_y]&amp;cf_visited) { pn+=1; px[pn]=-1; py[pn]=0; }
+        if (c_x &lt; world_w) if !(w[c_x+1,c_y]&amp;cf_visited) { pn+=1; px[pn]=1; py[pn]=0; }
+        if (c_y &gt; 0) if !(w[c_x,c_y-1]&amp;cf_visited)  { pn+=1; px[pn]=0; py[pn]=-1; }
+        if (c_y &lt; world_h) if !(w[c_x,c_y+1]&amp;cf_visited)  { pn+=1; px[pn]=0; py[pn]=+1; }
         // if it's possible to change direction, do it and move on:
         if (pn &gt; 0)
         {
@@ -166,10 +118,7 @@ while (!done)
             d_x = px[pc]
             d_y = py[pc]
             wcn(c_x, c_y, d_x, d_y);
-            if (pn == 1)
-            {
-                w[c_x, c_y] |= cf_full;
-            }
+            if (pn == 1) w[c_x, c_y] |= cf_full
             c_x += d_x;
             c_y += d_y;
         }
@@ -180,45 +129,28 @@ while (!done)
             ve = 0;
             // Find non-full cell count:
             for (i = 0; i &lt;= world_w; i += 1)
+            for (j = 0; j &lt;= world_h; j += 1)
+            if (w[i,j] &amp; cf_visited) vs += !(w[i,j] &amp; cf_full)
+            else ve += 1;
+            // if there are still unvisited cells,
+            // set current coords to one of non-full cells.
+            if (ve = 0) done = 1
+            else
             {
+                vi = floor(random(vs)) + 1
+                for (i = 0; i &lt;= world_w; i += 1)
                 for (j = 0; j &lt;= world_h; j += 1)
                 {
-                    if (w[i, j] &amp; cf_visited)
+                    if (w[i,j] &amp; cf_visited)
+                    if (!(w[i,j] &amp; cf_full))
                     {
-                        vs += !(w[i, j] &amp; cf_full);
-                    }
-                    else 
-                    {
-                        ve += 1;
-                    }
-                    // if there are still unvisited cells,
-                    // set current coords to one of non-full cells.
-                    if (ve = 0)
-                    {
-                        done = 1;
-                    }
-                    else
-                    {
-                        vi = floor(random(vs)) + 1
-                        for (i = 0; i &lt;= world_w; i += 1)
+                        vi -= 1
+                        if (vi &lt;= 0)
                         {
-                            for (j = 0; j &lt;= world_h; j += 1)
-                            {
-                                if (w[i,j] &amp; cf_visited)
-                                {
-                                    if (!(w[i,j] &amp; cf_full))
-                                    {
-                                        vi -= 1
-                                        if (vi &lt;= 0)
-                                        {
-                                            c_x = i
-                                            c_y = j
-                                            i = world_w + 1
-                                            j = world_h + 1
-                                        }
-                                    }
-                                }
-                            }
+                            c_x = i
+                            c_y = j
+                            i = world_w + 1
+                            j = world_h + 1
                         }
                     }
                 }
@@ -254,47 +186,21 @@ room_caption = "Done!";
 repeat (cut)
 {
     for (i = 0; i &lt;= world_w; i += 1)
+    for (j = 0; j &lt;= world_h; j += 1)
+    w[i,j] &amp;= c_white ^ cf_proc
+    for (i = 0; i &lt;= world_w; i += 1)
+    for (j = 0; j &lt;= world_h; j += 1)
     {
-        for (j = 0; j &lt;= world_h; j += 1)
+        pn = 0;
+        if w[i,j] &amp; cf_up { pn += 1; px[pn] =  0; py[pn] = -1; }
+        if w[i,j] &amp; cf_dn { pn += 1; px[pn] =  0; py[pn] =  1; }
+        if w[i,j] &amp; cf_lt { pn += 1; px[pn] = -1; py[pn] =  0; }
+        if w[i,j] &amp; cf_rt { pn += 1; px[pn] =  1; py[pn] =  0; }
+        if (pn = 1 &amp;&amp; !(w[i,j]&amp;cf_proc))
         {
-            w[i, j] &amp;= c_white ^ cf_proc;
-            for (i = 0; i &lt;= world_w; i += 1)
-            {
-                for (j = 0; j &lt;= world_h; j += 1)
-                {
-                    pn = 0;
-                    if (w[i, j] &amp; cf_up)
-                    {
-                        pn += 1;
-                        x[pn] = 0;
-                        py[pn] = -1;
-                    }
-                    if (w[i, j] &amp; cf_dn)
-                    {
-                        pn += 1;
-                        px[pn] = 0;
-                        py[pn] = 1;
-                    }
-                    if (w[i, j] &amp; cf_lt)
-                    {
-                        pn += 1;
-                        px[pn] = -1;
-                        py[pn] = 0;
-                    }
-                    if (w[i, j] &amp; cf_rt)
-                    {
-                        pn += 1;
-                        px[pn] = 1;
-                        py[pn] = 0;
-                    }
-                    if (pn = 1 &amp;&amp; !(w[i, j] &amp; cf_proc))
-                    {
-                        wdc(i, j, px[pn], py[pn]);
-                        w[i, j] |= cf_proc;
-                        w[i + px[1], j + py[1]] |= cf_proc;
-                    }
-                }
-            }
+            wdc(i,j,px[pn],py[pn]);
+            w[i,j] |= cf_proc
+            w[i + px[1], j + py[1]] |= cf_proc
         }
     }
 }
@@ -320,89 +226,52 @@ room_caption = "Done reducing ends";
           <argument>
             <kind>1</kind>
             <string>///Make the maze loopable (connect the dead ends)
-for (i = 0; i &lt;= world_w; i += 1)
-{
-    for (j = 0; j &lt;= world_h; j += 1)
-    {
-        w[i, j] &amp;= c_white ^ cf_proc;
-    }
-}
-for (i = 0; i &lt;= world_w; i += 1)
-{
-    for (j = 0; j &lt;= world_h; j += 1)
+for (i=0;i&lt;=world_w;i+=1)
+    for (j=0;j&lt;=world_h;j+=1)
+        w[i,j] &amp;= c_white ^ cf_proc
+for (i=0;i&lt;=world_w;i+=1)
+    for (j=0;j&lt;=world_h;j+=1)
     {
         pn = 0;
-        if (w[i, j] &amp; cf_up)
+        if (w[i,j] &amp; cf_up)
         {
             pn += 1;
             px[pn] = 0;
             py[pn] = -1;
         }
-        if (w[i, j] &amp; cf_dn)
+        if (w[i,j] &amp; cf_dn)
         {
             pn += 1;
             px[pn] = 0;
-            py[pn] += 1;
+            py[pn] = +1;
         }
-        if (w[i, j] &amp; cf_lt)
+        if (w[i,j] &amp; cf_lt)
         {
             pn += 1; 
             px[pn] = -1;
             py[pn] = 0;
         }
-        if (w[i, j] &amp; cf_rt)
+        if (w[i,j] &amp; cf_rt)
         {
             pn += 1;
-            px[pn] += 1;
+            px[pn] = +1;
             py[pn] = 0;
         }
         if (pn == 1)
+        if (1)
         {
-            if (1)
-            {
-                pn = 0;
-                c_x = i;
-                c_y = j;
-                if (c_x &gt; 0)
-                {
-                    if (w[c_x - 1, c_y] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_lt))
-                    {
-                        pn += 1;
-                        px[pn] = -1;
-                        py[pn] = 0;
-                    }
-                }
-                if (c_x &lt; world_w)
-                {
-                    if (w[c_x + 1,c_y] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_rt))
-                    {
-                        pn += 1;
-                        px[pn] = 1;
-                        py[pn] = 0;
-                    }
-                }
-                if (c_y &gt; 0)
-                {
-                    if (w[c_x, c_y - 1] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_up))
-                    {
-                        pn += 1;
-                        px[pn] = 0;
-                        py[pn] = -1;
-                    }
-                }
-                if (c_y &lt; world_h)
-                {
-                    if (w[c_x, c_y + 1] &gt; 33 &amp;&amp; !(w[c_x, c_y] &amp; cf_dn))
-                    {
-                        pn += 1;
-                        px[pn] = 0;
-                        py[pn] += 1;
-                    }
-                }
-                pc = 1 + floor(random(pn));
-                wcn(c_x, c_y, px[pc], py[pc]);
-            }
-        }
+            pn = 0;
+            c_x = i;c_y = j;
+            if (c_x &gt; 0)
+                if (w[c_x-1,c_y]&gt;33 &amp;&amp; !(w[c_x,c_y]&amp;cf_lt) ) { pn+=1; px[pn]=-1;py[pn]=0;}
+            if (c_x &lt; world_w)
+                if (w[c_x+1,c_y]&gt;33 &amp;&amp; !(w[c_x,c_y]&amp;cf_rt) ) { pn+=1; px[pn]=1;py[pn]=0;}
+            if (c_y &gt; 0)
+                if (w[c_x,c_y-1]&gt;33 &amp;&amp; !(w[c_x,c_y]&amp;cf_up) ) { pn+=1; px[pn]=0;py[pn]=-1;}
+            if (c_y &lt; world_h)
+                if (w[c_x,c_y+1]&gt;33 &amp;&amp; !(w[c_x,c_y]&amp;cf_dn) ) { pn+=1; px[pn]=0;py[pn]=+1;}
+            pc = 1 + floor(random(pn));
+            wcn(c_x, c_y, px[pc], py[pc]);
     }
 }
 room_caption = "Done merging dead ends";
@@ -431,96 +300,78 @@ room_caption = "Done merging dead ends";
 //Technology is slow, because it picks the best suitable place for a room
 //The smaller is your maze, the better.
 rdon = 0;
-cf_temp = cf_full | cf_visited;
+cf_temp = cf_full | cf_visited
 repeat(rnum)
 {
-    rgb = 16777215;
-    rgx = 0;
-    rgy = 0;
-    rw = wmin + floor(random(wmax - wmin + 1));
-    rh = hmin + floor(random(hmax - hmin + 1));
+    rgb = 16777215
+    rgx = 0
+    rgy = 0
+    rw = wmin + floor(random(wmax - wmin + 1))
+    rh = hmin + floor(random(hmax - hmin + 1))
     for (i = 0; i &lt;= world_w - rw; i += 1)
-    {
         for (j = 0; j &lt;= world_h - rh; j += 1)
         {
             rgc = 0;
             for (k = i; k &lt;= i + rw; k += 1)
-            {
                 for (l = j; l &lt;= j + rh; l += 1)
                 {
-                    if (w[k, l] &amp; cf_room)
+                    if (w[k,l] &amp; cf_room)
                     {
-                        rgc += 100;
-                        continue;
+                        rgc += 100
+                        continue
                     }
-                    if (w[k, l] &lt;= cf_temp)
+                if (w[k, l] &lt;= cf_temp)
+                    continue
+                if (k &gt; 0)
+                    if (w[k-1,l] &gt; cf_temp)
                     {
-                        continue;
+                        rgc += 1
+                        continue
                     }
-                    if (k &gt; 0)
-                    {
-                        if (w[k - 1, l] &gt; cf_temp)
-                        {
-                            rgc += 1;
-                            continue;
-                        }
-                    }
-                    if (k &lt; world_w)
-                    {
-                        if (w[k + 1, l] &gt; cf_temp)
-                        {
-                            rgc += 1;
-                            continue;
-                        }
-                    }
-                    if (l &gt; 0)
-                    {
-                        if (w[k, l - 1] &gt; cf_temp)
-                        {
-                            rgc += 1;
-                            continue;
-                        }
-                    }
-                    if (l &lt; world_h)
-                    {
-                        if (w[k, l + 1] &gt; cf_temp)
-                        {
-                            rgc += 1;
-                            continue;
-                        }
-                    }
+                if (k &lt; world_w)
+                if (w[k+1,l] &gt; cf_temp)
+                {
+                    rgc += 1
+                    continue
                 }
+                if (l &gt; 0)
+                    if (w[k,l-1] &gt; cf_temp)
+                    {
+                        rgc += 1
+                        continue
+                    }
+                if (l &lt; world_h)
+                    if (w[k,l+1] &gt; cf_temp)
+                    {
+                        rgc += 1
+                        continue
+                    }
             }
             if (rgc != 0)
-            {
                 if ((rgc &lt; rgb) || (rgc == rgb &amp;&amp; random(100) &lt; 15))
                 {
                     rgx = i;
                     rgy = j;
                     rgb = rgc;
                 }
-            }
         }
-    }
-    for (k = rgx; k &lt;= rgx + rw; k += 1)
-    {
-        for (l = rgy; l &lt;= rgy + rh; l += 1)
-        {
-            w[k, l] |= cf_room;
-            if (k &lt; rgx + rw)
+        for (k = rgx; k &lt;= rgx + rw; k += 1) 
+            for (l = rgy; l &lt;= rgy + rh; l += 1)
             {
-                w[k, l] |= cf_rt;
-                w[k + 1, l] |= cf_lt;
+                w[k, l] |= cf_room
+                if (k &lt; rgx + rw)
+                {
+                    w[k, l] |= cf_rt
+                    w[k+1, l] |= cf_lt
+                }
+                if (l &lt; rgy + rh)
+                {
+                    w[k, l] |= cf_dn
+                    w[k, l+1] |= cf_up
+                }
             }
-            if (l &lt; rgy + rh)
-            {
-                w[k, l] |= cf_dn;
-                w[k, l + 1] |= cf_up;
-            }
-        }
-    }
-    rdon += 1;
-    // Plug in your room-related code here:
+	rdon += 1
+	// Plug in your room-related code here:
     if (rdon == 1)
     {
         _x = wsiz2 * irandom_range(rgx, rgx + rw);

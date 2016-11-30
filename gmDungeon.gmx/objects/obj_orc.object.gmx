@@ -35,7 +35,6 @@ xp = 13;
 moved = false;
 if(choose(0, 1, 2, 3, 4) == 1)
 {
-    gold = 0;
     repeat(global.toughness)
     {
         gold = irandom_range(1, 10);
