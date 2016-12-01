@@ -33,23 +33,24 @@ name = choose("parchment", "stained", "red", "dark green", "indigo", "plaid", "d
     "silver", "thin", "mottled", "pink", "light green", "dark blue", "tan", "wrinkled",
     "gold", "thick") + " spellbook";
 itemType = "spellbook";
-    //Attack spellbooks
-description = "spellbook of " + choose("force bolt", "drain life", "magic missile",
+description = "spellbook of " + choose(
+            //Attack spellbooks
+    "force bolt", "drain life", "magic missile",
     "cone of cold", "fireball", "finger of death", 
-    //Clerical spellbooks
+            //Clerical spellbooks
     "protection", "create monster", "remove curse", "create familiar", "turn undead", 
-    //Divination spellbooks
+            //Divination spellbooks
     "detect monsters", "light", "detect food", "clairvoyance", "detect unseen", 
     "identify", "detect treasure", "magic mapping", 
-    //Enchantment spellbooks
+            //Enchantment spellbooks
     "sleep", "confuse monster", "slow monster", "cause fear", 
     "charm monster", 
-    //Escape spellbooks
+            //Escape spellbooks
     "jumping", "haste self", "invisibility", "levitation", "teleport away", 
-    //Healing spellbooks
+            //Healing spellbooks
     "healing", "cure blindness", "cure sickness", "extra healing", 
     "stone to flesh", "restore ability", 
-    //Matter spellbooks
+            //Matter spellbooks
     "knock", "wizard lock", "dig", "polymorph", "cancellation");
 amount = 1;
 </string>
