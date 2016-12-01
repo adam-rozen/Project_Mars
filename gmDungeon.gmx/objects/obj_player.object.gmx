@@ -396,18 +396,7 @@ if (keyboard_check_released(ord("V")) &amp;&amp; global.p_turn)
 }
 if (keyboard_check_released(ord("S")) &amp;&amp; global.p_turn)
 {
-    file = get_save_filename("*.*", "");
-    scr_save(file);
-}
-if (keyboard_check_released(ord("L")) &amp;&amp; global.p_turn)
-{
-    file = get_open_filename("*.*", "");
-    file = file_find_first("\*.save", 0);
-    file_find_close();
-    if (file_exists(file))
-    {
-        scr_load(file);
-    }
+    scr_save();
 }
 </string>
           </argument>
