@@ -36,7 +36,7 @@ name = choose("zelgo mer", "pratyavayah", "elbib yloh", "yum yum", "andova begar
     "garven deh", "fnord", "mapiro mahama diromat", "phol ende wodan", 
     "strc prst skrz krk") + " scroll";
 itemType = "scroll";
-decription = "scroll of " + choose("identify", "light", "blank paper", "enchant weapon",
+description = "scroll of " + choose("identify", "light", "blank paper", "enchant weapon",
     "enchant armor", "remove curse", "confuse monster", "destroy armor", "fire",
     "food detection", "gold detection", "magic mapping", "scare monster", "teleportation",
     "amnesia", "create monster", "earth", "taming", "charging", "genocide",

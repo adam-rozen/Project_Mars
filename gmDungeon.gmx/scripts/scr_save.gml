@@ -9,9 +9,17 @@ ini_write_real("Player Values", "hp", hp);
 ini_write_real("Player Values", "maxMana", maxMana);
 ini_write_real("Player Values", "mana", mana);
 ini_write_real("Player Values", "xp", xp);
+ini_write_real("Player Values", "strength", strength);
+ini_write_real("Player Values", "charisma", charisma);
+ini_write_real("Player Values", "constitution", constitution);
+ini_write_real("Player Values", "dexterity", dexterity);
+ini_write_real("Player Values", "wisdom", wisdom);
+ini_write_real("Player Values", "attack", attack);
+ini_write_real("Player Values", "intelligence", intelligence);
 ini_write_real("Player Values", "level", level);
 ini_write_real("Player Values", "gold", gold);
 ini_write_real("Player Values", "move", move);
+ini_write_real("Player Values", "playerNutrition", playerNutrition);
 ini_write_real("Player Values", "seed", random_get_seed());
 i = 0;
 test = obj_inventory.inv[i];
@@ -42,40 +50,72 @@ for (i = 0; i <= dgen.world_w + 1; i += .5)
         _y = j * wsiz2 - wsiz1;
         if (place_meeting(_x, _y, obj_floor))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "floor");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "floor");
         }
         else if (place_meeting(_x, _y, obj_wall))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "wall");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "wall");
         }
         else if (place_meeting(_x, _y, obj_gold))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "gold");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "gold");
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "amount", instance_place(_x, _y, obj_gold).amount);
         }
         else if (place_meeting(_x, _y, obj_scroll))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "scroll");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "scroll");
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "amount", instance_place(_x, _y, obj_scroll).amount);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "name", instance_place(_x, _y, obj_scroll).name);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "itemType", instance_place(_x, _y, obj_scroll).itemType);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "description", instance_place(_x, _y, obj_scroll).description);
         }
         else if (place_meeting(_x, _y, obj_spellbook))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "spellbook");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "spellbook");
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "itemType", instance_place(_x, _y, obj_spellbook).amount);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "description", instance_place(_x, _y, obj_spellbook).description);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "name", instance_place(_x, _y, obj_spellbook).name);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "amount", instance_place(_x, _y, obj_spellbook).amount);
         }
         else if (place_meeting(_x, _y, obj_armor))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "gold");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "armor");
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "type", instance_place(_x, _y, obj_armor).type);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "description", instance_place(_x, _y, obj_armor).description);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "name", instance_place(_x, _y, obj_armor).name);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "amount", instance_place(_x, _y, obj_armor).amount);
         }
         else if (place_meeting(_x, _y, obj_down))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "down");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "down");
         }
         else if (place_meeting(_x, _y, obj_up))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "up");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "up");
         }
         else if (place_meeting(_x, _y, obj_foodRation))
         {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y), "foodRation");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "foodRation");
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "nutrition", instance_place(_x, _y, obj_foodRation).nutrition);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "itemType", instance_place(_x, _y, obj_foodRation).itemType);
+            ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "name", instance_place(_x, _y, obj_foodRation).name);
         }
+        else if (place_meeting(_x, _y, obj_amulet))
+        {
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "amulet");
+        }
+        else if (place_meeting(_x, _y, obj_ring))
+        {
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "ring");
+        }
+        else if (place_meeting(_x, _y, obj_potion))
+        {
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "potion");
+        }
+        else if (place_meeting(_x, _y, obj_wand))
+        {
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "wand");
+        }        
     }
 }
 ini_close();
