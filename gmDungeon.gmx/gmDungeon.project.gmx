@@ -11,7 +11,10 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_gold</sprite>
     <sprite>sprites\spr_spellbook</sprite>
+    <sprite>sprites\spr_gem</sprite>
+    <sprite>sprites\spr_weapon</sprite>
     <sprite>sprites\spr_scroll</sprite>
+    <sprite>sprites\spr_tool</sprite>
     <sprite>sprites\spr_food</sprite>
     <sprite>sprites\spr_amulet</sprite>
     <sprite>sprites\spr_potion</sprite>
@@ -57,6 +60,7 @@
     <object>objects\obj_kobold</object>
     <object>objects\obj_orc</object>
     <object>objects\obj_armor</object>
+    <object>objects\obj_wand</object>
     <object>objects\obj_floor</object>
     <object>objects\obj_down</object>
     <object>objects\obj_up</object>
@@ -71,7 +75,6 @@
     <object>objects\obj_inventory</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_textbox</object>
-    <object>objects\obj_wand</object>
     <object>objects\obj_statusBar</object>
   </objects>
   <rooms name="rooms">
