@@ -10,9 +10,9 @@ if (global.class == "wizard")
 {
     if (turn mod 18 == 0)
     {
-       if (mana < maxMana)
+       if (pw < maxPW)
        {
-           mana += 1;
+           pw += 1;
        }
     }
 }
@@ -20,9 +20,9 @@ else
 {
     if (turn mod 24 == 0)
     {
-       if (mana < maxMana)
+       if (pw < maxPW)
        {
-           mana += 1;
+           pw += 1;
        }
     }
 }
