@@ -89,6 +89,7 @@
     <room>rooms\roomInv</room>
   </rooms>
   <constants number="10">
+    <constant name="movespeed">32</constant>
     <constant name="cf_room">128</constant>
     <constant name="cf_proc">64</constant>
     <constant name="cf_full">32</constant>
@@ -98,7 +99,6 @@
     <constant name="cf_up">2</constant>
     <constant name="cf_visited">1</constant>
     <constant name="cf_empty">0</constant>
-    <constant name="movespeed">32</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

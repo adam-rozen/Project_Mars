@@ -58,7 +58,7 @@ if (room_get_name(room) != "roomInv")
         + "  Dlvl:" + string(global.toughness)
         + "  $:" + string(obj_player.gold)
         + "  T:" + string(obj_player.turn)
-        + "  PW:" + string(obj_player.mana) + "/" + string(obj_player.maxMana)
+        + "  PW:" + string(obj_player.pw) + "/" + string(obj_player.maxPW)
         + "  Lvl:" + string(obj_player.level)
         + "  XP:" + string(obj_player.xp));
 }
