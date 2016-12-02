@@ -13,8 +13,8 @@
     <sprite>sprites\spr_spellbook</sprite>
     <sprite>sprites\spr_gem</sprite>
     <sprite>sprites\spr_weapon</sprite>
-    <sprite>sprites\spr_scroll</sprite>
     <sprite>sprites\spr_tool</sprite>
+    <sprite>sprites\spr_scroll</sprite>
     <sprite>sprites\spr_food</sprite>
     <sprite>sprites\spr_amulet</sprite>
     <sprite>sprites\spr_potion</sprite>
@@ -58,6 +58,8 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
     <object>objects\obj_kobold</object>
+    <object>objects\obj_weapon</object>
+    <object>objects\obj_tool</object>
     <object>objects\obj_orc</object>
     <object>objects\obj_armor</object>
     <object>objects\obj_wand</object>

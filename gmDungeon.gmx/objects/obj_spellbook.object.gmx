@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_item</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Parameters
+            <string>///Parameters (may need to edit)
 name = choose("parchment", "stained", "red", "dark green", "indigo", "plaid", "dusty",
     "glittering", "vellum", "cloth", "orange", "turquoise", "magenta", "light brown",
     "bronze", "shining", "ragged", "leather", "yellow", "cyan", "purple", "dark brown",
