@@ -31,8 +31,29 @@ turn = 0;
 level = 1;
 up = false;
 xp = 0;
-maxXP = 39;
 gold = 0;
+levelUpRequirement[1] = 20;
+for (i = 2; i &lt;= 9; i++)
+{
+    levelUpRequirement[i] = levelUpRequirement[i - 1] * 2;
+}
+levelUpRequirement[10] = 10000;
+for (i = 11; i &lt;= 19; i++)
+{
+    levelUpRequirement[i] = levelUpRequirement[i - 10] * 1000;
+}
+levelUpRequirement[20] = 10000000;
+for (i = 21; i &lt;= 29; i++)
+{
+    levelUpRequirement[i] = levelUpRequirement[i - 1] + 10000000;
+}
+levelUpRequirement[30] = null;
+for (i = 1; i &lt;= 28; i++)
+{
+    maxXP[i] = levelUpRequirement[i + 1] - 1;
+}
+maxXP[29] = levelUpRequirement[29];
+maxXP[30] = maxXP[29];
 switch (global.class)
 {
     case "Wizard":
