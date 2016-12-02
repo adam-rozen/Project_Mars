@@ -28,7 +28,10 @@
             <string>///Parameters
 name = "food ration";
 itemType = "food";
+type = "food";
+description = "food ration";
 nutrition = 800;
+amount = 1;
 </string>
           </argument>
         </arguments>

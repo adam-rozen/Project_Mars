@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>type = choose("Shirt", "Suit", "Dragon Suit", "Cloak", "Helm", "Glove", "Shield", "Boot");
+            <string>itemType = "armor";
+type = choose("Shirt", "Suit", "Dragon Suit", "Cloak", "Helm", "Glove", "Shield", "Boot");
 switch(type)
 {
     case "Shirt":

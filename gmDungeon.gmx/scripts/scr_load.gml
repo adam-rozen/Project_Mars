@@ -24,21 +24,55 @@ obj_player.maxHP = ini_read_real("Player Values", "maxHP", 1);
 obj_player.move = ini_read_real("Player Values", "move", 0);
 obj_player.playerNutrition = ini_read_real("Player Values", "playerNutrition", 900);
 i = 0;
-while(ini_key_exists("Player Inventory", i + " name"))
+while(ini_key_exists("Player Inventory", string(i) + " name"))
 {
-    type = ini_read_string("Player Inventory", i + " type", "");
-    switch(type)
+    name = ini_read_string("Player Inventory", i + " name", "");
+    var test;
+    switch(name)
     {
         case "amulet":
-            test = instance_create(0,0,obj_amulet);
-            test.type = type;
-            test.itemType = ini_read_string("Player Inventory", i + "itemType", "");
-            test.description = ini_read_string("Player Inventory", i + "description", "");
-            test.name = ini_read_string("Player Inventory", i + "name", "");
-            addToInv(test);
-            instance_deactivate_object(test);
+            test = instance_create(0, 0, obj_amulet);
             break;
-    }}
+        case "armor":
+            test = instance_create(0, 0, obj_armor);
+            test.type = ini_read_string("Player Inventory", string(i) + " type", "");
+            break;
+        case "scroll":
+            test = instance_create(0, 0, obj_scroll);
+            break;
+        case "spellbook":
+            test = instance_create(0, 0, obj_spellbook);
+            break;
+        case "wand":
+            test = instance_create(0, 0, obj_armor);
+            break;
+        case "foodRation":
+            test = instance_create(0, 0, obj_foodRation);
+            test.nutrition = ini_read_real("Player Inventory", string(i) + " nutrition", "");
+            break;
+    }
+    test.name = name;
+    test.itemType = ini_read_string("Player Inventory", string(i) + "itemType", "");
+    test.description = ini_read_string("Player Inventory", string(i) + "description", "");
+    test.amount = ini_read_real("Player Inventory", string(i) + "amount", 1);
+    addToInv(test);
+    instance_deactivate_object(test);
+}
+a = 0;
+while(ini_key_exists("Enemy Values", string(a) + " name"))
+{
+    name = ini_read_string("Enemy Values", string(a) + " name", "");
+    var test;
+    switch (name)
+    {
+        case "orc":
+            test = instance_create(ini_read_real("Enemy Values", string(a) + " x", ""), ini_read_real("Enemy Values", string(a) + " y", ""), obj_orc);
+            break;
+        case "kobold":
+            test = instance_create(ini_read_real("Enemy Values", string(a) + " x", ""), ini_read_real("Enemy Values", string(a) + " y", ""), obj_kobold);
+            break;
+    } 
+}
 random_set_seed(ini_read_real("Player Values", "seed", 0));
 ini_close();
 file_delete("save.dat");

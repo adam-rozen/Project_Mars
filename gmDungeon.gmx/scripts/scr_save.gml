@@ -26,22 +26,31 @@ test = obj_inventory.inv[i];
 while(test!=-1)
 {
     ini_write_string("Player Inventory", string(i) + " name", test.name);
+    if (test.itemType == "armor")
+    {
+        ini_write_string("Player Inventory", string(i) + " type", test.type);
+    }
+    if (test.itemType == "food")
+    {
+        ini_write_real("Player Inventory", string(i) + " nutrition", test.nutrition);
+    }
+    ini_write_string("Player Inventory", string(i) + " itemType", test.itemType);
     ini_write_real("Player Inventory", string(i) + " amount", test.amount);
-    ini_write_real("Player Inventory", string(i) + " description", test.description);
+    ini_write_string("Player Inventory", string(i) + " description", test.description);
     i++;
     test = obj_inventory.inv[i];
 } 
 for (a = 0; a <= instance_number(obj_enemy); a++)
 {
     ida = instance_find(obj_enemy, a);
-    ini_write_real("Enemy Values", string(a) + "x", ida.x);
-    ini_write_real("Enemy Values", string(a) + "y", ida.y);
-    ini_write_real("Enemy Values", string(a) + "hp", ida.hp);
-    ini_write_string("Enemy Values", string(a) + "name", ida.name);
-    ini_write_real("Enemy Values", string(a) + "gold", ida.gold);
-    ini_write_real("Enemy Values", string(a) + "moved", ida.moved);
-    ini_write_real("Enemy Values", string(a) + "attack", ida.attack);
-    ini_write_real("Enemy Values", string(a) + "maxHP", ida.maxHP);    
+    ini_write_real("Enemy Values", string(a) + " x", ida.x);
+    ini_write_real("Enemy Values", string(a) + " y", ida.y);
+    ini_write_real("Enemy Values", string(a) + " hp", ida.hp);
+    ini_write_string("Enemy Values", string(a) + " name", ida.name);
+    ini_write_real("Enemy Values", string(a) + " gold", ida.gold);
+    ini_write_real("Enemy Values", string(a) + " moved", ida.moved);
+    ini_write_real("Enemy Values", string(a) + " attack", ida.attack);
+    ini_write_real("Enemy Values", string(a) + " maxHP", ida.maxHP);    
     
 }
 for (i = 0; i <= dgen.world_w + 1; i += .5)

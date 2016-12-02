@@ -375,7 +375,7 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
 }
 if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
 {
-    if (mana &gt;= 5)
+    if (pw &gt;= 5)
     {
         print("In what direction?");
         zap = true;
