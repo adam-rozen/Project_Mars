@@ -8,7 +8,14 @@ for(i = 1; i < range; i++)
     if (target != noone)
     {
         target.hp -= damage;
-        print("Kapow!");
+        if (target.hp > 0)
+            print("Kapow!");
+        else
+        {
+            print("You kill the " + target.name + "!");
+            xp += target.xp;
+            levelUp();
+        }
     }
     target2 = instance_place(x + (i * xMovespeed), y + (i * yMovespeed), obj_wall);
     if (target2 != noone)

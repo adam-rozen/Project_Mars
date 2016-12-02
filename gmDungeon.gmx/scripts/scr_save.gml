@@ -18,7 +18,6 @@ ini_write_real("Player Values", "attack", attack);
 ini_write_real("Player Values", "intelligence", intelligence);
 ini_write_real("Player Values", "level", level);
 ini_write_real("Player Values", "gold", gold);
-ini_write_real("Player Values", "move", move);
 ini_write_real("Player Values", "playerNutrition", playerNutrition);
 ini_write_real("Player Values", "seed", random_get_seed());
 i = 0;
@@ -51,19 +50,19 @@ for (a = 0; a <= instance_number(obj_enemy); a++)
     ini_write_real("Enemy Values", string(a) + " moved", ida.moved);
     ini_write_real("Enemy Values", string(a) + " attack", ida.attack);
     ini_write_real("Enemy Values", string(a) + " maxHP", ida.maxHP);    
-    
+    ini_write_real("Enemy Values", string(a) + " xp", ida.xp);
 }
+ini_write_real("Dungeon Properties", "world_w", dgen.world_w);
+ini_write_real("Dungeon Properties", "world_h", dgen.world_h);
+ini_write_real("Dungeon Properties", "wsiz1", dgen.wsiz1);
+ini_write_real("Dungeon Properties", "wsiz2", dgen.wsiz2);
 for (i = 0; i <= dgen.world_w + 1; i += .5)
 {
     for (j = 0; j <= dgen.world_h + 1; j += .5)
     {
-        _x = i * wsiz2 - wsiz1;
-        _y = j * wsiz2 - wsiz1;
-        if (place_meeting(_x, _y, obj_floor))
-        {
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "floor");
-        }
-        else if (place_meeting(_x, _y, obj_wall))
+        _x = i * dgen.wsiz2 - dgen.wsiz1;
+        _y = j * dgen.wsiz2 - dgen.wsiz1;
+        if (place_meeting(_x, _y, obj_wall))
         {
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "wall");
         }
@@ -91,6 +90,7 @@ for (i = 0; i <= dgen.world_w + 1; i += .5)
         else if (place_meeting(_x, _y, obj_armor))
         {
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "armor");
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "itemType", instance_place(_x, _y, obj_armor).itemType);
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "type", instance_place(_x, _y, obj_armor).type);
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "description", instance_place(_x, _y, obj_armor).description);
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "name", instance_place(_x, _y, obj_armor).name);
@@ -142,6 +142,10 @@ for (i = 0; i <= dgen.world_w + 1; i += .5)
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "itemType", instance_place(_x, _y, obj_wand).itemType)
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "description", instance_place(_x, _y, obj_wand).description)
             ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "amount", instance_place(_x, _y, obj_wand).amount)
+        }
+        else if (place_meeting(_x, _y, obj_floor))
+        {
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "floor");
         }
     }
 }

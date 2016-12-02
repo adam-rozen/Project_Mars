@@ -30,6 +30,7 @@
 global.toughness = 1;
 // change color to white
 draw_set_color(c_white);
+global.load = false;
 randomize();
 // set font
 draw_set_font(fontArial);

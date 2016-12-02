@@ -370,92 +370,95 @@ repeat(rnum)
                     w[k, l+1] |= cf_up
                 }
             }
-	rdon += 1
-	// Plug in your room-related code here:
-    if (rdon == 1)
+    rdon += 1
+    // Plug in your room-related code here:
+    if (!global.load)
     {
-        _x = wsiz2 * irandom_range(rgx, rgx + rw);
-        _y = wsiz2 * irandom_range(rgy, rgy + rh);
-        obj_player.x = _x;
-        obj_player.y = _y;
-        if (global.toughness != 1)
+        if (rdon == 1)
         {
-            instance_create(_x, _y, obj_up);
-        }
-    }
-    if (rdon == rnum)
-    {
-        _x = wsiz2 * irandom_range(rgx, rgx + rw);
-        _y = wsiz2 * irandom_range(rgy, rgy + rh);
-        if (obj_player.up)
-        {
+            _x = wsiz2 * irandom_range(rgx, rgx + rw);
+            _y = wsiz2 * irandom_range(rgy, rgy + rh);
             obj_player.x = _x;
             obj_player.y = _y;
-            up = false;
+            if (global.toughness != 1)
+            {
+                instance_create(_x, _y, obj_up);
+            }
         }
-        instance_create(_x, _y, obj_down);
-    }
-    repeat(choose(0, 0, 0, 1))
-    {
-        test = choose(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-            10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-            20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
-            30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
-            40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
-            50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
-            60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
-            70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
-            80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-            90, 91, 92, 93, 94, 95, 96, 97, 98, 99);
-        if (test == 0 || test == 1 || test == 2)
+        if (rdon == rnum)
         {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_ring);
+            _x = wsiz2 * irandom_range(rgx, rgx + rw);
+            _y = wsiz2 * irandom_range(rgy, rgy + rh);
+            if (obj_player.up)
+            {
+                obj_player.x = _x;
+                obj_player.y = _y;
+                up = false;
+            }
+            instance_create(_x, _y, obj_down);
         }
-        else if (test == 3 || test == 4 || test == 5 || test == 6)
+        repeat(choose(0, 0, 0, 1))
         {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_wand);
+            test = choose(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+                20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+                30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+                40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+                50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+                60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
+                70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
+                80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
+                90, 91, 92, 93, 94, 95, 96, 97, 98, 99);
+            if (test == 0 || test == 1 || test == 2)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_ring);
+            }
+            else if (test == 3 || test == 4 || test == 5 || test == 6)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_wand);
+            }
+            else if (test == 4 || test == 5 || test == 6 || test == 7 || test == 8
+                || test == 9 || test == 10 || test == 11 || test == 12 || test == 13
+                || test == 14 || test == 15 || test == 16 || test == 17 || test == 18
+                || test == 19 || test == 20 || test == 21 || test == 22 || test == 23)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_foodRation);
+            }
+            else if (test == 24 || test == 25 || test == 26 || test == 27
+                || test == 28 || test == 29 || test == 30 || test == 31
+                || test == 32 || test == 33 || test == 34 || test == 35
+                || test == 36 || test == 37 || test == 38 || test == 39)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
+            }
+            else if (test == 40)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_amulet);
+            }
         }
-        else if (test == 4 || test == 5 || test == 6 || test == 7 || test == 8
-            || test == 9 || test == 10 || test == 11 || test == 12 || test == 13
-            || test == 14 || test == 15 || test == 16 || test == 17 || test == 18
-            || test == 19 || test == 20 || test == 21 || test == 22 || test == 23)
+        if (choose(0, 1, 2) == 1)
         {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_foodRation);
+            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
         }
-        else if (test == 24 || test == 25 || test == 26 || test == 27
-            || test == 28 || test == 29 || test == 30 || test == 31
-            || test == 32 || test == 33 || test == 34 || test == 35
-            || test == 36 || test == 37 || test == 38 || test == 39)
+        repeat(choose(0, 0, 1, 2, 3))
         {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
+            _x = wsiz2 * irandom_range(rgx, rgx + rw);
+            _y = wsiz2 * irandom_range(rgy, rgy + rh);
+            target = instance_place(_x, _y, obj_entity);
+            if (target == noone)
+            {
+                instance_create(_x, _y, obj_orc);
+            }
         }
-        else if (test == 40)
+        repeat(choose(0, 1, 2, 3))
         {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_amulet);
-        }
-    }
-    if (choose(0, 1, 2) == 1)
-    {
-        instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
-    }
-    repeat(choose(0, 0, 1, 2, 3))
-    {
-        _x = wsiz2 * irandom_range(rgx, rgx + rw);
-        _y = wsiz2 * irandom_range(rgy, rgy + rh);
-        target = instance_place(_x, _y, obj_entity);
-        if (target == noone)
-        {
-            instance_create(_x, _y, obj_orc);
-        }
-    }
-    repeat(choose(0, 1, 2, 3))
-    {
-        _x = wsiz2 * irandom_range(rgx, rgx + rw);
-        _y = wsiz2 * irandom_range(rgy, rgy + rh);
-        target = instance_place(_x, _y, obj_entity);
-        if (target == noone)
-        {
-            instance_create(_x, _y, obj_kobold);
+            _x = wsiz2 * irandom_range(rgx, rgx + rw);
+            _y = wsiz2 * irandom_range(rgy, rgy + rh);
+            target = instance_place(_x, _y, obj_entity);
+            if (target == noone)
+            {
+                instance_create(_x, _y, obj_kobold);
+            }
         }
     }
 }
