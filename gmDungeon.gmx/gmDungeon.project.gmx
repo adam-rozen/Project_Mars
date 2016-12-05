@@ -68,6 +68,7 @@
     <object>objects\obj_up</object>
     <object>objects\obj_foodRation</object>
     <object>objects\obj_amulet</object>
+    <object>objects\obj_gem</object>
     <object>objects\obj_ring</object>
     <object>objects\obj_potion</object>
     <object>objects\obj_item</object>
