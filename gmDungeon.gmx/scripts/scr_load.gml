@@ -3,13 +3,12 @@ if (!file_exists("save.dat"))
     show_message("No save file found!");
     exit;
 }
-global.load = true;
+instance_destroy();
 ini_open("save.dat");
 global.toughness = ini_read_real("Player Values", "floor", 1);
 global.class = ini_read_string("Player Values", "class", "none");
 instance_create(x, y, obj_inventory);
 instance_create(x, y, obj_player);
-//instance_create(x, y, dgen);
 obj_player.x = ini_read_real("Player Values", "x", 0);
 obj_player.y = ini_read_real("Player Values", "y", 0);
 obj_player.turn = ini_read_real("Player Values", "turn", 0);
@@ -30,15 +29,15 @@ obj_player.maxHP = ini_read_real("Player Values", "maxHP", 1);
 obj_player.xp = ini_read_real("Player Values", "xp", 0);
 obj_player.playerNutrition = ini_read_real("Player Values", "playerNutrition", 900);
 i = 0;
-while (ini_key_exists("Player Inventory", string(i) + " name"))
+while (ini_key_exists("Player Inventory", string(i) + " itemType"))
 {
-    name = ini_read_string("Player Inventory", string(i) + " name", "");
-    switch(name)
+    itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+    switch(itemType)
     {
         case "amulet":
             test = instance_create(0, 0, obj_amulet);
-            test.name = name;
-            test.itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+            test.itemType = itemType;
+            test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             addToInv(test);
@@ -46,8 +45,8 @@ while (ini_key_exists("Player Inventory", string(i) + " name"))
             break;
         case "ring":
             test = instance_create(0, 0, obj_ring);
-            test.name = name;
-            test.itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+            test.itemType = itemType;
+            test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             addToInv(test);
@@ -55,8 +54,8 @@ while (ini_key_exists("Player Inventory", string(i) + " name"))
             break;
         case "potion":
             test = instance_create(0, 0, obj_potion);
-            test.name = name;
-            test.itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+            test.itemType = itemType;
+            test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             addToInv(test);
@@ -64,8 +63,8 @@ while (ini_key_exists("Player Inventory", string(i) + " name"))
             break;
         case "armor":
             test = instance_create(0, 0, obj_armor);
-            test.name = name;
-            test.itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+            test.itemType = itemType;
+            test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             test.type = ini_read_string("Player Inventory", string(i) + " type", "");
@@ -74,8 +73,8 @@ while (ini_key_exists("Player Inventory", string(i) + " name"))
             break;
         case "scroll":
             test = instance_create(0, 0, obj_scroll);
-            test.name = name;
-            test.itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+            test.itemType = itemType;
+            test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             addToInv(test);
@@ -83,8 +82,8 @@ while (ini_key_exists("Player Inventory", string(i) + " name"))
             break;
         case "spellbook":
             test = instance_create(0, 0, obj_spellbook);
-            test.name = name;
-            test.itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+            test.itemType = itemType;
+            test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             addToInv(test);
@@ -92,8 +91,8 @@ while (ini_key_exists("Player Inventory", string(i) + " name"))
             break;
         case "wand":
             test = instance_create(0, 0, obj_wand);
-            test.name = name;
-            test.itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+            test.itemType = itemType;
+            test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             addToInv(test);
@@ -102,8 +101,8 @@ while (ini_key_exists("Player Inventory", string(i) + " name"))
         case "foodRation":
             test = instance_create(0, 0, obj_foodRation);
             test.nutrition = ini_read_real("Player Inventory", string(i) + " nutrition", "");
-            test.name = name;
-            test.itemType = ini_read_string("Player Inventory", string(i) + " itemType", "");
+            test.itemType = itemType;
+            test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             addToInv(test);

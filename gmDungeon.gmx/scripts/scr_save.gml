@@ -52,16 +52,16 @@ for (a = 0; a <= instance_number(obj_enemy); a++)
     ini_write_real("Enemy Values", string(a) + " maxHP", ida.maxHP);    
     ini_write_real("Enemy Values", string(a) + " xp", ida.xp);
 }
-ini_write_real("Dungeon Properties", "world_w", dgen.world_w);
-ini_write_real("Dungeon Properties", "world_h", dgen.world_h);
-ini_write_real("Dungeon Properties", "wsiz1", dgen.wsiz1);
-ini_write_real("Dungeon Properties", "wsiz2", dgen.wsiz2);
-for (i = 0; i <= dgen.world_w + 1; i += .5)
+ini_write_real("Dungeon Properties", "world_w", 31);
+ini_write_real("Dungeon Properties", "world_h", 31);
+ini_write_real("Dungeon Properties", "wsiz1", 32);
+ini_write_real("Dungeon Properties", "wsiz2", 64);
+for (i = 0; i <= 31 + 1; i += .5)
 {
-    for (j = 0; j <= dgen.world_h + 1; j += .5)
+    for (j = 0; j <= 31 + 1; j += .5)
     {
-        _x = i * dgen.wsiz2 - dgen.wsiz1;
-        _y = j * dgen.wsiz2 - dgen.wsiz1;
+        _x = i * 64 - 32;
+        _y = j * 64 - 32;
         if (place_meeting(_x, _y, obj_wall))
         {
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "wall");
