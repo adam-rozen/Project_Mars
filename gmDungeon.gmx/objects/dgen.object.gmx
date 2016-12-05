@@ -158,8 +158,6 @@ while !done
         }
     }
 }
-
-room_caption = "Done!";
 </string>
           </argument>
         </arguments>

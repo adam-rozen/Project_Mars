@@ -9,7 +9,7 @@ global.toughness = ini_read_real("Player Values", "floor", 1);
 global.class = ini_read_string("Player Values", "class", "none");
 instance_create(x, y, obj_inventory);
 instance_create(x, y, obj_player);
-instance_create(x, y, dgen);
+//instance_create(x, y, dgen);
 obj_player.x = ini_read_real("Player Values", "x", 0);
 obj_player.y = ini_read_real("Player Values", "y", 0);
 obj_player.turn = ini_read_real("Player Values", "turn", 0);
@@ -141,16 +141,16 @@ while(ini_key_exists("Enemy Values", string(a) + " name"))
     }
     a++;
 }
-dgen.world_w = ini_read_real("Dungeon Properties", "world_w", 32);
-dgen.world_h = ini_read_real("Dungeon Properties", "world_h", 32);
-dgen.wsiz1 = ini_read_real("Dungeon Properties", "wsiz1", 1);
-dgen.wsiz2 = ini_read_real("Dungeon Properties", "wsiz2", 2);
-for (i=0; i <= dgen.world_w; i += .5)
+world_w = ini_read_real("Dungeon Properties", "world_w", 32);
+world_h = ini_read_real("Dungeon Properties", "world_h", 32);
+wsiz1 = ini_read_real("Dungeon Properties", "wsiz1", 1);
+wsiz2 = ini_read_real("Dungeon Properties", "wsiz2", 2);
+for (i=0; i <= world_w + 1; i += .5)
 {
-    for (j = 0; j <= dgen.world_h; j += .5)
+    for (j = 0; j <= world_h + 1; j += .5)
     {
-        _x = i * dgen.wsiz2 - dgen.wsiz1;
-        _y = j * dgen.wsiz2 - dgen.wsiz1;
+        _x = i * wsiz2 - wsiz1;
+        _y = j * wsiz2 - wsiz1;
         type = ini_read_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "");
         switch (type)
         {
