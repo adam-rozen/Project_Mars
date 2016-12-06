@@ -41,6 +41,76 @@ description = "scroll of " + choose("identify", "light", "blank paper", "enchant
     "food detection", "gold detection", "magic mapping", "scare monster", "teleportation",
     "amnesia", "create monster", "earth", "taming", "charging", "genocide",
     "punishment", "stinking cloud"); //mail?
+price = 0;
+switch (descrpition)
+{
+    case "scroll of identify":
+        price = 20;
+        break;
+    case "scroll of light":
+        price = 50;
+        break;
+    case "scroll of blank paper":
+        price = 60;
+        break;
+    case "scroll of enchant weapon":
+        price = 60;
+        break;
+    case "scroll of enchant armor":
+        price = 80;
+        break;
+    case "scroll of remove curse":
+        price = 80;
+        break;
+    case "scroll of confuse monster":
+        price = 100;
+        break;
+    case "scroll of destroy armor":
+        price = 100;
+        break;
+    case "scroll of fire":
+        price = 100;
+        break;
+    case "scroll of food detection":
+        price = 100;
+        break;
+    case "scroll of gold detection":
+        price = 100;
+        break;
+    case "scroll of magic mapping":
+        price = 100;
+        break;
+    case "scroll of scare monster":
+        price = 100;
+        break;
+    case "scroll of teleportation":
+        price = 100;
+        break;
+    case "scroll of anmesia":
+        price = 200;
+        break;
+    case "scroll of create monster":
+        price = 200;
+        break;
+    case "scroll of earth":
+        price = 200;
+        break;
+    case "scroll of taming":
+        price = 200;
+        break;
+    case "scroll of charging":
+        price = 300;
+        break;
+    case "scroll of genocide":
+        price = 300;
+        break;
+    case "scroll of punishment":
+        price = 300;
+        break;
+    case "scroll of stinking cloud":
+        price = 300;
+        break;
+}
 amount = 1;
 </string>
           </argument>
