@@ -42,7 +42,7 @@ description = "scroll of " + choose("identify", "light", "blank paper", "enchant
     "amnesia", "create monster", "earth", "taming", "charging", "genocide",
     "punishment", "stinking cloud"); //mail?
 price = 0;
-switch (descrpition)
+switch (description)
 {
     case "scroll of identify":
         price = 20;
