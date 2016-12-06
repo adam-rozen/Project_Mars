@@ -26,11 +26,125 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
-name = "food ration";
+name = choose(
+    // Meat
+    "meatball", "meat ring", "meat stick", "egg", "tripe ration", "huge chunk of meat", 
+    // Fruits and vegetables
+    "kelp frond", "eucalyptus leaf", "clove of garlic", "sprig of wolfsbane", "apple", 
+    "carrot", "pear", "banana", "orange", "melon", "slime mold", 
+    // People food
+    "fortune cookie", "candy bar", "cream pie", "lump of royal jelly", 
+    "pancake", "C-ration", "K-ration", "cram ration", "food ration", "lembas wafer",
+    // Tins
+    "homemade tin", "tin of spinach, blessed", "tin of spinach, uncursed",
+    "tin of spinach, cursed", 
+    // Corpses
+    "lichen corpse", "lizard corpse");
 itemType = "food";
 type = "food";
-description = "food ration";
-nutrition = 800;
+description = name;
+switch (name)
+{
+    case "meatball":
+        nutrition = 5;
+        break;
+    case "meat ring":
+        nutrition = 5;
+        break;
+    case "meat stick":
+        nutrition = 5;
+        break;
+    case "egg":
+        nutrition = 80;
+        break;
+    case "tripe ration":
+        nutrition = 200;
+        break;
+    case "huge chunk of meat":
+        nutrition = 2000;
+        break;
+    case "kelp frond":
+        nutrition = 30;
+        break;
+    case "eucalyptus leaf":
+        nutrition = 30;
+        break;
+    case "clove of garlic":
+        nutrition = 40;
+        break;
+    case "spring of wolfsbane":
+        nutrition = 40;
+        break;
+    case "apple":
+        nutrition = 50;
+        break;
+    case "carrot":
+        nutrition = 50;
+        break;
+    case "pear":
+        nutrition = 50;
+        break;
+    case "banana":
+        nutrition = 80;
+        break;
+    case "orange":
+        nutrition = 80;
+        break;
+    case "melon":
+        nutrition = 100;
+        break;
+    case "slime mold":
+        nutrition = 250
+        break;
+    case "fortune cookie":
+        nutrition = 40;
+        break;
+    case "candy bar":
+        nutrition = 100;
+        break;
+    case "cream pie":
+        nutrition = 100;
+        break;
+    case "lump of royal jelly":
+        nutrition = 200;
+        break;
+    case "pancake":
+        nutrition = 200;
+        break;
+    case "C-ration":
+        nutrition = 300;
+        break;
+    case "K-ration":
+        nutrition = 400;
+        break;
+    case "cram ration":
+        nutrition = 600;
+        break;
+    case "food ration":
+        nutrition = 800;
+        break;
+    case "lembas wafer":
+        nutrition = 800;
+        break;
+    case "homemade tin":
+        nutrition = 50;
+        break;
+    case "tin of spinach, blessed":
+        nutrition = 600;
+        break;
+    case "tin of spinach, uncursed":
+        nutrition = random_range(401, 601);
+        break;
+    case "tin of spinach, cursed":
+        nutrition = random_range(201, 601);
+        break;
+    case "lichen corpse":
+        nutrition = 200;
+        break;
+    case "lizard corpse":
+        nutrition = 40;
+        break;
+}
 amount = 1;
 </string>
           </argument>
