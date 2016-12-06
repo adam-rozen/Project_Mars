@@ -59,7 +59,7 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             addToInv(test);
-            //instance_deactivate_object(test);
+            instance_deactivate_object(test);
             break;
         case "armor":
             test = instance_create(0, 0, obj_armor);
