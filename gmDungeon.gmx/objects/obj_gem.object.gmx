@@ -28,7 +28,7 @@
             <string>///Parameters
 itemType = "gem";
 type = choose("White", "Blue", "Red", "Yellowish Brown", "Orange", "Yellow", "Black",
-    "Green", "Violet")
+    "Green", "Violet");
 switch(type)
 {
     case "White":
