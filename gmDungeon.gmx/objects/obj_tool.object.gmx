@@ -33,7 +33,7 @@ type = choose("Character accessory", "Pet accessory", "Container",
 switch(type)
 {
     case "Character accessory":
-        name = choose("blindfold", "lenses", "Eyes of the Overworld", "towel");
+        name = choose("blindfold", "lenses", "towel");
         description = name;
         break;
     
@@ -55,13 +55,13 @@ switch(type)
         break;
         
     case "Atonal instrument":
-        name = choose("bell", "Bell of Opening", "drum of earthquake", "leather drum", 
+        name = choose("bell", "drum of earthquake", "leather drum", 
             "magic whistle", "tin whistle");
         description = namel;
         break;
         
     case "Light source":
-        name = choose("brass lantern", "Candelabrum of Invocation", "magic lamp", 
+        name = choose("brass lantern", "magic lamp", 
             "oil lamp", "tallow candle", "wax candle");
         description = name;
         break;
@@ -72,8 +72,7 @@ switch(type)
         break;
         
     case "Unlocking tool":
-        name = choose("credit card", "The Platinum Yendorian Express Card", "lock pick", 
-            "skeleton key", "The Master Key of Thievery");
+        name = choose("credit card", "lock pick", "skeleton key");
         description = name;
         break;
         
@@ -85,8 +84,8 @@ switch(type)
     case "Miscellaneous":
         name = choose("bag of tricks", "can of grease", "crystal ball", 
             "The Orb of Detection", "The Orb of Fate", "expensive camera", "figurine", 
-            "horn of plenty", "magic marker", "mirror", "The Magic Mirror of Merlin", 
-            "stethoscope", "tin opener", "tinning kit");
+            "horn of plenty", "magic marker", "mirror", "stethoscope",
+            "tin opener", "tinning kit");
         description = name;
         break;
 }

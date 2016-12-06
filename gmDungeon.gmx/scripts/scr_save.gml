@@ -25,17 +25,14 @@ test = obj_inventory.inv[i];
 while(test!=-1)
 {
     ini_write_string("Player Inventory", string(i) + " name", test.name);
-    if (test.itemType == "armor")
+    if (test.itemType == "armor" || test.itemType == "gem" || test.itemType == "weapon"
+        || test.itemType == "tool")
     {
         ini_write_string("Player Inventory", string(i) + " type", test.type);
     }
-    if (test.itemType == "food")
+    else if (test.itemType == "food")
     {
         ini_write_real("Player Inventory", string(i) + " nutrition", test.nutrition);
-    }
-    if (test.itemType == "gem")
-    {
-        ini_write_string("Player Inventory", string(i) + " type", test.type);
     }
     ini_write_string("Player Inventory", string(i) + " itemType", test.itemType);
     ini_write_real("Player Inventory", string(i) + " amount", test.amount);
