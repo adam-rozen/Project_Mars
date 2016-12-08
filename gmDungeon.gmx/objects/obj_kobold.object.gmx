@@ -28,6 +28,7 @@
             <string>///Parameters
 name = "kobold";
 xp = 6;
+level = 0;
 maxHP = irandom_range(1, 4);
 hp = maxHP;
 attack = 4;

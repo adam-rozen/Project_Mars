@@ -32,6 +32,7 @@ hp = maxHP;
 attack = 8
 gold = 0;
 xp = 13;
+level = 1;
 moved = false;
 if(choose(0, 1, 2, 3, 4) == 1)
 {
