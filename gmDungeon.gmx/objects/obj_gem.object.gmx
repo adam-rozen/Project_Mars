@@ -25,57 +25,72 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Parameters
+            <string>///Parameters may need to edit
 itemType = "gem";
 type = choose("White", "Blue", "Red", "Yellowish Brown", "Orange", "Yellow", "Black",
-    "Green", "Violet")
+    "Green", "Violet", "Gray Stone", "Rock")
 switch(type)
 {
     case "White":
         name = choose("dilithium crystal", "diamond", "opal", "fluorite stone",
-            "worthless glass");
+            "worthless piece of white glass");
         description = name;
         break;
         
     case "Blue":
         name = choose("sapphire", "turquoise stone", "aquamarine srone",
-            "fluorite stone", "worthless glass");
+            "fluorite stone", "worthless piece of  blue glass");
         description = name;
         break;
         
     case "Red":
-        name = choose("ruby", "garnet stone", "jasper stone", "worthless glass");
+        name = choose("ruby", "garnet stone", "jasper stone", 
+            "worthless piece of red glass");
         description = name;
         break;
         
     case "Yellowish Brown":
-        name = choose("amber stone", "topaz stone", "worthless glass");
+        name = choose("amber stone", "topaz stone", 
+            "worthless piece of yellowish brown glass");
         description = name;
         break;
         
     case "Orange":
-        name = choose("jacinth stone", "agate stone", "worthless glass");
+        name = choose("jacinth stone", "agate stone", "worthless piece of orange glass");
         description = name;
         break;
         
     case "Yellow":
-        name = choose("citrine stone", "chrysoberyl stone", "worthless glass");
+        name = choose("citrine stone", "chrysoberyl stone", 
+            "worthless piece of yellow glass");
         description = name;
         break;
         
     case "Black":
-        name = choose("black opal", "jet stone", "obsidian stone", "worthless glass");
+        name = choose("black opal", "jet stone", "obsidian stone", 
+            "worthless piece of black glass");
         description = name;
         break;
         
     case "Green":
         name = choose("emerald", "aquamarine stone", "jade stone", "fluorite stone",
-            "turquoise stone", "worthless glass");
+            "turquoise stone", "worthless piece of green glass");
         description = name;
         break;
     
     case "Violet":
-        name = choose("amethyst stone", "fluorite stone", "worthless glass");
+        name = choose("amethyst stone", "fluorite stone", 
+            "worthless piece of violet glass");
+        description = name;
+        break;
+        
+    case "Gray Stone":
+        name = choose("luck", "load", "touch", "flint ") + "stone";
+        description = name;
+        break;
+        
+    case "Rock":
+        name = "rock";
         description = name;
         break;
 }
