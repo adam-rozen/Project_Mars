@@ -27,8 +27,23 @@ if(!global.p_turn && !moved)
             else if (place_meeting(x + xMovespeed, y + yMovespeed, obj_player))
             {
                 target = instance_place(x + xMovespeed, y + yMovespeed, obj_player);
-                print("The " + name + " hits!");
-                target.hp -= irandom_range(1, attack);
+                if (target.ac >= 0)
+                {
+                    target = 10 + target.ac + level;
+                }
+                else
+                {
+                    target = 10 + irandom_range(target.ac, -1) + level;
+                }
+                if (irandom_range(1, 20) < target)
+                {
+                    print("The " + name + " hits!");
+                    target.hp -= irandom_range(1, attack);
+                }
+                else
+                {
+                    print("The " + name + " misses!");
+                }
                 moved = true;
                 global.move += 1;
             }

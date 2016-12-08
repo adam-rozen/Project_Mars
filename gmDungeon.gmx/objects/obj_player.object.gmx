@@ -31,6 +31,7 @@ turn = 0;
 level = 1;
 up = false;
 xp = 0;
+ac = 10;
 gold = 0;
 levelUpRequirement[1] = 20;
 for (i = 2; i &lt;= 9; i++)
