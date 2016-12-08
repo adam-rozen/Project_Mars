@@ -377,6 +377,10 @@ if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&am
     if (room_next(room) != -1)
     {
         global.toughness+=1;
+        if (room == 10)
+        {
+            room_goto(room_next(room));
+        }
         room_goto(room_next(room));
         print("You go down the stairs.");
         endPlayerTurn();
