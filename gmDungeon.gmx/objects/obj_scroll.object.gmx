@@ -34,83 +34,97 @@ name = choose("zelgo mer", "pratyavayah", "elbib yloh", "yum yum", "andova begar
     "lorem ipsum", "ashpd sodalg", "eiris sazun idisi", "vas corp bet mani", 
     "xixaxa xoxaxa xuxaxa", "prirutsenie", "tharr", "duam xnaht", "hackem muche",
     "garven deh", "fnord", "mapiro mahama diromat", "phol ende wodan", 
-    "strc prst skrz krk") + " scroll";
+    "strc prst skrz krk", "unlabeled", "stamped") + " scroll";
 itemType = "scroll";
-description = "scroll of " + choose("identify", "light", "blank paper", "enchant weapon",
-    "enchant armor", "remove curse", "confuse monster", "destroy armor", "fire",
-    "food detection", "gold detection", "magic mapping", "scare monster", "teleportation",
-    "amnesia", "create monster", "earth", "taming", "charging", "genocide",
-    "punishment", "stinking cloud"); //mail?
-price = 0;
-switch (description)
+if (name == "unlabeled scroll")
 {
-    case "scroll of identify":
-        price = 20;
-        break;
-    case "scroll of light":
-        price = 50;
-        break;
-    case "scroll of blank paper":
-        price = 60;
-        break;
-    case "scroll of enchant weapon":
-        price = 60;
-        break;
-    case "scroll of enchant armor":
-        price = 80;
-        break;
-    case "scroll of remove curse":
-        price = 80;
-        break;
-    case "scroll of confuse monster":
-        price = 100;
-        break;
-    case "scroll of destroy armor":
-        price = 100;
-        break;
-    case "scroll of fire":
-        price = 100;
-        break;
-    case "scroll of food detection":
-        price = 100;
-        break;
-    case "scroll of gold detection":
-        price = 100;
-        break;
-    case "scroll of magic mapping":
-        price = 100;
-        break;
-    case "scroll of scare monster":
-        price = 100;
-        break;
-    case "scroll of teleportation":
-        price = 100;
-        break;
-    case "scroll of anmesia":
-        price = 200;
-        break;
-    case "scroll of create monster":
-        price = 200;
-        break;
-    case "scroll of earth":
-        price = 200;
-        break;
-    case "scroll of taming":
-        price = 200;
-        break;
-    case "scroll of charging":
-        price = 300;
-        break;
-    case "scroll of genocide":
-        price = 300;
-        break;
-    case "scroll of punishment":
-        price = 300;
-        break;
-    case "scroll of stinking cloud":
-        price = 300;
-        break;
+    description = "scroll of blank paper";
+    price = 60;
 }
+    else if (name == "stamped scroll")
+        {
+            description = "scroll of mail";
+            price = 0;
+        }
+        
+        else
+        {
+            description = "scroll of " + choose("identify", "light", "enchant weapon",
+                "enchant armor", "remove curse", "confuse monster", "destroy armor", 
+                "fire", "food detection", "gold detection", "magic mapping", 
+                "scare monster", "teleportation", "amnesia", "create monster", "earth", 
+                "taming", "charging", "genocide", "punishment", "stinking cloud"); 
+            price = 0;
+            switch (description)
+            {
+                case "scroll of identify":
+                    price = 20;
+                    break;
+                case "scroll of light":
+                    price = 50;
+                    break;
+                case "scroll of blank paper":
+                    price = 60;
+                    break;
+                case "scroll of enchant weapon":
+                    price = 60;
+                    break;
+                case "scroll of enchant armor":
+                    price = 80;
+                    break;
+                case "scroll of remove curse":
+                    price = 80;
+                    break;
+                case "scroll of confuse monster":
+                    price = 100;
+                    break;
+                case "scroll of destroy armor":
+                    price = 100;
+                    break;
+                case "scroll of fire":
+                    price = 100;
+                    break;
+                case "scroll of food detection":
+                    price = 100;
+                    break;
+                case "scroll of gold detection":
+                    price = 100;
+                    break;
+                case "scroll of magic mapping":
+                    price = 100;
+                    break;
+                case "scroll of scare monster":
+                    price = 100;
+                    break;
+                case "scroll of teleportation":
+                    price = 100;
+                    break;
+                case "scroll of anmesia":
+                    price = 200;
+                    break;
+                case "scroll of create monster":
+                    price = 200;
+                    break;
+                case "scroll of earth":
+                    price = 200;
+                    break;
+                case "scroll of taming":
+                    price = 200;
+                    break;
+                case "scroll of charging":
+                    price = 300;
+                    break;
+                case "scroll of genocide":
+                    price = 300;
+                    break;
+                case "scroll of punishment":
+                    price = 300;
+                    break;
+                case "scroll of stinking cloud":
+                    price = 300;
+                    break;
+            }
+        }
 amount = 1;
 </string>
           </argument>

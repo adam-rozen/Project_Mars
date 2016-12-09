@@ -30,15 +30,37 @@ name = choose("ruby", "pink", "orange", "yellow", "emerald",
     "dark green", "cyan", "sky blue", "brilliant blue", "magenta",
     "purple-red", "puce", "milky", "swirly", "bubbly",
     "smoky", "cloudy", "effervescent", "black", "golden",
-    "brown", "fizzy", "dark", "white", "murky"
+    "brown", "fizzy", "dark", "white", "murky", "clear", "blessed clear", 
+    "cursed clear"
     ) + " potion";
 itemType = "potion";
-description = "potion of " + choose("water (uncursed)", "booze", "fruit juice",
-    "see invisible", "sickness", "confusion", "extra healing", "hallucination",
-    "healing", "holy water","unholy water", "restore ability", "sleeping", "blindness",
-    "gain energy","smoky", "cloudy", "effervescent", "black", "golden", "invisibility", 
-    "monster detection", "object detection", "enlightenment", "full healing", "levitation",
-    "polymorph", "speed", "acid", "oil", "gain ability", "gain level", "paralysis");
+if (name == "clear potion")
+    {
+        description = "potion of water";
+    }
+    
+    else if (name == "blessed clear potion")
+        {
+            description = "potion of holy water";
+        }
+        
+        else if (name == "cursed clear potion")
+            {
+                description = "potion of unholy water";
+            }
+            
+            else
+                {
+                    description = "potion of " + choose("water (uncursed)", "booze", 
+                        "fruit juice", "see invisible", "sickness", "confusion", 
+                        "extra healing", "hallucination", "healing", "holy water", 
+                        "unholy water", "restore ability", "sleeping", "blindness",
+                        "gain energy","smoky", "cloudy", "effervescent", "black", 
+                        "golden", "invisibility", "monster detection", "object detection",
+                        "enlightenment", "full healing", "levitation", "polymorph", 
+                        "speed", "acid", "oil", "gain ability", "gain level", 
+                        "paralysis");
+                }
 amount = 1;
 </string>
           </argument>
