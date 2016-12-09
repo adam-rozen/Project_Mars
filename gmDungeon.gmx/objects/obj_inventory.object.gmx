@@ -94,13 +94,18 @@ if (room_get_name(room) == "roomInv")
         b++;
         test = inv[b];
     }
+    //show_debug_message(string(b));
     for (i = 0; i &lt; b; i++)
     {
-        if (i &lt; 26)
+        if (b &lt; 26)
+        {
             draw_text(32, (32 * (i + 2)) + 32, chr(i + 97) + " " + inv[i].name);
-        else if (i &lt; 52)
+        }
+        else if (b &lt; 52)
+        {
             draw_text(32, (32 * (i + 2)) + 32, chr(i + 97) + " " + inv[i].name);
-    }
+        }
+   }
 }
 </string>
           </argument>

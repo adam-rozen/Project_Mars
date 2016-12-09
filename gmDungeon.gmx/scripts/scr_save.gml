@@ -25,8 +25,8 @@ test = obj_inventory.inv[i];
 while(test!=-1)
 {
     ini_write_string("Player Inventory", string(i) + " name", test.name);
-    if (test.itemType == "armor" || test.itemType == "gem" || test.itemType == "weapon"
-        || test.itemType == "tool")
+    if (test.itemType == "armor" || test.itemType == "gem"
+        || test.itemType == "weapon" || test.itemType == "tool")
     {
         ini_write_string("Player Inventory", string(i) + " type", test.type);
     }

@@ -53,13 +53,15 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             instance_deactivate_object(test);
             break;
         case "potion":
-            test = instance_create(0, 0, obj_potion);
+            test = instance_create(-300000, -3000000, obj_potion);
             test.itemType = itemType;
             test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
+            show_debug_message(test.name);
             addToInv(test);
-            instance_deactivate_object(test);
+            //instance_deactivate_object(test);
+            //show_debug_message(test.name);
             break;
         case "armor":
             test = instance_create(0, 0, obj_armor);

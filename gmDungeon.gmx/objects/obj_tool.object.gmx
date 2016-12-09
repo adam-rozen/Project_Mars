@@ -57,7 +57,7 @@ switch(type)
     case "Atonal instrument":
         name = choose("bell", "drum of earthquake", "leather drum", 
             "magic whistle", "tin whistle");
-        description = namel;
+        description = name;
         break;
         
     case "Light source":

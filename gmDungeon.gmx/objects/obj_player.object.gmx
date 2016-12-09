@@ -351,6 +351,7 @@ if (target!=noone)
     addToInv(target);
     print("You picked up " + target.name + ".");
     instance_deactivate_object(target);
+    show_debug_message(target.name);
 }
 </string>
           </argument>
