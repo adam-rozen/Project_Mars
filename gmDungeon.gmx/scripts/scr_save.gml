@@ -9,6 +9,7 @@ ini_write_real("Player Values", "hp", hp);
 ini_write_real("Player Values", "maxPW", maxPW);
 ini_write_real("Player Values", "pw", pw);
 ini_write_real("Player Values", "xp", xp);
+ini_write_real("Player Values", "ac", ac);
 ini_write_real("Player Values", "strength", strength);
 ini_write_real("Player Values", "charisma", charisma);
 ini_write_real("Player Values", "constitution", constitution);
@@ -52,6 +53,7 @@ for (a = 0; a <= instance_number(obj_enemy); a++)
     ini_write_real("Enemy Values", string(a) + " attack", ida.attack);
     ini_write_real("Enemy Values", string(a) + " maxHP", ida.maxHP);    
     ini_write_real("Enemy Values", string(a) + " xp", ida.xp);
+    ini_write_real("Enemy Values", string(a) + " level", ida.level);
 }
 ini_write_real("Dungeon Properties", "world_w", 31);
 ini_write_real("Dungeon Properties", "world_h", 31);
@@ -83,7 +85,7 @@ for (i = 0; i <= 31 + 1; i += .5)
         else if (place_meeting(_x, _y, obj_spellbook))
         {
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + " type", "spellbook");
-            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "itemType", instance_place(_x, _y, obj_spellbook).amount);
+            ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "itemType", instance_place(_x, _y, obj_spellbook).itemType);
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "description", instance_place(_x, _y, obj_spellbook).description);
             ini_write_string("Dungeon Properties", string(_x) + " " + string(_y) + "name", instance_place(_x, _y, obj_spellbook).name);
             ini_write_real("Dungeon Properties", string(_x) + " " + string(_y) + "amount", instance_place(_x, _y, obj_spellbook).amount);

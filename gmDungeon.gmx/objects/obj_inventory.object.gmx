@@ -97,9 +97,10 @@ if (room_get_name(room) == "roomInv")
     //show_debug_message(string(b));
     for (i = 0; i &lt; b; i++)
     {
+        show_debug_message(string(i));
         if (b &lt; 26)
         {
-            draw_text(32, (32 * (i + 2)) + 32, chr(i + 97) + " " + inv[i].name);
+            draw_text(32, (32 * (i + 2)) + 32, chr(i + 97) + " " + obj_inventory.inv[i].name);
         }
         else if (b &lt; 52)
         {
