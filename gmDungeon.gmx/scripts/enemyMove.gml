@@ -29,13 +29,13 @@ if(!global.p_turn && !moved)
                 target = instance_place(x + xMovespeed, y + yMovespeed, obj_player);
                 if (target.ac >= 0)
                 {
-                    target = 10 + target.ac + level;
+                    targetNum = 10 + target.ac + level;
                 }
                 else
                 {
-                    target = 10 + irandom_range(target.ac, -1) + level;
+                    targetNum = 10 + irandom_range(target.ac, -1) + level;
                 }
-                if (irandom_range(1, 20) < target)
+                if (irandom_range(1, 20) < targetNum)
                 {
                     print("The " + name + " hits!");
                     target.hp -= irandom_range(1, attack);
