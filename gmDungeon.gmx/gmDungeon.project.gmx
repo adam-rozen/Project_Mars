@@ -54,6 +54,7 @@
     <object>objects\dgen</object>
     <object>objects\obj_gold</object>
     <object>objects\obj_scroll</object>
+    <object>objects\obj_boulder</object>
     <object>objects\obj_spellbook</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
