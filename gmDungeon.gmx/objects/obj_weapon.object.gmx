@@ -36,145 +36,261 @@ switch(type)
     case "dagger":
         name = choose("orcish dagger", "dagger", "silver dagger", "athame", "elven dagger");
         description = name;
+        if (description == "silver dagger")
+        {
+            price = 40;
+        }
+        else
+        {
+            price = 4;
+        }
         break;
-        
     case "knife":
         name = choose("worm tooth", "knife", "stiletto", "scalpel", "crysknife");
         description = name;
+        switch (description)
+        {
+            case "worm tooth":
+                price = 2;
+                break;
+            case "crysknife":
+                price = 100;
+                break;
+            default:
+                price = 4;
+                break;
+        }
         break;
-    
     case "axe":
         name = choose("axe", "battle-axe");
         description = name;
+        if (description == "axe")
+        {
+            price = 8;
+        }
+        else
+        {
+            price = 40;
+        }
         break;
-        
     case "pick-axe":
-        name = choose("pick-axe", "dwarvish mattock");
+        name = "dwarvish mattock";
         description = name;
+        price = 50;
         break;
-        
     case "short sword":
         name = choose("orcish", "", "dwarvish", "elven") + " short sword";
         description = name;
+        price = 10;
         break;
-        
     case "broadsword":
         name = choose("broadsword", "runesword", "elven broadsword");
         description = name;
+        if (description == "runesword")
+        {
+            price = 300;
+        }
+        else
+        {
+            price = 10;
+        }
         break;
-        
     case "long sword":
         name = choose("long sword", "katana");
         description = name;
+        if (description == "long sword")
+        {
+            price = 15;
+        }
+        else
+        {
+            price = 80;
+        }
         break;
-        
     case "two-handed sword":
         name = choose("two-handed sword", "tsurugi");
         description = name;
+        if (description == "two-handed sword")
+        {
+            price = 50;
+        }
+        else
+        {
+            price = 500;
+        }
         break;
-        
     case "scimitar":
         name = "scimitar";
         description = name;
+        price = 15;
         break;
-        
     case "saber":
         name = "silver saber";
         decription = name;
+        price = 75;
         break;
-        
     case "club":
         name = choose("club", "aklys");
         description = name;
+        if (description == "club")
+        {
+            price = 3;
+        }
+        else
+        {
+            price = 4;
+        }
         break;
-        
     case "mace":
         name = "mace";
         description = name;
+        price = 5;
         break;
-        
     case "morning star":
         name = "morning star";
         description = name;
+        price = 10;
         break;
-        
     case "flail":
         name = choose("flail", "grappling hook");
         description = name;
+        if (description == "flail")
+        {
+            price = 4;
+        }
+        else
+        {
+            price = 50;
+        }
         break;
-        
     case "hammer":
         name = "war hammer";
         description = name;
+        price = 5;
         break;
-        
     case "quarterstaff":
         name = "quarterstaff";
         description = name;
+        price = 5;
         break;
-        
     case "polearm":
         name = choose("partisan", "fauchard", "glaive", "bec-de-corbin", "spetum",
             "lucern hammer", "guisarme", "ranseur", "voulge", "bill-guisarme", 
             "bardiche", "halberd");
         description = name;
+        switch ("description")
+        {
+            case "fauchard":
+            case "spetum":
+            case "guisarme":
+            case "voulge":
+                price = 5;
+                break;
+            case "glaive":
+            case "ranseur":
+                price = 6;
+                break;
+            case "lucern hammer":
+            case "bill-guisarme":
+            case "bardiche":
+                price = 7;
+                break;
+            case "bec-de-corbin":
+                price = 8;
+                break;
+            default:
+                price = 10;
+                break;
+        }
         break;
-        
     case "spear":
         name = choose("orcish spear", "spear", "silver spear", "elven spear",
             "dwarvish spear", "javelin");
         description = name;
+        if (description == "silver spear")
+        {
+            price = 40;
+        }
+        else
+        {
+            price = 3;
+        }
         break;
-        
     case "trident":
         name = "trident";
         description = name;
+        price = 5;
         break;
-        
     case "lance":
         name = "lance";
         description = name;
+        price = 10;
         break;
-        
     case "bow":
         name = choose("orcish bow", "orcish arrow", "bow", "arrow", "elven bow",
             "elven arrow", "yumi", "ya", "silver arrow");
         description = name;
+        switch (description)
+        {
+            case "orcish arrow":
+            case "arrow":
+            case "elven arrow":
+                price = 2;
+                break;
+            case "ya":
+                price = 4;
+                break;
+            case "silver arrow":
+                price = 5;
+                break;
+            default:
+                price = 60;
+                break;
+        }
         break;
-        
     case "sling":
-        name = choose("sling, flintstone");
+        name = "sling";
         description = name;
+        price = 20;
         break;
-        
     case "crossbow":
         name = choose("crossbow", "crossbow bolt");
         description = name;
+        if (description = "crossbow")
+        {
+            price = 40;
+        }
+        else
+        {
+            price = 2;
+        }
         break;
-    
     case "dart":
         name = "dart";
         description = name;
+        price = 2;
         break;
-        
     case "shuriken":
         name = "shuriken";
         description = name;
+        price = 5;
         break;
-        
     case "boomerang":
         name = "boomerang";
         description = name;
+        price = 20;
         break;
-        
     case "whip":
         name = choose("bullwhip", "rubber hose");
         description = name;
-        break;
-        
-    case "unicorn horn":
-        name = "unicorn horn";
-        description = name;
+        if (description == "bullwhip")
+        {
+            price = 4;
+        }
+        else
+        {
+            price = 3;
+        }
         break;
 }
 amount = 1
