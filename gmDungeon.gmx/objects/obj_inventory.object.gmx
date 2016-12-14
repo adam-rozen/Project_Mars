@@ -30,6 +30,7 @@ for(i = 0; i &lt; 52; i++)
 {
     inv[i] = -1;
 }
+
 </string>
           </argument>
         </arguments>
@@ -55,6 +56,7 @@ for(i = 0; i &lt; 52; i++)
             <string>///Close Inventory
 if (room_get_name(room) == "roomInv")
 {
+    ini_close();
     if (keyboard_check_released(ord("I")))
     {
         room_goto(global.rm);
@@ -85,17 +87,21 @@ if (room_get_name(room) == "roomInv")
             <string>///Draw
 if (room_get_name(room) == "roomInv")
 {
+    ini_open("inventory.dat");
     draw_text(32, 32, "Inventory");
     draw_text(32, 64, "$: " + string(obj_player.gold))
     b = 0;
-    test = inv[b];
-    while(test != -1)
+    //test = inv[b];
+    while(ini_key_exists("Player Inventory", string(b) + " name"))
     {
+        draw_text(32,(32 * (b + 2)) + 32, chr(i + 97) + " " + ini_read_string("Player Inventory", string(b) + " name", ""));
         b++;
-        test = inv[b];
+        //test = inv[b];
     }
+    ini_close();
+}
     //show_debug_message(string(b));
-    for (i = 0; i &lt; b; i++)
+    /**for (i = 0; i &lt; b; i++)
     {
         show_debug_message(string(i));
         if (b &lt; 26)

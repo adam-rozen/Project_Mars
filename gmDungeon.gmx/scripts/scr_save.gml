@@ -1,3 +1,7 @@
+if (file_exists("inventory.dat"))
+{
+    file_copy("inventory.dat", "save.dat");
+}
 ini_open("save.dat");
 ini_write_real("Player Values", "x", x);
 ini_write_real("Player Values", "y", y);
@@ -21,7 +25,7 @@ ini_write_real("Player Values", "level", level);
 ini_write_real("Player Values", "gold", gold);
 ini_write_real("Player Values", "playerNutrition", playerNutrition);
 ini_write_real("Player Values", "seed", random_get_seed());
-i = 0;
+/*i = 0;
 test = obj_inventory.inv[i];
 while(test!=-1)
 {
@@ -40,7 +44,7 @@ while(test!=-1)
     ini_write_string("Player Inventory", string(i) + " description", test.description);
     i++;
     test = obj_inventory.inv[i];
-} 
+}*/
 for (a = 0; a <= instance_number(obj_enemy); a++)
 {
     ida = instance_find(obj_enemy, a);

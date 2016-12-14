@@ -153,7 +153,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
         case "ring":
@@ -162,7 +164,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
         case "potion":
@@ -172,7 +176,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             show_debug_message(test.name);
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             //show_debug_message(test.name);
             break;
@@ -183,7 +189,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             test.type = ini_read_string("Player Inventory", string(i) + " type", "");
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
         case "gem":
@@ -193,7 +201,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             test.type = ini_read_string("Player Inventory", string(i) + " type", "");
+            ini_close();
             addToInv(test);
+            ini_open(save.dat);
             instance_deactivate_object(test);
             break;
         case "weapon":
@@ -203,7 +213,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             test.type = ini_read_string("Player Inventory", string(i) + " type", "");
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
         case "tool":
@@ -213,7 +225,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
             test.type = ini_read_string("Player Inventory", string(i) + " type", "");
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
         case "scroll":
@@ -222,7 +236,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
         case "spellbook":
@@ -231,7 +247,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
         case "wand":
@@ -240,7 +258,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
         case "foodRation":
@@ -250,7 +270,9 @@ while (ini_key_exists("Player Inventory", string(i) + " itemType"))
             test.name = ini_read_string("Player Inventory", string(i) + " name", "");
             test.description = ini_read_string("Player Inventory", string(i) + " description", "");
             test.amount = ini_read_real("Player Inventory", string(i) + " amount", 1);
+            ini_close();
             addToInv(test);
+            ini_open("save.dat");
             instance_deactivate_object(test);
             break;
     }
