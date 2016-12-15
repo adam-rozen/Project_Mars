@@ -30,7 +30,7 @@ itemType = "weapon";
 type = choose("dagger", "knife", "axe", "pick-axe", "short sword", "broadsword", 
     "long sword", "two-handed sword", "scimitar", "saber", "club", "mace", "morning star",
     "flail", "hammer", "quarterstaff", "polearm", "spear", "trident", "lance", "bow",
-    "sling", "crossbow", "dart", "shuriken", "boomerang", "whip", "unicorn horn");
+    "sling", "crossbow", "dart", "shuriken", "boomerang", "whip");
 switch(type)
 {
     case "dagger":
@@ -79,7 +79,7 @@ switch(type)
         price = 50;
         break;
     case "short sword":
-        name = choose("orcish", "", "dwarvish", "elven") + " short sword";
+        name = choose("orcish ", "", "dwarvish ", "elven ") + "short sword";
         description = name;
         price = 10;
         break;
@@ -152,16 +152,9 @@ switch(type)
         price = 10;
         break;
     case "flail":
-        name = choose("flail", "grappling hook");
+        name = "flail";
         description = name;
-        if (description == "flail")
-        {
-            price = 4;
-        }
-        else
-        {
-            price = 50;
-        }
+        price = 4;
         break;
     case "hammer":
         name = "war hammer";
@@ -178,7 +171,7 @@ switch(type)
             "lucern hammer", "guisarme", "ranseur", "voulge", "bill-guisarme", 
             "bardiche", "halberd");
         description = name;
-        switch ("description")
+        switch (description)
         {
             case "fauchard":
             case "spetum":
@@ -293,7 +286,7 @@ switch(type)
         }
         break;
 }
-amount = 1
+amount = 1;
 </string>
           </argument>
         </arguments>
