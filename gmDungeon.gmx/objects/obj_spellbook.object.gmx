@@ -55,122 +55,56 @@ description = "spellbook of " + choose(
 switch (description)
 {
     case "spellbook of force bolt":
-        price = 100;
-        break;
-    case "spellbook of drain life":
-        price = 200;
-        break;
-    case "spellbook of magic missile":
-        price = 200;
-        break;
-    case "spellbook of cone of cold":
-        price = 400;
-        break;
-    case "spellbook of fireball":
-        price = 400;
-        break;
-    case "spellbook of finger of death":
-        price = 700;
-        break;
     case "spellbook of protection":
-        price = 100;
-        break;
-    case "spellbook of create monster":
-        price = 200;
-        break;
-    case "spellbook of remove curse":
-        price = 300;
-        break;
-    case "spellbook of create familiar":
-        price = 600;
-        break;
-    case "spellbook of turn undead":
-        price = 600;
-        break;
     case "spellbook of detect monsters":
-        price = 100;
-        break;
     case "spellbook of light":
-        price = 100;
-        break;
-    case "spellbook of detect food":
-        price = 200;
-        break;
-    case "spellbook of clairvoyance":
-        price = 300;
-        break;
-    case "spellbook of detect unseen":
-        price = 300;
-        break;
-    case "spellbook of identify":
-        price = 300;
-        break;
-    case "spellbook of detect treasure":
-        price = 400;
-        break;
-    case "spellbook of magic mapping":
-        price = 500;
-        break;
     case "spellbook of sleep":
-        price = 100;
-        break;
-    case "spellbook of confusion":
-        price = 200;
-        break;
-    case "spellbook of slow monster":
-        price = 200;
-        break;
-    case "spellbook of cause fear":
-        price = 300;
-        break;
-    case "spellbook of charm monster":
-        price = 300;
-        break;
     case "spellbook of jumping":
-        price = 100;
-        break;
-    case "spellbook of haste self":
-        price = 300;
-        break;
-    case "spellbook of invisibility":
-        price = 400;
-        break;
-    case "spellbook of levitation":
-        price = 400;
-        break;
-    case "spellbook of teleport away":
-        price = 600;
-        break;
     case "spellbook of healing":
-        price = 100;
-        break;
-    case "spellbook of cure blindness":
-        price = 200;
-        break;
-    case "spellbook of cure sickness":
-        price = 300;
-        break;
-    case "spellbook of extra healing":
-        price = 300;
-        break;
-    case "spellbook of stone to flesh":
-        price = 300;
-        break;
-    case "spellbook of restore ability":
-        price = 400;
-        break;
     case "spellbook of knock":
         price = 100;
         break;
+    case "spellbook of drain life":
+    case "spellbook of magic missile":
+    case "spellbook of create monster":
+    case "spellbook of detect food":
+    case "spellbook of confuse monster":
+    case "spellbook of slow monster":
+    case "spellbook of cure blindness":
     case "spellbook of wizard lock":
         price = 200;
         break;
+    case "spellbook of remove curse":
+    case "spellbook of clairvoyance":
+    case "spellbook of detect unseen":
+    case "spellbook of identify":
+    case "spellbook of cause fear":
+    case "spellbook of charm monster":
+    case "spellbook of haste self":
+    case "spellbook of cure sickness":
+    case "spellbook of extra healing":
+    case "spellbook of stone to flesh":
+        price = 300;
+        break;
+    case "spellbook of cone of cold":
+    case "spellbook of fireball":
+    case "spellbook of detect treasure":
+    case "spellbook of invisibility":
+    case "spellbook of levitation":
+    case "spellbook of restore ability":
+        price = 400;
+        break;
+    case "spellbook of magic mapping":
     case "spellbook of dig":
         price = 500;
         break;
+    case "spellbook of create familiar":
+    case "spellbook of turn undead":
+    case "spellbook of teleport away":
     case "spellbook of polymorph":
         price = 600;
         break;
+    case "spellbook of finger of death":
     case "spellbook of cancellation":
         price = 700;
         break;

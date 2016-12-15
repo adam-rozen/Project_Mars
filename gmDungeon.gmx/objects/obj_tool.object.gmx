@@ -35,57 +35,59 @@ switch(type)
     case "Character accessory":
         name = choose("blindfold", "lenses", "towel");
         description = name;
+        switch(description)
+        {
+            case "blindfold":
+                price = 20;
+                break;
+            case "lenses":
+                price = 80;
+                break;
+            case "towel":
+                price = 50;
+                break;
+        }
         break;
-    
     case "Pet accessory":
         name = choose("leash", "saddle");
         description = name;
         break;
-       
     case "Container":
         name = choose("bag of holding", "chest", "ice box", "large box", "oilskin sack",
             "sack");
         description = name;
         break;
-    
     case "Tonal instrument":
         name = choose("bugle", "fire horn", "frost horn", "magic flute", "magic harp", 
             "tooled horn", "wooden flute", "wooden harp");
         description = name;
         break;
-        
     case "Atonal instrument":
         name = choose("bell", "drum of earthquake", "leather drum", 
             "magic whistle", "tin whistle");
         description = name;
         break;
-        
     case "Light source":
         name = choose("brass lantern", "magic lamp", 
             "oil lamp", "tallow candle", "wax candle");
         description = name;
         break;
-    
     case "Trap":
         name = choose("beartrap", "land mine");
         description = name;
         break;
-        
     case "Unlocking tool":
         name = choose("credit card", "lock pick", "skeleton key");
         description = name;
         break;
-        
     case "Weapon-tool":
         name = choose("grappling hook", "pick-axe", "unicorn horn");
         description = name;
         break;
-        
     case "Miscellaneous":
         name = choose("bag of tricks", "can of grease", "crystal ball", 
-            "The Orb of Detection", "The Orb of Fate", "expensive camera", "figurine", 
-            "horn of plenty", "magic marker", "mirror", "stethoscope",
-            "tin opener", "tinning kit");
+            "expensive camera", "figurine", "horn of plenty", "magic marker",
+            "mirror", "stethoscope", "tin opener", "tinning kit");
         description = name;
         break;
 }
