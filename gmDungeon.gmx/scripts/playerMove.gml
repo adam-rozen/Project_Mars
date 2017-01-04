@@ -9,20 +9,35 @@ if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
             }
             else
             {
-                target.hp -= irandom_range(1, attack);
-                if (target.hp > 0)
+                if (target.ac >= 0)
                 {
-                    print("You hit the " + target.name + "!");
+                    targetNum = 10 + target.ac + level;
                 }
                 else
                 {
-                    print("You kill the " + target.name + "!");
-                    xp += target.xp;
-                    if (xp > maxXP[level])
+                    targetNum = 10 + irandom_range(target.ac, -1) + level;
+                }
+                if (irandom_range(1, 20) < targetNum)
+                {
+                    target.hp -= irandom_range(1, attack);
+                    if (target.hp > 0)
                     {
-                        xp = maxXP[level];
+                        print("You hit the " + target.name + "!");
                     }
-                    levelUp();
+                    else
+                    {
+                        print("You kill the " + target.name + "!");
+                        xp += target.xp;
+                        if (xp > maxXP[level])
+                        {
+                            xp = maxXP[level];
+                        }
+                        levelUp();
+                    }
+                }
+                else
+                {
+                    print("You miss the " + target.name + ".");
                 }
             }
             endPlayerTurn();

@@ -31,6 +31,7 @@ xp = 6;
 level = 0;
 maxHP = irandom_range(1, 4);
 hp = maxHP;
+ac = 10;
 attack = 4;
 moved = false;
 gold = 0;
