@@ -51,27 +51,29 @@
     <font>fonts\fontArialSmall</font>
   </fonts>
   <objects name="objects">
+    <objects name="Item">
+      <object>objects\obj_amulet</object>
+      <object>objects\obj_foodRation</object>
+      <object>objects\obj_gem</object>
+      <object>objects\obj_ring</object>
+      <object>objects\obj_spellbook</object>
+      <object>objects\obj_tool</object>
+      <object>objects\obj_weapon</object>
+      <object>objects\obj_armor</object>
+      <object>objects\obj_gold</object>
+      <object>objects\obj_potion</object>
+      <object>objects\obj_scroll</object>
+      <object>objects\obj_wand</object>
+      <object>objects\obj_boulder</object>
+    </objects>
     <object>objects\dgen</object>
-    <object>objects\obj_gold</object>
-    <object>objects\obj_scroll</object>
-    <object>objects\obj_boulder</object>
-    <object>objects\obj_spellbook</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_player</object>
     <object>objects\obj_kobold</object>
-    <object>objects\obj_weapon</object>
-    <object>objects\obj_tool</object>
     <object>objects\obj_orc</object>
-    <object>objects\obj_armor</object>
-    <object>objects\obj_wand</object>
     <object>objects\obj_floor</object>
     <object>objects\obj_down</object>
     <object>objects\obj_up</object>
-    <object>objects\obj_foodRation</object>
-    <object>objects\obj_amulet</object>
-    <object>objects\obj_gem</object>
-    <object>objects\obj_ring</object>
-    <object>objects\obj_potion</object>
     <object>objects\obj_item</object>
     <object>objects\obj_entity</object>
     <object>objects\obj_stair</object>
