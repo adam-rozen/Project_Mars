@@ -51,44 +51,205 @@ switch(type)
     case "Pet accessory":
         name = choose("leash", "saddle");
         description = name;
+        switch (description)
+        {
+            case "leash":
+                price = 20;
+                break;
+            case "saddle":
+                price = 150;
+                break;
+        }
         break;
     case "Container":
         name = choose("bag of holding", "chest", "ice box", "large box", "oilskin sack",
             "sack");
         description = name;
+        switch (description)
+        {
+            case "bag of holding":
+                price = 100;
+                break;
+            case "chest":
+                price = 16;
+                break;
+            case "ice box":
+                price = 42;
+                break;
+            case "large box":
+                price = 8;
+                break;
+            case "oilskin sack":
+                price = 100;
+                break;
+            case "sack":
+                price = 2;
+                break;
+        }
         break;
     case "Tonal instrument":
         name = choose("bugle", "fire horn", "frost horn", "magic flute", "magic harp", 
             "tooled horn", "wooden flute", "wooden harp");
         description = name;
+        switch (description)
+        {
+            case "bugle":
+                price = 15;
+                break;
+            case "fire horn":
+                price = 50;
+                break;
+            case "frost horn":
+                price = 50;
+                break;
+            case "magic flute":
+                price = 36;
+                break;
+            case "magic harp":
+                price = 50;
+                break;
+            case "tooled horn":
+                price = 15;
+                break;
+            case "wooden flute":
+                price = 12;
+                break;
+            case "wooden harp":
+                price = 50;
+                break;
+        }
         break;
     case "Atonal instrument":
         name = choose("bell", "drum of earthquake", "leather drum", 
             "magic whistle", "tin whistle");
         description = name;
+        switch (description)
+        {
+            case "bell":
+                price = 50;
+                break;
+            case "drum of earthquake":
+                price = 25;
+                break;
+            case "leather drum":
+                price = 25;
+                break;
+            case "magic whistle":
+                price = 10;
+                break;
+            case "tin whistle":
+                price = 10;
+                break;
+        }
         break;
     case "Light source":
         name = choose("brass lantern", "magic lamp", 
             "oil lamp", "tallow candle", "wax candle");
         description = name;
+        switch (description)
+        {
+            case "brass lantern":
+                price = 20;
+                break;
+            case "magic lamp":
+                price = 50;
+                break;
+            case "oil lamp":
+                price = 10;
+                break;
+            case "tallow candle":
+                price = 10;
+                break;
+            case "wax candle":
+                price = 20;
+                break;
+        }
         break;
     case "Trap":
         name = choose("beartrap", "land mine");
         description = name;
+        switch (description)
+        {
+            case "beartrap":
+                price = 60;
+                break;
+            case "land mine":
+                price = 180;
+                break;
+        }
         break;
     case "Unlocking tool":
         name = choose("credit card", "lock pick", "skeleton key");
         description = name;
+        switch (description)
+        {
+            case "credit card":
+                price = 10;
+                break;
+            case "lock pick":
+                price = 20;
+                break;
+            case "skeleton key":
+                price = 10;
+        }
         break;
     case "Weapon-tool":
         name = choose("grappling hook", "pick-axe", "unicorn horn");
         description = name;
+        switch (description)
+        {
+            case "grappling hook":
+                price = 50;
+                break;
+            case "pick-axe":
+                price = 50;
+                break;
+            case "unicorn horn":
+                price = 100;
+                break;
+        }
         break;
     case "Miscellaneous":
         name = choose("bag of tricks", "can of grease", "crystal ball", 
             "expensive camera", "figurine", "horn of plenty", "magic marker",
             "mirror", "stethoscope", "tin opener", "tinning kit");
         description = name;
+        switch (description)
+        {
+            case "bag of tricks":
+                price = 100;
+                break;
+            case "can of grease":
+                price = 20;
+                break;
+            case "crystal ball":
+                price = 60;
+                break;
+            case "expensive camera":
+                price = 200;
+                break;
+            case "figurine":
+                price = 80;
+                break;
+            case "horn of plenty":
+                price = 50;
+                break;
+            case "magic marker":
+                price = 50;
+                break;
+            case "mirror":
+                price = 10;
+                break;
+            case "stethoscope":
+                price = 75;
+                break;
+            case "tin opener":
+                price = 30;
+                break;
+            case "tinning kit":
+                price = 30;
+                break;
+        }
         break;
 }
 amount = 1;
