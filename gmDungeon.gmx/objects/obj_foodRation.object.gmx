@@ -48,102 +48,135 @@ switch (name)
 {
     case "meatball":
         nutrition = 5;
+        price = 5;
         break;
     case "meat ring":
         nutrition = 5;
+        price = 5;
         break;
     case "meat stick":
         nutrition = 5;
+        price = 5;
         break;
     case "egg":
         nutrition = 80;
+        price = 9;
         break;
     case "tripe ration":
         nutrition = 200;
+        price = 15;
         break;
     case "huge chunk of meat":
         nutrition = 2000;
+        price = 105;
         break;
     case "kelp frond":
         nutrition = 30;
+        price = 6;
         break;
     case "eucalyptus leaf":
         nutrition = 30;
+        price = 6;
         break;
     case "clove of garlic":
         nutrition = 40;
+        price = 7;
         break;
     case "spring of wolfsbane":
         nutrition = 40;
+        price = 7;
         break;
     case "apple":
         nutrition = 50;
+        price = 7;
         break;
     case "carrot":
         nutrition = 50;
+        price = 7;
         break;
     case "pear":
         nutrition = 50;
+        price = 7;
         break;
     case "banana":
         nutrition = 80;
+        price = 9;
         break;
     case "orange":
         nutrition = 80;
+        price = 9;
         break;
     case "melon":
         nutrition = 100;
+        price = 10;
         break;
     case "slime mold":
         nutrition = 250
+        price = 17;
         break;
     case "fortune cookie":
         nutrition = 40;
+        price = 7;
         break;
     case "candy bar":
         nutrition = 100;
+        price = 10;
         break;
     case "cream pie":
         nutrition = 100;
+        price = 10;
         break;
     case "lump of royal jelly":
         nutrition = 200;
+        price = 15;
         break;
     case "pancake":
         nutrition = 200;
+        price = 15;
         break;
     case "C-ration":
         nutrition = 300;
+        price = 20;
         break;
     case "K-ration":
         nutrition = 400;
+        price = 25;
         break;
     case "cram ration":
         nutrition = 600;
+        price = 35;
         break;
     case "food ration":
         nutrition = 800;
+        price = 45;
         break;
     case "lembas wafer":
         nutrition = 800;
+        price = 45;
         break;
     case "homemade tin":
         nutrition = 50;
+        price = 5;
         break;
     case "tin of spinach, blessed":
         nutrition = 600;
+        price = 5;
         break;
     case "tin of spinach, uncursed":
         nutrition = random_range(401, 601);
+        price = 5;
         break;
     case "tin of spinach, cursed":
         nutrition = random_range(201, 601);
+        price = 5;
         break;
     case "lichen corpse":
         nutrition = 200;
+        price = 5;
         break;
     case "lizard corpse":
         nutrition = 40;
+        price = 5;
         break;
 }
 amount = 1;

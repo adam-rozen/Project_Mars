@@ -38,6 +38,31 @@ description = "ring of " + choose("adornment", "hunger", "protection",
     "see invisible", "shock resistance", "fire resistance", "free action",
     "levitation", "regeneration", "searching", "slow digestion", "teleportation",
     "conflict", "polymorph", "polymorph control", "teleport control");
+if (description == "ring of adornment" || "ring of hunger" || "ring of protection" ||
+    "ring of protection from shape changers" || "ring of stealth" || 
+    "ring of sustain ability" || "ring of warning")
+    {
+        price = 100;
+    }
+    else if (description == "ring of aggravate monster" || "ring of cold resistance" ||
+            "ring of gain strength" || "ring of increase accuracy" || 
+            "ring of increase damage" || "ring of inisibility" || 
+            "ring of poison resistance" || "ring of see invisible" ||
+            "ring of shock resistance")
+            {
+                price = 150;
+            }
+            else if (description == "ring of fire resistance" || "ring of free action" ||
+                    "ring of levitation" || "ring of regeneration" || "ring of searching" ||
+                    "ring of slow digestion" || "ring of teleportation")
+                    {
+                        price = 200;
+                    }
+                    else 
+                        {
+                            price = 300;
+                        }
+                        
 amount = 1;
 </string>
           </argument>

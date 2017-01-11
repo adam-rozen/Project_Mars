@@ -35,67 +35,217 @@ switch(type)
         name = choose("dilithium crystal", "diamond", "opal", "fluorite stone",
             "worthless piece of white glass");
         description = name;
+        switch (description)
+        {
+            case "dilithium crystal":
+                price = 4500;
+                break;
+            case "diamond":
+                price = 4000;
+                break;
+            case "opal":
+                price = 800;
+                break;
+            case "fluorite stone":
+                price = 400;
+                break;
+            case "worthless piece of white glass":
+                price = 0;
+                break;
+        }
         break;
         
     case "Blue":
         name = choose("sapphire", "turquoise stone", "aquamarine srone",
-            "fluorite stone", "worthless piece of  blue glass");
+            "fluorite stone", "worthless piece of blue glass");
         description = name;
+        switch (description)
+        {
+            case "sapphire":
+                price = 3000;
+                break;
+            case "turquoise stone":
+                price = 2000;
+                break;
+            case "aquamarine stone":
+                price = 1500;
+                break;
+            case "fluorite stone":
+                price = 400;
+                break;
+            case "worthless piece of blue glass":
+                price = 0;
+                break;
+        }
         break;
         
     case "Red":
         name = choose("ruby", "garnet stone", "jasper stone", 
             "worthless piece of red glass");
         description = name;
+        switch (description)
+        {
+            case "ruby":
+                price = 3500;
+                break;
+            case "garnet stone":
+                price = 700;
+                break;
+            case "jasper stone":
+                price = 500;
+                break;
+            case "worthless piece of red glass":
+                price = 0;
+                break;
+        }
         break;
         
     case "Yellowish Brown":
         name = choose("amber stone", "topaz stone", 
             "worthless piece of yellowish brown glass");
         description = name;
+        switch (description)
+        {
+            case "amber stone":
+                price = 1000;
+                break;
+            case "topaz stone":
+                price = 900;
+                break;
+            case "worthless piece of yellowish brown glass":
+                price = 0;
+                break;
+        }
         break;
         
     case "Orange":
         name = choose("jacinth stone", "agate stone", "worthless piece of orange glass");
         description = name;
+        switch (description)
+        {
+            case "jacinth stone":
+                price = 3250;
+                break;
+            case "agate stone":
+                price = 200;
+                break;
+            case "worthless piece of orange glass":
+                price = 0;
+                break;
+        }
         break;
         
     case "Yellow":
         name = choose("citrine stone", "chrysoberyl stone", 
             "worthless piece of yellow glass");
         description = name;
+        switch (description)
+        {
+            case "citrine stone":
+                price = 1500;
+                break;
+            case "chrysoberyl stone":
+                price = 700;
+                break;
+            case "worthless piece of yellow glass":
+                price = 0;
+                break;
+        }
         break;
         
     case "Black":
         name = choose("black opal", "jet stone", "obsidian stone", 
             "worthless piece of black glass");
         description = name;
+         switch (description)
+         {
+            case "black opal":
+                price = 2500;
+                break;
+            case "jet stone":
+                price = 850;
+                break;
+            case "obsidian stone":
+                price = 200;
+                break;
+            case "worthless piece of black glass":
+                price = 0;
+                break;
+         }
         break;
         
     case "Green":
         name = choose("emerald", "aquamarine stone", "jade stone", "fluorite stone",
             "turquoise stone", "worthless piece of green glass");
         description = name;
+        switch (description)
+        {
+            case "emerald":
+                price = 2500;
+                break;
+            case "aquamarine stone":
+                price = 1500;
+                break;
+            case "jade stone":
+                price = 300;
+                break;
+            case "fluorite stone":
+                price = 400;
+                break;
+            case "turquoise stone":
+                price = 2000;
+                break;
+            case "worthless piece of green glass":
+                price = 0;
+                break;
+        }
         break;
     
     case "Violet":
         name = choose("amethyst stone", "fluorite stone", 
             "worthless piece of violet glass");
         description = name;
+        switch (description)
+        {
+            case "amethyst stone":
+                price = 600;
+                break;
+            case "fluorite stone":
+                price = 400;
+                break;
+            case "worthless piece of violet glass":
+                price = 0;
+                break;
+        }
         break;
         
     case "Gray Stone":
         name = choose("luck", "load", "touch", "flint ") + "stone";
         description = name;
+        switch (description)
+        {
+            case "luckstone":
+                price = 60;
+                break;
+            case "loadstone":
+                price = 1;
+                break;
+            case "touchstone":
+                price = 45;
+                break;
+            case "flint stone":
+                price = 1;
+                break;
+        }
         break;
         
     case "Rock":
         name = "rock";
         description = name;
+        price = 0;
         break;
 }
 amount = 1;
-
 </string>
           </argument>
         </arguments>

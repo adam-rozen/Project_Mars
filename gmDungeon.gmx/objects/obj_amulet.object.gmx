@@ -63,6 +63,7 @@ description = "amulet of " + choose("change", "change","change","change","change
     "versus poison", "versus poison", "versus poison", "versus poison", "versus poison",
     "versus poison", "versus poison", "versus poison", "versus poison", "versus poison",
     "versus poison", "versus poison", "versus poison", "versus poison");
+price = 150;
 amount = 1;
 </string>
           </argument>
