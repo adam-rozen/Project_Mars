@@ -92,9 +92,9 @@ if (room_get_name(room) == "roomInv")
     draw_text(32, 64, "$: " + string(obj_player.gold))
     b = 0;
     //test = inv[b];
-    while(ini_key_exists("Player Inventory", string(b) + " name"))
+    while(ini_key_exists(base64_encode("Player Inventory"), base64_encode(string(b) + " name")))
     {
-        draw_text(32,(32 * (b + 2)) + 32, chr(i + 97) + " " + ini_read_string("Player Inventory", string(b) + " name", ""));
+        draw_text(32,(32 * (b + 2)) + 32, chr(i + 97) + " " + base64_decode(ini_read_string(base64_encode("Player Inventory"), base64_encode(string(b) + " name"), "")));
         b++;
         //test = inv[b];
     }
