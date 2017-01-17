@@ -133,7 +133,8 @@ switch(type)
             else if (name == "cloak of invisibility")
                 {
                     description = choose("tattered cape", "ornamental cope", "opera cloak",
-                        "piece of cloth");   
+                        "piece of cloth");
+                    price = 60;
                 }
                 
                 else if (name == "cloak of magic resistance")

@@ -37,29 +37,69 @@ itemType = "potion";
 if (name == "clear potion")
     {
         description = "potion of water";
+        price = 0;
     }
     
     else if (name == "blessed clear potion")
         {
             description = "potion of holy water";
+            price = 100;
         }
         
         else if (name == "cursed clear potion")
             {
                 description = "potion of unholy water";
+                price = 100;
             }
             
             else
                 {
-                    description = "potion of " + choose("water (uncursed)", "booze", 
+                    description = "potion of " + choose("booze", 
                         "fruit juice", "see invisible", "sickness", "confusion", 
-                        "extra healing", "hallucination", "healing", "holy water", 
-                        "unholy water", "restore ability", "sleeping", "blindness",
+                        "extra healing", "hallucination", "healing", "restore ability", 
+                        "sleeping", "blindness",
                         "gain energy","smoky", "cloudy", "effervescent", "black", 
                         "golden", "invisibility", "monster detection", "object detection",
                         "enlightenment", "full healing", "levitation", "polymorph", 
                         "speed", "acid", "oil", "gain ability", "gain level", 
                         "paralysis");
+                        
+                    if (description == "potion of booze" || "potion of fruit juice"|| 
+                        "potion of see invisible" || "potion of sickness")
+                        {
+                            price = 50;
+                        }
+                        else if (description == "potion of confusion" || 
+                            "potion of extra healing" || "potion of hallucination" ||
+                            "potion of healing" || "potion of restore ability" ||
+                            "potion of sleeping")
+                            {
+                                price = 100;
+                            }
+                            else if (description == "potion of blindness" || 
+                                "potion of gain energy" || "potion of invisibility" ||
+                                "potion of monster detection" || 
+                                "potion of object detection")
+                                {
+                                    price = 150;
+                                }
+                                else if (description == "potion of enlightenment" ||
+                                    "potion of full healing" || "potion of levitation" ||
+                                    "potion of polymorph" || "potion of speed")
+                                    {
+                                        price = 200;
+                                    }
+                                    else if (description == "potion of acid" ||
+                                        "potion of oil")
+                                        {
+                                            price = 250;
+                                        }
+                                        else if (description == "potion of gain ability" ||
+                                            "potion of gain level" || "potion of paralysis")
+                                            {
+                                                price = 300;
+                                            }
+                                        
                 }
 amount = 1;
 </string>
