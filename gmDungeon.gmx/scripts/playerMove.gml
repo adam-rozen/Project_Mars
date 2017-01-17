@@ -19,7 +19,14 @@ if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
                 }
                 if (irandom_range(1, 20) < targetNum)
                 {
-                    target.hp -= irandom_range(1, attack);
+                    if (target.size == "tiny" || target.size == "small" || target.size = "medium")
+                    {
+                        target.hp -= irandom_range(1, damageSmall);
+                    }
+                    else
+                    {
+                        target.hp -= irandom_range(1, damageLarge);
+                    }
                     if (target.hp > 0)
                     {
                         print("You hit the " + target.name + "!");

@@ -32,7 +32,8 @@ level = 0;
 maxHP = irandom_range(1, 4);
 hp = maxHP;
 ac = 10;
-attack = 4;
+damage = 4;
+size = "small";
 moved = false;
 gold = 0;
 </string>

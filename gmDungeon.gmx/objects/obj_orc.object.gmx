@@ -29,11 +29,12 @@
 name = "orc";
 maxHP = irandom_range(1, 8);
 hp = maxHP;
-attack = 8;
+damage = 8;
 ac = 10;
 gold = 0;
 xp = 13;
 level = 1;
+size = "medium";
 moved = false;
 if(choose(0, 1, 2, 3, 4) == 1)
 {

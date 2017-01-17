@@ -27,266 +27,813 @@
             <kind>1</kind>
             <string>///Parameters (may need to edit)
 itemType = "weapon";
-type = choose("dagger", "knife", "axe", "pick-axe", "short sword", "broadsword", 
-    "long sword", "two-handed sword", "scimitar", "saber", "club", "mace", "morning star",
-    "flail", "hammer", "quarterstaff", "polearm", "spear", "trident", "lance", "bow",
-    "sling", "crossbow", "dart", "shuriken", "boomerang", "whip");
-switch(type)
+prob = irandom_range(1, 1000);
+if (prob &lt;= 12)
 {
-    case "dagger":
-        name = choose("orcish dagger", "dagger", "silver dagger", "athame", "elven dagger");
-        description = name;
-        if (description == "silver dagger")
-        {
-            price = 40;
-        }
-        else
-        {
-            price = 4;
-        }
-        break;
-    case "knife":
-        name = choose("worm tooth", "knife", "stiletto", "scalpel", "crysknife");
-        description = name;
-        switch (description)
-        {
-            case "worm tooth":
-                price = 2;
-                break;
-            case "crysknife":
-                price = 100;
-                break;
-            default:
-                price = 4;
-                break;
-        }
-        break;
-    case "axe":
-        name = choose("axe", "battle-axe");
-        description = name;
-        if (description == "axe")
-        {
-            price = 8;
-        }
-        else
-        {
-            price = 40;
-        }
-        break;
-    case "pick-axe":
-        name = "dwarvish mattock";
-        description = name;
-        price = 50;
-        break;
-    case "short sword":
-        name = choose("orcish ", "", "dwarvish ", "elven ") + "short sword";
-        description = name;
-        price = 10;
-        break;
-    case "broadsword":
-        name = choose("broadsword", "runesword", "elven broadsword");
-        description = name;
-        if (description == "runesword")
-        {
-            price = 300;
-        }
-        else
-        {
-            price = 10;
-        }
-        break;
-    case "long sword":
-        name = choose("long sword", "katana");
-        description = name;
-        if (description == "long sword")
-        {
-            price = 15;
-        }
-        else
-        {
-            price = 80;
-        }
-        break;
-    case "two-handed sword":
-        name = choose("two-handed sword", "tsurugi");
-        description = name;
-        if (description == "two-handed sword")
-        {
-            price = 50;
-        }
-        else
-        {
-            price = 500;
-        }
-        break;
-    case "scimitar":
-        name = "scimitar";
-        description = name;
-        price = 15;
-        break;
-    case "saber":
-        name = "silver saber";
-        decription = name;
-        price = 75;
-        break;
-    case "club":
-        name = choose("club", "aklys");
-        description = name;
-        if (description == "club")
-        {
-            price = 3;
-        }
-        else
-        {
-            price = 4;
-        }
-        break;
-    case "mace":
-        name = "mace";
-        description = name;
-        price = 5;
-        break;
-    case "morning star":
-        name = "morning star";
-        description = name;
-        price = 10;
-        break;
-    case "flail":
-        name = "flail";
-        description = name;
-        price = 4;
-        break;
-    case "hammer":
-        name = "war hammer";
-        description = name;
-        price = 5;
-        break;
-    case "quarterstaff":
-        name = "quarterstaff";
-        description = name;
-        price = 5;
-        break;
-    case "polearm":
-        name = choose("partisan", "fauchard", "glaive", "bec-de-corbin", "spetum",
-            "lucern hammer", "guisarme", "ranseur", "voulge", "bill-guisarme", 
-            "bardiche", "halberd");
-        description = name;
-        switch (description)
-        {
-            case "fauchard":
-            case "spetum":
-            case "guisarme":
-            case "voulge":
-                price = 5;
-                break;
-            case "glaive":
-            case "ranseur":
-                price = 6;
-                break;
-            case "lucern hammer":
-            case "bill-guisarme":
-            case "bardiche":
-                price = 7;
-                break;
-            case "bec-de-corbin":
-                price = 8;
-                break;
-            default:
-                price = 10;
-                break;
-        }
-        break;
-    case "spear":
-        name = choose("orcish spear", "spear", "silver spear", "elven spear",
-            "dwarvish spear", "javelin");
-        description = name;
-        if (description == "silver spear")
-        {
-            price = 40;
-        }
-        else
-        {
-            price = 3;
-        }
-        break;
-    case "trident":
-        name = "trident";
-        description = name;
-        price = 5;
-        break;
-    case "lance":
-        name = "lance";
-        description = name;
-        price = 10;
-        break;
-    case "bow":
-        name = choose("orcish bow", "orcish arrow", "bow", "arrow", "elven bow",
-            "elven arrow", "yumi", "ya", "silver arrow");
-        description = name;
-        switch (description)
-        {
-            case "orcish arrow":
-            case "arrow":
-            case "elven arrow":
-                price = 2;
-                break;
-            case "ya":
-                price = 4;
-                break;
-            case "silver arrow":
-                price = 5;
-                break;
-            default:
-                price = 60;
-                break;
-        }
-        break;
-    case "sling":
-        name = "sling";
-        description = name;
-        price = 20;
-        break;
-    case "crossbow":
-        name = choose("crossbow", "crossbow bolt");
-        description = name;
-        if (description = "crossbow")
-        {
-            price = 40;
-        }
-        else
-        {
-            price = 2;
-        }
-        break;
-    case "dart":
-        name = "dart";
-        description = name;
-        price = 2;
-        break;
-    case "shuriken":
-        name = "shuriken";
-        description = name;
-        price = 5;
-        break;
-    case "boomerang":
-        name = "boomerang";
-        description = name;
-        price = 20;
-        break;
-    case "whip":
-        name = choose("bullwhip", "rubber hose");
-        description = name;
-        if (description == "bullwhip")
-        {
-            price = 4;
-        }
-        else
-        {
-            price = 3;
-        }
-        break;
+    name = "orcish dagger";
+    appearance = "crude dagger";
+    damageSmall = 3;
+    damageLarge = 3;
+    toHitBonus = 2;
+    skill = "dagger";
+    hands = 1;
+    price = 4;
+    weight = 10;
+    material = "iron";
 }
-amount = 1;
+else if (prob &lt;= 42)
+{
+    name = "dagger";
+    appearance = "dagger";
+    damageSmall = 4;
+    damageLarge = 3;
+    toHitBonus = 2;
+    skill = "dagger";
+    hands = 1;
+    price = 4;
+    weight = 10;
+    material = "iron";
+}
+else if (prob &lt;= 45)
+{
+    name = "silver dagger";
+    appearance = "silver dagger";
+    damageSmall = 4;
+    damageLarge = 3;
+    toHitBonus = 2;
+    skill = "dagger";
+    hands = 1;
+    price = 40;
+    weight = 12;
+    material = "silver";
+}
+else if (prob &lt;= 55)
+{
+    name = "elven dagger";
+    appearance = "runed dagger";
+    damageSmall = 5;
+    damageLarge = 3;
+    toHitBonus = 2;
+    skill = "dagger";
+    hands = 1;
+    price = 4;
+    weight = 10;
+    material = "wood";
+}
+else if (prob &lt;= 75)
+{
+    name = "knife";
+    appearance = "knife";
+    damageSmall = 3;
+    damageLarge = 2;
+    toHitBonus = 0;
+    skill = "knife";
+    hands = 1;
+    price = 4;
+    weight = 20;
+    material = "iron";
+}
+else if (prob &lt;= 80)
+{
+    name = "stiletto";
+    appearance = "stiletto";
+    damageSmall = 3;
+    damageLarge = 2;
+    toHitBonus = 0;
+    skill = "knife";
+    hands = 1;
+    price = 4;
+    weight = 20;
+    material = "iron";
+}
+else if (prob &lt;= 120)
+{
+    name = "axe";
+    appearance = "axe";
+    damageSmall = 6;
+    damageLarge = 3;
+    toHitBonus = 0;
+    skill = "axe";
+    hands = 1;
+    price = 8;
+    weight = 60;
+    material = "iron";
+}
+else if (prob &lt;= 130)
+{
+    name = "battle-axe";
+    appearance = "double-headed axe";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "axe";
+    hands = 2;
+    price = 40;
+    weight = 120;
+    material = "iron";
+}
+else if (prob &lt;= 143)
+{
+    name = "dwarvish mattock";
+    appearance = "broad pick";
+    damageSmall = 12;
+    //damageLarge = do later;
+    toHitBonus = -1;
+    skill = "pick-axe";
+    hands = 2;
+    price = 50;
+    weight = 120;
+    material = "iron";
+}
+else if (prob &lt;= 146)
+{
+    name = "orcish short sword";
+    appearance = "crude short sword";
+    damageSmall = 5;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "short sword";
+    hands = 1;
+    price = 10;
+    weight = 30;
+    material = "iron";
+}
+else if (prob &lt;= 154)
+{
+    name = "short sword";
+    appearance = "short sword";
+    damageSmall = 6;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "short sword";
+    hands = 1;
+    price = 10;
+    weight = 30;
+    material = "iron";
+}
+else if (prob &lt;= 156)
+{
+    name = "dwarvish short sword";
+    appearance = "broad short sword";
+    damageSmall = 7;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "short sword";
+    hands = 1;
+    price = 10;
+    weight = 30;
+    material = "iron";
+}
+else if (prob &lt;= 158)
+{
+    name = "elven short sword";
+    appearance = "runed short sword";
+    damageSmall = 8;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "short sword";
+    hands = 1;
+    price = 10;
+    weight = 30;
+    material = "wood";
+}
+else if (prob &lt;= 166)
+{
+    name = "broadsword";
+    appearance = "broadsword";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "broadsword";
+    hands = 1;
+    price = 10;
+    weight = 70;
+    material = "iron";
+}
+else if (prob &lt;= 170)
+{
+    name = "elven broadsword";
+    appearance = "runed broadsword";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "broadsword";
+    hands = 1;
+    price = 10;
+    weight = 70;
+    material = "wood"
+}
+else if (prob &lt;= 220)
+{
+    name = "long sword";
+    appearance = "long sword";
+    damageSmall = 8;
+    damageLarge = 12;
+    toHitBonus = 0;
+    skill = "long sword";
+    hands = 1;
+    price = 15;
+    weight = 40;
+    material = "iron";
+}
+else if (prob &lt;= 224)
+{
+    name = "katana";
+    appearance = "samurai sword";
+    damageSmall = 10;
+    damageLarge = 12;
+    toHitBonus = 1;
+    skill = "long sword";
+    hands = 1;
+    price = 80;
+    weight = 40;
+    material = "iron";
+}
+else if (prob &lt;= 246)
+{
+    name = "two-handed sword";
+    appearance = "two-handed sword";
+    damageSmall = 12;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "two-handed sword";
+    hands = 2;
+    price = 50;
+    weight = 150;
+    material = "iron";
+}
+else if (prob &lt;= 261)
+{
+    name = "scimitar";
+    appearance = "curved sword";
+    damageSmall = 8;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "scimitar";
+    hands = 2;
+    price = 15;
+    weight = 40;
+    material = "iron";
+}
+else if (prob &lt;= 267)
+{
+    name = "silver saber";
+    appearance = "silver saber";
+    damageSmall = 8;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "saber"
+    hands = 1;
+    price = 75;
+    weight = 40;
+    material = "silver";
+}
+else if (prob &lt;= 279)
+{
+    name = "club";
+    appearance = "club";
+    damageSmall = 6;
+    damageLarge = 3;
+    toHitBonus = 0;
+    skill = "club";
+    hands = 1;
+    price = 3;
+    weight = 30;
+    material = "wood";
+}
+else if (prob &lt;= 287)
+{
+    name = "aklys";
+    appearance = "thonged club";
+    damageSmall = 6;
+    damageLarge = 3;
+    toHitBonus = 0;
+    skill = "club";
+    hands = 1;
+    price = 4;
+    weight = 15;
+    material = "iron";
+}
+else if (prob &lt;= 327)
+{
+    name = "mace";
+    appearance = "mace";
+    //damageSmall = do later;
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "mace";
+    hands = 1;
+    price = 5;
+    weight = 30;
+    material = "iron";
+}
+else if (prob &lt;= 339)
+{
+    name = "morning star";
+    appearance = "morning star";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "morning star";
+    hands = 1;
+    price = 10;
+    weight = 120;
+    material = "iron";
+}
+else if (prob &lt;= 379)
+{
+    name = "flail";
+    appearance = "flail";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "flail";
+    hands = 1;
+    price = 4;
+    weight = 15;
+    material = "iron";
+}
+else if (prob &lt;= 394)
+{
+    name = "war hammer";
+    appearance = "war hammer";
+    //damageSmall = do later;
+    damageLarge = 4;
+    toHitBonus = 0;
+    skill = "hammer";
+    hands = 1;
+    price = 5;
+    weight = 50;
+    material = "iron";
+}
+else if (prob &lt;= 405)
+{
+    name = "quarterstaff";
+    appearance = "quarterstaff";
+    damageSmall = 6;
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "quarterstaff";
+    hands = 2;
+    price = 5;
+    weight = 40;
+    material = "wood";
+}
+else if (prob &lt;= 413)
+{
+    name = "halberd";
+    appearance = "angled poleaxe";
+    damageSmall = 10;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 10;
+    weight = 150;
+    material = "iron";
+}
+else if (prob &lt;= 417)
+{
+    name = "bardiche";
+    appearance = "long poleaxe";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 7;
+    weight = 120;
+    material = "iron";
+}
+else if (prob &lt;= 421)
+{
+    name = "bill-guisarme";
+    appearance = "hooked polearm";
+    //damageSmall = do later;
+    damageLarge = 10;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 7;
+    weight = 120;
+    material = "iron";
+}
+else if (prob &lt;= 426)
+{
+    name = "ranseur";
+    appearance = "hilted polearm";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 6;
+    weight = 50;
+    material = "iron";
+}
+else if (prob &lt;= 430)
+{
+    name =  "voulge";
+    appearance = "pole cleaver";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 5;
+    weight = 125;
+    material = "iron";
+}
+else if (prob &lt;= 436)
+{
+    name = "guisarme";
+    appearance = "pruning hook";
+    //damageSmall = do later;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 5;
+    weight = 80;
+    material = "iron";
+}
+else if (prob &lt;= 441)
+{
+    name = "lucern hammer";
+    appearance = "pronged polearm";
+    //damageSmall = do later
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 7;
+    weight = 150;
+    material = "iron";
+}
+else if (prob &lt;= 446)
+{
+    name = "spetum";
+    appearance = "forked polearm";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 5;
+    weight = 50;
+    material = "iron";
+}
+else if (prob &lt;= 450)
+{
+    name = "bec-de-corbin";
+    appearance = "beaked polearm";
+    damageSmall = 8;
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 8;
+    weight = 100;
+    material = "iron";
+}
+else if (prob &lt;= 458)
+{
+    name = "glaive";
+    appearance = "single-edged polearm";
+    damageSmall = 6;
+    damageLarge = 10;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 6;
+    weight = 75;
+    material = "iron";
+}
+else if (prob &lt;= 464)
+{
+    name = "fauchard";
+    appearance = "pole sickle";
+    damageSmall = 6;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 5;
+    weight = 60;
+    material = "iron";
+}
+else if (prob &lt;= 469)
+{
+    name = "partisan";
+    appearance = "vulgar polearm";
+    damageSmall = 6;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "polearm";
+    hands = 2;
+    price = 10;
+    weight = 80;
+    material = "iron";
+}
+else if (prob &lt;= 482)
+{
+    name = "orcish spear";
+    appearance = "crude spear";
+    damageSmall = 5;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "spear";
+    hands = 1;
+    price = 3;
+    weight = 30;
+    material = "iron";
+}
+else if (prob &lt;= 532)
+{
+    name = "spear";
+    appearance = "spear";
+    damageSmall = 6;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "spear";
+    hands = 1;
+    price = 3;
+    weight = 30;
+    material = "iron";
+}
+else if (prob &lt;= 534)
+{
+    name = "silver spear";
+    appearance = "silver spear";
+    damageSmall = 6;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "spear";
+    hands = 1;
+    price = 40;
+    weight = 36;
+    material = "silver";
+}
+else if (prob &lt;= 544)
+{
+    name = "elven spear";
+    appearance = "runed spear";
+    damageSmall = 7;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "spear";
+    hands = 1;
+    price = 3;
+    weight = 30;
+    material = "wood";
+}
+else if (prob &lt;= 556)
+{
+    name = "dwarvish spear";
+    appearance = "stout spear";
+    damageSmall = 8;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "spear";
+    hands = 1;
+    price = 3;
+    weight = 35;
+    material = "iron";
+}
+else if (prob &lt;= 566)
+{
+    name = "javelin";
+    appearance = "throwing spear";
+    damageSmall = 6;
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "spear";
+    hands = 1;
+    price = 3;
+    weight = 20;
+    material = "iron";
+}
+else if (prob &lt;= 574)
+{
+    name = "trident";
+    appearance = "trident";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "trident";
+    hands = 1;
+    price = 5;
+    weight = 25;
+    material = "iron";
+}
+else if (prob &lt;= 578)
+{
+    name = "lance";
+    appearance = "lance";
+    damageSmall = 6;
+    damageLarge = 8;
+    toHitBonus = 0;
+    skill = "lance";
+    hands = 1;
+    price = 10;
+    weight = 180;
+    material = "iron";
+}
+else if (prob &lt;= 590)
+{
+    name = "orcish bow";
+    appearance = "crude bow";
+    damageSmall = 2;
+    damageLarge = 2;
+    toHitBonus = 0;
+    skill = "bow";
+    hands = 1;
+    price = 60;
+    weight = 30;
+    material = "wood";
+}
+else if (prob &lt;= 610)
+{
+    name = "orcish arrow";
+    appearance = "crude arrow";
+    damageSmall = 5;
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "bow";
+    hands = 1;
+    price = 2;
+    weight = 1;
+    material = "iron";
+}
+else if (prob &lt;= 634)
+{
+    name = "bow";
+    appearance = "bow";
+    damageSmall = 2;
+    damageLarge = 2;
+    toHitBonus = 0;
+    skill = "bow";
+    hands = 1;
+    price = 60;
+    weight = 30;
+    material = "wood";
+}
+else if (prob &lt;= 689)
+{
+    name = "arrow";
+    appearance = "arrow";
+    damageSmall = 6;
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "bow";
+    hands = 1;
+    price = 2;
+    weight = 1;
+    material = "iron";
+}
+else if (prob &lt;= 701)
+{
+    name = "elven bow";
+    appearance = "runed bow";
+    damageSmall = 2;
+    damageLarge = 2;
+    toHitBonus = 0;
+    skill = "bow";
+    hands = 1;
+    price = 60;
+    weight = 30;
+    material = "wood";
+}
+else if (prob &lt;= 721)
+{
+    name = "elven arrow";
+    appearance = "runed arrow";
+    damageSmall = 7;
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "bow";
+    hands = 1;
+    price = 2;
+    weight = 1;
+    material = "wood";
+}
+else if (prob &lt;= 736)
+{
+    name = "ya";
+    appearance = "bamboo arrow";
+    damageSmall = 7;
+    damageLarge = 7;
+    toHitBonus = 1;
+    skill = "bow";
+    hands = 1;
+    price = 4;
+    weight = 1;
+    material = "metal";
+}
+else if (prob &lt;= 748)
+{
+    name = "silver arrow";
+    appearance = "silver arrow";
+    damageSmall = 6;
+    damageLarge = 6;
+    toHitBonus = 0;
+    skill = "bow";
+    hands = 1;
+    price = 5;
+    weight = 1;
+    material = "silver";
+}
+else if (prob &lt;= 788)
+{
+    name = "sling";
+    appearance = "sling";
+    damageSmall = 2;
+    damageLarge = 2;
+    toHitBonus = 0;
+    skill = "sling";
+    hands = 1;
+    price = 20;
+    weight = 3;
+    material = "leather";
+}
+else if (prob &lt;= 833)
+{
+    name = "crossbow";
+    appearance = "crossbow";
+    damageSmall = 2;
+    damageLarge = 2;
+    toHitBonus = 0;
+    skill = "crossbow";
+    hands = 1;
+    price = 40;
+    weight = 50;
+    material = "wood";
+}
+else if (prob &lt;= 888)
+{
+    name = "crossbow bolt";
+    appearance = "crossbow bolt";
+    //damageSmall = do later;
+    //damageLarge = do later;
+    toHitBonus = 0;
+    skill = "crossbow";
+    hands = 1;
+    price = 2;
+    weight = 1;
+    material = "iron";
+}
+else if (prob &lt;= 948)
+{
+    name = "dart";
+    appearance = "dart";
+    damageSmall = 3;
+    damageLarge = 2;
+    toHitBonus = 0;
+    skill = "dart";
+    hands = 1;
+    price = 2;
+    weight = 1;
+    material = "iron";
+}
+else if (prob &lt;= 983)
+{
+    name = "shuriken";
+    appearance = "throwing star";
+    damageSmall = 8;
+    damageLarge = 6;
+    toHitBonus = 2;
+    skill = "shuriken";
+    hands = 1;
+    price = 5;
+    weight = 1;
+    material = "iron";
+}
+else if (prob &lt;= 998)
+{
+    name = "boomerang";
+    appearance = "boomerang";
+    damageSmall = 9;
+    damageLarge = 9;
+    toHitBonus = 0;
+    skill = "boomerang";
+    hands = 1;
+    price = 20;
+    weight = 5;
+    material = "wood";
+}
+else if (prob &lt;= 1000)
+{
+    name = "bullwhip";
+    appearance = "bullwhip";
+    damageSmall = 2;
+    damageLarge = 1;
+    toHitBonus = 0;
+    skill = "whip";
+    hands = 1;
+    price = 4;
+    weight = 20;
+    material = "leather";
+}
 </string>
           </argument>
         </arguments>

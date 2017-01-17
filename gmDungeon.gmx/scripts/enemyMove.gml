@@ -38,7 +38,7 @@ if(!global.p_turn && !moved)
                 if (irandom_range(1, 20) < targetNum)
                 {
                     print("The " + name + " hits!");
-                    target.hp -= irandom_range(1, attack);
+                    target.hp -= irandom_range(1, damage);
                 }
                 else
                 {
