@@ -60,7 +60,8 @@ switch (global.class)
     case "Wizard":
         maxPW = irandom_range(5, 7);
         maxHP = 10;
-        damage = 6;
+        damageSmall = 2;
+        damageLarge = 2;
         strength = 7;
         intelligence = 10;
         wisdom = 7;
@@ -71,7 +72,8 @@ switch (global.class)
     case "Fighter":
         maxPW = 1;
         maxHP = 14;
-        damage = 10;
+        damageSmall = 2;
+        damageLarge = 2;
         strength = 16;
         intelligence = 7;
         wisdom = 7;
@@ -82,7 +84,8 @@ switch (global.class)
     case "Rogue":
         maxPW = 1;
         maxHP = 10;
-        damage = 6;
+        damageSmall = 2;
+        damageLarge = 2;
         strength = 7;
         intelligence = 7;
         wisdom = 7;
@@ -227,7 +230,7 @@ if(global.move &gt;= instance_number(obj_enemy) &amp;&amp; !global.p_turn)
 }
 if (global.p_turn)
 {
-    if (keyboard_check_released(vk_numpad8) || keyboard_check_released(ord('8')))
+    if (keyboard_check_pressed(vk_numpad8) || keyboard_check_pressed(ord('8')))
     {
         xMovespeed = 0;
         yMovespeed = -32;
@@ -238,7 +241,7 @@ if (global.p_turn)
         else
             playerMove(xMovespeed, yMovespeed);
     }
-    if (keyboard_check_released(vk_numpad6) || keyboard_check_released(ord('6')))
+    if (keyboard_check_pressed(vk_numpad6) || keyboard_check_pressed(ord('6')))
     {
         xMovespeed = 32;
         yMovespeed = 0;
@@ -249,7 +252,7 @@ if (global.p_turn)
         else
             playerMove(xMovespeed, yMovespeed);
     }
-    if (keyboard_check_released(vk_numpad4) || keyboard_check_released(ord('4')))
+    if (keyboard_check_pressed(vk_numpad4) || keyboard_check_pressed(ord('4')))
     {
         xMovespeed = -32;
         yMovespeed = 0;
@@ -260,7 +263,7 @@ if (global.p_turn)
         else
             playerMove(xMovespeed, yMovespeed);
     }
-    if (keyboard_check_released(vk_numpad2) || keyboard_check_released(ord('2')) &amp;&amp; global.p_turn == true)
+    if (keyboard_check_pressed(vk_numpad2) || keyboard_check_pressed(ord('2')) &amp;&amp; global.p_turn == true)
     {
         xMovespeed = 0;
         yMovespeed = 32;
@@ -271,7 +274,7 @@ if (global.p_turn)
         else
             playerMove(xMovespeed, yMovespeed);
     }
-    if (keyboard_check_released(vk_numpad1) || keyboard_check_released(ord('1')))
+    if (keyboard_check_pressed(vk_numpad1) || keyboard_check_pressed(ord('1')))
     {
         xMovespeed = -32;
         yMovespeed = 32;
@@ -282,7 +285,7 @@ if (global.p_turn)
         else
             playerMove(xMovespeed, yMovespeed);
     }
-    if (keyboard_check_released(vk_numpad3) || keyboard_check_released(ord('3')))
+    if (keyboard_check_pressed(vk_numpad3) || keyboard_check_pressed(ord('3')))
     {
         xMovespeed = 32;
         yMovespeed = 32;
@@ -293,7 +296,7 @@ if (global.p_turn)
         else
             playerMove(xMovespeed, yMovespeed);
     }
-    if (keyboard_check_released(vk_numpad7) || keyboard_check_released(ord('7')))
+    if (keyboard_check_pressed(vk_numpad7) || keyboard_check_pressed(ord('7')))
     {
         xMovespeed = -32;
         yMovespeed = -32;
@@ -304,7 +307,7 @@ if (global.p_turn)
         else
             playerMove(xMovespeed, yMovespeed);
     }
-    if (keyboard_check_released(vk_numpad9) || keyboard_check_released(ord('9')))
+    if (keyboard_check_pressed(vk_numpad9) || keyboard_check_pressed(ord('9')))
     {
         xMovespeed = 32;
         yMovespeed = -32;
@@ -374,7 +377,7 @@ if (target!=noone)
           <argument>
             <kind>1</kind>
             <string>///Commands
-if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&amp; keyboard_check(vk_shift) &amp;&amp; global.p_turn)
+if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_pressed(190) &amp;&amp; keyboard_check(vk_shift) &amp;&amp; global.p_turn)
 {
     if (room_next(room) != -1)
     {
@@ -389,7 +392,7 @@ if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_released(190) &amp;&am
     }
     
 }
-if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp; keyboard_check(vk_shift) &amp;&amp; global.p_turn)
+if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_pressed(188) &amp;&amp; keyboard_check(vk_shift) &amp;&amp; global.p_turn)
 {
     if (room_previous(room) !=-1)
     {
@@ -400,7 +403,7 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_released(188) &amp;&amp;
         up = true;
     }
 }
-if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
+if (keyboard_check_pressed(ord("Z")) &amp;&amp; global.p_turn)
 {
     if (pw &gt;= 5)
     {
@@ -412,16 +415,16 @@ if (keyboard_check_released(ord("Z")) &amp;&amp; global.p_turn)
         print("You don't have enough mana");
     }
 }
-if (keyboard_check_released(ord("I")) &amp;&amp; global.p_turn)
+if (keyboard_check_pressed(ord("I")) &amp;&amp; global.p_turn)
 {
     global.rm = room;
     room_goto(roomInv);
 }
-if (keyboard_check_released(ord("V")) &amp;&amp; global.p_turn)
+if (keyboard_check_pressed(ord("V")) &amp;&amp; global.p_turn)
 {
     instance_create(x, y, obj_potion);
 }
-if (keyboard_check_released(ord("S")) &amp;&amp; global.p_turn)
+if (keyboard_check_pressed(ord("S")) &amp;&amp; global.p_turn)
 {
     scr_save();
 }
