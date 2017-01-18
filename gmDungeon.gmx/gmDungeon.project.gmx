@@ -84,6 +84,7 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_textbox</object>
     <object>objects\obj_statusBar</object>
+    <object>objects\obj_spell</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
@@ -98,6 +99,7 @@
     <room>rooms\room9</room>
     <room>rooms\room10</room>
     <room>rooms\roomInv</room>
+    <room>rooms\roomSpell</room>
     <room>rooms\room12</room>
   </rooms>
   <constants number="10">

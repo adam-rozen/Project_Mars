@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,12 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create Inventory
-for(i = 0; i &lt; 52; i++)
+            <string>///Create Spell Inventory
+for(i = 0; i &lt; 40; i++)
 {
-    inv[i] = -1;
+    spell[i] = -1;
 }
-
 </string>
           </argument>
         </arguments>
@@ -53,11 +52,10 @@ for(i = 0; i &lt; 52; i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Close Inventory
-if (room_get_name(room) == "roomInv")
+            <string>///Close spell access
+if (room_get_name(room) == "roomSpell")
 {
-    ini_close();
-    if (keyboard_check_released(ord("I")))
+    if (keyboard_check_released(ord("Z")))
     {
         room_goto(global.rm);
     }
@@ -84,19 +82,9 @@ if (room_get_name(room) == "roomInv")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw
-if (room_get_name(room) == "roomInv")
+            <string>if (room_get_name(room) == "roomSpell")
 {
-    ini_open("inventory.dat");
-    draw_text(32, 32, "Inventory");
-    draw_text(32, 64, "$: " + string(obj_player.gold))
-    b = 0;
-    while(ini_key_exists(base64_encode("Player Inventory"), base64_encode(string(b) + " name")))
-    {
-        draw_text(32,(32 * (b + 2)) + 32, chr(i + 97) + " " + base64_decode(ini_read_string(base64_encode("Player Inventory"), base64_encode(string(b) + " name"), "")));
-        b++;
-    }
-    ini_close();
+    
 }
 </string>
           </argument>
