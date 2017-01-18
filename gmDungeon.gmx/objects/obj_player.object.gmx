@@ -60,8 +60,9 @@ switch (global.class)
     case "Wizard":
         maxPW = irandom_range(5, 7);
         maxHP = 10;
-        damageSmall = 2;
-        damageLarge = 2;
+        damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;
         strength = 7;
         intelligence = 10;
         wisdom = 7;
@@ -72,8 +73,9 @@ switch (global.class)
     case "Fighter":
         maxPW = 1;
         maxHP = 14;
-        damageSmall = 2;
-        damageLarge = 2;
+        damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;
         strength = 16;
         intelligence = 7;
         wisdom = 7;
@@ -84,8 +86,9 @@ switch (global.class)
     case "Rogue":
         maxPW = 1;
         maxHP = 10;
-        damageSmall = 2;
-        damageLarge = 2;
+        damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;
         strength = 7;
         intelligence = 7;
         wisdom = 7;
