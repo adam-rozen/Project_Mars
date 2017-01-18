@@ -397,72 +397,50 @@ repeat(rnum)
         }
         repeat(choose(0, 0, 0, 1))
         {
-            test = choose(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-                10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-                20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
-                30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
-                40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
-                50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
-                60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
-                70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
-                80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
-                90, 91, 92, 93, 94, 95, 96, 97, 98, 99);
-            if (test == 0 || test == 1 || test == 2)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_ring);
-            }
-            else if (test == 3 || test == 4 || test == 5 || test == 6)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_wand);
-            }
-            else if (test == 99 || test == 98 || test == 97 || test == 7 || test == 8
-                || test == 9 || test == 10 || test == 11 || test == 12 || test == 13
-                || test == 14 || test == 15 || test == 16 || test == 17 || test == 18
-                || test == 19 || test == 20 || test == 21 || test == 22 || test == 23)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_food);
-            }
-            else if (test == 24 || test == 25 || test == 26 || test == 27
-                || test == 28 || test == 29 || test == 30 || test == 31
-                || test == 32 || test == 33 || test == 34 || test == 35
-                || test == 36 || test == 37 || test == 38 || test == 39)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
-            }
-            else if (test == 40)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_amulet);
-            }
-            else if (test == 41 || test == 42 || test == 43 || test == 44 || test == 45
-                || test == 46 || test == 47 || test == 48)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gem);
-            }
-            else if (test == 49 || test == 50 || test == 51 || test == 52
-                || test == 53 || test == 54 || test == 55 || test == 56 || test == 57
-                || test == 58 || test == 59 || test == 60 || test == 61 || test == 62
-                || test == 63 || test == 64)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_scroll);
-            }
-            else if (test == 65 || test == 66 || test == 67 || test == 68)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_spellbook);
-            }
-            else if (test == 69 || test == 70 || test == 71 || test == 72
-            || test == 73 || test == 74 || test == 75 || test || 76)
-            {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_tool);
-            }
-            else if (test == 77 || test == 78 || test == 79 || test == 80  || test == 81
-                || test == 82 || test == 83 || test == 84 || test == 85 || test == 86)
+            itemGen = irandom_range(1, 100);
+            if (itemGen &lt;= 10)
             {
                 instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_weapon);
             }
-            else if (test == 87 || test == 88 || test == 89 || test == 90 || test == 91
-                || test == 92 || test == 93 || test == 94 || test == 95 || test == 96)
+            else if (itemGen &lt;= 20)
             {
                 instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_armor);
+            }
+            else if (itemGen &lt;= 40)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_food);
+            }
+            else if (itemGen &lt;= 48)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_tool);
+            }
+            else if (itemGen &lt;= 64)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
+            }
+            else if (itemGen &lt;= 80)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_scroll);
+            }
+            else if (itemGen &lt;= 84)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_spellbook);
+            }
+            else if (itemGen &lt;= 88)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_wand);
+            }
+            else if (itemGen &lt;= 91)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_ring);
+            }
+            else if (itemGen &lt;= 92)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_amulet);
+            }
+            else if (itemGen &lt;= 100)
+            {
+                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gem);
             }
         }
         if (choose(0, 1, 2) == 1)

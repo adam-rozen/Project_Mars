@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>///Parameters (may need to edit)
 itemType = "weapon";
-prob = irandom_range(1, 1000);
-if (prob &lt;= 12)
+weaponGen = irandom_range(1, 1000);
+if (weaponGen &lt;= 12)
 {
     name = "orcish dagger";
     appearance = "crude dagger";
@@ -41,7 +41,7 @@ if (prob &lt;= 12)
     weight = 10;
     material = "iron";
 }
-else if (prob &lt;= 42)
+else if (weaponGen &lt;= 42)
 {
     name = "dagger";
     appearance = "dagger";
@@ -54,7 +54,7 @@ else if (prob &lt;= 42)
     weight = 10;
     material = "iron";
 }
-else if (prob &lt;= 45)
+else if (weaponGen &lt;= 45)
 {
     name = "silver dagger";
     appearance = "silver dagger";
@@ -67,7 +67,7 @@ else if (prob &lt;= 45)
     weight = 12;
     material = "silver";
 }
-else if (prob &lt;= 55)
+else if (weaponGen &lt;= 55)
 {
     name = "elven dagger";
     appearance = "runed dagger";
@@ -80,7 +80,7 @@ else if (prob &lt;= 55)
     weight = 10;
     material = "wood";
 }
-else if (prob &lt;= 75)
+else if (weaponGen &lt;= 75)
 {
     name = "knife";
     appearance = "knife";
@@ -93,7 +93,7 @@ else if (prob &lt;= 75)
     weight = 20;
     material = "iron";
 }
-else if (prob &lt;= 80)
+else if (weaponGen &lt;= 80)
 {
     name = "stiletto";
     appearance = "stiletto";
@@ -106,7 +106,7 @@ else if (prob &lt;= 80)
     weight = 20;
     material = "iron";
 }
-else if (prob &lt;= 120)
+else if (weaponGen &lt;= 120)
 {
     name = "axe";
     appearance = "axe";
@@ -119,7 +119,7 @@ else if (prob &lt;= 120)
     weight = 60;
     material = "iron";
 }
-else if (prob &lt;= 130)
+else if (weaponGen &lt;= 130)
 {
     name = "battle-axe";
     appearance = "double-headed axe";
@@ -135,7 +135,7 @@ else if (prob &lt;= 130)
     weight = 120;
     material = "iron";
 }
-else if (prob &lt;= 143)
+else if (weaponGen &lt;= 143)
 {
     name = "dwarvish mattock";
     appearance = "broad pick";
@@ -150,7 +150,7 @@ else if (prob &lt;= 143)
     weight = 120;
     material = "iron";
 }
-else if (prob &lt;= 146)
+else if (weaponGen &lt;= 146)
 {
     name = "orcish short sword";
     appearance = "crude short sword";
@@ -163,7 +163,7 @@ else if (prob &lt;= 146)
     weight = 30;
     material = "iron";
 }
-else if (prob &lt;= 154)
+else if (weaponGen &lt;= 154)
 {
     name = "short sword";
     appearance = "short sword";
@@ -176,7 +176,7 @@ else if (prob &lt;= 154)
     weight = 30;
     material = "iron";
 }
-else if (prob &lt;= 156)
+else if (weaponGen &lt;= 156)
 {
     name = "dwarvish short sword";
     appearance = "broad short sword";
@@ -189,7 +189,7 @@ else if (prob &lt;= 156)
     weight = 30;
     material = "iron";
 }
-else if (prob &lt;= 158)
+else if (weaponGen &lt;= 158)
 {
     name = "elven short sword";
     appearance = "runed short sword";
@@ -202,7 +202,7 @@ else if (prob &lt;= 158)
     weight = 30;
     material = "wood";
 }
-else if (prob &lt;= 166)
+else if (weaponGen &lt;= 166)
 {
     name = "broadsword";
     appearance = "broadsword";
@@ -217,7 +217,7 @@ else if (prob &lt;= 166)
     weight = 70;
     material = "iron";
 }
-else if (prob &lt;= 170)
+else if (weaponGen &lt;= 170)
 {
     name = "elven broadsword";
     appearance = "runed broadsword";
@@ -232,7 +232,7 @@ else if (prob &lt;= 170)
     weight = 70;
     material = "wood"
 }
-else if (prob &lt;= 220)
+else if (weaponGen &lt;= 220)
 {
     name = "long sword";
     appearance = "long sword";
@@ -245,7 +245,7 @@ else if (prob &lt;= 220)
     weight = 40;
     material = "iron";
 }
-else if (prob &lt;= 224)
+else if (weaponGen &lt;= 224)
 {
     name = "katana";
     appearance = "samurai sword";
@@ -258,7 +258,7 @@ else if (prob &lt;= 224)
     weight = 40;
     material = "iron";
 }
-else if (prob &lt;= 246)
+else if (weaponGen &lt;= 246)
 {
     name = "two-handed sword";
     appearance = "two-handed sword";
@@ -273,7 +273,7 @@ else if (prob &lt;= 246)
     weight = 150;
     material = "iron";
 }
-else if (prob &lt;= 261)
+else if (weaponGen &lt;= 261)
 {
     name = "scimitar";
     appearance = "curved sword";
@@ -286,7 +286,7 @@ else if (prob &lt;= 261)
     weight = 40;
     material = "iron";
 }
-else if (prob &lt;= 267)
+else if (weaponGen &lt;= 267)
 {
     name = "silver saber";
     appearance = "silver saber";
@@ -299,7 +299,7 @@ else if (prob &lt;= 267)
     weight = 40;
     material = "silver";
 }
-else if (prob &lt;= 279)
+else if (weaponGen &lt;= 279)
 {
     name = "club";
     appearance = "club";
@@ -312,7 +312,7 @@ else if (prob &lt;= 279)
     weight = 30;
     material = "wood";
 }
-else if (prob &lt;= 287)
+else if (weaponGen &lt;= 287)
 {
     name = "aklys";
     appearance = "thonged club";
@@ -325,7 +325,7 @@ else if (prob &lt;= 287)
     weight = 15;
     material = "iron";
 }
-else if (prob &lt;= 327)
+else if (weaponGen &lt;= 327)
 {
     name = "mace";
     appearance = "mace";
@@ -339,7 +339,7 @@ else if (prob &lt;= 327)
     weight = 30;
     material = "iron";
 }
-else if (prob &lt;= 339)
+else if (weaponGen &lt;= 339)
 {
     name = "morning star";
     appearance = "morning star";
@@ -354,7 +354,7 @@ else if (prob &lt;= 339)
     weight = 120;
     material = "iron";
 }
-else if (prob &lt;= 379)
+else if (weaponGen &lt;= 379)
 {
     name = "flail";
     appearance = "flail";
@@ -369,7 +369,7 @@ else if (prob &lt;= 379)
     weight = 15;
     material = "iron";
 }
-else if (prob &lt;= 394)
+else if (weaponGen &lt;= 394)
 {
     name = "war hammer";
     appearance = "war hammer";
@@ -383,7 +383,7 @@ else if (prob &lt;= 394)
     weight = 50;
     material = "iron";
 }
-else if (prob &lt;= 405)
+else if (weaponGen &lt;= 405)
 {
     name = "quarterstaff";
     appearance = "quarterstaff";
@@ -396,7 +396,7 @@ else if (prob &lt;= 405)
     weight = 40;
     material = "wood";
 }
-else if (prob &lt;= 413)
+else if (weaponGen &lt;= 413)
 {
     name = "halberd";
     appearance = "angled poleaxe";
@@ -410,7 +410,7 @@ else if (prob &lt;= 413)
     weight = 150;
     material = "iron";
 }
-else if (prob &lt;= 417)
+else if (weaponGen &lt;= 417)
 {
     name = "bardiche";
     appearance = "long poleaxe";
@@ -426,7 +426,7 @@ else if (prob &lt;= 417)
     weight = 120;
     material = "iron";
 }
-else if (prob &lt;= 421)
+else if (weaponGen &lt;= 421)
 {
     name = "bill-guisarme";
     appearance = "hooked polearm";
@@ -440,7 +440,7 @@ else if (prob &lt;= 421)
     weight = 120;
     material = "iron";
 }
-else if (prob &lt;= 426)
+else if (weaponGen &lt;= 426)
 {
     name = "ranseur";
     appearance = "hilted polearm";
@@ -455,7 +455,7 @@ else if (prob &lt;= 426)
     weight = 50;
     material = "iron";
 }
-else if (prob &lt;= 430)
+else if (weaponGen &lt;= 430)
 {
     name =  "voulge";
     appearance = "pole cleaver";
@@ -470,7 +470,7 @@ else if (prob &lt;= 430)
     weight = 125;
     material = "iron";
 }
-else if (prob &lt;= 436)
+else if (weaponGen &lt;= 436)
 {
     name = "guisarme";
     appearance = "pruning hook";
@@ -484,7 +484,7 @@ else if (prob &lt;= 436)
     weight = 80;
     material = "iron";
 }
-else if (prob &lt;= 441)
+else if (weaponGen &lt;= 441)
 {
     name = "lucern hammer";
     appearance = "pronged polearm";
@@ -498,7 +498,7 @@ else if (prob &lt;= 441)
     weight = 150;
     material = "iron";
 }
-else if (prob &lt;= 446)
+else if (weaponGen &lt;= 446)
 {
     name = "spetum";
     appearance = "forked polearm";
@@ -513,7 +513,7 @@ else if (prob &lt;= 446)
     weight = 50;
     material = "iron";
 }
-else if (prob &lt;= 450)
+else if (weaponGen &lt;= 450)
 {
     name = "bec-de-corbin";
     appearance = "beaked polearm";
@@ -526,7 +526,7 @@ else if (prob &lt;= 450)
     weight = 100;
     material = "iron";
 }
-else if (prob &lt;= 458)
+else if (weaponGen &lt;= 458)
 {
     name = "glaive";
     appearance = "single-edged polearm";
@@ -539,7 +539,7 @@ else if (prob &lt;= 458)
     weight = 75;
     material = "iron";
 }
-else if (prob &lt;= 464)
+else if (weaponGen &lt;= 464)
 {
     name = "fauchard";
     appearance = "pole sickle";
@@ -552,7 +552,7 @@ else if (prob &lt;= 464)
     weight = 60;
     material = "iron";
 }
-else if (prob &lt;= 469)
+else if (weaponGen &lt;= 469)
 {
     name = "partisan";
     appearance = "vulgar polearm";
@@ -566,7 +566,7 @@ else if (prob &lt;= 469)
     weight = 80;
     material = "iron";
 }
-else if (prob &lt;= 482)
+else if (weaponGen &lt;= 482)
 {
     name = "orcish spear";
     appearance = "crude spear";
@@ -579,7 +579,7 @@ else if (prob &lt;= 482)
     weight = 30;
     material = "iron";
 }
-else if (prob &lt;= 532)
+else if (weaponGen &lt;= 532)
 {
     name = "spear";
     appearance = "spear";
@@ -592,7 +592,7 @@ else if (prob &lt;= 532)
     weight = 30;
     material = "iron";
 }
-else if (prob &lt;= 534)
+else if (weaponGen &lt;= 534)
 {
     name = "silver spear";
     appearance = "silver spear";
@@ -605,7 +605,7 @@ else if (prob &lt;= 534)
     weight = 36;
     material = "silver";
 }
-else if (prob &lt;= 544)
+else if (weaponGen &lt;= 544)
 {
     name = "elven spear";
     appearance = "runed spear";
@@ -618,7 +618,7 @@ else if (prob &lt;= 544)
     weight = 30;
     material = "wood";
 }
-else if (prob &lt;= 556)
+else if (weaponGen &lt;= 556)
 {
     name = "dwarvish spear";
     appearance = "stout spear";
@@ -631,7 +631,7 @@ else if (prob &lt;= 556)
     weight = 35;
     material = "iron";
 }
-else if (prob &lt;= 566)
+else if (weaponGen &lt;= 566)
 {
     name = "javelin";
     appearance = "throwing spear";
@@ -644,7 +644,7 @@ else if (prob &lt;= 566)
     weight = 20;
     material = "iron";
 }
-else if (prob &lt;= 574)
+else if (weaponGen &lt;= 574)
 {
     name = "trident";
     appearance = "trident";
@@ -660,7 +660,7 @@ else if (prob &lt;= 574)
     weight = 25;
     material = "iron";
 }
-else if (prob &lt;= 578)
+else if (weaponGen &lt;= 578)
 {
     name = "lance";
     appearance = "lance";
@@ -673,7 +673,7 @@ else if (prob &lt;= 578)
     weight = 180;
     material = "iron";
 }
-else if (prob &lt;= 590)
+else if (weaponGen &lt;= 590)
 {
     name = "orcish bow";
     appearance = "crude bow";
@@ -686,7 +686,7 @@ else if (prob &lt;= 590)
     weight = 30;
     material = "wood";
 }
-else if (prob &lt;= 610)
+else if (weaponGen &lt;= 610)
 {
     name = "orcish arrow";
     appearance = "crude arrow";
@@ -699,7 +699,7 @@ else if (prob &lt;= 610)
     weight = 1;
     material = "iron";
 }
-else if (prob &lt;= 634)
+else if (weaponGen &lt;= 634)
 {
     name = "bow";
     appearance = "bow";
@@ -712,7 +712,7 @@ else if (prob &lt;= 634)
     weight = 30;
     material = "wood";
 }
-else if (prob &lt;= 689)
+else if (weaponGen &lt;= 689)
 {
     name = "arrow";
     appearance = "arrow";
@@ -725,7 +725,7 @@ else if (prob &lt;= 689)
     weight = 1;
     material = "iron";
 }
-else if (prob &lt;= 701)
+else if (weaponGen &lt;= 701)
 {
     name = "elven bow";
     appearance = "runed bow";
@@ -738,7 +738,7 @@ else if (prob &lt;= 701)
     weight = 30;
     material = "wood";
 }
-else if (prob &lt;= 721)
+else if (weaponGen &lt;= 721)
 {
     name = "elven arrow";
     appearance = "runed arrow";
@@ -751,7 +751,7 @@ else if (prob &lt;= 721)
     weight = 1;
     material = "wood";
 }
-else if (prob &lt;= 736)
+else if (weaponGen &lt;= 736)
 {
     name = "ya";
     appearance = "bamboo arrow";
@@ -764,7 +764,7 @@ else if (prob &lt;= 736)
     weight = 1;
     material = "metal";
 }
-else if (prob &lt;= 748)
+else if (weaponGen &lt;= 748)
 {
     name = "silver arrow";
     appearance = "silver arrow";
@@ -777,7 +777,7 @@ else if (prob &lt;= 748)
     weight = 1;
     material = "silver";
 }
-else if (prob &lt;= 788)
+else if (weaponGen &lt;= 788)
 {
     name = "sling";
     appearance = "sling";
@@ -790,7 +790,7 @@ else if (prob &lt;= 788)
     weight = 3;
     material = "leather";
 }
-else if (prob &lt;= 833)
+else if (weaponGen &lt;= 833)
 {
     name = "crossbow";
     appearance = "crossbow";
@@ -803,7 +803,7 @@ else if (prob &lt;= 833)
     weight = 50;
     material = "wood";
 }
-else if (prob &lt;= 888)
+else if (weaponGen &lt;= 888)
 {
     name = "crossbow bolt";
     appearance = "crossbow bolt";
@@ -818,7 +818,7 @@ else if (prob &lt;= 888)
     weight = 1;
     material = "iron";
 }
-else if (prob &lt;= 948)
+else if (weaponGen &lt;= 948)
 {
     name = "dart";
     appearance = "dart";
@@ -831,7 +831,7 @@ else if (prob &lt;= 948)
     weight = 1;
     material = "iron";
 }
-else if (prob &lt;= 983)
+else if (weaponGen &lt;= 983)
 {
     name = "shuriken";
     appearance = "throwing star";
@@ -844,7 +844,7 @@ else if (prob &lt;= 983)
     weight = 1;
     material = "iron";
 }
-else if (prob &lt;= 998)
+else if (weaponGen &lt;= 998)
 {
     name = "boomerang";
     appearance = "boomerang";
@@ -857,7 +857,7 @@ else if (prob &lt;= 998)
     weight = 5;
     material = "wood";
 }
-else if (prob &lt;= 1000)
+else if (weaponGen &lt;= 1000)
 {
     name = "bullwhip";
     appearance = "bullwhip";
