@@ -58,6 +58,1028 @@ draw_set_font(fontArial);
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Randomize Item Appearances
+//Cloaks
+for (i = 0; i &lt;= 3; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 3; i++)
+{
+    switch(j = irandom_range(0, 3))
+    {
+        case 0:
+            if (available[j])
+            {
+                cloakAppearance[i] = "tattered cape";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                cloakAppearance[i] = "ornamental cope";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                cloakAppearance[i] = "opera cloak";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                cloakAppearance[i] = "piece of cloth";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
+//Helms
+for (i = 0; i &lt;= 3; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 3; i++)
+{
+    switch(j = irandom_range(0, 3))
+    {
+        case 0:
+            if (available[j])
+            {
+                helmAppearance[i] = "plumed helmet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                helmAppearance[i] = "etched helmet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                helmAppearance[i] = "crested helmet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                helmAppearance[i] = "visored helmet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
+//Gloves
+for (i = 0; i &lt;= 3; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 3; i++)
+{
+    switch(j = irandom_range(0, 3))
+    {
+        case 0:
+            if (available[j])
+            {
+                glovesAppearance[i] = "old gloves";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                glovesAppearance[i] = "riding gloves";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                glovesAppearance[i] = "padded gloves";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                glovesAppearance[i] = "fencing gloves";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
+//Boots
+for (i = 0; i &lt;= 6; i++)
+{
+    available[0] = true;
+}
+for (i = 0; i &lt;= 6; i++)
+{
+    switch(j = irandom_range(0, 6))
+    {
+        case 0:
+            if (available[j])
+            {
+                bootsAppearance[i] = "buckled boots";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                bootsAppearance[i] = "combat boots";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                bootsAppearance[i] = "riding boots";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                bootsAppearance[i] = "jungle boots";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 4:
+            if (available[j])
+            {
+                bootsAppearance[i] = "riding boots";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 5:
+            if (available[j])
+            {
+                bootsAppearance[i] = "snow boots";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 6:
+            if (available[j])
+            {
+                bootsAppearance[i] = "mud boots";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break
+    }
+}
+//Potions
+for (i = 0; i &lt;= 24; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 24; i++)
+{
+    switch(j = irandom_range(0, 24))
+    {
+        case 0:
+            if (available[j])
+            {
+                potionAppearance[i] = "ruby potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                potionAppearance[i] = "dark green potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                potionAppearance[i] = "purple-red potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                potionAppearance[i] = "smoky potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 4:
+            if (available[j])
+            {
+                potionAppearance[i] = "brown potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 5:
+            if (available[j])
+            {
+                potionAppearance[i] = "pink potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 6:
+            if (available[j])
+            {
+                potionAppearance[i] = "cyan potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 7:
+            if (available[j])
+            {
+                potionAppearance[i] = "puce potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 8:
+            if (available[j])
+            {
+                potionAppearance[i] = "cloudy potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 9:
+            if (available[j])
+            {
+                potionAppearance[i] = "fizzy potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 10:
+            if (available[j])
+            {
+                potionAppearance[i] = "orange potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 11:
+            if (available[j])
+            {
+                potionAppearance[i] = "sky blue potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 12:
+            if (available[j])
+            {
+                potionAppearance[i] = "milky potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 13:
+            if (available[j])
+            {
+                potionAppearance[i] = "effervescent potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 14:
+            if (available[j])
+            {
+                potionAppearance[i] = "dark potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 15:
+            if (available[j])
+            {
+                potionAppearance[i] = "yellow potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 16:
+            if (available[j])
+            {
+                potionAppearance[i] = "brilliant blue potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 17:
+            if (available[j])
+            {
+                potionAppearance[i] = "swirly potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 18:
+            if (available[j])
+            {
+                potionAppearance[i] = "black potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 19:
+            if (available[j])
+            {
+                potionAppearance[i] = "white potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 20:
+            if (available[j])
+            {
+                potionAppearance[i] = "emerald potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 21:
+            if (available[j])
+            {
+                potionAppearance[i] = "magenta potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 22:
+            if (available[j])
+            {
+                potionAppearance[i] = "bubbly potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 23:
+            if (available[j])
+            {
+                potionAppearance[i] = "golden potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 24:
+            if (available[j])
+            {
+                potionAppearance[i] = "murky potion";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
+//Scrolls
+for (i = 0; i &lt;= 40; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 20; i++)
+{
+    switch(j = irandom_range(0, 40)
+    {
+        case 0:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled ZELGO MER";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled PRATYAVAYAH";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled ELBIB YLOH";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled YUM YUM";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 4:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled ANDOVA BEGARIN";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 5:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled VELOX NEB";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 6:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled READ ME";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 7:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled KO BATE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 8:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled GNIK SISI VLE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 9:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled GHOTI";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 10:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled XOR OTA";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 11:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled JUYED AWK YACC";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 12:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled DAIYEN FOOELS";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 13:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled VERR YED HORRE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 14:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled KERNOD WEL";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 15:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled KIRJE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 16:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled FOOBIE BLETCH";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 17:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled ETAOIN SHRDLU";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 18:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled ABRA KA DABRA";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 19:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled HAPAX LEGOMENON";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 20:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled ZLORFIK";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 21:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled NR 9";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 22:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled LEP GEX VEN ZEA";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 23:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled VENZAR BORGAVVE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 24:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled ELAM EBOW";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 25:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled VE FORBRYDERNE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 26:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled TEMOV";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 27:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled LOREM IPSUM";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 28:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled ASHPD SODALG";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 29:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled EIRIS SAZUN ISIDI";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 30:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled VAS CORP BET MANI";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 31:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled XIXAXA XOXAXA XUXAXA";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 32:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled PRIRUTSENIE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 33:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled THARR";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 34:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled DUAM XNAHT";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 35:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled GARVEN DEH";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 36:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled FNORD";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 37:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled MAPIRO MAHAMA DIROMAT";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 38:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled PHOL ENDE WODAN";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 39:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled STRC PRST SKRZ KRK";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 40:
+            if (available[j])
+            {
+                scrollAppearance[i] = "scroll labeled HACKEM MUCHE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Generate
 if (keyboard_check_pressed(ord("F")))
 {
