@@ -66,7 +66,8 @@ for (i = 0; i &lt;= 3; i++)
 }
 for (i = 0; i &lt;= 3; i++)
 {
-    switch(j = irandom_range(0, 3))
+    j = irandom_range(0, 3);
+    switch(j)
     {
         case 0:
             if (available[j])
@@ -121,7 +122,8 @@ for (i = 0; i &lt;= 3; i++)
 }
 for (i = 0; i &lt;= 3; i++)
 {
-    switch(j = irandom_range(0, 3))
+    j = irandom_range(0, 3);
+    switch(j)
     {
         case 0:
             if (available[j])
@@ -176,7 +178,8 @@ for (i = 0; i &lt;= 3; i++)
 }
 for (i = 0; i &lt;= 3; i++)
 {
-    switch(j = irandom_range(0, 3))
+    j = irandom_range(0, 3);
+    switch(j)
     {
         case 0:
             if (available[j])
@@ -227,11 +230,12 @@ for (i = 0; i &lt;= 3; i++)
 //Boots
 for (i = 0; i &lt;= 6; i++)
 {
-    available[0] = true;
+    available[i] = true;
 }
 for (i = 0; i &lt;= 6; i++)
 {
-    switch(j = irandom_range(0, 6))
+    j = irandom_range(0, 6);
+    switch(j)
     {
         case 0:
             if (available[j])
@@ -319,7 +323,8 @@ for (i = 0; i &lt;= 24; i++)
 }
 for (i = 0; i &lt;= 24; i++)
 {
-    switch(j = irandom_range(0, 24))
+    j = irandom_range(0, 24);
+    switch(j)
     {
         case 0:
             if (available[j])
@@ -605,7 +610,8 @@ for (i = 0; i &lt;= 40; i++)
 }
 for (i = 0; i &lt;= 20; i++)
 {
-    switch(j = irandom_range(0, 40)
+    j = irandom_range(0, 40);
+    switch(j)
     {
         case 0:
             if (available[j])
@@ -1051,6 +1057,458 @@ for (i = 0; i &lt;= 20; i++)
             if (available[j])
             {
                 scrollAppearance[i] = "scroll labeled HACKEM MUCHE";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
+//Spellbooks
+for (i = 0; i &lt;= 39; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 39; i++)
+{
+    j = irandom_range(0, 39);
+    switch(j)
+    {
+        case 0:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "parchment spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "stained spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "red spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "dark green spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 4:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "indigo spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 5:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "plaid spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 6:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "dusty spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 7:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "gilttering spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 8:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "vellum spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 9:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "cloth spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 10:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "orange spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 11:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "turquoise spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 12:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "magenta spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 13:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "light brown spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 14:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "bronze spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 15:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "shining spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 16:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "ragged spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 17:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "leather spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 18:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "yellow spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 19:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "cyan spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 20:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "purple spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 21:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "dark brown spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 22:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "copper spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 23:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "dull spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 24:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "dog eared spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 25:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "white spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 26:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "velvet spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 27:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "light blue spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 28:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "violet spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 29:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "gray spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 30:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "silver spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 31:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "thin spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 32:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "mottled spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 33:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "pink spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 34:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "light green spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 35:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "dark blue spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 36:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "tan spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 37:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "wrinkled spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 38:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "gold spellbook";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 39:
+            if (available[j])
+            {
+                spellbookAppearance[i] = "thick spellbook";
                 available[j] = false;
             }
             else
