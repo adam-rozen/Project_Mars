@@ -1518,6 +1518,746 @@ for (i = 0; i &lt;= 39; i++)
             break;
     }
 }
+//Rings
+for (i = 0; i &lt;= 27; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 27; i++)
+{
+    j = irandom_range(0, 27);
+    switch(j)
+    {
+        case 0:
+            if (available[j])
+            {
+                ringAppearance[i] = "pearl ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                ringAppearance[i] = "engagement ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                ringAppearance[i] = "silver ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                ringAppearance[i] = "clay ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 4:
+            if (available[j])
+            {
+                ringAppearance[i] = "jade ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 5:
+            if (available[j])
+            {
+                ringAppearance[i] = "diamond ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 6:
+            if (available[j])
+            {
+                ringAppearance[i] = "iron ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 7:
+            if (available[j])
+            {
+                ringAppearance[i] = "shiny ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 8:
+            if (available[j])
+            {
+                ringAppearance[i] = "gold ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 9:
+            if (available[j])
+            {
+                ringAppearance[i] = "coral ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 10:
+            if (available[j])
+            {
+                ringAppearance[i] = "agate ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 11:
+            if (available[j])
+            {
+                ringAppearance[i] = "ivory ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 12:
+            if (available[j])
+            {
+                ringAppearance[i] = "twisted ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 13:
+            if (available[j])
+            {
+                ringAppearance[i] = "bronze ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 14:
+            if (available[j])
+            {
+                ringAppearance[i] = "wooden ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 15:
+            if (available[j])
+            {
+                ringAppearance[i] = "black onyx ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 16:
+            if (available[j])
+            {
+                ringAppearance[i] = "topaz ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 17:
+            if (available[j])
+            {
+                ringAppearance[i] = "emerald ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 18:
+            if (available[j])
+            {
+                ringAppearance[i] = "steel ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 19:
+            if (available[j])
+            {
+                ringAppearance[i] = "brass ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 20:
+            if (available[j])
+            {
+                ringAppearance[i] = "granite ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 21:
+            if (available[j])
+            {
+                ringAppearance[i] = "moonstone ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 22:
+            if (available[j])
+            {
+                ringAppearance[i] = "sapphire ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 23:
+            if (available[j])
+            {
+                ringAppearance[i] = "wire ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 24:
+            if (available[j])
+            {
+                ringAppearance[i] = "copper ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 25:
+            if (available[j])
+            {
+                ringAppearance[i] = "opal ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 26:
+            if (available[j])
+            {
+                ringAppearance[i] = "tiger eye ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 27:
+            if (available[j])
+            {
+                ringAppearance[i] = "ruby ring";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
+//Amulets
+for (i = 0; i &lt;= 8; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 8; i++)
+{
+    j = irandom_range(0, 8);
+    switch(j)
+    {
+        case 0:
+            if (available[j])
+            {
+                amuletAppearance[i] = "circular amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                amuletAppearance[i] = "triangular amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                amuletAppearance[i] = "concave amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                amuletAppearance[i] = "spherical amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 4:
+            if (available[j])
+            {
+                amuletAppearance[i] = "pyramidal amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 5:
+            if (available[j])
+            {
+                amuletAppearance[i] = "hexagonal amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 6:
+            if (available[j])
+            {
+                amuletAppearance[i] = "oval amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 7:
+            if (available[j])
+            {
+                amuletAppearance[i] = "square amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 8:
+            if (available[j])
+            {
+                amuletAppearance[i] = "octagonal amulet";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
+//Wands
+for (i = 0; i &lt;= 26; i++)
+{
+    available[i] = true;
+}
+for (i = 0; i &lt;= 26; i++)
+{
+    j = irandom_range(0, 26);
+    switch(j)
+    {
+        case 0:
+            if (available[j])
+            {
+                wandAppearance[i] = "aluminum wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 1:
+            if (available[j])
+            {
+                wandAppearance[i] = "curved wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 2:
+            if (available[j])
+            {
+                wandAppearance[i] = "iridium wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 3:
+            if (available[j])
+            {
+                wandAppearance[i] = "marble wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 4:
+            if (available[j])
+            {
+                wandAppearance[i] = "short wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 5:
+            if (available[j])
+            {
+                wandAppearance[i] = "uranium wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 6:
+            if (available[j])
+            {
+                wandAppearance[i] = "balsa wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 7:
+            if (available[j])
+            {
+                wandAppearance[i] = "ebony wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 8:
+            if (available[j])
+            {
+                wandAppearance[i] = "iron wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 9:
+            if (available[j])
+            {
+                wandAppearance[i] = "oak wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 10:
+            if (available[j])
+            {
+                wandAppearance[i] = "silver wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 11:
+            if (available[j])
+            {
+                wandAppearance[i] = "zinc wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 12:
+            if (available[j])
+            {
+                wandAppearance[i] = "brass wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 13:
+            if (available[j])
+            {
+                wandAppearance[i] = "forked wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 14:
+            if (available[j])
+            {
+                wandAppearance[i] = "jeweled wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 15:
+            if (available[j])
+            {
+                wandAppearance[i] = "pine wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 16:
+            if (available[j])
+            {
+                wandAppearance[i] = "spiked wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 17:
+            if (available[j])
+            {
+                wandAppearance[i] = "copper wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 18:
+            if (available[j])
+            {
+                wandAppearance[i] = "glass wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 19:
+            if (available[j])
+            {
+                wandAppearance[i] = "long wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 20:
+            if (available[j])
+            {
+                wandAppearance[i] = "platinum wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 21:
+            if (available[j])
+            {
+                wandAppearance[i] = "steel wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 22:
+            if (available[j])
+            {
+                wandAppearance[i] = "crystal wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 23:
+            if (available[j])
+            {
+                wandAppearance[i] = "hexagonal wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 24:
+            if (available[j])
+            {
+                wandAppearance[i] = "maple wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 25:
+            if (available[j])
+            {
+                wandAppearance[i] = "runed wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+        case 26:
+            if (available[j])
+            {
+                wandAppearance[i] = "tin wand";
+                available[j] = false;
+            }
+            else
+            {
+                i--;
+            }
+            break;
+    }
+}
 </string>
           </argument>
         </arguments>
