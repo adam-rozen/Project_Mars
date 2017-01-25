@@ -321,25 +321,25 @@ repeat(rnum)
                 if (w[k, l] &lt;= cf_temp)
                     continue
                 if (k &gt; 0)
-                    if (w[k-1,l] &gt; cf_temp)
+                    if (w[k - 1, l] &gt; cf_temp)
                     {
                         rgc += 1
                         continue
                     }
                 if (k &lt; world_w)
-                if (w[k+1,l] &gt; cf_temp)
+                if (w[k + 1, l] &gt; cf_temp)
                 {
                     rgc += 1
                     continue
                 }
                 if (l &gt; 0)
-                    if (w[k,l-1] &gt; cf_temp)
+                    if (w[k, l - 1] &gt; cf_temp)
                     {
                         rgc += 1
                         continue
                     }
                 if (l &lt; world_h)
-                    if (w[k,l+1] &gt; cf_temp)
+                    if (w[k, l + 1] &gt; cf_temp)
                     {
                         rgc += 1
                         continue
@@ -360,12 +360,12 @@ repeat(rnum)
                 if (k &lt; rgx + rw)
                 {
                     w[k, l] |= cf_rt
-                    w[k+1, l] |= cf_lt
+                    w[k + 1, l] |= cf_lt
                 }
                 if (l &lt; rgy + rh)
                 {
                     w[k, l] |= cf_dn
-                    w[k, l+1] |= cf_up
+                    w[k, l + 1] |= cf_up
                 }
             }
     rdon += 1
@@ -395,52 +395,54 @@ repeat(rnum)
             }
             instance_create(_x, _y, obj_down);
         }
-        repeat(choose(0, 0, 0, 1))
+        repeat(choose(0, 1))
         {
             itemGen = irandom_range(1, 100);
+            genSpotX = wsiz2 * irandom_range(rgx, rgx + rw);
+            genSpotY = wsiz2 * irandom_range(rgy, rgy + rh);
             if (itemGen &lt;= 10)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_weapon);
+                instance_create(genSpotX, genSpotY, obj_weapon);
             }
             else if (itemGen &lt;= 20)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_armor);
+                instance_create(genSpotX, genSpotY, obj_armor);
             }
             else if (itemGen &lt;= 40)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_food);
+                instance_create(genSpotX, genSpotY, obj_food);
             }
             else if (itemGen &lt;= 48)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_tool);
+                instance_create(genSpotX, genSpotY, obj_tool);
             }
             else if (itemGen &lt;= 64)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_potion);
+                instance_create(genSpotX, genSpotY, obj_potion);
             }
             else if (itemGen &lt;= 80)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_scroll);
+                instance_create(genSpotX, genSpotY, obj_scroll);
             }
             else if (itemGen &lt;= 84)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_spellbook);
+                instance_create(genSpotX, genSpotY, obj_spellbook);
             }
             else if (itemGen &lt;= 88)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_wand);
+                instance_create(genSpotX, genSpotY, obj_wand);
             }
             else if (itemGen &lt;= 91)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_ring);
+                instance_create(genSpotX, genSpotY, obj_ring);
             }
             else if (itemGen &lt;= 92)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_amulet);
+                instance_create(genSpotX, genSpotY, obj_amulet);
             }
             else if (itemGen &lt;= 100)
             {
-                instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gem);
+                instance_create(genSpotX, genSpotY, obj_gem);
             }
         }
         if (choose(0, 1, 2) == 1)
