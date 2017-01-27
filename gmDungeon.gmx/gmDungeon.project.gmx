@@ -85,6 +85,16 @@
     <object>objects\obj_textbox</object>
     <object>objects\obj_statusBar</object>
     <object>objects\obj_spell</object>
+    <objects name="weapons">
+      <object>objects\obj_orcishDagger</object>
+      <object>objects\obj_dagger</object>
+      <object>objects\obj_silverDagger</object>
+      <object>objects\obj_athame</object>
+      <object>objects\obj_elvenDagger</object>
+      <object>objects\obj_wormTooth</object>
+      <object>objects\obj_knife</object>
+      <object>objects\obj_stiletto</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
