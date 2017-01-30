@@ -51,22 +51,47 @@
     <font>fonts\fontArialSmall</font>
   </fonts>
   <objects name="objects">
-    <objects name="Item">
-      <object>objects\obj_amulet</object>
-      <object>objects\obj_food</object>
-      <object>objects\obj_gem</object>
-      <object>objects\obj_ring</object>
-      <object>objects\obj_spellbook</object>
-      <object>objects\obj_tool</object>
+    <objects name="items">
       <object>objects\obj_weapon</object>
       <object>objects\obj_armor</object>
-      <object>objects\obj_gold</object>
+      <object>objects\obj_comestible</object>
+      <object>objects\obj_tool</object>
       <object>objects\obj_potion</object>
       <object>objects\obj_scroll</object>
+      <object>objects\obj_spellbook</object>
       <object>objects\obj_wand</object>
+      <object>objects\obj_ring</object>
+      <object>objects\obj_amulet</object>
+      <object>objects\obj_gem</object>
+      <object>objects\obj_gold</object>
       <object>objects\obj_boulder</object>
+      <objects name="weapons">
+        <object>objects\obj_orcishDagger</object>
+        <object>objects\obj_dagger</object>
+        <object>objects\obj_silverDagger</object>
+        <object>objects\obj_athame</object>
+        <object>objects\obj_elvenDagger</object>
+        <object>objects\obj_wormTooth</object>
+        <object>objects\obj_knife</object>
+        <object>objects\obj_stiletto</object>
+        <object>objects\obj_scalpel</object>
+        <object>objects\obj_crysknife</object>
+        <object>objects\obj_axe</object>
+        <object>objects\obj_battleAxe</object>
+        <object>objects\obj_dwarvishMattock</object>
+        <object>objects\obj_orcishShortSword</object>
+      </objects>
+      <objects name="armor">
+        <object>objects\obj_armorTemplate</object>
+      </objects>
+      <objects name="tools">
+        <object>objects\obj_toolTemplate</object>
+      </objects>
+      <objects name="potions">
+        <object>objects\obj_potionTemplate</object>
+      </objects>
     </objects>
-    <objects name="Monster">
+    <objects name="monsters">
       <object>objects\obj_kobold</object>
       <object>objects\obj_orc</object>
     </objects>
@@ -85,22 +110,6 @@
     <object>objects\obj_textbox</object>
     <object>objects\obj_statusBar</object>
     <object>objects\obj_spell</object>
-    <objects name="weapons">
-      <object>objects\obj_orcishDagger</object>
-      <object>objects\obj_dagger</object>
-      <object>objects\obj_silverDagger</object>
-      <object>objects\obj_athame</object>
-      <object>objects\obj_elvenDagger</object>
-      <object>objects\obj_wormTooth</object>
-      <object>objects\obj_knife</object>
-      <object>objects\obj_stiletto</object>
-      <object>objects\obj_scalpel</object>
-      <object>objects\obj_crysknife</object>
-      <object>objects\obj_axe</object>
-      <object>objects\obj_battleAxe</object>
-      <object>objects\obj_dwarvishMattock</object>
-      <object>objects\obj_orcishShortSword</object>
-    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
