@@ -94,6 +94,12 @@
       <object>objects\obj_wormTooth</object>
       <object>objects\obj_knife</object>
       <object>objects\obj_stiletto</object>
+      <object>objects\obj_scalpel</object>
+      <object>objects\obj_crysknife</object>
+      <object>objects\obj_axe</object>
+      <object>objects\obj_battleAxe</object>
+      <object>objects\obj_dwarvishMattock</object>
+      <object>objects\obj_orcishShortSword</object>
     </objects>
   </objects>
   <rooms name="rooms">

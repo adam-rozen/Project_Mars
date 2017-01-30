@@ -53,64 +53,19 @@ else if (weaponGen &lt;= 80)
 }
 else if (weaponGen &lt;= 120)
 {
-    name = "axe";
-    appearance = "axe";
-    damageSmall[0] = 6;
-    damageLarge[0] = 3;
-    toHitBonus = 0;
-    skill = "axe";
-    hands = 1;
-    price = 8;
-    weight = 60;
-    material = "iron";
-    itemType = "weapon";
+    instance_change(obj_axe, true);
 }
 else if (weaponGen &lt;= 130)
 {
-    name = "battle-axe";
-    appearance = "double-headed axe";
-    damageSmall[0] = 8;
-    damageSmall[1] = 4;
-    damageLarge[0] = 6;
-    damageLarge[1] = 4;
-    damageLarge[2] = 4;
-    toHitBonus = 0;
-    skill = "axe";
-    hands = 2;
-    price = 40;
-    weight = 120;
-    material = "iron";
-    itemType = "weapon";
+    instance_change(obj_battleAxe, true);
 }
 else if (weaponGen &lt;= 143)
 {
-    name = "dwarvish mattock";
-    appearance = "broad pick";
-    damageSmall[0] = 12;
-    damageLarge[0] = 8;
-    damageLarge[1] = 6;
-    damageLarge[2] = 6;
-    toHitBonus = -1;
-    skill = "pick-axe";
-    hands = 2;
-    price = 50;
-    weight = 120;
-    material = "iron";
-    itemType = "weapon";
+    instance_change(obj_dwarvishMattock, true);
 }
 else if (weaponGen &lt;= 146)
 {
-    name = "orcish short sword";
-    appearance = "crude short sword";
-    damageSmall[0] = 5;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "short sword";
-    hands = 1;
-    price = 10;
-    weight = 30;
-    material = "iron";
-    itemType = "weapon";
+    instance_change(obj_orcishShortSword, true);
 }
 else if (weaponGen &lt;= 154)
 {
