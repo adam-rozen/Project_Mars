@@ -78,7 +78,6 @@ else if (weaponGen &lt;= 154)
     hands = 1;
     price = 10;
     weight = 30;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 156)
@@ -92,7 +91,6 @@ else if (weaponGen &lt;= 156)
     hands = 1;
     price = 10;
     weight = 30;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 158)
@@ -106,7 +104,6 @@ else if (weaponGen &lt;= 158)
     hands = 1;
     price = 10;
     weight = 30;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 166)
@@ -122,7 +119,6 @@ else if (weaponGen &lt;= 166)
     hands = 1;
     price = 10;
     weight = 70;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 170)
@@ -138,7 +134,6 @@ else if (weaponGen &lt;= 170)
     hands = 1;
     price = 10;
     weight = 70;
-    material = "wood"
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 220)
@@ -152,7 +147,6 @@ else if (weaponGen &lt;= 220)
     hands = 1;
     price = 15;
     weight = 40;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 224)
@@ -166,7 +160,6 @@ else if (weaponGen &lt;= 224)
     hands = 1;
     price = 80;
     weight = 40;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 246)
@@ -182,7 +175,6 @@ else if (weaponGen &lt;= 246)
     hands = 2;
     price = 50;
     weight = 150;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 261)
@@ -196,7 +188,6 @@ else if (weaponGen &lt;= 261)
     hands = 2;
     price = 15;
     weight = 40;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 267)
@@ -210,7 +201,6 @@ else if (weaponGen &lt;= 267)
     hands = 1;
     price = 75;
     weight = 40;
-    material = "silver";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 279)
@@ -224,7 +214,6 @@ else if (weaponGen &lt;= 279)
     hands = 1;
     price = 3;
     weight = 30;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 287)
@@ -238,7 +227,6 @@ else if (weaponGen &lt;= 287)
     hands = 1;
     price = 4;
     weight = 15;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 327)
@@ -253,7 +241,6 @@ else if (weaponGen &lt;= 327)
     hands = 1;
     price = 5;
     weight = 30;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 339)
@@ -269,7 +256,6 @@ else if (weaponGen &lt;= 339)
     hands = 1;
     price = 10;
     weight = 120;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 379)
@@ -285,7 +271,6 @@ else if (weaponGen &lt;= 379)
     hands = 1;
     price = 4;
     weight = 15;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 394)
@@ -300,7 +285,6 @@ else if (weaponGen &lt;= 394)
     hands = 1;
     price = 5;
     weight = 50;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 405)
@@ -314,7 +298,6 @@ else if (weaponGen &lt;= 405)
     hands = 2;
     price = 5;
     weight = 40;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 413)
@@ -329,7 +312,6 @@ else if (weaponGen &lt;= 413)
     hands = 2;
     price = 10;
     weight = 150;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 417)
@@ -346,7 +328,6 @@ else if (weaponGen &lt;= 417)
     hands = 2;
     price = 7;
     weight = 120;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 421)
@@ -361,7 +342,6 @@ else if (weaponGen &lt;= 421)
     hands = 2;
     price = 7;
     weight = 120;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 426)
@@ -377,7 +357,6 @@ else if (weaponGen &lt;= 426)
     hands = 2;
     price = 6;
     weight = 50;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 430)
@@ -393,7 +372,6 @@ else if (weaponGen &lt;= 430)
     hands = 2;
     price = 5;
     weight = 125;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 436)
@@ -408,7 +386,6 @@ else if (weaponGen &lt;= 436)
     hands = 2;
     price = 5;
     weight = 80;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 441)
@@ -423,7 +400,6 @@ else if (weaponGen &lt;= 441)
     hands = 2;
     price = 7;
     weight = 150;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 446)
@@ -439,7 +415,6 @@ else if (weaponGen &lt;= 446)
     hands = 2;
     price = 5;
     weight = 50;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 450)
@@ -453,7 +428,6 @@ else if (weaponGen &lt;= 450)
     hands = 2;
     price = 8;
     weight = 100;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 458)
@@ -467,7 +441,6 @@ else if (weaponGen &lt;= 458)
     hands = 2;
     price = 6;
     weight = 75;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 464)
@@ -481,7 +454,6 @@ else if (weaponGen &lt;= 464)
     hands = 2;
     price = 5;
     weight = 60;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 469)
@@ -496,7 +468,6 @@ else if (weaponGen &lt;= 469)
     hands = 2;
     price = 10;
     weight = 80;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 482)
@@ -510,7 +481,6 @@ else if (weaponGen &lt;= 482)
     hands = 1;
     price = 3;
     weight = 30;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 532)
@@ -524,7 +494,6 @@ else if (weaponGen &lt;= 532)
     hands = 1;
     price = 3;
     weight = 30;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 534)
@@ -538,7 +507,6 @@ else if (weaponGen &lt;= 534)
     hands = 1;
     price = 40;
     weight = 36;
-    material = "silver";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 544)
@@ -552,7 +520,6 @@ else if (weaponGen &lt;= 544)
     hands = 1;
     price = 3;
     weight = 30;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 556)
@@ -566,7 +533,6 @@ else if (weaponGen &lt;= 556)
     hands = 1;
     price = 3;
     weight = 35;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 566)
@@ -580,7 +546,6 @@ else if (weaponGen &lt;= 566)
     hands = 1;
     price = 3;
     weight = 20;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 574)
@@ -597,7 +562,6 @@ else if (weaponGen &lt;= 574)
     hands = 1;
     price = 5;
     weight = 25;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 578)
@@ -611,7 +575,6 @@ else if (weaponGen &lt;= 578)
     hands = 1;
     price = 10;
     weight = 180;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 590)
@@ -625,7 +588,6 @@ else if (weaponGen &lt;= 590)
     hands = 1;
     price = 60;
     weight = 30;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 610)
@@ -639,7 +601,6 @@ else if (weaponGen &lt;= 610)
     hands = 1;
     price = 2;
     weight = 1;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 634)
@@ -653,7 +614,6 @@ else if (weaponGen &lt;= 634)
     hands = 1;
     price = 60;
     weight = 30;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 689)
@@ -667,7 +627,6 @@ else if (weaponGen &lt;= 689)
     hands = 1;
     price = 2;
     weight = 1;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 701)
@@ -681,7 +640,6 @@ else if (weaponGen &lt;= 701)
     hands = 1;
     price = 60;
     weight = 30;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 721)
@@ -695,7 +653,6 @@ else if (weaponGen &lt;= 721)
     hands = 1;
     price = 2;
     weight = 1;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 736)
@@ -709,7 +666,6 @@ else if (weaponGen &lt;= 736)
     hands = 1;
     price = 4;
     weight = 1;
-    material = "metal";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 748)
@@ -723,7 +679,6 @@ else if (weaponGen &lt;= 748)
     hands = 1;
     price = 5;
     weight = 1;
-    material = "silver";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 788)
@@ -737,7 +692,6 @@ else if (weaponGen &lt;= 788)
     hands = 1;
     price = 20;
     weight = 3;
-    material = "leather";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 833)
@@ -751,7 +705,6 @@ else if (weaponGen &lt;= 833)
     hands = 1;
     price = 40;
     weight = 50;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 888)
@@ -767,7 +720,6 @@ else if (weaponGen &lt;= 888)
     hands = 1;
     price = 2;
     weight = 1;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 948)
@@ -781,7 +733,6 @@ else if (weaponGen &lt;= 948)
     hands = 1;
     price = 2;
     weight = 1;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 983)
@@ -795,7 +746,6 @@ else if (weaponGen &lt;= 983)
     hands = 1;
     price = 5;
     weight = 1;
-    material = "iron";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 998)
@@ -809,7 +759,6 @@ else if (weaponGen &lt;= 998)
     hands = 1;
     price = 20;
     weight = 5;
-    material = "wood";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 1000)
@@ -823,7 +772,6 @@ else if (weaponGen &lt;= 1000)
     hands = 1;
     price = 4;
     weight = 20;
-    material = "leather";
     itemType = "weapon";
 }
 </string>

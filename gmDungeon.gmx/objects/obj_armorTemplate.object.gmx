@@ -32,10 +32,9 @@
 //slot = put armor's slot as string here (ex. "body armor";)
 //ac = put armor's AC as int here
 //mc = put armor's MC as int here
-//special = put armor's effects as string here (ex. "poison resistance";)
+//effect = put armor's effects as string here (ex. "poison resistance";)
 //price = put armor's price as int here
 //weight = put armor's weight as int here
-//material = put armor's material as int here (ex. "iron")
 //itemType = for armor, always "armor";
 
 //When creating the object, use our standard naming convention (ex. obj_orcishChainMail),

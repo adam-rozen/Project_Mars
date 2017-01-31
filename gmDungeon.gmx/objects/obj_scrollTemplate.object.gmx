@@ -25,14 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//name = put tool's name as string here (ex. "skeleton key";)
-//appearance = put tool's appearance as string here (ex. "key";)
-//price = put tool's price as int here 
-//weight = put tool's weight as int here
-//itemType = for tools, always "tool";
+            <string>//name = put scroll's name as string here (ex. "scroll of identify";)
+//appearance = put scroll's appearance as string here (ex. "crude chain mail";), or
+    //if random, put an unused appearance element here (ex. scrollAppearance[0];)
+//effect = put scroll's effect as string here (ex. "identify";)
+//price = put scroll's price as int here
+//weight = for scrolls, always 5;
+//itemType = for scrolls, always "scroll";
 
-//When creating the object, use our standard naming convention (ex. obj_skeletonKey),
-//set the sprite to spr_tool, and set the parent to obj_tool.
+//When creating the object, use our standard naming convention (ex. obj_scrollOfIdentify),
+//set the sprite to spr_scroll, and set the parent to obj_scroll.
 </string>
           </argument>
         </arguments>

@@ -90,6 +90,9 @@
       <objects name="potions">
         <object>objects\obj_potionTemplate</object>
       </objects>
+      <objects name="scrolls">
+        <object>objects\obj_scrollTemplate</object>
+      </objects>
     </objects>
     <objects name="monsters">
       <object>objects\obj_kobold</object>

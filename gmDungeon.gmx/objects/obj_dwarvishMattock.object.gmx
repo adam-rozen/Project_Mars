@@ -36,7 +36,6 @@ skill = "pick-axe";
 hands = 2;
 price = 50;
 weight = 120;
-material = "iron";
 itemType = "weapon";
 </string>
           </argument>
