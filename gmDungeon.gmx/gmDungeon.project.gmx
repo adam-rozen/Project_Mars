@@ -93,6 +93,9 @@
       <objects name="scrolls">
         <object>objects\obj_scrollTemplate</object>
       </objects>
+      <objects name="wands">
+        <object>objects\obj_wandTemplate</object>
+      </objects>
     </objects>
     <objects name="monsters">
       <object>objects\obj_kobold</object>

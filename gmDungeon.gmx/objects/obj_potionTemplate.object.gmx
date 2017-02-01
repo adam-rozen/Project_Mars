@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//name = put potion's name as string here (ex. "potion of sickness";)
 //appearance = put potion's appearance as string here (ex. "clear potion";), or
-    //if random, put an unused appearance element here (ex. potionAppearance[0];)
+    //if random, put unused appearance element here (ex. potionAppearance[0];)
 //price = put potion's price as int here
 //weight = for potions, always 20;
 //itemType = for potions, always "potion";

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//name = put scroll's name as string here (ex. "scroll of identify";)
 //appearance = put scroll's appearance as string here (ex. "crude chain mail";), or
-    //if random, put an unused appearance element here (ex. scrollAppearance[0];)
+    //if random, put unused appearance element here (ex. scrollAppearance[0];)
 //effect = put scroll's effect as string here (ex. "identify";)
 //price = put scroll's price as int here
 //weight = for scrolls, always 5;

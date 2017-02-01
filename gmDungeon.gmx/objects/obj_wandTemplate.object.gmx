@@ -25,20 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//name = put armor's name as string here (ex. "orcish chain mail";)
-//appearance = put armor's appearance as string here (ex. "crude chain mail";), or
-    //if random, put unused appearance element here (ex. cloakAppearance[0];)
-    //depending on armor's slot
-//slot = put armor's slot as string here (ex. "body armor";)
-//ac = put armor's AC as int here
-//mc = put armor's MC as int here
-//effect = put armor's effects as string here (ex. "poison resistance";)
-//price = put armor's price as int here
-//weight = put armor's weight as int here
-//itemType = for armor, always "armor";
+            <string>//name = put wand's name as string here (ex. "wand of striking";)
+//appearance = put unused wand appearance element here (ex. wandAppearance[0];)
+//effect = put wand's effect as string here (ex. "wForceBolt";)
+//price = put wand's price as int here
+//weight = for wands, always 7;
 
-//When creating the object, use our standard naming convention (ex. obj_orcishChainMail),
-//set the sprite to spr_armor, and set the parent to obj_armor.
+//When creating the object, use our standard naming convention (ex. obj_wandOfStriking),
+//set the sprite to spr_wand, and set the parent to obj_wand.
 </string>
           </argument>
         </arguments>
