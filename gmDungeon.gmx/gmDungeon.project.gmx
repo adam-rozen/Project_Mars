@@ -96,6 +96,9 @@
       <objects name="wands">
         <object>objects\obj_wandTemplate</object>
       </objects>
+      <objects name="rings">
+        <object>objects\obj_ringTemplate</object>
+      </objects>
     </objects>
     <objects name="monsters">
       <object>objects\obj_kobold</object>
