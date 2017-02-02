@@ -410,7 +410,7 @@ repeat(rnum)
             }
             else if (itemGen &lt;= 40)
             {
-                instance_create(genSpotX, genSpotY, obj_food);
+                instance_create(genSpotX, genSpotY, obj_comestible);
             }
             else if (itemGen &lt;= 48)
             {

@@ -161,7 +161,7 @@ room_caption = 'Position: (' + string(x div 32) + '; ' + string(y div 32) + ')';
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>room_get_name(room) != "roomInv"</string>
+            <string>room_get_name(room) != "roomInv"&amp;&amp;room_get_name(room)!="roomWield"</string>
           </argument>
         </arguments>
       </action>
@@ -433,6 +433,11 @@ if (keyboard_check_pressed(ord("S")) &amp;&amp; global.p_turn)
 {
     scr_save();
 }
+if (keyboard_check_pressed(ord("W")) &amp;&amp; global.p_turn)
+{
+    global.rm = room;
+    room_goto(roomWield);
+}
 </string>
           </argument>
         </arguments>
@@ -493,7 +498,7 @@ if (keyboard_check_pressed(ord("S")) &amp;&amp; global.p_turn)
           <argument>
             <kind>1</kind>
             <string>///Draw
-if (room_get_name(room) != "roomInv")
+if (room_get_name(room) != "roomInv" &amp;&amp; room_get_name(room) != "roomWield" &amp;&amp; room_get_name(room) != "roomSpell")
 {
     draw_self();
     /*draw_set_colour(c_black);
