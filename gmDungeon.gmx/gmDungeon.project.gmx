@@ -80,6 +80,9 @@
         <object>objects\obj_battleAxe</object>
         <object>objects\obj_dwarvishMattock</object>
         <object>objects\obj_orcishShortSword</object>
+        <object>objects\obj_shortSword</object>
+        <object>objects\obj_dwarvishShortSword</object>
+        <object>objects\obj_elvenShortSword</object>
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>

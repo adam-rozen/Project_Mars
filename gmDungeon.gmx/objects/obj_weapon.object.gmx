@@ -69,42 +69,15 @@ else if (weaponGen &lt;= 146)
 }
 else if (weaponGen &lt;= 154)
 {
-    name = "short sword";
-    appearance = "short sword";
-    damageSmall[0] = 6;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "short sword";
-    hands = 1;
-    price = 10;
-    weight = 30;
-    itemType = "weapon";
+    instance_change(obj_shortSword, true);
 }
 else if (weaponGen &lt;= 156)
 {
-    name = "dwarvish short sword";
-    appearance = "broad short sword";
-    damageSmall[0] = 7;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "short sword";
-    hands = 1;
-    price = 10;
-    weight = 30;
-    itemType = "weapon";
+    instance_change(obj_dwarvishShortSword, true);
 }
 else if (weaponGen &lt;= 158)
 {
-    name = "elven short sword";
-    appearance = "runed short sword";
-    damageSmall[0] = 8;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "short sword";
-    hands = 1;
-    price = 10;
-    weight = 30;
-    itemType = "weapon";
+    instance_change(obj_elvenShortSword, true);
 }
 else if (weaponGen &lt;= 166)
 {
