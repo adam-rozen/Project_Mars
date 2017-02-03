@@ -81,100 +81,31 @@ else if (weaponGen &lt;= 158)
 }
 else if (weaponGen &lt;= 166)
 {
-    name = "broadsword";
-    appearance = "broadsword";
-    damageSmall[0] = 4;
-    damageSmall[1] = 4;
-    damageLarge[0] = 6;
-    damageLarge[1] = 1;
-    toHitBonus = 0;
-    skill = "broadsword";
-    hands = 1;
-    price = 10;
-    weight = 70;
-    itemType = "weapon";
+    instance_change(obj_broadsword, true);
 }
 else if (weaponGen &lt;= 170)
 {
-    name = "elven broadsword";
-    appearance = "runed broadsword";
-    damageSmall[0] = 6;
-    damageSmall[1] = 4;
-    damageLarge[0] = 6;
-    damageLarge[1] = 1;
-    toHitBonus = 0;
-    skill = "broadsword";
-    hands = 1;
-    price = 10;
-    weight = 70;
-    itemType = "weapon";
+    instance_change(obj_elvenBroadsword, true);
 }
 else if (weaponGen &lt;= 220)
 {
-    name = "long sword";
-    appearance = "long sword";
-    damageSmall[0] = 8;
-    damageLarge[0] = 12;
-    toHitBonus = 0;
-    skill = "long sword";
-    hands = 1;
-    price = 15;
-    weight = 40;
-    itemType = "weapon";
+    instance_change(obj_longsword, true);
 }
 else if (weaponGen &lt;= 224)
 {
-    name = "katana";
-    appearance = "samurai sword";
-    damageSmall[0] = 10;
-    damageLarge[0] = 12;
-    toHitBonus = 1;
-    skill = "long sword";
-    hands = 1;
-    price = 80;
-    weight = 40;
-    itemType = "weapon";
+    instance_change(obj_katana, true);
 }
 else if (weaponGen &lt;= 246)
 {
-    name = "two-handed sword";
-    appearance = "two-handed sword";
-    damageSmall[0] = 12;
-    damageLarge[0] = 6;
-    damageLarge[1] = 6;
-    damageLarge[2] = 6;
-    toHitBonus = 0;
-    skill = "two-handed sword";
-    hands = 2;
-    price = 50;
-    weight = 150;
-    itemType = "weapon";
+    instance_change(obj_twoHandedSword, true);
 }
 else if (weaponGen &lt;= 261)
 {
-    name = "scimitar";
-    appearance = "curved sword";
-    damageSmall[0] = 8;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "scimitar";
-    hands = 2;
-    price = 15;
-    weight = 40;
-    itemType = "weapon";
+    instance_change(obj_scimitar, true);
 }
 else if (weaponGen &lt;= 267)
 {
-    name = "silver saber";
-    appearance = "silver saber";
-    damageSmall[0] = 8;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "saber"
-    hands = 1;
-    price = 75;
-    weight = 40;
-    itemType = "weapon";
+    instance_change(obj_silverSaber, true);
 }
 else if (weaponGen &lt;= 279)
 {

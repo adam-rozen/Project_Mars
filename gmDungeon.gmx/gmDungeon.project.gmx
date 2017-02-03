@@ -84,6 +84,15 @@
         <object>objects\obj_shortSword</object>
         <object>objects\obj_dwarvishShortSword</object>
         <object>objects\obj_elvenShortSword</object>
+        <object>objects\obj_broadsword</object>
+        <object>objects\obj_runesword</object>
+        <object>objects\obj_elvenBroadsword</object>
+        <object>objects\obj_longsword</object>
+        <object>objects\obj_katana</object>
+        <object>objects\obj_twoHandedSword</object>
+        <object>objects\obj_tsurugi</object>
+        <object>objects\obj_scimitar</object>
+        <object>objects\obj_silverSaber</object>
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>
