@@ -96,6 +96,84 @@ switch (global.class)
         constitution = 7;
         charisma = 6;
         break;
+    case "Archeologist":
+        maxPW = 1;
+        maxHP = 11;
+        /*damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;*/
+        strength = 7;
+        intelligence = 10;
+        wisdom = 10;
+        dexterity = 7;
+        constitution = 7;
+        charisma = 7;
+        break;
+    case "Caveman":
+        maxPW = 1;
+        maxHP = 14;
+        /*damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;*/
+        strength = 10;
+        intelligence = 7;
+        wisdom = 7;
+        dexterity = 7;
+        constitution = 8;
+        charisma = 6;
+        break;
+    case "Ranger":
+        maxPW = 1;
+        maxHP = 13;
+        /*damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;*/
+        strength = 13;
+        intelligence = 13;
+        wisdom = 13;
+        dexterity = 9;
+        constitution = 13;
+        charisma = 7;
+        break;
+    case "Samurai":
+        maxPW = 1;
+        maxHP = 13;
+        /*damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;*/
+        strength = 10;
+        intelligence = 8;
+        wisdom = 7;
+        dexterity = 10;
+        constitution = 17;
+        charisma = 6;
+        break;
+    case "Tourist":
+        maxPW = 1;
+        maxHP = 8;
+        /*damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;*/
+        strength = 7;
+        intelligence = 10;
+        wisdom = 6;
+        dexterity = 7;
+        constitution = 7;
+        charisma = 10;
+        break;
+    case "Valkyrie":
+        maxPW = 1;
+        maxHP = 14;
+        /*damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;*/
+        strength = 10;
+        intelligence = 7;
+        wisdom = 7;
+        dexterity = 7;
+        constitution = 10;
+        charisma = 7;
+        break;
 }
 pw = maxPW;
 hp = maxHP;
