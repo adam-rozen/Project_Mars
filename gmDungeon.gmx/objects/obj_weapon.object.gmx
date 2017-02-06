@@ -109,58 +109,19 @@ else if (weaponGen &lt;= 267)
 }
 else if (weaponGen &lt;= 279)
 {
-    name = "club";
-    appearance = "club";
-    damageSmall[0] = 6;
-    damageLarge[0] = 3;
-    toHitBonus = 0;
-    skill = "club";
-    hands = 1;
-    price = 3;
-    weight = 30;
-    itemType = "weapon";
+    instance_change(obj_club, true);
 }
 else if (weaponGen &lt;= 287)
 {
-    name = "aklys";
-    appearance = "thonged club";
-    damageSmall[0] = 6;
-    damageLarge[0] = 3;
-    toHitBonus = 0;
-    skill = "club";
-    hands = 1;
-    price = 4;
-    weight = 15;
-    itemType = "weapon";
+    instance_change(obj_aklys, true);
 }
 else if (weaponGen &lt;= 327)
 {
-    name = "mace";
-    appearance = "mace";
-    damageSmall[0] = 6;
-    damageSmall[1] = 1;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "mace";
-    hands = 1;
-    price = 5;
-    weight = 30;
-    itemType = "weapon";
+    instance_change(obj_mace, true);
 }
 else if (weaponGen &lt;= 339)
 {
-    name = "morning star";
-    appearance = "morning star";
-    damageSmall[0] = 4;
-    damageSmall[1] = 4;
-    damageLarge[0] = 6;
-    damageLarge[1] = 1;
-    toHitBonus = 0;
-    skill = "morning star";
-    hands = 1;
-    price = 10;
-    weight = 120;
-    itemType = "weapon";
+    instance_change(obj_morningStar, true);
 }
 else if (weaponGen &lt;= 379)
 {

@@ -93,6 +93,10 @@
         <object>objects\obj_tsurugi</object>
         <object>objects\obj_scimitar</object>
         <object>objects\obj_silverSaber</object>
+        <object>objects\obj_club</object>
+        <object>objects\obj_aklys</object>
+        <object>objects\obj_mace</object>
+        <object>objects\obj_morningStar</object>
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>
