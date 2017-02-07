@@ -25,15 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>name = "knife";
-appearance = "knife";
-damageSmall[0] = 3;
-damageLarge[0] = 2;
+            <string>name = "war hammer";
+appearance = "war hammer";
+damageSmall[0] = 4;
+damageSmall[1] = 1;
+damageLarge[0] = 4;
 toHitBonus = 0;
-skill = "knife";
+skill = "hammer";
 hands = 1;
-price = 4;
-weight = 20;
+price = 5;
+weight = 50;
 weaponType = "melee";
 itemType = "weapon";
 </string>

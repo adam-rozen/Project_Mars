@@ -97,6 +97,9 @@
         <object>objects\obj_aklys</object>
         <object>objects\obj_mace</object>
         <object>objects\obj_morningStar</object>
+        <object>objects\obj_flail</object>
+        <object>objects\obj_warHammer</object>
+        <object>objects\obj_quarterstaff</object>
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>

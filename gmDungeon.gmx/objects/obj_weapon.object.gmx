@@ -125,45 +125,15 @@ else if (weaponGen &lt;= 339)
 }
 else if (weaponGen &lt;= 379)
 {
-    name = "flail";
-    appearance = "flail";
-    damageSmall[0] = 6;
-    damageSmall[1] = 1;
-    damageLarge[0] = 4;
-    damageLarge[1] = 4;
-    toHitBonus = 0;
-    skill = "flail";
-    hands = 1;
-    price = 4;
-    weight = 15;
-    itemType = "weapon";
+    instance_change(obj_flail, true);
 }
 else if (weaponGen &lt;= 394)
 {
-    name = "war hammer";
-    appearance = "war hammer";
-    damageSmall[0] = 4;
-    damageSmall[1] = 1;
-    damageLarge[0] = 4;
-    toHitBonus = 0;
-    skill = "hammer";
-    hands = 1;
-    price = 5;
-    weight = 50;
-    itemType = "weapon";
+    instance_change(obj_warHammer, true);
 }
 else if (weaponGen &lt;= 405)
 {
-    name = "quarterstaff";
-    appearance = "quarterstaff";
-    damageSmall[0] = 6;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "quarterstaff";
-    hands = 2;
-    price = 5;
-    weight = 40;
-    itemType = "weapon";
+    instance_change(obj_quarterstaff, true);
 }
 else if (weaponGen &lt;= 413)
 {
