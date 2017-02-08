@@ -173,88 +173,27 @@ else if (weaponGen &lt;= 450)
 }
 else if (weaponGen &lt;= 458)
 {
-    name = "glaive";
-    appearance = "single-edged polearm";
-    damageSmall[0] = 6;
-    damageLarge[0] = 10;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 6;
-    weight = 75;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_glaive, true);
 }
 else if (weaponGen &lt;= 464)
 {
-    name = "fauchard";
-    appearance = "pole sickle";
-    damageSmall[0] = 6;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 5;
-    weight = 60;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_fauchard, true);
 }
 else if (weaponGen &lt;= 469)
 {
-    name = "partisan";
-    appearance = "vulgar polearm";
-    damageSmall[0] = 6;
-    damageLarge[0] = 6;
-    damageLarge[1] = 1;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 10;
-    weight = 80;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_partisan, true);
 }
 else if (weaponGen &lt;= 482)
 {
-    name = "orcish spear";
-    appearance = "crude spear";
-    damageSmall[0] = 5;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "spear";
-    hands = 1;
-    price = 3;
-    weight = 30;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_orcishSpear, true);
 }
 else if (weaponGen &lt;= 532)
 {
-    name = "spear";
-    appearance = "spear";
-    damageSmall[0] = 6;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "spear";
-    hands = 1;
-    price = 3;
-    weight = 30;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_spear, true);
 }
 else if (weaponGen &lt;= 534)
 {
-    name = "silver spear";
-    appearance = "silver spear";
-    damageSmall[0] = 6;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "spear";
-    hands = 1;
-    price = 40;
-    weight = 36;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_silverSpear, true);
 }
 else if (weaponGen &lt;= 544)
 {

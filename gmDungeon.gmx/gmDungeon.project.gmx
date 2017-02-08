@@ -102,15 +102,21 @@
         <object>objects\obj_flail</object>
         <object>objects\obj_warHammer</object>
         <object>objects\obj_quarterstaff</object>
-        <object>objects\obj_halberd</object>
-        <object>objects\obj_bardiche</object>
-        <object>objects\obj_billGuisarme</object>
+        <object>objects\obj_partisan</object>
+        <object>objects\obj_fauchard</object>
+        <object>objects\obj_glaive</object>
+        <object>objects\obj_becDeCorbin</object>
+        <object>objects\obj_spetum</object>
+        <object>objects\obj_lucernHammer</object>
+        <object>objects\obj_guisarme</object>
         <object>objects\obj_ranseur</object>
         <object>objects\obj_voulge</object>
-        <object>objects\obj_guisarme</object>
-        <object>objects\obj_lucernHammer</object>
-        <object>objects\obj_spetum</object>
-        <object>objects\obj_becDeCorbin</object>
+        <object>objects\obj_billGuisarme</object>
+        <object>objects\obj_bardiche</object>
+        <object>objects\obj_halberd</object>
+        <object>objects\obj_orcishSpear</object>
+        <object>objects\obj_spear</object>
+        <object>objects\obj_silverSpear</object>
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>
