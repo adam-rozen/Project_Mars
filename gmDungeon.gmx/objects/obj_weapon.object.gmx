@@ -137,133 +137,39 @@ else if (weaponGen &lt;= 405)
 }
 else if (weaponGen &lt;= 413)
 {
-    name = "halberd";
-    appearance = "angled poleaxe";
-    damageSmall[0] = 10;
-    damageLarge[0] = 6;
-    damageLarge[1] = 6;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 10;
-    weight = 150;
-    itemType = "weapon";
+    instance_change(obj_halberd, true);
 }
 else if (weaponGen &lt;= 417)
 {
-    name = "bardiche";
-    appearance = "long poleaxe";
-    damageSmall[0] = 4;
-    damageSmall[1] = 4;
-    damageLarge[0] = 4;
-    damageLarge[1] = 4;
-    damageLarge[2] = 4;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 7;
-    weight = 120;
-    itemType = "weapon";
+    instance_change(obj_bardiche, true);
 }
 else if (weaponGen &lt;= 421)
 {
-    name = "bill-guisarme";
-    appearance = "hooked polearm";
-    damageSmall[0] = 4;
-    damageSmall[1] = 4;
-    damageLarge[0] = 10;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 7;
-    weight = 120;
-    itemType = "weapon";
+    instance_change(obj_billGuisarme, true);
 }
 else if (weaponGen &lt;= 426)
 {
-    name = "ranseur";
-    appearance = "hilted polearm";
-    damageSmall[0] = 4;
-    damageSmall[1] = 4;
-    damageLarge[0] = 4;
-    damageLarge[1] = 4;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 6;
-    weight = 50;
-    itemType = "weapon";
+    instance_change(obj_ranseur, true);
 }
 else if (weaponGen &lt;= 430)
 {
-    name =  "voulge";
-    appearance = "pole cleaver";
-    damageSmall[0] = 4;
-    damageSmall[1] = 4;
-    damageLarge[0] = 4;
-    damageLarge[1] = 4;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 5;
-    weight = 125;
-    itemType = "weapon";
+    instance_change(obj_voulge, true);
 }
 else if (weaponGen &lt;= 436)
 {
-    name = "guisarme";
-    appearance = "pruning hook";
-    damageSmall[0] = 4;
-    damageSmall[1] = 4;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 5;
-    weight = 80;
-    itemType = "weapon";
+    instance_change(obj_guisarme, true);
 }
 else if (weaponGen &lt;= 441)
 {
-    name = "lucern hammer";
-    appearance = "pronged polearm";
-    damageSmall[0] = 4;
-    damageSmall[1] = 4;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 7;
-    weight = 150;
-    itemType = "weapon";
+    instance_change(obj_lucernHammer, true);
 }
 else if (weaponGen &lt;= 446)
 {
-    name = "spetum";
-    appearance = "forked polearm";
-    damageSmall[0] = 6;
-    damageSmall[1] = 1;
-    damageLarge[0] = 6;
-    damageLarge[1] = 6;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 5;
-    weight = 50;
-    itemType = "weapon";
+    instance_change(obj_spetum, true);
 }
 else if (weaponGen &lt;= 450)
 {
-    name = "bec-de-corbin";
-    appearance = "beaked polearm";
-    damageSmall[0] = 8;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "polearm";
-    hands = 2;
-    price = 8;
-    weight = 100;
-    itemType = "weapon";
+    instance_change(obj_becDeCorbin, true);
 }
 else if (weaponGen &lt;= 458)
 {
@@ -276,6 +182,7 @@ else if (weaponGen &lt;= 458)
     hands = 2;
     price = 6;
     weight = 75;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 464)
@@ -289,6 +196,7 @@ else if (weaponGen &lt;= 464)
     hands = 2;
     price = 5;
     weight = 60;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 469)
@@ -303,6 +211,7 @@ else if (weaponGen &lt;= 469)
     hands = 2;
     price = 10;
     weight = 80;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 482)
@@ -316,6 +225,7 @@ else if (weaponGen &lt;= 482)
     hands = 1;
     price = 3;
     weight = 30;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 532)
@@ -329,6 +239,7 @@ else if (weaponGen &lt;= 532)
     hands = 1;
     price = 3;
     weight = 30;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 534)
@@ -342,6 +253,7 @@ else if (weaponGen &lt;= 534)
     hands = 1;
     price = 40;
     weight = 36;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 544)
@@ -355,6 +267,7 @@ else if (weaponGen &lt;= 544)
     hands = 1;
     price = 3;
     weight = 30;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 556)
@@ -368,6 +281,7 @@ else if (weaponGen &lt;= 556)
     hands = 1;
     price = 3;
     weight = 35;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 566)
@@ -381,6 +295,7 @@ else if (weaponGen &lt;= 566)
     hands = 1;
     price = 3;
     weight = 20;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 574)
@@ -397,6 +312,7 @@ else if (weaponGen &lt;= 574)
     hands = 1;
     price = 5;
     weight = 25;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 578)
@@ -410,6 +326,7 @@ else if (weaponGen &lt;= 578)
     hands = 1;
     price = 10;
     weight = 180;
+    weaponType = "melee";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 590)
@@ -423,6 +340,7 @@ else if (weaponGen &lt;= 590)
     hands = 1;
     price = 60;
     weight = 30;
+    weaponType = "bow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 610)
@@ -436,6 +354,7 @@ else if (weaponGen &lt;= 610)
     hands = 1;
     price = 2;
     weight = 1;
+    weaponType = "arrow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 634)
@@ -449,6 +368,7 @@ else if (weaponGen &lt;= 634)
     hands = 1;
     price = 60;
     weight = 30;
+    weaponType = "bow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 689)
@@ -462,6 +382,7 @@ else if (weaponGen &lt;= 689)
     hands = 1;
     price = 2;
     weight = 1;
+    weaponType = "arrow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 701)
@@ -475,6 +396,7 @@ else if (weaponGen &lt;= 701)
     hands = 1;
     price = 60;
     weight = 30;
+    weaponType = "bow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 721)
@@ -488,6 +410,7 @@ else if (weaponGen &lt;= 721)
     hands = 1;
     price = 2;
     weight = 1;
+    weaponType = "arrow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 736)
@@ -501,6 +424,7 @@ else if (weaponGen &lt;= 736)
     hands = 1;
     price = 4;
     weight = 1;
+    weaponType = "arrow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 748)
@@ -514,6 +438,7 @@ else if (weaponGen &lt;= 748)
     hands = 1;
     price = 5;
     weight = 1;
+    weaponType = "arrow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 788)
@@ -527,6 +452,7 @@ else if (weaponGen &lt;= 788)
     hands = 1;
     price = 20;
     weight = 3;
+    weaponType = "sling";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 833)
@@ -540,6 +466,7 @@ else if (weaponGen &lt;= 833)
     hands = 1;
     price = 40;
     weight = 50;
+    weaponType = "crossbow";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 888)
@@ -555,6 +482,7 @@ else if (weaponGen &lt;= 888)
     hands = 1;
     price = 2;
     weight = 1;
+    weaponType = "bolt";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 948)
@@ -568,6 +496,7 @@ else if (weaponGen &lt;= 948)
     hands = 1;
     price = 2;
     weight = 1;
+    weaponType = "thrown";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 983)
@@ -581,6 +510,7 @@ else if (weaponGen &lt;= 983)
     hands = 1;
     price = 5;
     weight = 1;
+    weaponType = "thrown";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 998)
@@ -594,6 +524,7 @@ else if (weaponGen &lt;= 998)
     hands = 1;
     price = 20;
     weight = 5;
+    weaponType = "thrown";
     itemType = "weapon";
 }
 else if (weaponGen &lt;= 1000)
@@ -607,6 +538,7 @@ else if (weaponGen &lt;= 1000)
     hands = 1;
     price = 4;
     weight = 20;
+    weaponType = "melee";
     itemType = "weapon";
 }
 </string>
