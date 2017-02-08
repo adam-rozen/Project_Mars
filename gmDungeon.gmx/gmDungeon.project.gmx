@@ -52,6 +52,8 @@
     <font>fonts\fontArialSmall</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_rubberHose</object>
+    <object>objects\obj_yumi</object>
     <objects name="items">
       <object>objects\obj_weapon</object>
       <object>objects\obj_armor</object>
@@ -100,6 +102,15 @@
         <object>objects\obj_flail</object>
         <object>objects\obj_warHammer</object>
         <object>objects\obj_quarterstaff</object>
+        <object>objects\obj_halberd</object>
+        <object>objects\obj_bardiche</object>
+        <object>objects\obj_billGuisarme</object>
+        <object>objects\obj_ranseur</object>
+        <object>objects\obj_voulge</object>
+        <object>objects\obj_guisarme</object>
+        <object>objects\obj_lucernHammer</object>
+        <object>objects\obj_spetum</object>
+        <object>objects\obj_becDeCorbin</object>
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>
