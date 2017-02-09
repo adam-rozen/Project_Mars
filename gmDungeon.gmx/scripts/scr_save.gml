@@ -101,12 +101,12 @@ for (i = 0; i <= 31 + 1; i += .5)
         }
         else if (place_meeting(_x, _y, obj_armor))
         {
-            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " type"), base64_encode(argument0.type));
-            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " itemType"), base64_encode(argument0.itemType));
-            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " name"), base64_encode(argument0.name));
-            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " description"), base64_encode(argument0.description));
-            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " price"), base64_encode(string(argument0.price)));
-            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " amount"), base64_encode(argument0.amount));
+            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " type"), base64_encode(instance_place(_x, _y, obj_armor).type));
+            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " itemType"), base64_encode(instance_place(_x, _y, obj_armor).itemType));
+            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " name"), base64_encode(instance_place(_x, _y, obj_armor).name));
+            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " description"), base64_encode(instance_place(_x, _y, obj_armor).description));
+            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " price"), base64_encode(string(instance_place(_x, _y, obj_armor).price)));
+            ini_write_string(base64_encode("Dungeon Properties"), base64_encode(string(i) + " amount"), base64_encode(string(instance_place(_x, _y, obj_armor).amount)));
         }
         else if (place_meeting(_x, _y, obj_down))
         {
