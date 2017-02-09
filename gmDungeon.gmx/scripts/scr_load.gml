@@ -88,6 +88,7 @@ for (i=0; i <= world_w + 1; i += .5)
                 target.name = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "name", base64_encode("")));
                 target.itemType = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "itemType", base64_encode("")));
                 target.description = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "description", base64_encode("")));
+                target.price = (real(base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "price", base64_encode("0")))));
                 break;
             case "spellbook":
                 target = instance_create(_x, _y, obj_spellbook);
@@ -138,13 +139,24 @@ for (i=0; i <= world_w + 1; i += .5)
                 target.itemType = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "itemType", base64_encode("")));
                 target.description = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "description", base64_encode("")));
                 break;
-            case "foodRation":
-                target = instance_create(_x, _y, obj_foodRation);
+            case "comestible":
+                target = instance_create(_x, _y, obj_comestible);
                 target.amount = real(base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "amount", base64_encode("1"))));
                 target.name = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "name", base64_encode("")));
                 target.itemType = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "itemType", base64_encode("")));
                 target.description = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "description", base64_encode("")));
                 target.nutrition = real(base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "nutrition", base64_encode("1"))));
+                target.type = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "type", base64_encode("")));
+                target.price = real(base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "price", base64_encode("1"))));
+                break;
+            case "tool":
+                target = instance_create(_x, _y, obj_tool);
+                target.name = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "name", base64_encode("")));
+                target.itemType = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " itemType", base64_encode("")));
+                target.description = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " description", base64_encode("")));
+                target.type = base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "type", base64_encode("")));
+                target.amount = real(base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " amount", base64_encode("1"))));
+                target.price = real(base64_decode(ini_read_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "price", base64_encode("1"))));
                 break;
         }
     }

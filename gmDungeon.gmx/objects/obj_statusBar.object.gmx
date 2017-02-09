@@ -51,7 +51,7 @@ y = obj_player.y + 224;
           <argument>
             <kind>1</kind>
             <string>///Draw
-if (room_get_name(room) != "roomInv" &amp;&amp; room_get_name(room) != "roomWield")
+if (room_get_name(room) != "roomInv" &amp;&amp; room_get_name(room) != "roomSpell" &amp;&amp; room_get_name(room) != "roomWield")
 {
     draw_self();
     draw_text(x + 8, y, "HP:" + string(obj_player.hp) + "/" + string(obj_player.maxHP)

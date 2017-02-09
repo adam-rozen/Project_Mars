@@ -505,7 +505,7 @@ if (keyboard_check_pressed(ord("I")) &amp;&amp; global.p_turn)
 }
 if (keyboard_check_pressed(ord("V")) &amp;&amp; global.p_turn)
 {
-    instance_create(x, y, obj_potion);
+    instance_create(x, y, obj_weapon);
 }
 if (keyboard_check_pressed(ord("S")) &amp;&amp; global.p_turn)
 {
