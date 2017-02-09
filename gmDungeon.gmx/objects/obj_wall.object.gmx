@@ -33,6 +33,7 @@ if (instance_exists(target))
         instance_destroy();
     }
 }
+// test
 </string>
           </argument>
         </arguments>
