@@ -466,6 +466,11 @@ if (place_meeting(x,y,obj_down) &amp;&amp; keyboard_check_pressed(190) &amp;&amp
         if (room == 10)
         {
             room_goto(room_next(room));
+            room_goto(room_next(room));
+        }
+        else if (room == 12)
+        {
+            room_goto(room_next(room));
         }
         room_goto(room_next(room));
         print("You go down the stairs.");
@@ -477,6 +482,15 @@ if (place_meeting(x,y,obj_up) &amp;&amp; keyboard_check_pressed(188) &amp;&amp; 
 {
     if (room_previous(room) !=-1)
     {
+        if (room == 14)
+        {
+            room_goto(room_previous(room));
+        }
+        else if (room == 12)
+        {
+            room_goto(room_previous(room));
+            room_goto(room_previous(room));
+        }
         global.toughness-=1;
         room_goto(room_previous(room));
         print("You go up the stairs.");

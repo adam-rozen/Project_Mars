@@ -21,7 +21,9 @@ obj_player.charisma = real(base64_decode(ini_read_string(base64_encode("Player V
 obj_player.constitution = real(base64_decode(ini_read_string(base64_encode("Player Values"), "constitution", base64_encode("1"))));
 obj_player.dexterity = real(base64_decode(ini_read_string(base64_encode("Player Values"), "dexterity", base64_encode("1"))));
 obj_player.wisdom = real(base64_decode(ini_read_string(base64_encode("Player Values"), "wisdom", base64_encode("1"))));
-obj_player.attack = real(base64_decode(ini_read_string(base64_encode("Player Values"), "attack", base64_encode("1"))));
+obj_player.toHitBonus = real(base64_decode(ini_read_string(base64_encode("Player Values"), "toHitBonus", base64_encode("0"))));
+obj_player.damageLarge[0] = real(base64_decode(ini_read_string(base64_encode("Player Values"), "damageLarge[0]", base64_encode("2"))));
+obj_player.damageSmall[0] = real(base64_decode(ini_read_string(base64_encode("Player Values"), "damageSmall[0]", base64_encode("2"))));
 obj_player.intelligence = real(base64_decode(ini_read_string(base64_encode("Player Values"), "intelligence", base64_encode("1"))));
 obj_player.level = real(base64_decode(ini_read_string(base64_encode("Player Values"), "level", base64_encode("1"))));
 obj_player.gold = real(base64_decode(ini_read_string(base64_encode("Player Values"), "gold", base64_encode("0"))));
@@ -40,7 +42,7 @@ while(ini_key_exists(base64_encode("Enemy Values"), string(a) + " name"))
             test.name = name;
             test.maxHP = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode("1"))));
             test.xp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " xp", base64_encode("0"))));
-            test.attack = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " attack", base64_encode("1"))));
+            test.attack = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " damage", base64_encode("1"))));
             test.moved = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " moved", base64_encode("0"))));
             test.gold = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " gold", base64_encode("0"))));
             test.hp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " hp", base64_encode("1"))));
@@ -51,7 +53,7 @@ while(ini_key_exists(base64_encode("Enemy Values"), string(a) + " name"))
             test.name = name;
             test.maxHP = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode("1"))));
             test.xp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " xp", base64_encode("0"))));
-            test.attack = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " attack", base64_encode("1"))));
+            test.attack = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " damage", base64_encode("1"))));
             test.moved = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " moved", base64_encode("0"))));
             test.gold = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " gold", base64_encode("0"))));
             test.hp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " hp", base64_encode("1"))));
@@ -164,7 +166,8 @@ for (i=0; i <= world_w + 1; i += .5)
 i = 0;
 while (ini_key_exists(base64_encode("Player Inventory"), string(i) + " itemType"))
 {
-    itemType = base64_decode(ini_read_string(base64_encode("Player Inventory"), base64_encode(string(i) + " itemType"), base64_encode("")));
+    itemType = base64_decode(ini_read_string(base64_encode("Player Inventory"), (string(i) + " itemType"), base64_encode("")));
+    show_debug_message(itemType);
     switch(itemType)
     {
         case "amulet":
@@ -225,11 +228,18 @@ while (ini_key_exists(base64_encode("Player Inventory"), string(i) + " itemType"
             instance_deactivate_object(test);
             break;
         case "weapon":
+            show_debug_message("weapon");
             test = instance_create(0, 0, obj_weapon);
             test.itemType = itemType;
             test.name = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " name", ""));
-            test.description = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " description", ""));
-            test.amount = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " amount", base64_encode(string(1)))));
+            test.appearance = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " appearance", ""));
+            test.price = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " price", base64_encode(string(1)))));
+            test.toHitBonus = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " toHitBonus", base64_encode(string(1)))));
+            test.hands = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " hands", base64_encode(string(1)))));
+            test.weight = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " weight", base64_encode(string(1)))));
+            test.damageSmall[0] = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " damageSmall[0]", base64_encode(string(1)))));
+            test.damageLarge[0] = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " damageLarge[0]", base64_encode(string(1)))));
+            test.weaponType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " weaponType", ""));
             test.type = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " type", ""));
             ini_close();
             addToInv(test);
@@ -281,8 +291,8 @@ while (ini_key_exists(base64_encode("Player Inventory"), string(i) + " itemType"
             ini_open("save.dat");
             instance_deactivate_object(test);
             break;
-        case "foodRation":
-            test = instance_create(0, 0, obj_foodRation);
+        case "comestible":
+            test = instance_create(0, 0, obj_comestible);
             test.nutrition = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " nutrition", base64_encode(""))));
             test.itemType = itemType;
             test.name = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(i) + " name", ""));

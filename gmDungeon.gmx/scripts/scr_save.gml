@@ -19,7 +19,9 @@ ini_write_string(base64_encode("Player Values"), "charisma", base64_encode(strin
 ini_write_string(base64_encode("Player Values"), "constitution", base64_encode(string(constitution)));
 ini_write_string(base64_encode("Player Values"), "dexterity", base64_encode(string(dexterity)));
 ini_write_string(base64_encode("Player Values"), "wisdom", base64_encode(string(wisdom)));
-ini_write_string(base64_encode("Player Values"), "attack", base64_encode(string(attack)));
+ini_write_string(base64_encode("Player Values"), "toHitBonus", base64_encode(string(toHitBonus)));
+ini_write_string(base64_encode("Player Values"), "damageLarge[0]", base64_encode(string(damageLarge[0])));
+ini_write_string(base64_encode("Player Values"), "damageSmall[0]", base64_encode(string(damageSmall[0])));
 ini_write_string(base64_encode("Player Values"), "intelligence", base64_encode(string(intelligence)));
 ini_write_string(base64_encode("Player Values"), "level", base64_encode(string(level)));
 ini_write_string(base64_encode("Player Values"), "gold", base64_encode(string(gold)));
@@ -34,7 +36,7 @@ for (a = 0; a <= instance_number(obj_enemy); a++)
     ini_write_string(base64_encode("Enemy Values"), string(a) + " name", base64_encode(string(ida.name)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " gold", base64_encode(string(ida.gold)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " moved", base64_encode(string(ida.moved)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " attack", base64_encode(string(ida.attack)));
+    ini_write_string(base64_encode("Enemy Values"), string(a) + " damage", base64_encode(string(ida.damage)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode(string(ida.maxHP)));    
     ini_write_string(base64_encode("Enemy Values"), string(a) + " xp", base64_encode(string(ida.xp)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " level", base64_encode(string(ida.level)));
@@ -65,6 +67,7 @@ for (i = 0; i <= 31 + 1; i += .5)
             ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " damageLarge[0]", base64_encode(string(instance_place(_x, _y, obj_weapon).damageLarge[0])));
             ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " itemType", base64_encode(instance_place(_x, _y, obj_weapon).itemType));
             ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " weaponType", base64_encode(instance_place(_x, _y, obj_weapon).weaponType));
+            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " name", base64_encode(instance_place(_x, _y, obj_weapon).name));
             ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " type", base64_encode("weapon"));
         }
         else if (place_meeting(_x, _y, obj_gem))
@@ -119,12 +122,12 @@ for (i = 0; i <= 31 + 1; i += .5)
         else if (place_meeting(_x, _y, obj_comestible))
         {
             ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + " type", base64_encode("comestible"));
-            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "nutrition", base64_encode(string(instance_place(_x, _y, obj_foodRation).nutrition)));
-            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "itemType", base64_encode(instance_place(_x, _y, obj_foodRation).itemType));
-            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "type", base64_encode(instance_place(_x, _y, obj_foodRation).type));
-            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "name", base64_encode(instance_place(_x, _y, obj_foodRation).name));
-            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "amount", base64_encode(string(instance_place(_x, _y, obj_foodRation).amount)));
-            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "description", base64_encode(instance_place(_x, _y, obj_foodRation).description));
+            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "nutrition", base64_encode(string(instance_place(_x, _y, obj_comestible).nutrition)));
+            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "itemType", base64_encode(instance_place(_x, _y, obj_comestible).itemType));
+            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "type", base64_encode(instance_place(_x, _y, obj_comestible).type));
+            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "name", base64_encode(instance_place(_x, _y, obj_comestible).name));
+            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "amount", base64_encode(string(instance_place(_x, _y, obj_comestible).amount)));
+            ini_write_string(base64_encode("Dungeon Properties"), string(_x) + " " + string(_y) + "description", base64_encode(instance_place(_x, _y, obj_comestible).description));
         }
         else if (place_meeting(_x, _y, obj_amulet))
         {
