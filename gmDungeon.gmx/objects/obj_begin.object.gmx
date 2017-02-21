@@ -2287,6 +2287,14 @@ if (keyboard_check_pressed(ord("F")))
     instance_create(x, y, dgen);
     instance_destroy();
 }
+else if (keyboard_check_pressed(ord("R")) and keyboard_check_pressed(vk_shift))
+{
+    global.class = "Ranger";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
 else if (keyboard_check_pressed(ord("R")))
 {
     global.class = "Rogue";
@@ -2298,6 +2306,46 @@ else if (keyboard_check_pressed(ord("R")))
 else if (keyboard_check_pressed(ord("W")))
 {
     global.class = "Wizard";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
+else if (keyboard_check_pressed(ord("A")))
+{
+    global.class = "Archeologist";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
+else if (keyboard_check_pressed(ord("C")))
+{
+    global.class = "Caveman";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
+else if (keyboard_check_pressed(ord("t")))
+{
+    global.class = "Tourist";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
+else if (keyboard_check_pressed(ord("V")))
+{
+    global.class = "Valkyrie";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
+else if (keyboard_check_pressed(ord("S")))
+{
+    global.class = "Samurai";
     instance_create(x, y, obj_inventory);
     instance_create(x, y, obj_player);
     instance_create(x, y, dgen);
@@ -2329,7 +2377,7 @@ else if (keyboard_check_pressed(ord("L")))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(0, 0, "Choose your class#f - Fighter#r - Rogue#w - Wizard#l - Load save file");
+            <string>draw_text(0, 0, "Choose your class#a - Archeologist#c - Caveman#f - Fighter#r - Rogue#R - Ranger#s - Samurai#t - Tourist#v - Valkyrie#w - Wizard#l - Load save file"); 
 </string>
           </argument>
         </arguments>

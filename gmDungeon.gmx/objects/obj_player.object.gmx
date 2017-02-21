@@ -99,9 +99,9 @@ switch (global.class)
     case "Archeologist":
         maxPW = 1;
         maxHP = 11;
-        /*damageSmall[0] = 2;
+        damageSmall[0] = 2;
         damageLarge[0] = 2;
-        toHitBonus = 0;*/
+        toHitBonus = 0;
         strength = 7;
         intelligence = 10;
         wisdom = 10;
@@ -112,9 +112,9 @@ switch (global.class)
     case "Caveman":
         maxPW = 1;
         maxHP = 14;
-        /*damageSmall[0] = 2;
+        damageSmall[0] = 2;
         damageLarge[0] = 2;
-        toHitBonus = 0;*/
+        toHitBonus = 0;
         strength = 10;
         intelligence = 7;
         wisdom = 7;
@@ -125,9 +125,9 @@ switch (global.class)
     case "Ranger":
         maxPW = 1;
         maxHP = 13;
-        /*damageSmall[0] = 2;
+        damageSmall[0] = 2;
         damageLarge[0] = 2;
-        toHitBonus = 0;*/
+        toHitBonus = 0;
         strength = 13;
         intelligence = 13;
         wisdom = 13;
@@ -138,9 +138,9 @@ switch (global.class)
     case "Samurai":
         maxPW = 1;
         maxHP = 13;
-        /*damageSmall[0] = 2;
+        damageSmall[0] = 2;
         damageLarge[0] = 2;
-        toHitBonus = 0;*/
+        toHitBonus = 0;
         strength = 10;
         intelligence = 8;
         wisdom = 7;
@@ -151,9 +151,9 @@ switch (global.class)
     case "Tourist":
         maxPW = 1;
         maxHP = 8;
-        /*damageSmall[0] = 2;
+        damageSmall[0] = 2;
         damageLarge[0] = 2;
-        toHitBonus = 0;*/
+        toHitBonus = 0;
         strength = 7;
         intelligence = 10;
         wisdom = 6;
@@ -164,9 +164,9 @@ switch (global.class)
     case "Valkyrie":
         maxPW = 1;
         maxHP = 14;
-        /*damageSmall[0] = 2;
+        damageSmall[0] = 2;
         damageLarge[0] = 2;
-        toHitBonus = 0;*/
+        toHitBonus = 0;
         strength = 10;
         intelligence = 7;
         wisdom = 7;
