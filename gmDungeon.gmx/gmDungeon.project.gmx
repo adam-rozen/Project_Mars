@@ -53,7 +53,6 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_rubberHose</object>
-    <object>objects\obj_yumi</object>
     <objects name="items">
       <object>objects\obj_weapon</object>
       <object>objects\obj_armor</object>
@@ -117,6 +116,27 @@
         <object>objects\obj_orcishSpear</object>
         <object>objects\obj_spear</object>
         <object>objects\obj_silverSpear</object>
+        <object>objects\obj_elvenSpear</object>
+        <object>objects\obj_dwarvishSpear</object>
+        <object>objects\obj_javelin</object>
+        <object>objects\obj_trident</object>
+        <object>objects\obj_lance</object>
+        <object>objects\obj_orcishBow</object>
+        <object>objects\obj_orcishArrow</object>
+        <object>objects\obj_bow</object>
+        <object>objects\obj_arrow</object>
+        <object>objects\obj_elvenBow</object>
+        <object>objects\obj_elvenArrow</object>
+        <object>objects\obj_yumi</object>
+        <object>objects\obj_ya</object>
+        <object>objects\obj_silverArrow</object>
+        <object>objects\obj_sling</object>
+        <object>objects\obj_crossbow</object>
+        <object>objects\obj_crossbowBolt</object>
+        <object>objects\obj_dart</object>
+        <object>objects\obj_shuriken</object>
+        <object>objects\obj_boomerang</object>
+        <object>objects\obj_bullwhip</object>
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>

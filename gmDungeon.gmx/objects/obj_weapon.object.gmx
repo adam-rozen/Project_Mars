@@ -197,288 +197,83 @@ else if (weaponGen &lt;= 534)
 }
 else if (weaponGen &lt;= 544)
 {
-    name = "elven spear";
-    appearance = "runed spear";
-    damageSmall[0] = 7;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "spear";
-    hands = 1;
-    price = 3;
-    weight = 30;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_elvenSpear, true);
 }
 else if (weaponGen &lt;= 556)
 {
-    name = "dwarvish spear";
-    appearance = "stout spear";
-    damageSmall[0] = 8;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "spear";
-    hands = 1;
-    price = 3;
-    weight = 35;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_dwarvishSpear, true);
 }
 else if (weaponGen &lt;= 566)
 {
-    name = "javelin";
-    appearance = "throwing spear";
-    damageSmall[0] = 6;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "spear";
-    hands = 1;
-    price = 3;
-    weight = 20;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_javelin, true);
 }
 else if (weaponGen &lt;= 574)
 {
-    name = "trident";
-    appearance = "trident";
-    damageSmall[0] = 6;
-    damageSmall[1] = 1;
-    damageLarge[0] = 4;
-    damageLarge[1] = 4;
-    damageLarge[2] = 4;
-    toHitBonus = 0;
-    skill = "trident";
-    hands = 1;
-    price = 5;
-    weight = 25;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_trident, true);
 }
 else if (weaponGen &lt;= 578)
 {
-    name = "lance";
-    appearance = "lance";
-    damageSmall[0] = 6;
-    damageLarge[0] = 8;
-    toHitBonus = 0;
-    skill = "lance";
-    hands = 1;
-    price = 10;
-    weight = 180;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_lance, true);
 }
 else if (weaponGen &lt;= 590)
 {
-    name = "orcish bow";
-    appearance = "crude bow";
-    damageSmall[0] = 2;
-    damageLarge[0] = 2;
-    toHitBonus = 0;
-    skill = "bow";
-    hands = 1;
-    price = 60;
-    weight = 30;
-    weaponType = "bow";
-    itemType = "weapon";
+    instance_change(obj_orcishBow, true);
 }
 else if (weaponGen &lt;= 610)
 {
-    name = "orcish arrow";
-    appearance = "crude arrow";
-    damageSmall[0] = 5;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "bow";
-    hands = 1;
-    price = 2;
-    weight = 1;
-    weaponType = "arrow";
-    itemType = "weapon";
+    instance_change(obj_orcishArrow, true);
 }
 else if (weaponGen &lt;= 634)
 {
-    name = "bow";
-    appearance = "bow";
-    damageSmall[0] = 2;
-    damageLarge[0] = 2;
-    toHitBonus = 0;
-    skill = "bow";
-    hands = 1;
-    price = 60;
-    weight = 30;
-    weaponType = "bow";
-    itemType = "weapon";
+    instance_change(obj_bow, true);
 }
 else if (weaponGen &lt;= 689)
 {
-    name = "arrow";
-    appearance = "arrow";
-    damageSmall[0] = 6;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "bow";
-    hands = 1;
-    price = 2;
-    weight = 1;
-    weaponType = "arrow";
-    itemType = "weapon";
+    instance_change(obj_arrow, true);
 }
 else if (weaponGen &lt;= 701)
 {
-    name = "elven bow";
-    appearance = "runed bow";
-    damageSmall[0] = 2;
-    damageLarge[0] = 2;
-    toHitBonus = 0;
-    skill = "bow";
-    hands = 1;
-    price = 60;
-    weight = 30;
-    weaponType = "bow";
-    itemType = "weapon";
+    instance_change(obj_elvenBow, true);
 }
 else if (weaponGen &lt;= 721)
 {
-    name = "elven arrow";
-    appearance = "runed arrow";
-    damageSmall[0] = 7;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "bow";
-    hands = 1;
-    price = 2;
-    weight = 1;
-    weaponType = "arrow";
-    itemType = "weapon";
+    instance_change(obj_elvenArrow, true);
 }
 else if (weaponGen &lt;= 736)
 {
-    name = "ya";
-    appearance = "bamboo arrow";
-    damageSmall[0] = 7;
-    damageLarge[0] = 7;
-    toHitBonus = 1;
-    skill = "bow";
-    hands = 1;
-    price = 4;
-    weight = 1;
-    weaponType = "arrow";
-    itemType = "weapon";
+    instance_change(obj_ya, true);
 }
 else if (weaponGen &lt;= 748)
 {
-    name = "silver arrow";
-    appearance = "silver arrow";
-    damageSmall[0] = 6;
-    damageLarge[0] = 6;
-    toHitBonus = 0;
-    skill = "bow";
-    hands = 1;
-    price = 5;
-    weight = 1;
-    weaponType = "arrow";
-    itemType = "weapon";
+    instance_change(obj_silverArrow, true);
 }
 else if (weaponGen &lt;= 788)
 {
-    name = "sling";
-    appearance = "sling";
-    damageSmall[0] = 2;
-    damageLarge[0] = 2;
-    toHitBonus = 0;
-    skill = "sling";
-    hands = 1;
-    price = 20;
-    weight = 3;
-    weaponType = "sling";
-    itemType = "weapon";
+    instance_change(obj_sling, true);
 }
 else if (weaponGen &lt;= 833)
 {
-    name = "crossbow";
-    appearance = "crossbow";
-    damageSmall[0] = 2;
-    damageLarge[0] = 2;
-    toHitBonus = 0;
-    skill = "crossbow";
-    hands = 1;
-    price = 40;
-    weight = 50;
-    weaponType = "crossbow";
-    itemType = "weapon";
+    instance_change(obj_crossbow, true);
 }
 else if (weaponGen &lt;= 888)
 {
-    name = "crossbow bolt";
-    appearance = "crossbow bolt";
-    damageSmall[0] = 4;
-    damageSmall[1] = 1;
-    damageLarge[0] = 6;
-    damageLarge[1] = 1;
-    toHitBonus = 0;
-    skill = "crossbow";
-    hands = 1;
-    price = 2;
-    weight = 1;
-    weaponType = "bolt";
-    itemType = "weapon";
+    instance_change(obj_crossbowBolt, true);
 }
 else if (weaponGen &lt;= 948)
 {
-    name = "dart";
-    appearance = "dart";
-    damageSmall[0] = 3;
-    damageLarge[0] = 2;
-    toHitBonus = 0;
-    skill = "dart";
-    hands = 1;
-    price = 2;
-    weight = 1;
-    weaponType = "thrown";
-    itemType = "weapon";
+    instance_change(obj_dart, true);
 }
 else if (weaponGen &lt;= 983)
 {
-    name = "shuriken";
-    appearance = "throwing star";
-    damageSmall[0] = 8;
-    damageLarge[0] = 6;
-    toHitBonus = 2;
-    skill = "shuriken";
-    hands = 1;
-    price = 5;
-    weight = 1;
-    weaponType = "thrown";
-    itemType = "weapon";
+    instance_change(obj_shuriken, true);
 }
 else if (weaponGen &lt;= 998)
 {
-    name = "boomerang";
-    appearance = "boomerang";
-    damageSmall[0] = 9;
-    damageLarge[0] = 9;
-    toHitBonus = 0;
-    skill = "boomerang";
-    hands = 1;
-    price = 20;
-    weight = 5;
-    weaponType = "thrown";
-    itemType = "weapon";
+    instance_change(obj_boomerang, true);
 }
 else if (weaponGen &lt;= 1000)
 {
-    name = "bullwhip";
-    appearance = "bullwhip";
-    damageSmall[0] = 2;
-    damageLarge[0] = 1;
-    toHitBonus = 0;
-    skill = "whip";
-    hands = 1;
-    price = 4;
-    weight = 20;
-    weaponType = "melee";
-    itemType = "weapon";
+    instance_change(obj_bullwhip, true);
 }
 </string>
           </argument>
