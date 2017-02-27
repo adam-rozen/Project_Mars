@@ -52,7 +52,6 @@
     <font>fonts\fontArialSmall</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_rubberHose</object>
     <objects name="items">
       <object>objects\obj_weapon</object>
       <object>objects\obj_armor</object>
@@ -137,6 +136,7 @@
         <object>objects\obj_shuriken</object>
         <object>objects\obj_boomerang</object>
         <object>objects\obj_bullwhip</object>
+        <object>objects\obj_rubberHose</object>
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>
