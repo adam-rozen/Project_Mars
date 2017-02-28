@@ -57,31 +57,115 @@ if (room_get_name(room) == "roomWield")
             <string>///Wield Weapon
 if (room_get_name(room) == "roomWield")
 {
-    if (keyboard_check_released(ord("A")))
+    key = keyboard_key;
+    if (key != 0)
     {
-        ini_open("inventory.dat");
-        b = 0;
-        if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
+        switch(key)
         {
-            with instance_position(600, 600, obj_dagger)
-            {
-                instance_destroy();
-            }
-            temp = instance_create(600, 600, obj_dagger);
-            temp.name = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " name", ""));
-            temp.appearance = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " appearance", ""));
-            temp.skill = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " skill", ""));
-            temp.hands = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " hands", "")));
-            temp.damageSmall[0] = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " damageSmall[0]", "")));
-            temp.damageLarge[0] = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " damageLarge[0]", "")));
-            temp.toHitBonus = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " toHitBonus", "")));
-            temp.price = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " price", "")));
-            temp.weight = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " weight", "")));
-            temp.weaponType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " weaponType", ""));
-            temp.itemType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " itemType", ""));
-            print("You wield the " + temp.name);
-            ini_close();
-            room_goto(global.rm);
+            case ord("A"):
+                b = 0;
+                wield(b);
+                break;
+            case ord("B"):
+                b = 1;
+                wield(b);
+                break;    
+            case ord("C"):
+                b = 2;
+                wield(b);
+                break;    
+            case ord("D"):
+                b = 3;
+                wield(b);
+                break;    
+            case ord("E"):
+                b = 4;
+                wield(b);
+                break;    
+            case ord("F"):
+                b = 5;
+                wield(b);
+                break;    
+            case ord("G"):
+                b = 6;
+                wield(b);
+                break;    
+            case ord("H"):
+                b = 7;
+                wield(b);
+                break;    
+            case ord("I"):
+                b = 8;
+                wield(b);
+                break;    
+            case ord("J"):
+                b = 9;
+                wield(b);
+                break;    
+            case ord("K"):
+                b = 10;
+                wield(b);
+                break;    
+            case ord("L"):
+                b = 11;
+                wield(b);
+                break;    
+            case ord("M"):
+                b = 12;
+                wield(b);
+                break;    
+            case ord("N"):
+                b = 13
+                wield(b);
+                break;    
+            case ord("O"):
+                b = 14
+                wield(b);
+                break;    
+            case ord("P"):
+                b = 15
+                wield(b);
+                break;    
+            case ord("Q"):
+                b = 16
+                wield(b);
+                break;    
+            case ord("R"):
+                b = 17
+                wield(b);
+                break;    
+            case ord("S"):
+                b = 18
+                wield(b);
+                break;    
+            case ord("T"):
+                b = 19
+                wield(b);
+                break;    
+            case ord("U"):
+                b = 20
+                wield(b);
+                break;    
+            case ord("V"):
+                b = 21
+                wield(b);
+                break;    
+            case ord("W"):
+                b = 22
+                wield(b);
+                break;    
+            case ord("X"):
+                b = 23
+                wield(b);
+                break;    
+            case ord("Y"):
+                b = 24
+                wield(b);
+                break;    
+            case ord("Z"):
+                b = 25
+                wield(b);
+                break;
         }
     }
 }
