@@ -165,10 +165,18 @@ for (i=0; i <= world_w + 1; i += .5)
     }
 }
 i = 0;
+while (ini_key_exists(base64_encode("Player Spell"), string(i) + " name"))
+{
+    test = base64_decode(ini_read_string(base64_encode("Player Spell"), string(i) + " name", ""));
+    ini_close();
+    addToSpell(test);
+    ini_open("save.dat");
+    i++;
+}
+i = 0;
 while (ini_key_exists(base64_encode("Player Inventory"), string(i) + " itemType"))
 {
     itemType = base64_decode(ini_read_string(base64_encode("Player Inventory"), (string(i) + " itemType"), base64_encode("")));
-    show_debug_message(itemType);
     switch(itemType)
     {
         case "amulet":
