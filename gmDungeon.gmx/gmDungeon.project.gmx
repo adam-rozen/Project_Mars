@@ -45,6 +45,7 @@
     <script>scripts\enemyMove.gml</script>
     <script>scripts\scr_save.gml</script>
     <script>scripts\scr_load.gml</script>
+    <script>scripts\drink.gml</script>
     <script>scripts\wield.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -196,6 +197,7 @@
     <room>rooms\roomInv</room>
     <room>rooms\roomSpell</room>
     <room>rooms\room12</room>
+    <room>rooms\roomDrink</room>
     <room>rooms\roomWield</room>
   </rooms>
   <constants number="10">
