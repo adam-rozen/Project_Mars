@@ -87,7 +87,7 @@
         <object>objects\obj_broadsword</object>
         <object>objects\obj_runesword</object>
         <object>objects\obj_elvenBroadsword</object>
-        <object>objects\obj_longsword</object>
+        <object>objects\obj_longSword</object>
         <object>objects\obj_katana</object>
         <object>objects\obj_twoHandedSword</object>
         <object>objects\obj_tsurugi</object>
@@ -140,6 +140,9 @@
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>
+        <object>objects\obj_hawaiianShirt</object>
+        <object>objects\obj_tShirt</object>
+        <object>objects\obj_leatherJacket</object>
       </objects>
       <objects name="tools">
         <object>objects\obj_toolTemplate</object>

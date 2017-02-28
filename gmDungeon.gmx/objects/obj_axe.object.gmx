@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>name = "axe";
-appearance = "axe";
+appearance = name;
 damageSmall[0] = 6;
 damageLarge[0] = 3;
 toHitBonus = 0;

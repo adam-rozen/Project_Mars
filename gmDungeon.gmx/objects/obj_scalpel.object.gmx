@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>name = "scalpel";
-appearance = "scalpel";
+appearance = name;
 damageSmall[0] = 3;
 damageLarge[0] = 3;
 toHitBonus = 2;

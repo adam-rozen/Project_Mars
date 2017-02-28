@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>name = "boomerang";
-appearance = "boomerang";
+appearance = name;
 damageSmall[0] = 9;
 damageLarge[0] = 9;
 toHitBonus = 0;

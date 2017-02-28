@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>name = "broadsword";
-appearance = "broadsword";
+appearance = name;
 damageSmall[0] = 4;
 damageSmall[1] = 4;
 damageLarge[0] = 6;

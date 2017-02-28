@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>name = "knife";
-appearance = "knife";
+appearance = name;
 damageSmall[0] = 3;
 damageLarge[0] = 2;
 toHitBonus = 0;
