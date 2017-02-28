@@ -11,6 +11,7 @@ instance_create(x, y, obj_inventory);
 instance_create(x, y, obj_player);
 obj_player.x = real(base64_decode(ini_read_string(base64_encode("Player Values"), "x", base64_encode("0"))));
 obj_player.y = real(base64_decode(ini_read_string(base64_encode("Player Values"), "y", base64_encode("0"))));
+obj_player.name = base64_decode(ini_read_string(base64_encode("Player Values"), "name", base64_encode("Joe")));
 obj_player.turn = real(base64_decode(ini_read_string(base64_encode("Player Values"), "turn", base64_encode("0"))));
 obj_player.maxHP = real(base64_decode(ini_read_string(base64_encode("Player Values"), "maxHP", base64_encode("1"))));
 obj_player.hp = real(base64_decode(ini_read_string(base64_encode("Player Values"), "hp", base64_encode("1"))));

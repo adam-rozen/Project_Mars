@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>///Parameters
 global.textbox = instance_create(x,y,obj_textbox);
+first = true;
+name = "";
 turn = 0;
 level = 1;
 up = false;
@@ -256,6 +258,36 @@ room_caption = 'Position: (' + string(x div 32) + '; ' + string(y div 32) + ')';
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Welcome Message
+if (first)
+{
+    if (name == "")
+    {
+        name = get_string("Who are you?", "");
+    }
+    print("Welcome " + name + " the " + global.class);
+    first = false;
+}
+</string>
+          </argument>
+        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -566,7 +598,8 @@ if (keyboard_check_pressed(ord("W")) &amp;&amp; global.p_turn)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>file_delete("inventory.dat");
+            <string>///Delete Inventory file
+file_delete("inventory.dat");
 </string>
           </argument>
         </arguments>

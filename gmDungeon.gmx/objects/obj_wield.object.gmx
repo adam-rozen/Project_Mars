@@ -38,6 +38,57 @@ if (room_get_name(room) == "roomWield")
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Wield Weapon
+if (room_get_name(room) == "roomWield")
+{
+    if (keyboard_check_released(ord("A")))
+    {
+        ini_open("inventory.dat");
+        b = 0;
+        if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
+        {
+            with instance_position(600, 600, obj_dagger)
+            {
+                instance_destroy();
+            }
+            temp = instance_create(600, 600, obj_dagger);
+            temp.name = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " name", ""));
+            temp.appearance = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " appearance", ""));
+            temp.skill = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " skill", ""));
+            temp.hands = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " hands", "")));
+            temp.damageSmall[0] = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " damageSmall[0]", "")));
+            temp.damageLarge[0] = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " damageLarge[0]", "")));
+            temp.toHitBonus = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " toHitBonus", "")));
+            temp.price = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " price", "")));
+            temp.weight = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " weight", "")));
+            temp.weaponType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " weaponType", ""));
+            temp.itemType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " itemType", ""));
+            print("You wield the " + temp.name);
+            ini_close();
+            room_goto(global.rm);
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -62,11 +113,11 @@ if (room_get_name(room) == "roomWield")
     ini_open("inventory.dat");
     draw_text(32, 32, "Wield");
     b = 0;
-    while(ini_key_exists(base64_encode("Player Inventory"), base64_encode(string(b) + " name")))
+    while(ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
     {
-        if (base64_decode(ini_read_string(base64_encode("Player Inventory"), base64_encode(string(b) + " itemType"),"")) == "weapon")
+        if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " itemType","")) == "weapon")
         {
-            draw_text(32,(32 * (b + 2)) + 32, chr(i + 97) + " " + base64_decode(ini_read_string(base64_encode("Player Inventory"), base64_encode(string(b) + " name"), "")));
+            draw_text(32,(32 * (b + 2)) + 32, chr(b + 97) + " " + base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " name", "")));
         }
         b++;
     }

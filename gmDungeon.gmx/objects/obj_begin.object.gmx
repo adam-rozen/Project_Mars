@@ -2327,7 +2327,7 @@ else if (keyboard_check_pressed(ord("C")))
     instance_create(x, y, dgen);
     instance_destroy();
 }
-else if (keyboard_check_pressed(ord("t")))
+else if (keyboard_check_pressed(ord("T")))
 {
     global.class = "Tourist";
     instance_create(x, y, obj_inventory);

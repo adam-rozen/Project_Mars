@@ -7,6 +7,7 @@ ini_write_string(base64_encode("Player Values"), "x", base64_encode(string(x)));
 ini_write_string(base64_encode("Player Values"), "y", base64_encode(string(y)));
 ini_write_string(base64_encode("Player Values"), "floor", base64_encode(string(global.toughness)));
 ini_write_string(base64_encode("Player Values"), "class", base64_encode(global.class));
+ini_write_string(base64_encode("Player Values"), "name", base64_encode(name));
 ini_write_string(base64_encode("Player Values"), "turn", base64_encode(string(turn)));
 ini_write_string(base64_encode("Player Values"), "maxHP", base64_encode(string(maxHP)));
 ini_write_string(base64_encode("Player Values"), "hp", base64_encode(string(hp)));

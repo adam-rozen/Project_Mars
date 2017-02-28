@@ -17,20 +17,44 @@ if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
         {
             targetNum = 10 + irandom_range(target.ac, -1) + level;
         }
+        temp = instance_position(600, 600, obj_player);
         if ((irandom_range(1, 20) + toHitBonus) < targetNum)
         {
             if (target.size == "tiny" || target.size == "small" || target.size = "medium")
             {
-                for (i = 0; i <= array_length_1d(damageSmall) - 1; i++)
+                if (temp == noone)
                 {
-                    target.hp -= irandom_range(1, damageSmall[i]);
+                    for (i = 0; i <= array_length_1d(damageSmall) - 1; i++)
+                    {
+                        target.hp -= irandom_range(1, damageSmall[i]);
+                    }
                 }
+                else
+                {
+                    show_debug_message(temp)
+                    show_debug_message(temp.name)
+                    for (i = 0; i <= array_length_1d(temp.damageSmall) - 1; i++)
+                    {
+                       target.hp -= irandom_range(1, temp.damageSmall[i]);
+                    }
+                }
+                 
             }
             else
             {
-                for (i = 0; i <= array_length_1d(damageLarge); i++)
+                if (temp == noone)
                 {
-                    target.hp -= irandom_range(1, damageLarge[i]);
+                    for (i = 0; i <= array_length_1d(damageLarge); i++)
+                    {
+                        target.hp -= irandom_range(1, damageLarge[i]);
+                    }
+                }
+                else
+                {
+                    for (i = 0; i <= array_length_1d(temp.damageLarge); i++)
+                    {
+                        target.hp -= irandom_range(1, temp.damageLarge[i]);
+                    }
                 }
             }
             if (target.hp > 0)
