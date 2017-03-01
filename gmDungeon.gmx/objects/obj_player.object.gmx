@@ -568,6 +568,11 @@ if (keyboard_check_pressed(ord("A")) &amp;&amp; global.p_turn)
     global.rm = room;
     room_goto(roomDrink);
 }
+if (keyboard_check_pressed(ord("R")) &amp;&amp; global.p_turn)
+{
+    global.rm = room;
+    room_goto(roomRead);
+}
 </string>
           </argument>
         </arguments>
