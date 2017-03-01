@@ -146,6 +146,14 @@
         <object>objects\obj_hawaiianShirt</object>
         <object>objects\obj_tShirt</object>
         <object>objects\obj_leatherJacket</object>
+        <object>objects\obj_leatherArmor</object>
+        <object>objects\obj_orcishRingMail</object>
+        <object>objects\obj_studdedLeatherArmor</object>
+        <object>objects\obj_ringMail</object>
+        <object>objects\obj_scaleMail</object>
+        <object>objects\obj_orcishChainMail</object>
+        <object>objects\obj_elvenMithrilCoat</object>
+        <object>objects\obj_dwarvishMithrilCoat</object>
       </objects>
       <objects name="tools">
         <object>objects\obj_toolTemplate</object>
