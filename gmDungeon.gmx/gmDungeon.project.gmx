@@ -144,29 +144,45 @@
       </objects>
       <objects name="armor">
         <object>objects\obj_armorTemplate</object>
-        <object>objects\obj_hawaiianShirt</object>
-        <object>objects\obj_tShirt</object>
-        <object>objects\obj_leatherJacket</object>
-        <object>objects\obj_leatherArmor</object>
-        <object>objects\obj_orcishRingMail</object>
-        <object>objects\obj_studdedLeatherArmor</object>
-        <object>objects\obj_ringMail</object>
-        <object>objects\obj_scaleMail</object>
-        <object>objects\obj_orcishChainMail</object>
-        <object>objects\obj_elvenMithrilCoat</object>
-        <object>objects\obj_splintMail</object>
-        <object>objects\obj_bandedMail</object>
-        <object>objects\obj_dwarvishMithrilCoat</object>
-        <object>objects\obj_bronzePlateMail</object>
-        <object>objects\obj_plateMail</object>
-        <object>objects\obj_crystalPlateMail</object>
-        <object>objects\obj_blueDragonScales</object>
-        <object>objects\obj_greenDragonScales</object>
-        <object>objects\obj_orangeDragonScales</object>
-        <object>objects\obj_redDragonScales</object>
-        <object>objects\obj_whiteDragonScales</object>
-        <object>objects\obj_yellowDragonScales</object>
-        <object>objects\obj_blackDragonScales</object>
+        <objects name="shirts">
+          <object>objects\obj_hawaiianShirt</object>
+          <object>objects\obj_tShirt</object>
+        </objects>
+        <objects name="suits">
+          <object>objects\obj_leatherJacket</object>
+          <object>objects\obj_leatherArmor</object>
+          <object>objects\obj_orcishRingMail</object>
+          <object>objects\obj_studdedLeatherArmor</object>
+          <object>objects\obj_ringMail</object>
+          <object>objects\obj_scaleMail</object>
+          <object>objects\obj_orcishChainMail</object>
+          <object>objects\obj_chainMail</object>
+          <object>objects\obj_elvenMithrilCoat</object>
+          <object>objects\obj_splintMail</object>
+          <object>objects\obj_bandedMail</object>
+          <object>objects\obj_dwarvishMithrilCoat</object>
+          <object>objects\obj_bronzePlateMail</object>
+          <object>objects\obj_plateMail</object>
+          <object>objects\obj_crystalPlateMail</object>
+          <object>objects\obj_blackDragonScales</object>
+          <object>objects\obj_blueDragonScales</object>
+          <object>objects\obj_grayDragonScales</object>
+          <object>objects\obj_greenDragonScales</object>
+          <object>objects\obj_orangeDragonScales</object>
+          <object>objects\obj_redDragonScales</object>
+          <object>objects\obj_silverDragonScales</object>
+          <object>objects\obj_whiteDragonScales</object>
+          <object>objects\obj_yellowDragonScales</object>
+          <object>objects\obj_blackDragonScaleMail</object>
+          <object>objects\obj_blueDragonScaleMail</object>
+          <object>objects\obj_grayDragonScaleMail</object>
+          <object>objects\obj_greenDragonScaleMail</object>
+          <object>objects\obj_orangeDragonScaleMail</object>
+          <object>objects\obj_redDragonScaleMail</object>
+          <object>objects\obj_silverDragonScaleMail</object>
+          <object>objects\obj_whiteDragonScaleMail</object>
+          <object>objects\obj_yellowDragonScaleMail</object>
+        </objects>
       </objects>
       <objects name="tools">
         <object>objects\obj_toolTemplate</object>
