@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Parameters
 name = "orc";
+difficulty = 3;
 damage = 8;
 level = 1;
 maxHP = irandom_range(1, 8);
@@ -35,7 +36,13 @@ xp = 13;
 mSpeed = 9;
 ac = 10;
 mr = 0;
+alignment = -3;
+frequency = 0;
+genocidable = true;
+weight = 850;
+nutrition = 150;
 size = "medium";
+gold = 0;
 if(choose(0, 1, 2, 3, 4) == 1)
 {
     repeat(global.toughness)

@@ -160,6 +160,13 @@
         <object>objects\obj_bronzePlateMail</object>
         <object>objects\obj_plateMail</object>
         <object>objects\obj_crystalPlateMail</object>
+        <object>objects\obj_blueDragonScales</object>
+        <object>objects\obj_greenDragonScales</object>
+        <object>objects\obj_orangeDragonScales</object>
+        <object>objects\obj_redDragonScales</object>
+        <object>objects\obj_whiteDragonScales</object>
+        <object>objects\obj_yellowDragonScales</object>
+        <object>objects\obj_blackDragonScales</object>
       </objects>
       <objects name="tools">
         <object>objects\obj_toolTemplate</object>
