@@ -153,7 +153,12 @@
         <object>objects\obj_scaleMail</object>
         <object>objects\obj_orcishChainMail</object>
         <object>objects\obj_elvenMithrilCoat</object>
+        <object>objects\obj_splintMail</object>
+        <object>objects\obj_bandedMail</object>
         <object>objects\obj_dwarvishMithrilCoat</object>
+        <object>objects\obj_bronzePlateMail</object>
+        <object>objects\obj_plateMail</object>
+        <object>objects\obj_crystalPlateMail</object>
       </objects>
       <objects name="tools">
         <object>objects\obj_toolTemplate</object>
