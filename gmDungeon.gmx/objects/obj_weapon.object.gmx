@@ -89,7 +89,7 @@ else if (weaponGen &lt;= 170)
 }
 else if (weaponGen &lt;= 220)
 {
-    instance_change(obj_longsword, true);
+    instance_change(obj_longSword, true);
 }
 else if (weaponGen &lt;= 224)
 {

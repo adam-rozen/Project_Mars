@@ -49,6 +49,7 @@
     <script>scripts\wield.gml</script>
     <script>scripts\addToSpell.gml</script>
     <script>scripts\spell.gml</script>
+    <script>scripts\read.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
@@ -196,6 +197,7 @@
     <object>objects\obj_statusBar</object>
     <object>objects\obj_spell</object>
     <object>objects\obj_wield</object>
+    <object>objects\obj_read</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
@@ -214,6 +216,7 @@
     <room>rooms\room12</room>
     <room>rooms\roomDrink</room>
     <room>rooms\roomWield</room>
+    <room>rooms\roomRead</room>
   </rooms>
   <constants number="10">
     <constant name="movespeed">32</constant>
