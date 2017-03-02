@@ -72,7 +72,7 @@ for (i = 0; i &lt;= 3; i++)
         case 0:
             if (available[j])
             {
-                cloakAppearance[i] = "tattered cape";
+                global.cloakAppearance[i] = "tattered cape";
                 available[j] = false;
             }
             else
@@ -83,7 +83,7 @@ for (i = 0; i &lt;= 3; i++)
         case 1:
             if (available[j])
             {
-                cloakAppearance[i] = "ornamental cope";
+                global.cloakAppearance[i] = "ornamental cope";
                 available[j] = false;
             }
             else
@@ -94,7 +94,7 @@ for (i = 0; i &lt;= 3; i++)
         case 2:
             if (available[j])
             {
-                cloakAppearance[i] = "opera cloak";
+                global.cloakAppearance[i] = "opera cloak";
                 available[j] = false;
             }
             else
@@ -105,7 +105,7 @@ for (i = 0; i &lt;= 3; i++)
         case 3:
             if (available[j])
             {
-                cloakAppearance[i] = "piece of cloth";
+                global.cloakAppearance[i] = "piece of cloth";
                 available[j] = false;
             }
             else
@@ -128,7 +128,7 @@ for (i = 0; i &lt;= 3; i++)
         case 0:
             if (available[j])
             {
-                helmAppearance[i] = "plumed helmet";
+                global.helmAppearance[i] = "plumed helmet";
                 available[j] = false;
             }
             else
@@ -139,7 +139,7 @@ for (i = 0; i &lt;= 3; i++)
         case 1:
             if (available[j])
             {
-                helmAppearance[i] = "etched helmet";
+                global.helmAppearance[i] = "etched helmet";
                 available[j] = false;
             }
             else
@@ -150,7 +150,7 @@ for (i = 0; i &lt;= 3; i++)
         case 2:
             if (available[j])
             {
-                helmAppearance[i] = "crested helmet";
+                global.helmAppearance[i] = "crested helmet";
                 available[j] = false;
             }
             else
@@ -161,7 +161,7 @@ for (i = 0; i &lt;= 3; i++)
         case 3:
             if (available[j])
             {
-                helmAppearance[i] = "visored helmet";
+                global.helmAppearance[i] = "visored helmet";
                 available[j] = false;
             }
             else
@@ -184,7 +184,7 @@ for (i = 0; i &lt;= 3; i++)
         case 0:
             if (available[j])
             {
-                glovesAppearance[i] = "old gloves";
+                global.glovesAppearance[i] = "old gloves";
                 available[j] = false;
             }
             else
@@ -195,7 +195,7 @@ for (i = 0; i &lt;= 3; i++)
         case 1:
             if (available[j])
             {
-                glovesAppearance[i] = "riding gloves";
+                global.glovesAppearance[i] = "riding gloves";
                 available[j] = false;
             }
             else
@@ -206,7 +206,7 @@ for (i = 0; i &lt;= 3; i++)
         case 2:
             if (available[j])
             {
-                glovesAppearance[i] = "padded gloves";
+                global.glovesAppearance[i] = "padded gloves";
                 available[j] = false;
             }
             else
@@ -217,7 +217,7 @@ for (i = 0; i &lt;= 3; i++)
         case 3:
             if (available[j])
             {
-                glovesAppearance[i] = "fencing gloves";
+                global.glovesAppearance[i] = "fencing gloves";
                 available[j] = false;
             }
             else
@@ -240,7 +240,7 @@ for (i = 0; i &lt;= 6; i++)
         case 0:
             if (available[j])
             {
-                bootsAppearance[i] = "buckled boots";
+                global.bootsAppearance[i] = "buckled boots";
                 available[j] = false;
             }
             else
@@ -251,7 +251,7 @@ for (i = 0; i &lt;= 6; i++)
         case 1:
             if (available[j])
             {
-                bootsAppearance[i] = "combat boots";
+                global.bootsAppearance[i] = "combat boots";
                 available[j] = false;
             }
             else
@@ -262,7 +262,7 @@ for (i = 0; i &lt;= 6; i++)
         case 2:
             if (available[j])
             {
-                bootsAppearance[i] = "riding boots";
+                global.bootsAppearance[i] = "riding boots";
                 available[j] = false;
             }
             else
@@ -273,7 +273,7 @@ for (i = 0; i &lt;= 6; i++)
         case 3:
             if (available[j])
             {
-                bootsAppearance[i] = "jungle boots";
+                global.bootsAppearance[i] = "jungle boots";
                 available[j] = false;
             }
             else
@@ -284,7 +284,7 @@ for (i = 0; i &lt;= 6; i++)
         case 4:
             if (available[j])
             {
-                bootsAppearance[i] = "riding boots";
+                global.bootsAppearance[i] = "riding boots";
                 available[j] = false;
             }
             else
@@ -295,7 +295,7 @@ for (i = 0; i &lt;= 6; i++)
         case 5:
             if (available[j])
             {
-                bootsAppearance[i] = "snow boots";
+                global.bootsAppearance[i] = "snow boots";
                 available[j] = false;
             }
             else
@@ -306,7 +306,7 @@ for (i = 0; i &lt;= 6; i++)
         case 6:
             if (available[j])
             {
-                bootsAppearance[i] = "mud boots";
+                global.bootsAppearance[i] = "mud boots";
                 available[j] = false;
             }
             else
@@ -329,7 +329,7 @@ for (i = 0; i &lt;= 24; i++)
         case 0:
             if (available[j])
             {
-                potionAppearance[i] = "ruby potion";
+                global.potionAppearance[i] = "ruby potion";
                 available[j] = false;
             }
             else
@@ -340,7 +340,7 @@ for (i = 0; i &lt;= 24; i++)
         case 1:
             if (available[j])
             {
-                potionAppearance[i] = "dark green potion";
+                global.potionAppearance[i] = "dark green potion";
                 available[j] = false;
             }
             else
@@ -351,7 +351,7 @@ for (i = 0; i &lt;= 24; i++)
         case 2:
             if (available[j])
             {
-                potionAppearance[i] = "purple-red potion";
+                global.potionAppearance[i] = "purple-red potion";
                 available[j] = false;
             }
             else
@@ -362,7 +362,7 @@ for (i = 0; i &lt;= 24; i++)
         case 3:
             if (available[j])
             {
-                potionAppearance[i] = "smoky potion";
+                global.potionAppearance[i] = "smoky potion";
                 available[j] = false;
             }
             else
@@ -373,7 +373,7 @@ for (i = 0; i &lt;= 24; i++)
         case 4:
             if (available[j])
             {
-                potionAppearance[i] = "brown potion";
+                global.potionAppearance[i] = "brown potion";
                 available[j] = false;
             }
             else
@@ -384,7 +384,7 @@ for (i = 0; i &lt;= 24; i++)
         case 5:
             if (available[j])
             {
-                potionAppearance[i] = "pink potion";
+                global.potionAppearance[i] = "pink potion";
                 available[j] = false;
             }
             else
@@ -395,7 +395,7 @@ for (i = 0; i &lt;= 24; i++)
         case 6:
             if (available[j])
             {
-                potionAppearance[i] = "cyan potion";
+                global.potionAppearance[i] = "cyan potion";
                 available[j] = false;
             }
             else
@@ -406,7 +406,7 @@ for (i = 0; i &lt;= 24; i++)
         case 7:
             if (available[j])
             {
-                potionAppearance[i] = "puce potion";
+                global.potionAppearance[i] = "puce potion";
                 available[j] = false;
             }
             else
@@ -417,7 +417,7 @@ for (i = 0; i &lt;= 24; i++)
         case 8:
             if (available[j])
             {
-                potionAppearance[i] = "cloudy potion";
+                global.potionAppearance[i] = "cloudy potion";
                 available[j] = false;
             }
             else
@@ -428,7 +428,7 @@ for (i = 0; i &lt;= 24; i++)
         case 9:
             if (available[j])
             {
-                potionAppearance[i] = "fizzy potion";
+                global.potionAppearance[i] = "fizzy potion";
                 available[j] = false;
             }
             else
@@ -439,7 +439,7 @@ for (i = 0; i &lt;= 24; i++)
         case 10:
             if (available[j])
             {
-                potionAppearance[i] = "orange potion";
+                global.potionAppearance[i] = "orange potion";
                 available[j] = false;
             }
             else
@@ -450,7 +450,7 @@ for (i = 0; i &lt;= 24; i++)
         case 11:
             if (available[j])
             {
-                potionAppearance[i] = "sky blue potion";
+                global.potionAppearance[i] = "sky blue potion";
                 available[j] = false;
             }
             else
@@ -461,7 +461,7 @@ for (i = 0; i &lt;= 24; i++)
         case 12:
             if (available[j])
             {
-                potionAppearance[i] = "milky potion";
+                global.potionAppearance[i] = "milky potion";
                 available[j] = false;
             }
             else
@@ -472,7 +472,7 @@ for (i = 0; i &lt;= 24; i++)
         case 13:
             if (available[j])
             {
-                potionAppearance[i] = "effervescent potion";
+                global.potionAppearance[i] = "effervescent potion";
                 available[j] = false;
             }
             else
@@ -483,7 +483,7 @@ for (i = 0; i &lt;= 24; i++)
         case 14:
             if (available[j])
             {
-                potionAppearance[i] = "dark potion";
+                global.potionAppearance[i] = "dark potion";
                 available[j] = false;
             }
             else
@@ -494,7 +494,7 @@ for (i = 0; i &lt;= 24; i++)
         case 15:
             if (available[j])
             {
-                potionAppearance[i] = "yellow potion";
+                global.potionAppearance[i] = "yellow potion";
                 available[j] = false;
             }
             else
@@ -505,7 +505,7 @@ for (i = 0; i &lt;= 24; i++)
         case 16:
             if (available[j])
             {
-                potionAppearance[i] = "brilliant blue potion";
+                global.potionAppearance[i] = "brilliant blue potion";
                 available[j] = false;
             }
             else
@@ -516,7 +516,7 @@ for (i = 0; i &lt;= 24; i++)
         case 17:
             if (available[j])
             {
-                potionAppearance[i] = "swirly potion";
+                global.potionAppearance[i] = "swirly potion";
                 available[j] = false;
             }
             else
@@ -527,7 +527,7 @@ for (i = 0; i &lt;= 24; i++)
         case 18:
             if (available[j])
             {
-                potionAppearance[i] = "black potion";
+                global.potionAppearance[i] = "black potion";
                 available[j] = false;
             }
             else
@@ -538,7 +538,7 @@ for (i = 0; i &lt;= 24; i++)
         case 19:
             if (available[j])
             {
-                potionAppearance[i] = "white potion";
+                global.potionAppearance[i] = "white potion";
                 available[j] = false;
             }
             else
@@ -549,7 +549,7 @@ for (i = 0; i &lt;= 24; i++)
         case 20:
             if (available[j])
             {
-                potionAppearance[i] = "emerald potion";
+                global.potionAppearance[i] = "emerald potion";
                 available[j] = false;
             }
             else
@@ -560,7 +560,7 @@ for (i = 0; i &lt;= 24; i++)
         case 21:
             if (available[j])
             {
-                potionAppearance[i] = "magenta potion";
+                global.potionAppearance[i] = "magenta potion";
                 available[j] = false;
             }
             else
@@ -571,7 +571,7 @@ for (i = 0; i &lt;= 24; i++)
         case 22:
             if (available[j])
             {
-                potionAppearance[i] = "bubbly potion";
+                global.potionAppearance[i] = "bubbly potion";
                 available[j] = false;
             }
             else
@@ -582,7 +582,7 @@ for (i = 0; i &lt;= 24; i++)
         case 23:
             if (available[j])
             {
-                potionAppearance[i] = "golden potion";
+                global.potionAppearance[i] = "golden potion";
                 available[j] = false;
             }
             else
@@ -593,7 +593,7 @@ for (i = 0; i &lt;= 24; i++)
         case 24:
             if (available[j])
             {
-                potionAppearance[i] = "murky potion";
+                global.potionAppearance[i] = "murky potion";
                 available[j] = false;
             }
             else
@@ -616,7 +616,7 @@ for (i = 0; i &lt;= 20; i++)
         case 0:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled ZELGO MER";
+                global.scrollAppearance[i] = "scroll labeled ZELGO MER";
                 available[j] = false;
             }
             else
@@ -627,7 +627,7 @@ for (i = 0; i &lt;= 20; i++)
         case 1:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled PRATYAVAYAH";
+                global.scrollAppearance[i] = "scroll labeled PRATYAVAYAH";
                 available[j] = false;
             }
             else
@@ -638,7 +638,7 @@ for (i = 0; i &lt;= 20; i++)
         case 2:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled ELBIB YLOH";
+                global.scrollAppearance[i] = "scroll labeled ELBIB YLOH";
                 available[j] = false;
             }
             else
@@ -649,7 +649,7 @@ for (i = 0; i &lt;= 20; i++)
         case 3:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled YUM YUM";
+                global.scrollAppearance[i] = "scroll labeled YUM YUM";
                 available[j] = false;
             }
             else
@@ -660,7 +660,7 @@ for (i = 0; i &lt;= 20; i++)
         case 4:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled ANDOVA BEGARIN";
+                global.scrollAppearance[i] = "scroll labeled ANDOVA BEGARIN";
                 available[j] = false;
             }
             else
@@ -671,7 +671,7 @@ for (i = 0; i &lt;= 20; i++)
         case 5:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled VELOX NEB";
+                global.scrollAppearance[i] = "scroll labeled VELOX NEB";
                 available[j] = false;
             }
             else
@@ -682,7 +682,7 @@ for (i = 0; i &lt;= 20; i++)
         case 6:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled READ ME";
+                global.scrollAppearance[i] = "scroll labeled READ ME";
                 available[j] = false;
             }
             else
@@ -693,7 +693,7 @@ for (i = 0; i &lt;= 20; i++)
         case 7:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled KO BATE";
+                global.scrollAppearance[i] = "scroll labeled KO BATE";
                 available[j] = false;
             }
             else
@@ -704,7 +704,7 @@ for (i = 0; i &lt;= 20; i++)
         case 8:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled GNIK SISI VLE";
+                global.scrollAppearance[i] = "scroll labeled GNIK SISI VLE";
                 available[j] = false;
             }
             else
@@ -715,7 +715,7 @@ for (i = 0; i &lt;= 20; i++)
         case 9:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled GHOTI";
+                global.scrollAppearance[i] = "scroll labeled GHOTI";
                 available[j] = false;
             }
             else
@@ -726,7 +726,7 @@ for (i = 0; i &lt;= 20; i++)
         case 10:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled XOR OTA";
+                global.scrollAppearance[i] = "scroll labeled XOR OTA";
                 available[j] = false;
             }
             else
@@ -737,7 +737,7 @@ for (i = 0; i &lt;= 20; i++)
         case 11:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled JUYED AWK YACC";
+                global.scrollAppearance[i] = "scroll labeled JUYED AWK YACC";
                 available[j] = false;
             }
             else
@@ -748,7 +748,7 @@ for (i = 0; i &lt;= 20; i++)
         case 12:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled DAIYEN FOOELS";
+                global.scrollAppearance[i] = "scroll labeled DAIYEN FOOELS";
                 available[j] = false;
             }
             else
@@ -759,7 +759,7 @@ for (i = 0; i &lt;= 20; i++)
         case 13:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled VERR YED HORRE";
+                global.scrollAppearance[i] = "scroll labeled VERR YED HORRE";
                 available[j] = false;
             }
             else
@@ -770,7 +770,7 @@ for (i = 0; i &lt;= 20; i++)
         case 14:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled KERNOD WEL";
+                global.scrollAppearance[i] = "scroll labeled KERNOD WEL";
                 available[j] = false;
             }
             else
@@ -781,7 +781,7 @@ for (i = 0; i &lt;= 20; i++)
         case 15:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled KIRJE";
+                global.scrollAppearance[i] = "scroll labeled KIRJE";
                 available[j] = false;
             }
             else
@@ -792,7 +792,7 @@ for (i = 0; i &lt;= 20; i++)
         case 16:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled FOOBIE BLETCH";
+                global.scrollAppearance[i] = "scroll labeled FOOBIE BLETCH";
                 available[j] = false;
             }
             else
@@ -803,7 +803,7 @@ for (i = 0; i &lt;= 20; i++)
         case 17:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled ETAOIN SHRDLU";
+                global.scrollAppearance[i] = "scroll labeled ETAOIN SHRDLU";
                 available[j] = false;
             }
             else
@@ -814,7 +814,7 @@ for (i = 0; i &lt;= 20; i++)
         case 18:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled ABRA KA DABRA";
+                global.scrollAppearance[i] = "scroll labeled ABRA KA DABRA";
                 available[j] = false;
             }
             else
@@ -825,7 +825,7 @@ for (i = 0; i &lt;= 20; i++)
         case 19:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled HAPAX LEGOMENON";
+                global.scrollAppearance[i] = "scroll labeled HAPAX LEGOMENON";
                 available[j] = false;
             }
             else
@@ -836,7 +836,7 @@ for (i = 0; i &lt;= 20; i++)
         case 20:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled ZLORFIK";
+                global.scrollAppearance[i] = "scroll labeled ZLORFIK";
                 available[j] = false;
             }
             else
@@ -847,7 +847,7 @@ for (i = 0; i &lt;= 20; i++)
         case 21:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled NR 9";
+                global.scrollAppearance[i] = "scroll labeled NR 9";
                 available[j] = false;
             }
             else
@@ -858,7 +858,7 @@ for (i = 0; i &lt;= 20; i++)
         case 22:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled LEP GEX VEN ZEA";
+                global.scrollAppearance[i] = "scroll labeled LEP GEX VEN ZEA";
                 available[j] = false;
             }
             else
@@ -869,7 +869,7 @@ for (i = 0; i &lt;= 20; i++)
         case 23:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled VENZAR BORGAVVE";
+                global.scrollAppearance[i] = "scroll labeled VENZAR BORGAVVE";
                 available[j] = false;
             }
             else
@@ -880,7 +880,7 @@ for (i = 0; i &lt;= 20; i++)
         case 24:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled ELAM EBOW";
+                global.scrollAppearance[i] = "scroll labeled ELAM EBOW";
                 available[j] = false;
             }
             else
@@ -891,7 +891,7 @@ for (i = 0; i &lt;= 20; i++)
         case 25:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled VE FORBRYDERNE";
+                global.scrollAppearance[i] = "scroll labeled VE FORBRYDERNE";
                 available[j] = false;
             }
             else
@@ -902,7 +902,7 @@ for (i = 0; i &lt;= 20; i++)
         case 26:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled TEMOV";
+                global.scrollAppearance[i] = "scroll labeled TEMOV";
                 available[j] = false;
             }
             else
@@ -913,7 +913,7 @@ for (i = 0; i &lt;= 20; i++)
         case 27:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled LOREM IPSUM";
+                global.scrollAppearance[i] = "scroll labeled LOREM IPSUM";
                 available[j] = false;
             }
             else
@@ -924,7 +924,7 @@ for (i = 0; i &lt;= 20; i++)
         case 28:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled ASHPD SODALG";
+                global.scrollAppearance[i] = "scroll labeled ASHPD SODALG";
                 available[j] = false;
             }
             else
@@ -935,7 +935,7 @@ for (i = 0; i &lt;= 20; i++)
         case 29:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled EIRIS SAZUN ISIDI";
+                global.scrollAppearance[i] = "scroll labeled EIRIS SAZUN ISIDI";
                 available[j] = false;
             }
             else
@@ -946,7 +946,7 @@ for (i = 0; i &lt;= 20; i++)
         case 30:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled VAS CORP BET MANI";
+                global.scrollAppearance[i] = "scroll labeled VAS CORP BET MANI";
                 available[j] = false;
             }
             else
@@ -957,7 +957,7 @@ for (i = 0; i &lt;= 20; i++)
         case 31:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled XIXAXA XOXAXA XUXAXA";
+                global.scrollAppearance[i] = "scroll labeled XIXAXA XOXAXA XUXAXA";
                 available[j] = false;
             }
             else
@@ -968,7 +968,7 @@ for (i = 0; i &lt;= 20; i++)
         case 32:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled PRIRUTSENIE";
+                global.scrollAppearance[i] = "scroll labeled PRIRUTSENIE";
                 available[j] = false;
             }
             else
@@ -979,7 +979,7 @@ for (i = 0; i &lt;= 20; i++)
         case 33:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled THARR";
+                global.scrollAppearance[i] = "scroll labeled THARR";
                 available[j] = false;
             }
             else
@@ -990,7 +990,7 @@ for (i = 0; i &lt;= 20; i++)
         case 34:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled DUAM XNAHT";
+                global.scrollAppearance[i] = "scroll labeled DUAM XNAHT";
                 available[j] = false;
             }
             else
@@ -1001,7 +1001,7 @@ for (i = 0; i &lt;= 20; i++)
         case 35:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled GARVEN DEH";
+                global.scrollAppearance[i] = "scroll labeled GARVEN DEH";
                 available[j] = false;
             }
             else
@@ -1012,7 +1012,7 @@ for (i = 0; i &lt;= 20; i++)
         case 36:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled FNORD";
+                global.scrollAppearance[i] = "scroll labeled FNORD";
                 available[j] = false;
             }
             else
@@ -1023,7 +1023,7 @@ for (i = 0; i &lt;= 20; i++)
         case 37:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled MAPIRO MAHAMA DIROMAT";
+                global.scrollAppearance[i] = "scroll labeled MAPIRO MAHAMA DIROMAT";
                 available[j] = false;
             }
             else
@@ -1034,7 +1034,7 @@ for (i = 0; i &lt;= 20; i++)
         case 38:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled PHOL ENDE WODAN";
+                global.scrollAppearance[i] = "scroll labeled PHOL ENDE WODAN";
                 available[j] = false;
             }
             else
@@ -1045,7 +1045,7 @@ for (i = 0; i &lt;= 20; i++)
         case 39:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled STRC PRST SKRZ KRK";
+                global.scrollAppearance[i] = "scroll labeled STRC PRST SKRZ KRK";
                 available[j] = false;
             }
             else
@@ -1056,7 +1056,7 @@ for (i = 0; i &lt;= 20; i++)
         case 40:
             if (available[j])
             {
-                scrollAppearance[i] = "scroll labeled HACKEM MUCHE";
+                global.scrollAppearance[i] = "scroll labeled HACKEM MUCHE";
                 available[j] = false;
             }
             else
@@ -1079,7 +1079,7 @@ for (i = 0; i &lt;= 39; i++)
         case 0:
             if (available[j])
             {
-                spellbookAppearance[i] = "parchment spellbook";
+                global.spellbookAppearance[i] = "parchment spellbook";
                 available[j] = false;
             }
             else
@@ -1090,7 +1090,7 @@ for (i = 0; i &lt;= 39; i++)
         case 1:
             if (available[j])
             {
-                spellbookAppearance[i] = "stained spellbook";
+                global.spellbookAppearance[i] = "stained spellbook";
                 available[j] = false;
             }
             else
@@ -1101,7 +1101,7 @@ for (i = 0; i &lt;= 39; i++)
         case 2:
             if (available[j])
             {
-                spellbookAppearance[i] = "red spellbook";
+                global.spellbookAppearance[i] = "red spellbook";
                 available[j] = false;
             }
             else
@@ -1112,7 +1112,7 @@ for (i = 0; i &lt;= 39; i++)
         case 3:
             if (available[j])
             {
-                spellbookAppearance[i] = "dark green spellbook";
+                global.spellbookAppearance[i] = "dark green spellbook";
                 available[j] = false;
             }
             else
@@ -1123,7 +1123,7 @@ for (i = 0; i &lt;= 39; i++)
         case 4:
             if (available[j])
             {
-                spellbookAppearance[i] = "indigo spellbook";
+                global.spellbookAppearance[i] = "indigo spellbook";
                 available[j] = false;
             }
             else
@@ -1134,7 +1134,7 @@ for (i = 0; i &lt;= 39; i++)
         case 5:
             if (available[j])
             {
-                spellbookAppearance[i] = "plaid spellbook";
+                global.spellbookAppearance[i] = "plaid spellbook";
                 available[j] = false;
             }
             else
@@ -1145,7 +1145,7 @@ for (i = 0; i &lt;= 39; i++)
         case 6:
             if (available[j])
             {
-                spellbookAppearance[i] = "dusty spellbook";
+                global.spellbookAppearance[i] = "dusty spellbook";
                 available[j] = false;
             }
             else
@@ -1156,7 +1156,7 @@ for (i = 0; i &lt;= 39; i++)
         case 7:
             if (available[j])
             {
-                spellbookAppearance[i] = "gilttering spellbook";
+                global.spellbookAppearance[i] = "gilttering spellbook";
                 available[j] = false;
             }
             else
@@ -1167,7 +1167,7 @@ for (i = 0; i &lt;= 39; i++)
         case 8:
             if (available[j])
             {
-                spellbookAppearance[i] = "vellum spellbook";
+                global.spellbookAppearance[i] = "vellum spellbook";
                 available[j] = false;
             }
             else
@@ -1178,7 +1178,7 @@ for (i = 0; i &lt;= 39; i++)
         case 9:
             if (available[j])
             {
-                spellbookAppearance[i] = "cloth spellbook";
+                global.spellbookAppearance[i] = "cloth spellbook";
                 available[j] = false;
             }
             else
@@ -1189,7 +1189,7 @@ for (i = 0; i &lt;= 39; i++)
         case 10:
             if (available[j])
             {
-                spellbookAppearance[i] = "orange spellbook";
+                global.spellbookAppearance[i] = "orange spellbook";
                 available[j] = false;
             }
             else
@@ -1200,7 +1200,7 @@ for (i = 0; i &lt;= 39; i++)
         case 11:
             if (available[j])
             {
-                spellbookAppearance[i] = "turquoise spellbook";
+                global.spellbookAppearance[i] = "turquoise spellbook";
                 available[j] = false;
             }
             else
@@ -1211,7 +1211,7 @@ for (i = 0; i &lt;= 39; i++)
         case 12:
             if (available[j])
             {
-                spellbookAppearance[i] = "magenta spellbook";
+                global.spellbookAppearance[i] = "magenta spellbook";
                 available[j] = false;
             }
             else
@@ -1222,7 +1222,7 @@ for (i = 0; i &lt;= 39; i++)
         case 13:
             if (available[j])
             {
-                spellbookAppearance[i] = "light brown spellbook";
+                global.spellbookAppearance[i] = "light brown spellbook";
                 available[j] = false;
             }
             else
@@ -1233,7 +1233,7 @@ for (i = 0; i &lt;= 39; i++)
         case 14:
             if (available[j])
             {
-                spellbookAppearance[i] = "bronze spellbook";
+                global.spellbookAppearance[i] = "bronze spellbook";
                 available[j] = false;
             }
             else
@@ -1244,7 +1244,7 @@ for (i = 0; i &lt;= 39; i++)
         case 15:
             if (available[j])
             {
-                spellbookAppearance[i] = "shining spellbook";
+                global.spellbookAppearance[i] = "shining spellbook";
                 available[j] = false;
             }
             else
@@ -1255,7 +1255,7 @@ for (i = 0; i &lt;= 39; i++)
         case 16:
             if (available[j])
             {
-                spellbookAppearance[i] = "ragged spellbook";
+                global.spellbookAppearance[i] = "ragged spellbook";
                 available[j] = false;
             }
             else
@@ -1266,7 +1266,7 @@ for (i = 0; i &lt;= 39; i++)
         case 17:
             if (available[j])
             {
-                spellbookAppearance[i] = "leather spellbook";
+                global.spellbookAppearance[i] = "leather spellbook";
                 available[j] = false;
             }
             else
@@ -1277,7 +1277,7 @@ for (i = 0; i &lt;= 39; i++)
         case 18:
             if (available[j])
             {
-                spellbookAppearance[i] = "yellow spellbook";
+                global.spellbookAppearance[i] = "yellow spellbook";
                 available[j] = false;
             }
             else
@@ -1288,7 +1288,7 @@ for (i = 0; i &lt;= 39; i++)
         case 19:
             if (available[j])
             {
-                spellbookAppearance[i] = "cyan spellbook";
+                global.spellbookAppearance[i] = "cyan spellbook";
                 available[j] = false;
             }
             else
@@ -1299,7 +1299,7 @@ for (i = 0; i &lt;= 39; i++)
         case 20:
             if (available[j])
             {
-                spellbookAppearance[i] = "purple spellbook";
+                global.spellbookAppearance[i] = "purple spellbook";
                 available[j] = false;
             }
             else
@@ -1310,7 +1310,7 @@ for (i = 0; i &lt;= 39; i++)
         case 21:
             if (available[j])
             {
-                spellbookAppearance[i] = "dark brown spellbook";
+                global.spellbookAppearance[i] = "dark brown spellbook";
                 available[j] = false;
             }
             else
@@ -1321,7 +1321,7 @@ for (i = 0; i &lt;= 39; i++)
         case 22:
             if (available[j])
             {
-                spellbookAppearance[i] = "copper spellbook";
+                global.spellbookAppearance[i] = "copper spellbook";
                 available[j] = false;
             }
             else
@@ -1332,7 +1332,7 @@ for (i = 0; i &lt;= 39; i++)
         case 23:
             if (available[j])
             {
-                spellbookAppearance[i] = "dull spellbook";
+                global.spellbookAppearance[i] = "dull spellbook";
                 available[j] = false;
             }
             else
@@ -1343,7 +1343,7 @@ for (i = 0; i &lt;= 39; i++)
         case 24:
             if (available[j])
             {
-                spellbookAppearance[i] = "dog eared spellbook";
+                global.spellbookAppearance[i] = "dog eared spellbook";
                 available[j] = false;
             }
             else
@@ -1354,7 +1354,7 @@ for (i = 0; i &lt;= 39; i++)
         case 25:
             if (available[j])
             {
-                spellbookAppearance[i] = "white spellbook";
+                global.spellbookAppearance[i] = "white spellbook";
                 available[j] = false;
             }
             else
@@ -1365,7 +1365,7 @@ for (i = 0; i &lt;= 39; i++)
         case 26:
             if (available[j])
             {
-                spellbookAppearance[i] = "velvet spellbook";
+                global.spellbookAppearance[i] = "velvet spellbook";
                 available[j] = false;
             }
             else
@@ -1376,7 +1376,7 @@ for (i = 0; i &lt;= 39; i++)
         case 27:
             if (available[j])
             {
-                spellbookAppearance[i] = "light blue spellbook";
+                global.spellbookAppearance[i] = "light blue spellbook";
                 available[j] = false;
             }
             else
@@ -1387,7 +1387,7 @@ for (i = 0; i &lt;= 39; i++)
         case 28:
             if (available[j])
             {
-                spellbookAppearance[i] = "violet spellbook";
+                global.spellbookAppearance[i] = "violet spellbook";
                 available[j] = false;
             }
             else
@@ -1398,7 +1398,7 @@ for (i = 0; i &lt;= 39; i++)
         case 29:
             if (available[j])
             {
-                spellbookAppearance[i] = "gray spellbook";
+                global.spellbookAppearance[i] = "gray spellbook";
                 available[j] = false;
             }
             else
@@ -1409,7 +1409,7 @@ for (i = 0; i &lt;= 39; i++)
         case 30:
             if (available[j])
             {
-                spellbookAppearance[i] = "silver spellbook";
+                global.spellbookAppearance[i] = "silver spellbook";
                 available[j] = false;
             }
             else
@@ -1420,7 +1420,7 @@ for (i = 0; i &lt;= 39; i++)
         case 31:
             if (available[j])
             {
-                spellbookAppearance[i] = "thin spellbook";
+                global.spellbookAppearance[i] = "thin spellbook";
                 available[j] = false;
             }
             else
@@ -1431,7 +1431,7 @@ for (i = 0; i &lt;= 39; i++)
         case 32:
             if (available[j])
             {
-                spellbookAppearance[i] = "mottled spellbook";
+                global.spellbookAppearance[i] = "mottled spellbook";
                 available[j] = false;
             }
             else
@@ -1442,7 +1442,7 @@ for (i = 0; i &lt;= 39; i++)
         case 33:
             if (available[j])
             {
-                spellbookAppearance[i] = "pink spellbook";
+                global.spellbookAppearance[i] = "pink spellbook";
                 available[j] = false;
             }
             else
@@ -1453,7 +1453,7 @@ for (i = 0; i &lt;= 39; i++)
         case 34:
             if (available[j])
             {
-                spellbookAppearance[i] = "light green spellbook";
+                global.spellbookAppearance[i] = "light green spellbook";
                 available[j] = false;
             }
             else
@@ -1464,7 +1464,7 @@ for (i = 0; i &lt;= 39; i++)
         case 35:
             if (available[j])
             {
-                spellbookAppearance[i] = "dark blue spellbook";
+                global.spellbookAppearance[i] = "dark blue spellbook";
                 available[j] = false;
             }
             else
@@ -1475,7 +1475,7 @@ for (i = 0; i &lt;= 39; i++)
         case 36:
             if (available[j])
             {
-                spellbookAppearance[i] = "tan spellbook";
+                global.spellbookAppearance[i] = "tan spellbook";
                 available[j] = false;
             }
             else
@@ -1486,7 +1486,7 @@ for (i = 0; i &lt;= 39; i++)
         case 37:
             if (available[j])
             {
-                spellbookAppearance[i] = "wrinkled spellbook";
+                global.spellbookAppearance[i] = "wrinkled spellbook";
                 available[j] = false;
             }
             else
@@ -1497,7 +1497,7 @@ for (i = 0; i &lt;= 39; i++)
         case 38:
             if (available[j])
             {
-                spellbookAppearance[i] = "gold spellbook";
+                global.spellbookAppearance[i] = "gold spellbook";
                 available[j] = false;
             }
             else
@@ -1508,7 +1508,7 @@ for (i = 0; i &lt;= 39; i++)
         case 39:
             if (available[j])
             {
-                spellbookAppearance[i] = "thick spellbook";
+                global.spellbookAppearance[i] = "thick spellbook";
                 available[j] = false;
             }
             else
@@ -1531,7 +1531,7 @@ for (i = 0; i &lt;= 27; i++)
         case 0:
             if (available[j])
             {
-                ringAppearance[i] = "pearl ring";
+                global.ringAppearance[i] = "pearl ring";
                 available[j] = false;
             }
             else
@@ -1542,7 +1542,7 @@ for (i = 0; i &lt;= 27; i++)
         case 1:
             if (available[j])
             {
-                ringAppearance[i] = "engagement ring";
+                global.ringAppearance[i] = "engagement ring";
                 available[j] = false;
             }
             else
@@ -1553,7 +1553,7 @@ for (i = 0; i &lt;= 27; i++)
         case 2:
             if (available[j])
             {
-                ringAppearance[i] = "silver ring";
+                global.ringAppearance[i] = "silver ring";
                 available[j] = false;
             }
             else
@@ -1564,7 +1564,7 @@ for (i = 0; i &lt;= 27; i++)
         case 3:
             if (available[j])
             {
-                ringAppearance[i] = "clay ring";
+                global.ringAppearance[i] = "clay ring";
                 available[j] = false;
             }
             else
@@ -1575,7 +1575,7 @@ for (i = 0; i &lt;= 27; i++)
         case 4:
             if (available[j])
             {
-                ringAppearance[i] = "jade ring";
+                global.ringAppearance[i] = "jade ring";
                 available[j] = false;
             }
             else
@@ -1586,7 +1586,7 @@ for (i = 0; i &lt;= 27; i++)
         case 5:
             if (available[j])
             {
-                ringAppearance[i] = "diamond ring";
+                global.ringAppearance[i] = "diamond ring";
                 available[j] = false;
             }
             else
@@ -1597,7 +1597,7 @@ for (i = 0; i &lt;= 27; i++)
         case 6:
             if (available[j])
             {
-                ringAppearance[i] = "iron ring";
+                global.ringAppearance[i] = "iron ring";
                 available[j] = false;
             }
             else
@@ -1608,7 +1608,7 @@ for (i = 0; i &lt;= 27; i++)
         case 7:
             if (available[j])
             {
-                ringAppearance[i] = "shiny ring";
+                global.ringAppearance[i] = "shiny ring";
                 available[j] = false;
             }
             else
@@ -1619,7 +1619,7 @@ for (i = 0; i &lt;= 27; i++)
         case 8:
             if (available[j])
             {
-                ringAppearance[i] = "gold ring";
+                global.ringAppearance[i] = "gold ring";
                 available[j] = false;
             }
             else
@@ -1630,7 +1630,7 @@ for (i = 0; i &lt;= 27; i++)
         case 9:
             if (available[j])
             {
-                ringAppearance[i] = "coral ring";
+                global.ringAppearance[i] = "coral ring";
                 available[j] = false;
             }
             else
@@ -1641,7 +1641,7 @@ for (i = 0; i &lt;= 27; i++)
         case 10:
             if (available[j])
             {
-                ringAppearance[i] = "agate ring";
+                global.ringAppearance[i] = "agate ring";
                 available[j] = false;
             }
             else
@@ -1652,7 +1652,7 @@ for (i = 0; i &lt;= 27; i++)
         case 11:
             if (available[j])
             {
-                ringAppearance[i] = "ivory ring";
+                global.ringAppearance[i] = "ivory ring";
                 available[j] = false;
             }
             else
@@ -1663,7 +1663,7 @@ for (i = 0; i &lt;= 27; i++)
         case 12:
             if (available[j])
             {
-                ringAppearance[i] = "twisted ring";
+                global.ringAppearance[i] = "twisted ring";
                 available[j] = false;
             }
             else
@@ -1674,7 +1674,7 @@ for (i = 0; i &lt;= 27; i++)
         case 13:
             if (available[j])
             {
-                ringAppearance[i] = "bronze ring";
+                global.ringAppearance[i] = "bronze ring";
                 available[j] = false;
             }
             else
@@ -1685,7 +1685,7 @@ for (i = 0; i &lt;= 27; i++)
         case 14:
             if (available[j])
             {
-                ringAppearance[i] = "wooden ring";
+                global.ringAppearance[i] = "wooden ring";
                 available[j] = false;
             }
             else
@@ -1696,7 +1696,7 @@ for (i = 0; i &lt;= 27; i++)
         case 15:
             if (available[j])
             {
-                ringAppearance[i] = "black onyx ring";
+                global.ringAppearance[i] = "black onyx ring";
                 available[j] = false;
             }
             else
@@ -1707,7 +1707,7 @@ for (i = 0; i &lt;= 27; i++)
         case 16:
             if (available[j])
             {
-                ringAppearance[i] = "topaz ring";
+                global.ringAppearance[i] = "topaz ring";
                 available[j] = false;
             }
             else
@@ -1718,7 +1718,7 @@ for (i = 0; i &lt;= 27; i++)
         case 17:
             if (available[j])
             {
-                ringAppearance[i] = "emerald ring";
+                global.ringAppearance[i] = "emerald ring";
                 available[j] = false;
             }
             else
@@ -1729,7 +1729,7 @@ for (i = 0; i &lt;= 27; i++)
         case 18:
             if (available[j])
             {
-                ringAppearance[i] = "steel ring";
+                global.ringAppearance[i] = "steel ring";
                 available[j] = false;
             }
             else
@@ -1740,7 +1740,7 @@ for (i = 0; i &lt;= 27; i++)
         case 19:
             if (available[j])
             {
-                ringAppearance[i] = "brass ring";
+                global.ringAppearance[i] = "brass ring";
                 available[j] = false;
             }
             else
@@ -1751,7 +1751,7 @@ for (i = 0; i &lt;= 27; i++)
         case 20:
             if (available[j])
             {
-                ringAppearance[i] = "granite ring";
+                global.ringAppearance[i] = "granite ring";
                 available[j] = false;
             }
             else
@@ -1762,7 +1762,7 @@ for (i = 0; i &lt;= 27; i++)
         case 21:
             if (available[j])
             {
-                ringAppearance[i] = "moonstone ring";
+                global.ringAppearance[i] = "moonstone ring";
                 available[j] = false;
             }
             else
@@ -1773,7 +1773,7 @@ for (i = 0; i &lt;= 27; i++)
         case 22:
             if (available[j])
             {
-                ringAppearance[i] = "sapphire ring";
+                global.ringAppearance[i] = "sapphire ring";
                 available[j] = false;
             }
             else
@@ -1784,7 +1784,7 @@ for (i = 0; i &lt;= 27; i++)
         case 23:
             if (available[j])
             {
-                ringAppearance[i] = "wire ring";
+                global.ringAppearance[i] = "wire ring";
                 available[j] = false;
             }
             else
@@ -1795,7 +1795,7 @@ for (i = 0; i &lt;= 27; i++)
         case 24:
             if (available[j])
             {
-                ringAppearance[i] = "copper ring";
+                global.ringAppearance[i] = "copper ring";
                 available[j] = false;
             }
             else
@@ -1806,7 +1806,7 @@ for (i = 0; i &lt;= 27; i++)
         case 25:
             if (available[j])
             {
-                ringAppearance[i] = "opal ring";
+                global.ringAppearance[i] = "opal ring";
                 available[j] = false;
             }
             else
@@ -1817,7 +1817,7 @@ for (i = 0; i &lt;= 27; i++)
         case 26:
             if (available[j])
             {
-                ringAppearance[i] = "tiger eye ring";
+                global.ringAppearance[i] = "tiger eye ring";
                 available[j] = false;
             }
             else
@@ -1828,7 +1828,7 @@ for (i = 0; i &lt;= 27; i++)
         case 27:
             if (available[j])
             {
-                ringAppearance[i] = "ruby ring";
+                global.ringAppearance[i] = "ruby ring";
                 available[j] = false;
             }
             else
@@ -1851,7 +1851,7 @@ for (i = 0; i &lt;= 8; i++)
         case 0:
             if (available[j])
             {
-                amuletAppearance[i] = "circular amulet";
+                global.amuletAppearance[i] = "circular amulet";
                 available[j] = false;
             }
             else
@@ -1862,7 +1862,7 @@ for (i = 0; i &lt;= 8; i++)
         case 1:
             if (available[j])
             {
-                amuletAppearance[i] = "triangular amulet";
+                global.amuletAppearance[i] = "triangular amulet";
                 available[j] = false;
             }
             else
@@ -1873,7 +1873,7 @@ for (i = 0; i &lt;= 8; i++)
         case 2:
             if (available[j])
             {
-                amuletAppearance[i] = "concave amulet";
+                global.amuletAppearance[i] = "concave amulet";
                 available[j] = false;
             }
             else
@@ -1884,7 +1884,7 @@ for (i = 0; i &lt;= 8; i++)
         case 3:
             if (available[j])
             {
-                amuletAppearance[i] = "spherical amulet";
+                global.amuletAppearance[i] = "spherical amulet";
                 available[j] = false;
             }
             else
@@ -1895,7 +1895,7 @@ for (i = 0; i &lt;= 8; i++)
         case 4:
             if (available[j])
             {
-                amuletAppearance[i] = "pyramidal amulet";
+                global.amuletAppearance[i] = "pyramidal amulet";
                 available[j] = false;
             }
             else
@@ -1906,7 +1906,7 @@ for (i = 0; i &lt;= 8; i++)
         case 5:
             if (available[j])
             {
-                amuletAppearance[i] = "hexagonal amulet";
+                global.amuletAppearance[i] = "hexagonal amulet";
                 available[j] = false;
             }
             else
@@ -1917,7 +1917,7 @@ for (i = 0; i &lt;= 8; i++)
         case 6:
             if (available[j])
             {
-                amuletAppearance[i] = "oval amulet";
+                global.amuletAppearance[i] = "oval amulet";
                 available[j] = false;
             }
             else
@@ -1928,7 +1928,7 @@ for (i = 0; i &lt;= 8; i++)
         case 7:
             if (available[j])
             {
-                amuletAppearance[i] = "square amulet";
+                global.amuletAppearance[i] = "square amulet";
                 available[j] = false;
             }
             else
@@ -1939,7 +1939,7 @@ for (i = 0; i &lt;= 8; i++)
         case 8:
             if (available[j])
             {
-                amuletAppearance[i] = "octagonal amulet";
+                global.amuletAppearance[i] = "octagonal amulet";
                 available[j] = false;
             }
             else
@@ -1962,7 +1962,7 @@ for (i = 0; i &lt;= 26; i++)
         case 0:
             if (available[j])
             {
-                wandAppearance[i] = "aluminum wand";
+                global.wandAppearance[i] = "aluminum wand";
                 available[j] = false;
             }
             else
@@ -1973,7 +1973,7 @@ for (i = 0; i &lt;= 26; i++)
         case 1:
             if (available[j])
             {
-                wandAppearance[i] = "curved wand";
+                global.wandAppearance[i] = "curved wand";
                 available[j] = false;
             }
             else
@@ -1984,7 +1984,7 @@ for (i = 0; i &lt;= 26; i++)
         case 2:
             if (available[j])
             {
-                wandAppearance[i] = "iridium wand";
+                global.wandAppearance[i] = "iridium wand";
                 available[j] = false;
             }
             else
@@ -1995,7 +1995,7 @@ for (i = 0; i &lt;= 26; i++)
         case 3:
             if (available[j])
             {
-                wandAppearance[i] = "marble wand";
+                global.wandAppearance[i] = "marble wand";
                 available[j] = false;
             }
             else
@@ -2006,7 +2006,7 @@ for (i = 0; i &lt;= 26; i++)
         case 4:
             if (available[j])
             {
-                wandAppearance[i] = "short wand";
+                global.wandAppearance[i] = "short wand";
                 available[j] = false;
             }
             else
@@ -2017,7 +2017,7 @@ for (i = 0; i &lt;= 26; i++)
         case 5:
             if (available[j])
             {
-                wandAppearance[i] = "uranium wand";
+                global.wandAppearance[i] = "uranium wand";
                 available[j] = false;
             }
             else
@@ -2028,7 +2028,7 @@ for (i = 0; i &lt;= 26; i++)
         case 6:
             if (available[j])
             {
-                wandAppearance[i] = "balsa wand";
+                global.wandAppearance[i] = "balsa wand";
                 available[j] = false;
             }
             else
@@ -2039,7 +2039,7 @@ for (i = 0; i &lt;= 26; i++)
         case 7:
             if (available[j])
             {
-                wandAppearance[i] = "ebony wand";
+                global.wandAppearance[i] = "ebony wand";
                 available[j] = false;
             }
             else
@@ -2050,7 +2050,7 @@ for (i = 0; i &lt;= 26; i++)
         case 8:
             if (available[j])
             {
-                wandAppearance[i] = "iron wand";
+                global.wandAppearance[i] = "iron wand";
                 available[j] = false;
             }
             else
@@ -2061,7 +2061,7 @@ for (i = 0; i &lt;= 26; i++)
         case 9:
             if (available[j])
             {
-                wandAppearance[i] = "oak wand";
+                global.wandAppearance[i] = "oak wand";
                 available[j] = false;
             }
             else
@@ -2072,7 +2072,7 @@ for (i = 0; i &lt;= 26; i++)
         case 10:
             if (available[j])
             {
-                wandAppearance[i] = "silver wand";
+                global.wandAppearance[i] = "silver wand";
                 available[j] = false;
             }
             else
@@ -2083,7 +2083,7 @@ for (i = 0; i &lt;= 26; i++)
         case 11:
             if (available[j])
             {
-                wandAppearance[i] = "zinc wand";
+                global.wandAppearance[i] = "zinc wand";
                 available[j] = false;
             }
             else
@@ -2094,7 +2094,7 @@ for (i = 0; i &lt;= 26; i++)
         case 12:
             if (available[j])
             {
-                wandAppearance[i] = "brass wand";
+                global.wandAppearance[i] = "brass wand";
                 available[j] = false;
             }
             else
@@ -2105,7 +2105,7 @@ for (i = 0; i &lt;= 26; i++)
         case 13:
             if (available[j])
             {
-                wandAppearance[i] = "forked wand";
+                global.wandAppearance[i] = "forked wand";
                 available[j] = false;
             }
             else
@@ -2116,7 +2116,7 @@ for (i = 0; i &lt;= 26; i++)
         case 14:
             if (available[j])
             {
-                wandAppearance[i] = "jeweled wand";
+                global.wandAppearance[i] = "jeweled wand";
                 available[j] = false;
             }
             else
@@ -2127,7 +2127,7 @@ for (i = 0; i &lt;= 26; i++)
         case 15:
             if (available[j])
             {
-                wandAppearance[i] = "pine wand";
+                global.wandAppearance[i] = "pine wand";
                 available[j] = false;
             }
             else
@@ -2138,7 +2138,7 @@ for (i = 0; i &lt;= 26; i++)
         case 16:
             if (available[j])
             {
-                wandAppearance[i] = "spiked wand";
+                global.wandAppearance[i] = "spiked wand";
                 available[j] = false;
             }
             else
@@ -2149,7 +2149,7 @@ for (i = 0; i &lt;= 26; i++)
         case 17:
             if (available[j])
             {
-                wandAppearance[i] = "copper wand";
+                global.wandAppearance[i] = "copper wand";
                 available[j] = false;
             }
             else
@@ -2160,7 +2160,7 @@ for (i = 0; i &lt;= 26; i++)
         case 18:
             if (available[j])
             {
-                wandAppearance[i] = "glass wand";
+                global.wandAppearance[i] = "glass wand";
                 available[j] = false;
             }
             else
@@ -2171,7 +2171,7 @@ for (i = 0; i &lt;= 26; i++)
         case 19:
             if (available[j])
             {
-                wandAppearance[i] = "long wand";
+                global.wandAppearance[i] = "long wand";
                 available[j] = false;
             }
             else
@@ -2182,7 +2182,7 @@ for (i = 0; i &lt;= 26; i++)
         case 20:
             if (available[j])
             {
-                wandAppearance[i] = "platinum wand";
+                global.wandAppearance[i] = "platinum wand";
                 available[j] = false;
             }
             else
@@ -2193,7 +2193,7 @@ for (i = 0; i &lt;= 26; i++)
         case 21:
             if (available[j])
             {
-                wandAppearance[i] = "steel wand";
+                global.wandAppearance[i] = "steel wand";
                 available[j] = false;
             }
             else
@@ -2204,7 +2204,7 @@ for (i = 0; i &lt;= 26; i++)
         case 22:
             if (available[j])
             {
-                wandAppearance[i] = "crystal wand";
+                global.wandAppearance[i] = "crystal wand";
                 available[j] = false;
             }
             else
@@ -2215,7 +2215,7 @@ for (i = 0; i &lt;= 26; i++)
         case 23:
             if (available[j])
             {
-                wandAppearance[i] = "hexagonal wand";
+                global.wandAppearance[i] = "hexagonal wand";
                 available[j] = false;
             }
             else
@@ -2226,7 +2226,7 @@ for (i = 0; i &lt;= 26; i++)
         case 24:
             if (available[j])
             {
-                wandAppearance[i] = "maple wand";
+                global.wandAppearance[i] = "maple wand";
                 available[j] = false;
             }
             else
@@ -2237,7 +2237,7 @@ for (i = 0; i &lt;= 26; i++)
         case 25:
             if (available[j])
             {
-                wandAppearance[i] = "runed wand";
+                global.wandAppearance[i] = "runed wand";
                 available[j] = false;
             }
             else
@@ -2248,7 +2248,7 @@ for (i = 0; i &lt;= 26; i++)
         case 26:
             if (available[j])
             {
-                wandAppearance[i] = "tin wand";
+                global.wandAppearance[i] = "tin wand";
                 available[j] = false;
             }
             else

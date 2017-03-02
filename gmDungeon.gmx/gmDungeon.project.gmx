@@ -183,6 +183,20 @@
           <object>objects\obj_whiteDragonScaleMail</object>
           <object>objects\obj_yellowDragonScaleMail</object>
         </objects>
+        <objects name="cloaks">
+          <object>objects\obj_mummyWrapping</object>
+          <object>objects\obj_orcishCloak</object>
+          <object>objects\obj_dwarvishCloak</object>
+          <object>objects\obj_leatherCloak</object>
+          <object>objects\obj_cloakOfDisplacement</object>
+          <object>objects\obj_oilskinCloak</object>
+          <object>objects\obj_alchemySmock</object>
+          <object>objects\obj_cloakOfInvisibility</object>
+          <object>objects\obj_cloakOfMagicResistance</object>
+          <object>objects\obj_elvenCloak</object>
+          <object>objects\obj_robe</object>
+          <object>objects\obj_cloakOfProtection</object>
+        </objects>
       </objects>
       <objects name="tools">
         <object>objects\obj_toolTemplate</object>
