@@ -65,26 +65,26 @@ switch (global.class)
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 7;
-        intelligence = 10;
-        wisdom = 7;
-        dexterity = 7;
-        constitution = 7;
-        charisma = 7;
+        strength = 10;
+        intelligence = 18;
+        wisdom = 10;
+        dexterity = 13;
+        constitution = 13;
+        charisma = 10;
         addToSpell("Force Bolt");
         break;
-    case "Fighter":
+    case "Barbarian":
         maxPW = 1;
         maxHP = 14;
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 16;
+        strength = 18;
         intelligence = 7;
         wisdom = 7;
-        dexterity = 15;
-        constitution = 16;
-        charisma = 7;
+        dexterity = 17;
+        constitution = 18;
+        charisma = 6;
         break;
     case "Rogue":
         maxPW = 1;
@@ -92,12 +92,12 @@ switch (global.class)
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 7;
-        intelligence = 7;
-        wisdom = 7;
-        dexterity =10;
-        constitution = 7;
-        charisma = 6;
+        strength = 15;
+        intelligence = 14;
+        wisdom = 14;
+        dexterity =18;
+        constitution = 14;
+        charisma = 8;
         break;
     case "Archeologist":
         maxPW = 1;
@@ -105,12 +105,25 @@ switch (global.class)
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 7;
+        strength = 12;
+        intelligence = 15;
+        wisdom = 15;
+        dexterity = 10;
+        constitution = 12;
+        charisma = 10;
+        break;
+    case "Healer":
+        maxPW = irandom_range(2,5);
+        maxHP = 11;
+        damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;
+        strength = 9;
         intelligence = 10;
-        wisdom = 10;
-        dexterity = 7;
-        constitution = 7;
-        charisma = 7;
+        wisdom = 16;
+        dexterity = 9;
+        constitution = 14;
+        charisma = 17;
         break;
     case "Caveman":
         maxPW = 1;
@@ -118,12 +131,51 @@ switch (global.class)
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 10;
-        intelligence = 7;
-        wisdom = 7;
-        dexterity = 7;
-        constitution = 8;
-        charisma = 6;
+        strength = 18;
+        intelligence = 9;
+        wisdom = 9;
+        dexterity = 13;
+        constitution = 17;
+        charisma = 8;
+        break;
+    case "Knight":
+        maxPW = irandom_range(2,5);
+        maxHP = 14;
+        damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;
+        strength = 15;
+        intelligence = 8;
+        wisdom = 15;
+        dexterity = 8;
+        constitution = 11;
+        charisma = 17;
+        break;
+    case "Monk":
+        maxPW = irandom_range(3,4);
+        maxHP = 12;
+        damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;
+        strength = 17;
+        intelligence = 10;
+        wisdom = 14;
+        dexterity = 14;
+        constitution = 11;
+        charisma = 10;
+        break;
+    case "Priest":
+        maxPW = irandom_range(5,7);
+        maxHP = 10;
+        damageSmall[0] = 2;
+        damageLarge[0] = 2;
+        toHitBonus = 0;
+        strength = 12;
+        intelligence = 10;
+        wisdom = 18;
+        dexterity = 12;
+        constitution = 13;
+        charisma = 10;
         break;
     case "Ranger":
         maxPW = 1;
@@ -131,12 +183,12 @@ switch (global.class)
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 13;
-        intelligence = 13;
-        wisdom = 13;
-        dexterity = 9;
-        constitution = 13;
-        charisma = 7;
+        strength = 14;
+        intelligence = 10;
+        wisdom = 10;
+        dexterity = 18;
+        constitution = 14;
+        charisma = 9;
         break;
     case "Samurai":
         maxPW = 1;
@@ -144,12 +196,12 @@ switch (global.class)
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 10;
-        intelligence = 8;
-        wisdom = 7;
-        dexterity = 10;
-        constitution = 17;
-        charisma = 6;
+        strength = 16;
+        intelligence = 10;
+        wisdom = 8;
+        dexterity = 16;
+        constitution = 18;
+        charisma = 7;
         break;
     case "Tourist":
         maxPW = 1;
@@ -157,12 +209,12 @@ switch (global.class)
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 7;
-        intelligence = 10;
-        wisdom = 6;
-        dexterity = 7;
-        constitution = 7;
-        charisma = 10;
+        strength = 11;
+        intelligence = 13;
+        wisdom = 9;
+        dexterity = 11;
+        constitution = 15;
+        charisma = 16;
         break;
     case "Valkyrie":
         maxPW = 1;
@@ -170,12 +222,12 @@ switch (global.class)
         damageSmall[0] = 2;
         damageLarge[0] = 2;
         toHitBonus = 0;
-        strength = 10;
-        intelligence = 7;
-        wisdom = 7;
-        dexterity = 7;
-        constitution = 10;
-        charisma = 7;
+        strength = 18;
+        intelligence = 9;
+        wisdom = 9;
+        dexterity = 13;
+        constitution = 18;
+        charisma = 9;
         break;
 }
 pw = maxPW;
@@ -552,7 +604,7 @@ if (keyboard_check_pressed(ord("I")) &amp;&amp; global.p_turn)
 }
 if (keyboard_check_pressed(ord("V")) &amp;&amp; global.p_turn)
 {
-    instance_create(x, y, obj_weapon);
+    instance_create(x, y, obj_spellbook);
 }
 if (keyboard_check_pressed(ord("S")) &amp;&amp; global.p_turn)
 {

@@ -2279,9 +2279,9 @@ for (i = 0; i &lt;= 26; i++)
           <argument>
             <kind>1</kind>
             <string>///Generate
-if (keyboard_check_pressed(ord("F")))
+if (keyboard_check_pressed(ord("B")))
 {
-    global.class = "Fighter";
+    global.class = "Barbarian";
     instance_create(x, y, obj_inventory);
     instance_create(x, y, obj_player);
     instance_create(x, y, dgen);
@@ -2351,6 +2351,38 @@ else if (keyboard_check_pressed(ord("S")))
     instance_create(x, y, dgen);
     instance_destroy();
 }
+else if (keyboard_check_pressed(ord("H")))
+{
+    global.class = "Healer";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
+else if (keyboard_check_pressed(ord("P")))
+{
+    global.class = "Priest";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
+else if (keyboard_check_pressed(ord("K")))
+{
+    global.class = "Knight";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
+else if (keyboard_check_pressed(ord("M")))
+{
+    global.class = "Monk";
+    instance_create(x, y, obj_inventory);
+    instance_create(x, y, obj_player);
+    instance_create(x, y, dgen);
+    instance_destroy();
+}
 else if (keyboard_check_pressed(ord("L")))
 {
     scr_load();
@@ -2377,7 +2409,7 @@ else if (keyboard_check_pressed(ord("L")))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(0, 0, "Choose your class#a - Archeologist#c - Caveman#f - Fighter#r - Rogue#R - Ranger#s - Samurai#t - Tourist#v - Valkyrie#w - Wizard#l - Load save file"); 
+            <string>draw_text(0, 0, "Choose your class#a - Archeologist#b - Barbarian#c - Caveman#h - Healer#k - Knight#m - Monk#p - Priest#R - Ranger#r - Rogue#s - Samurai#t - Tourist#v - Valkyrie#w - Wizard#l - Load save file"); 
 </string>
           </argument>
         </arguments>
