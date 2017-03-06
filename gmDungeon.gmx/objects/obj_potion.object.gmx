@@ -102,7 +102,7 @@ if (name == "clear potion")
                                         
                 }
 amount = 1;*/
-potionGen = irandom_range(1, 100);
+potionGen = random_range(1, 100);
 if (potionGen &lt;= 6.9)
 {
     instance_change(obj_potionOfWater, true);
