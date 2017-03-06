@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
-/*name = choose("ruby", "pink", "orange", "yellow", "emerald",
+name = choose("ruby", "pink", "orange", "yellow", "emerald",
     "dark green", "cyan", "sky blue", "brilliant blue", "magenta",
     "purple-red", "puce", "milky", "swirly", "bubbly",
     "smoky", "cloudy", "effervescent", "black", "golden",
@@ -101,120 +101,7 @@ if (name == "clear potion")
                                             }
                                         
                 }
-amount = 1;*/
-potionGen = irandom_range(1, 100);
-if (potionGen &lt;= 6.9)
-{
-    instance_change(obj_potionOfWater, true);
-}
-else if (potionGen &lt;= 11.1)
-{
-    instance_change(obj_potionOfBooze, true);
-}
-else if (potionGen &lt;= 15.3)
-{
-    instance_change(obj_potionOfFruitJuice, true);
-}
-else if (potionGen &lt;= 19.5)
-{
-    instance_change(obj_potionOfSeeInvisible, true);
-}
-else if (potionGen &lt;= 23.7)
-{
-    instance_change(obj_potionOfSickness, true);
-}
-else if (potionGen &lt;= 27.9)
-{
-    instance_change(obj_potionOfConfusion, true);
-}
-else if (potionGen &lt;= 32.6)
-{
-    instance_change(obj_potionOfExtraHealing, true);
-}
-else if (potionGen &lt;= 36.6)
-{
-    instance_change(obj_potionOfHallucination, true);
-}
-else if (potionGen &lt;= 42.3)
-{
-    instance_change(obj_potionOfHealing, true);
-}
-else if (potionGen &lt;= 43.45)
-{
-    instance_change(obj_holyWater, true);
-}
-else if (potionGen &lt;= 44.6)
-{
-    instance_change(obj_unholyWater, true);
-}
-else if (potionGen &lt;= 48.6)
-{
-    instance_change(obj_potionOfRestoreAbility, true);
-}
-else if (potionGen &lt;= 52.8)
-{
-    instance_change(obj_potionOfSleeping, true);
-}
-else if (potionGen &lt;= 56.8)
-{
-    instance_change(obj_potionOfBlindness, true);
-}
-else if (potionGen &lt;= 61)
-{
-    instance_change(obj_potionOfGainEnergy, true);
-}
-else if (potionGen &lt;= 65)
-{
-    instance_change(obj_potionOfInvisibility, true);
-}
-else if (potionGen &lt;= 69)
-{
-    instance_change(obj_potionOfMonsterDetection, true);
-}
-else if (potionGen &lt;= 73.2)
-{
-    instance_change(obj_potionOfObjectDetection, true);
-}
-else if (potionGen &lt;= 75.2)
-{
-    instance_change(obj_potionOfEnlightenment, true);
-}
-else if (potionGen &lt;= 76.2)
-{
-    instance_change(obj_potionOfFullHealing, true);
-}
-else if (potionGen &lt;= 80.4)
-{
-    instance_change(obj_potionOfLevitation, true);
-}
-else if (potionGen &lt;= 81.4)
-{
-    instance_change(obj_potionOfPolymorph, true);
-}
-else if (potionGen &lt;= 85.6)
-{
-    instance_change(obj_potionOfSpeed, true);
-}
-else if (potionGen &lt;= 86.6)
-{
-    instance_change(obj_potionOfAcid, true);
-}
-else if (potionGen &lt;= 89.6)
-{
-    instance_change(obj_potionOfOil, true);
-}
-else if (potionGen &lt;= 93.8)
-{
-    instance_change(obj_potionOfGainAbility, true)
-}
-else if (potionGen &lt;= 95.8)
-{
-    instance_change(obj_potionOfGainLevel, true)
-}
-else if (potionGen &lt;= 100)
-{
-    instance_change(obj_potionOfParalysis, true)
-}
+amount = 1;
 </string>
           </argument>
         </arguments>

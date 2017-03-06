@@ -45,7 +45,7 @@
     <script>scripts\enemyMove.gml</script>
     <script>scripts\scr_save.gml</script>
     <script>scripts\scr_load.gml</script>
-    <script>scripts\drink.gml</script>
+    <script>scripts\quaff.gml</script>
     <script>scripts\wield.gml</script>
     <script>scripts\addToSpell.gml</script>
     <script>scripts\spell.gml</script>
@@ -202,6 +202,34 @@
         <object>objects\obj_toolTemplate</object>
       </objects>
       <objects name="potions">
+        <object>objects\obj_potionOfWater</object>
+        <object>objects\obj_potionOfBooze</object>
+        <object>objects\obj_potionOfFruitJuice</object>
+        <object>objects\obj_potionOfSeeInvisible</object>
+        <object>objects\obj_potionOfSickness</object>
+        <object>objects\obj_potionOfConfusion</object>
+        <object>objects\obj_potionOfExtraHealing</object>
+        <object>objects\obj_potionOfHallucination</object>
+        <object>objects\obj_potionOfHealing</object>
+        <object>objects\obj_holyWater</object>
+        <object>objects\obj_unholyWater</object>
+        <object>objects\obj_potionOfRestoreAbility</object>
+        <object>objects\obj_potionOfSleeping</object>
+        <object>objects\obj_potionOfBlindness</object>
+        <object>objects\obj_potionOfGainEnergy</object>
+        <object>objects\obj_potionOfInvisibility</object>
+        <object>objects\obj_potionOfMonsterDetection</object>
+        <object>objects\obj_potionOfObjectDetection</object>
+        <object>objects\obj_potionOfEnlightenment</object>
+        <object>objects\obj_potionOfFullHealing</object>
+        <object>objects\obj_potionOfLevitation</object>
+        <object>objects\obj_potionOfPolymorph</object>
+        <object>objects\obj_potionOfSpeed</object>
+        <object>objects\obj_potionOfAcid</object>
+        <object>objects\obj_potionOfOil</object>
+        <object>objects\obj_potionOfGainAbility</object>
+        <object>objects\obj_potionOfGainLevel</object>
+        <object>objects\obj_potionOfParalysis</object>
         <object>objects\obj_potionTemplate</object>
       </objects>
       <objects name="scrolls">
@@ -232,6 +260,7 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_textbox</object>
     <object>objects\obj_statusBar</object>
+    <object>objects\obj_quaff</object>
     <object>objects\obj_spell</object>
     <object>objects\obj_wield</object>
     <object>objects\obj_read</object>
@@ -251,7 +280,7 @@
     <room>rooms\roomInv</room>
     <room>rooms\roomSpell</room>
     <room>rooms\room12</room>
-    <room>rooms\roomDrink</room>
+    <room>rooms\roomQuaff</room>
     <room>rooms\roomWield</room>
     <room>rooms\roomRead</room>
   </rooms>
