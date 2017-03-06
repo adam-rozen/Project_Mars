@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>name = "potion of gain level";
-appearance = potionAppearance[23];
+appearance = global.potionAppearance[23];
 price = 300;
 weight = 20;
 itemType = "potion";
