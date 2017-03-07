@@ -7,6 +7,7 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
     {
         book = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " description", "")); 
         book = string_replace(book, "spellbook of ", "");
+        spl = "";
         switch(book)
         {
             case "force bolt":
@@ -16,7 +17,8 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                 spl = "extra healing spell";
                 break;
         }
-        addToSpell("Force Bolt");
+        if (spl == "force bolt spell")
+            addToSpell("Force Bolt");
         print("You add the " + spl + " to your repertoire");
         ini_close();
         room_goto(global.rm);
