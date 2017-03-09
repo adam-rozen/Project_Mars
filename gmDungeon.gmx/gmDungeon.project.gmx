@@ -27,6 +27,8 @@
     <sprite>sprites\spr_floor</sprite>
     <sprite>sprites\spr_black</sprite>
     <sprite>sprites\spr_kobold</sprite>
+    <sprite>sprites\spr_rat</sprite>
+    <sprite>sprites\spr_newt</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -244,6 +246,8 @@
     </objects>
     <objects name="monsters">
       <object>objects\obj_kobold</object>
+      <object>objects\obj_rat</object>
+      <object>objects\obj_newt</object>
       <object>objects\obj_orc</object>
     </objects>
     <object>objects\dgen</object>

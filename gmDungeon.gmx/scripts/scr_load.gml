@@ -36,31 +36,32 @@ a = 0;
 while(ini_key_exists(base64_encode("Enemy Values"), string(a) + " name"))
 {
     name = base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " name", base64_encode("")));
+    test = noone;
     switch (name)
     {
         case "orc":
             test = instance_create(real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " x", base64_encode("")))), real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " y", base64_encode("")))), obj_orc);
-            test.name = name;
-            test.maxHP = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode("1"))));
-            test.xp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " xp", base64_encode("0"))));
-            test.attack = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " damage", base64_encode("1"))));
-            test.moved = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " moved", base64_encode("0"))));
-            test.gold = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " gold", base64_encode("0"))));
-            test.hp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " hp", base64_encode("1"))));
-            test.level = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " level", base64_encode("1"))));
             break;
         case "kobold":
             test = instance_create(real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " x", base64_encode("")))), real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " y", base64_encode("")))), obj_kobold);
-            test.name = name;
-            test.maxHP = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode("1"))));
-            test.xp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " xp", base64_encode("0"))));
-            test.attack = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " damage", base64_encode("1"))));
-            test.moved = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " moved", base64_encode("0"))));
-            test.gold = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " gold", base64_encode("0"))));
-            test.hp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " hp", base64_encode("1"))));
-            test.level = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " level", base64_encode("0"))));
             break;
+        case "rat":
+            test = instance_create(real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " x", base64_encode("")))), real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " y", base64_encode("")))), obj_rat);
+            break;
+        case "newt":
+            test = instance_create(real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " x", base64_encode("")))), real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " y", base64_encode("")))), obj_rat);
+            break;
+        /*case "rat":
+            test = instance_create(real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " x", base64_encode("")))), real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " y", base64_encode("")))), obj_rat);
+            break;*/
     }
+    test.name = name;
+    test.maxHP = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode("1"))));
+    test.attack = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " damage", base64_encode("1"))));
+    test.moved = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " moved", base64_encode("0"))));
+    test.gold = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " gold", base64_encode("0"))));
+    test.hp = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " hp", base64_encode("1"))));
+    test.ac = real(base64_decode(ini_read_string(base64_encode("Enemy Values"), string(a) + " ac", base64_encode("1"))));
     a++;
 }
 world_w = real(base64_decode(ini_read_string(base64_encode("Dungeon Properties"), "world_w", base64_encode("32"))));

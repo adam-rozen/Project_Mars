@@ -37,10 +37,9 @@ for (a = 0; a <= instance_number(obj_enemy); a++)
     ini_write_string(base64_encode("Enemy Values"), string(a) + " name", base64_encode(string(ida.name)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " gold", base64_encode(string(ida.gold)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " moved", base64_encode(string(ida.moved)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " damage", base64_encode(string(ida.damage)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode(string(ida.maxHP)));    
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " xp", base64_encode(string(ida.xp)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " level", base64_encode(string(ida.level)));
+    ini_write_string(base64_encode("Enemy Values"), string(a) + " ac", base64_encode(string(ida.gold)));
+    
 }
 ini_write_string(base64_encode("Dungeon Properties"), "world_w", base64_encode(string(31)));
 ini_write_string(base64_encode("Dungeon Properties"), "world_h", base64_encode(string(31)));

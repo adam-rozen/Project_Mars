@@ -370,106 +370,93 @@ repeat(rnum)
             }
     rdon += 1
     // Plug in your room-related code here:
-//    if (!global.load)
-  //  {
-        if (rdon == 1)
+    if (rdon == 1)
+    {
+        _x = wsiz2 * irandom_range(rgx, rgx + rw);
+        _y = wsiz2 * irandom_range(rgy, rgy + rh);
+        obj_player.x = _x;
+        obj_player.y = _y;
+        if (global.toughness != 1)
         {
-            _x = wsiz2 * irandom_range(rgx, rgx + rw);
-            _y = wsiz2 * irandom_range(rgy, rgy + rh);
+            instance_create(_x, _y, obj_up);
+        }
+    }
+    if (rdon == rnum)
+    {
+        _x = wsiz2 * irandom_range(rgx, rgx + rw);
+        _y = wsiz2 * irandom_range(rgy, rgy + rh);
+        if (obj_player.up)
+        {
             obj_player.x = _x;
             obj_player.y = _y;
-            if (global.toughness != 1)
-            {
-                instance_create(_x, _y, obj_up);
-            }
+            up = false;
         }
-        if (rdon == rnum)
+        instance_create(_x, _y, obj_down);
+    }
+    repeat(choose(0, 1))
+    {
+        itemGen = irandom_range(1, 100);
+        genSpotX = wsiz2 * irandom_range(rgx, rgx + rw);
+        genSpotY = wsiz2 * irandom_range(rgy, rgy + rh);
+        if (itemGen &lt;= 10)
         {
-            _x = wsiz2 * irandom_range(rgx, rgx + rw);
-            _y = wsiz2 * irandom_range(rgy, rgy + rh);
-            if (obj_player.up)
-            {
-                obj_player.x = _x;
-                obj_player.y = _y;
-                up = false;
-            }
-            instance_create(_x, _y, obj_down);
+            instance_create(genSpotX, genSpotY, obj_weapon);
         }
-        repeat(choose(0, 1))
+        else if (itemGen &lt;= 20)
         {
-            itemGen = irandom_range(1, 100);
-            genSpotX = wsiz2 * irandom_range(rgx, rgx + rw);
-            genSpotY = wsiz2 * irandom_range(rgy, rgy + rh);
-            if (itemGen &lt;= 10)
-            {
-                instance_create(genSpotX, genSpotY, obj_weapon);
-            }
-            else if (itemGen &lt;= 20)
-            {
-                instance_create(genSpotX, genSpotY, obj_armor);
-            }
-            else if (itemGen &lt;= 40)
-            {
-                instance_create(genSpotX, genSpotY, obj_comestible);
-            }
-            else if (itemGen &lt;= 48)
-            {
-                instance_create(genSpotX, genSpotY, obj_tool);
-            }
-            else if (itemGen &lt;= 64)
-            {
-                instance_create(genSpotX, genSpotY, obj_potion);
-            }
-            else if (itemGen &lt;= 80)
-            {
-                instance_create(genSpotX, genSpotY, obj_scroll);
-            }
-            else if (itemGen &lt;= 84)
-            {
-                instance_create(genSpotX, genSpotY, obj_spellbook);
-            }
-            else if (itemGen &lt;= 88)
-            {
-                instance_create(genSpotX, genSpotY, obj_wand);
-            }
-            else if (itemGen &lt;= 91)
-            {
-                instance_create(genSpotX, genSpotY, obj_ring);
-            }
-            else if (itemGen &lt;= 92)
-            {
-                instance_create(genSpotX, genSpotY, obj_amulet);
-            }
-            else if (itemGen &lt;= 100)
-            {
-                instance_create(genSpotX, genSpotY, obj_gem);
-            }
+            instance_create(genSpotX, genSpotY, obj_armor);
         }
-        if (choose(0, 1, 2) == 1)
+        else if (itemGen &lt;= 40)
         {
-            instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
+            instance_create(genSpotX, genSpotY, obj_comestible);
         }
-        repeat(choose(0, 0, 1, 2, 3))
+        else if (itemGen &lt;= 48)
         {
-            _x = wsiz2 * irandom_range(rgx, rgx + rw);
-            _y = wsiz2 * irandom_range(rgy, rgy + rh);
-            target = instance_place(_x, _y, obj_entity);
-            if (target == noone)
-            {
-                instance_create(_x, _y, obj_orc);
-            }
+            instance_create(genSpotX, genSpotY, obj_tool);
         }
-        repeat(choose(0, 1, 2, 3))
+        else if (itemGen &lt;= 64)
         {
-            _x = wsiz2 * irandom_range(rgx, rgx + rw);
-            _y = wsiz2 * irandom_range(rgy, rgy + rh);
-            target = instance_place(_x, _y, obj_entity);
-            if (target == noone)
-            {
-                instance_create(_x, _y, obj_kobold);
-            }
+            instance_create(genSpotX, genSpotY, obj_potion);
         }
-    //}
+        else if (itemGen &lt;= 80)
+        {
+            instance_create(genSpotX, genSpotY, obj_scroll);
+        }
+        else if (itemGen &lt;= 84)
+        {
+            instance_create(genSpotX, genSpotY, obj_spellbook);
+        }
+        else if (itemGen &lt;= 88)
+        {
+            instance_create(genSpotX, genSpotY, obj_wand);
+        }
+        else if (itemGen &lt;= 91)
+        {
+            instance_create(genSpotX, genSpotY, obj_ring);
+        }
+        else if (itemGen &lt;= 92)
+        {
+            instance_create(genSpotX, genSpotY, obj_amulet);
+        }
+        else if (itemGen &lt;= 100)
+        {
+            instance_create(genSpotX, genSpotY, obj_gem);
+        }
+    }
+    if (choose(0, 1, 2) == 1)
+    {
+        instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
+    }
+    repeat(choose(0, 0, 1, 2, 3, 4))
+    {
+        _x = wsiz2 * irandom_range(rgx, rgx + rw);
+        _y = wsiz2 * irandom_range(rgy, rgy + rh);
+        target = instance_place(_x, _y, obj_entity);
+        if (!place_meeting(_x, _y, obj_entity))
+        {
+            instance_create(_x, _y, choose(obj_orc, obj_newt, obj_rat, obj_kobold));
+        }
+    }
 }
 </string>
           </argument>
