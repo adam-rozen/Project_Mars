@@ -52,6 +52,9 @@
     <script>scripts\addToSpell.gml</script>
     <script>scripts\spell.gml</script>
     <script>scripts\read.gml</script>
+    <script>scripts\fire.gml</script>
+    <script>scripts\putOn.gml</script>
+    <script>scripts\remove.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
@@ -287,6 +290,9 @@
     <room>rooms\roomQuaff</room>
     <room>rooms\roomWield</room>
     <room>rooms\roomRead</room>
+    <room>rooms\roomFire</room>
+    <room>rooms\roomPutOn</room>
+    <room>rooms\roomRemove</room>
   </rooms>
   <constants number="10">
     <constant name="movespeed">32</constant>
