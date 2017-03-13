@@ -447,14 +447,14 @@ repeat(rnum)
     {
         instance_create(wsiz2 * irandom_range(rgx, rgx + rw), wsiz2 * irandom_range(rgy, rgy + rh), obj_gold);
     }
-    repeat(choose(0, 0, 1, 2, 3, 4))
+    repeat(choose(0, 0, 0, 1, 2, 3))
     {
         _x = wsiz2 * irandom_range(rgx, rgx + rw);
         _y = wsiz2 * irandom_range(rgy, rgy + rh);
         target = instance_place(_x, _y, obj_entity);
         if (!place_meeting(_x, _y, obj_entity))
         {
-            instance_create(_x, _y, choose(obj_orc, obj_newt, obj_rat, obj_kobold));
+            instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
         }
     }
 }

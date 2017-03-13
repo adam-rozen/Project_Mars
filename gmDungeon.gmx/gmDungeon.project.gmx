@@ -29,6 +29,9 @@
     <sprite>sprites\spr_kobold</sprite>
     <sprite>sprites\spr_rat</sprite>
     <sprite>sprites\spr_newt</sprite>
+    <sprite>sprites\spr_homunculus</sprite>
+    <sprite>sprites\spr_zombie</sprite>
+    <sprite>sprites\spr_balrog</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -250,8 +253,11 @@
     <objects name="monsters">
       <object>objects\obj_kobold</object>
       <object>objects\obj_rat</object>
+      <object>objects\obj_balrog</object>
       <object>objects\obj_newt</object>
+      <object>objects\obj_zombie</object>
       <object>objects\obj_orc</object>
+      <object>objects\obj_homunculus</object>
     </objects>
     <object>objects\dgen</object>
     <object>objects\obj_wall</object>
@@ -284,9 +290,9 @@
     <room>rooms\room8</room>
     <room>rooms\room9</room>
     <room>rooms\room10</room>
+    <room>rooms\room11</room>
     <room>rooms\roomInv</room>
     <room>rooms\roomSpell</room>
-    <room>rooms\room12</room>
     <room>rooms\roomQuaff</room>
     <room>rooms\roomWield</room>
     <room>rooms\roomRead</room>
