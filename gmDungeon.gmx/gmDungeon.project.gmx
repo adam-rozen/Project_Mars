@@ -58,6 +58,10 @@
     <script>scripts\fire.gml</script>
     <script>scripts\putOn.gml</script>
     <script>scripts\remove.gml</script>
+    <script>scripts\wear.gml</script>
+    <script>scripts\takeOff.gml</script>
+    <script>scripts\quiver.gml</script>
+    <script>scripts\rest.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
@@ -299,6 +303,10 @@
     <room>rooms\roomFire</room>
     <room>rooms\roomPutOn</room>
     <room>rooms\roomRemove</room>
+    <room>rooms\roomWear</room>
+    <room>rooms\roomTakeOff</room>
+    <room>rooms\roomQuiver</room>
+    <room>rooms\roomRest</room>
   </rooms>
   <constants number="10">
     <constant name="movespeed">32</constant>
