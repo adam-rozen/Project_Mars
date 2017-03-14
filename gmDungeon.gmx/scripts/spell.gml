@@ -14,6 +14,8 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
             {
                 print("You don't have enough energy to cast that spell.");
             }
+            break
     }
+    ini_close();
     room_goto(global.rm);
 }

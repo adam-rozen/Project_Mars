@@ -1,5 +1,9 @@
 if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
 {
+    if (confused > 0)
+    {
+        confused -= 1;
+    }
     print("");
     target = instance_place(x + xMovespeed, y + yMovespeed, obj_entity);
     if (target == noone)
@@ -31,8 +35,6 @@ if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
                 }
                 else
                 {
-                    show_debug_message(temp)
-                    show_debug_message(temp.name)
                     for (i = 0; i <= array_length_1d(temp.damageSmall) - 1; i++)
                     {
                        target.hp -= irandom_range(1, temp.damageSmall[i]);

@@ -56,18 +56,21 @@ if (room_get_name(room) == "roomSpell")
             <kind>1</kind>
             <string>///Use Spell
 if (room_get_name(room) == "roomSpell")
-{
-    key = keyboard_key;
-    if (key !=0)
+{   
+    if (not obj_player.confused &gt; 0)
     {
-        switch(key)
+        key = keyboard_key;
+        if (key !=0)
         {
-            case ord("A"):
-                spell(0)
-                break;
-            case ord("B"):
-                spell(1)
-                break;         
+            switch(key)
+            {
+                case ord("A"):
+                    spell(0)
+                    break;
+                case ord("B"):
+                    spell(1)
+                    break;         
+            }
         }
     }
 }
