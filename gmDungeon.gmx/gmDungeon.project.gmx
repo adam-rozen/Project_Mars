@@ -209,6 +209,13 @@
           <object>objects\obj_robe</object>
           <object>objects\obj_cloakOfProtection</object>
         </objects>
+        <objects name="helms">
+          <object>objects\obj_fedora</object>
+          <object>objects\obj_dunceCap</object>
+          <object>objects\obj_cornuthaum</object>
+          <object>objects\obj_dentedPot</object>
+          <object>objects\obj_elvenLeatherHelm</object>
+        </objects>
       </objects>
       <objects name="tools">
         <object>objects\obj_toolTemplate</object>
