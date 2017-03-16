@@ -679,10 +679,10 @@ if (keyboard_check(ord("Q")) &amp;&amp; global.p_turn)
     global.rm = room;
     room_goto(roomQuaff);
 }
-if (keyboard_check(ord("F")) &amp;&amp; global.p_turn)
+if (keyboard_check(ord("Q")) &amp;&amp; keyboard_check(vk_shift) &amp;&amp; global.p_turn)
 {
     global.rm = room;
-    room_goto(roomFire);
+    room_goto(roomQuiver);
 }
 </string>
           </argument>
