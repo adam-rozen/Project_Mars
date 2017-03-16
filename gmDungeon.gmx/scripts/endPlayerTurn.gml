@@ -26,6 +26,10 @@ else
        }
     }
 }
+if (confused > 0)
+{
+    confused -= 1;
+}
 if (playerNutrition > 0)
     playerNutrition--;
 else

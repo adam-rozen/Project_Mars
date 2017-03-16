@@ -1,9 +1,5 @@
 if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
 {
-    if (confused > 0)
-    {
-        confused -= 1;
-    }
     print("");
     target = instance_place(x + xMovespeed, y + yMovespeed, obj_entity);
     if (target == noone)

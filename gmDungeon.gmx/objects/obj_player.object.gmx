@@ -399,7 +399,8 @@ if (global.p_turn)
 {
     if (keyboard_check_pressed(vk_numpad8) || keyboard_check_pressed(ord('8')))
     {
-        var xMovespeed, yMovespeed;
+        xMovespeed = 0;
+        yMovespeed = 0;
         if (confused == 0 or (0 == choose(0,0,0,0,1)))
         {
             xMovespeed = 0;
@@ -419,7 +420,8 @@ if (global.p_turn)
     }
     if (keyboard_check_pressed(vk_numpad6) || keyboard_check_pressed(ord('6')))
     {
-        var xMovespeed, yMovespeed;
+        xMovespeed = 0;
+        yMovespeed = 0;
         if (confused == 0 or (0 == choose(0,0,0,0,1)))
         {
             xMovespeed = 32;
@@ -439,7 +441,8 @@ if (global.p_turn)
     }
     if (keyboard_check_pressed(vk_numpad4) || keyboard_check_pressed(ord('4')))
     {
-        var xMovespeed, yMovespeed;
+        xMovespeed = 0;
+        yMovespeed = 0;
         if (confused == 0 or (0 == choose(0,0,0,0,1)))
         {
             xMovespeed = -32;
@@ -459,7 +462,8 @@ if (global.p_turn)
     }
     if (keyboard_check_pressed(vk_numpad2) || keyboard_check_pressed(ord('2')) &amp;&amp; global.p_turn == true)
     {
-        var xMovespeed, yMovespeed;
+        xMovespeed = 0;
+        yMovespeed = 0;
         if (confused == 0 or (0 == choose(0,0,0,0,1)))
         {
             xMovespeed = 0;
@@ -479,7 +483,8 @@ if (global.p_turn)
     }
     if (keyboard_check_pressed(vk_numpad1) || keyboard_check_pressed(ord('1')))
     {
-        var xMovespeed, yMovespeed;
+        xMovespeed = 0;
+        yMovespeed = 0;
         if (confused == 0 or (0 == choose(0,0,0,0,1)))
         {
             xMovespeed = -32;
@@ -499,7 +504,8 @@ if (global.p_turn)
     }
     if (keyboard_check_pressed(vk_numpad3) || keyboard_check_pressed(ord('3')))
     {
-        var xMovespeed, yMovespeed;
+        xMovespeed = 0;
+        yMovespeed = 0;
         if (confused == 0 or (0 == choose(0,0,0,0,1)))
         {
             xMovespeed = 32;
@@ -519,7 +525,8 @@ if (global.p_turn)
     }
     if (keyboard_check_pressed(vk_numpad7) || keyboard_check_pressed(ord('7')))
     {
-        var xMovespeed, yMovespeed;
+        xMovespeed = 0;
+        yMovespeed = 0;
         if (confused == 0 or (0 == choose(0,0,0,0,1)))
         {
             xMovespeed = -32;
@@ -539,7 +546,8 @@ if (global.p_turn)
     }
     if (keyboard_check_pressed(vk_numpad9) || keyboard_check_pressed(ord('9')))
     {
-        var xMovespeed, yMovespeed;
+        xMovespeed = 0;
+        yMovespeed = 0;
         if (confused == 0 or (0 == choose(0,0,0,0,1)))
         {
             xMovespeed = 32;
