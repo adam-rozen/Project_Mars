@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
-name = choose("zelgo mer", "pratyavayah", "elbib yloh", "yum yum", "andova begarin",
+/*name = choose("zelgo mer", "pratyavayah", "elbib yloh", "yum yum", "andova begarin",
     "velox neb", "read me", "ko bate", "gnik sisi vle", "ghoti", "xor ota",
     "juyed awk yacc", "daiyen fooels", "verr yed horre", "kernod wel", "kirje",
     "foobie bletch", "etaoin shrdlu", "abra ka dabra", "hapax legomenon", "zlorfik", 
@@ -91,7 +91,24 @@ else
             break;
     }
 }
-amount = 1;
+amount = 1; */
+scrollGen = random_range(1, 30);
+if (scrollGen &lt;= 18)
+{
+    instance_change(obj_scrollOfIdentify, true);
+}
+else if (scrollGen &lt;= 22.5)
+{
+    instance_change(obj_scrollOfDestroyArmor, true);
+}
+else if (scrollGen &lt;= 25.5)
+{
+    instance_change(obj_scrollOfFire, true);
+}
+else if (scrollGen &lt;= 30)
+{
+    instance_change(obj_scrollOfCreateMonster, true);
+}
 </string>
           </argument>
         </arguments>

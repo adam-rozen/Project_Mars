@@ -679,7 +679,7 @@ if (keyboard_check(ord("Q")) &amp;&amp; global.p_turn)
     global.rm = room;
     room_goto(roomQuaff);
 }
-if (keyboard_check(ord("Q")) &amp;&amp; keyboard_check(vk_shift) &amp;&amp; global.p_turn)
+if (keyboard_check(ord("U")) &amp;&amp; global.p_turn)
 {
     global.rm = room;
     room_goto(roomQuiver);
