@@ -451,11 +451,12 @@ repeat(rnum)
     {
         _x = wsiz2 * irandom_range(rgx, rgx + rw);
         _y = wsiz2 * irandom_range(rgy, rgy + rh);
-        target = instance_place(_x, _y, obj_entity);
-        if (!place_meeting(_x, _y, obj_entity))
+        while (place_meeting(_x, _y, obj_entity))
         {
-            instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
+            _x = wsiz2 * irandom_range(rgx, rgx + rw);
+            _y = wsiz2 * irandom_range(rgy, rgy + rh);
         }
+        instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
     }
 }
 </string>
