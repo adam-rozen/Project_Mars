@@ -215,6 +215,9 @@
           <object>objects\obj_cornuthaum</object>
           <object>objects\obj_dentedPot</object>
           <object>objects\obj_elvenLeatherHelm</object>
+          <object>objects\obj_helmet</object>
+          <object>objects\obj_orcishHelm</object>
+          <object>objects\obj_helmOfBrilliance</object>
         </objects>
       </objects>
       <objects name="tools">
