@@ -44,8 +44,48 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
         if (obj_player.confused == 0)
         {
             spl = base64_decode(ini_read_string(base64_encode("Player Invenory"), string(b) + " effect", ""));
-            print("You use a scroll of " + spl);
+            switch(spl)
+            {
+                case "fire":
+                    print("The scroll erupts in a tower of flame!");
+                    obj_player.hp -= (2 * (irandom_range(1,3)+irandom_range(1,3)+irandom_range(1,3)+2)+1)/3;
+                    break;
+                case "identify":
+                    t = irandom_range(0, 3);
+                    str = "scroll of ";
+                    switch(t)
+                    {
+                        case 0:
+                            global.scrollAppearance[t] = str + "identify";
+                            break;
+                        case 1:
+                            global.scrollAppearance[t] = str + "destroy armor";
+                            break;
+                        case 2:
+                            global.scrollAppearance[t] = str + "fire";
+                            break;
+                        case 3:
+                            global.scrollAppearance[t] = str + "create monster";
+                            break;
+                    }
+                case "destroy armor":
+                    break;
+                case "create monster":
+                    _x = 32 * irandom_range(x-96, x+96);
+                    _y = 32 * irandom_range(y-96, y+96);
+                    while (place_meeting(_x, _y, obj_entity))
+                    {
+                        _x = 32 * irandom_range(x-96, x+96);
+                        _y = 32 * irandom_range(y-96, y+96);
+                    }
+                    instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
+                    break;
+            }
             ini_key_delete(base64_encode("Player Inventory"), string(b) + " itemType");
+            ini_key_delete(base64_encode("Player Inventory"), string(b) + " name");
+            ini_key_delete(base64_encode("Player Inventory"), string(b) + " appearance");
+            ini_key_delete(base64_encode("Player Inventory"), string(b) + " effect");
+            ini_key_delete(base64_encode("Player Inventory"), string(b) + " price");
             ini_close();
             room_goto(global.rm);
         }
@@ -54,7 +94,7 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
             print("Being confused, you mispronounce the magic words...")
             switch (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " effect", "")))
             {
-                case "idetify":
+                case "identify":
                     print("You identify this as an identify scroll.");
                     global.scrollAppearance[0] = "scroll of identify";
                     break;
@@ -74,6 +114,8 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                         }
                         instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
                     }
+                    break;
+                case "destroy armor":
                     break;
             }
         }
