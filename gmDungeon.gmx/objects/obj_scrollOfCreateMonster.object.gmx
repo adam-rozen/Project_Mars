@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>name = "scroll of create monster";
-appearance = scrollAppearance[3];
+appearance = global.scrollAppearance[3];
 effect = "create monster";
 price = 200;
 weight = 5;

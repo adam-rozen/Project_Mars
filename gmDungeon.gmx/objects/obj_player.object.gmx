@@ -599,9 +599,9 @@ target = instance_place(x,y, obj_item);
 if (target!=noone)
 {
     addToInv(target);
-    print("You picked up " + target.name + ".");
+    print("You picked up " + target.appearance + ".");
     instance_deactivate_object(target);
-    show_debug_message(target.name);
+    show_debug_message(target.appearance);
 }
 </string>
           </argument>
@@ -658,7 +658,7 @@ if (keyboard_check(ord("I")) &amp;&amp; global.p_turn)
 }
 if (keyboard_check(ord("V")) &amp;&amp; global.p_turn)
 {
-    instance_create(x, y, obj_spellbook);
+    instance_create(x, y, obj_scroll);
 }
 if (keyboard_check(ord("S")) &amp;&amp; global.p_turn)
 {

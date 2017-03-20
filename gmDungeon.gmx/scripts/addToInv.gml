@@ -80,11 +80,13 @@ else if (argument0.itemType == "spellbook")
 }
 else if (argument0.itemType == "scroll")
 {
-    ini_write_string(base64_encode("Player Inventory"), (string(i) + " description"), base64_encode(argument0.description));
+    ini_write_string(base64_encode("Player Inventory"), (string(i) + " appearance"), base64_encode(argument0.appearance));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " name"), base64_encode(argument0.name));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " itemType"), base64_encode(argument0.itemType));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " price"), base64_encode(string(argument0.price)));
-    ini_write_string(base64_encode("Player Inventory"), (string(i) + " amount"), base64_encode(string(argument0.amount)));
+    ini_write_string(base64_encode("Player Inventory"), (string(i) + " weight"), base64_encode(string(argument0.weight)));
+    ini_write_string(base64_encode("Player Inventory"), (string(i) + " effect"), base64_encode(string(argument0.effect)));
+    //ini_write_string(base64_encode("Player Inventory"), (string(i) + " amount"), base64_encode(string(argument0.amount)));
 }
 else if (argument0.itemType == "tool")
 {

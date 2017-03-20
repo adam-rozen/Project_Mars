@@ -31,7 +31,6 @@ effect = "identify";
 price = 20;
 weight = 5;
 itemType = "scroll";
-
 </string>
           </argument>
         </arguments>
