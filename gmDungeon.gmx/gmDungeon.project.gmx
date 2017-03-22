@@ -292,6 +292,7 @@
     <object>objects\obj_textbox</object>
     <object>objects\obj_statusBar</object>
     <object>objects\obj_quaff</object>
+    <object>objects\obj_quiver</object>
     <object>objects\obj_spell</object>
     <object>objects\obj_wield</object>
     <object>objects\obj_read</object>
