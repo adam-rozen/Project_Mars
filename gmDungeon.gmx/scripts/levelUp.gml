@@ -1,6 +1,8 @@
 if (xp >= levelUpRequirement[level] && level < 30)
 {
     level++;
+    hpGain = 0;
+    pwGain = 0;
     switch(global.class)
     {
         case "Wizard":

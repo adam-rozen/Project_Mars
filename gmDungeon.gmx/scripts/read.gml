@@ -43,7 +43,9 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
     {
         if (obj_player.confused == 0)
         {
-            spl = base64_decode(ini_read_string(base64_encode("Player Invenory"), string(b) + " effect", ""));
+            spl = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " effect", ""));
+            show_debug_message(spl);
+            print("You read a scroll of " + spl);
             switch(spl)
             {
                 case "fire":
@@ -71,12 +73,12 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                 case "destroy armor":
                     break;
                 case "create monster":
-                    _x = 32 * irandom_range(x-96, x+96);
-                    _y = 32 * irandom_range(y-96, y+96);
+                    _x = 32 * irandom_range(obj_player.x-96, obj_player.x+96);
+                    _y = 32 * irandom_range(obj_player.y-96, obj_player.y+96);
                     while (place_meeting(_x, _y, obj_entity))
                     {
-                        _x = 32 * irandom_range(x-96, x+96);
-                        _y = 32 * irandom_range(y-96, y+96);
+                        _x = 32 * irandom_range(obj_player.x-96, obj_player.x+96);
+                        _y = 32 * irandom_range(obj_player.y-96, obj_player.y+96);
                     }
                     instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
                     break;
@@ -105,12 +107,12 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                 case "create monster":
                     repeat(13)
                     {
-                        _x = 32 * irandom_range(x-96, x+96);
-                        _y = 32 * irandom_range(y-96, y+96);
+                        _x = 32 * irandom_range(obj_player.x-96, obj_player.x+96);
+                        _y = 32 * irandom_range(obj_player.y-96, obj_player.y+96);
                         while (place_meeting(_x, _y, obj_entity))
                         {
-                            _x = 32 * irandom_range(x-96, x+96);
-                            _y = 32 * irandom_range(y-96, y+96);
+                            _x = 32 * irandom_range(obj_player.x-96, obj_player.x+96);
+                            _y = 32 * irandom_range(obj_player.y-96, obj_player.y+96);
                         }
                         instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
                     }

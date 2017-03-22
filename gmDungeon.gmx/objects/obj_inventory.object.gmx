@@ -29,7 +29,7 @@
 if (room_get_name(room) == "roomInv")
 {
     ini_close();
-    if (keyboard_check(ord("I")))
+    if (keyboard_check_released(ord("I")))
     {
         room_goto(global.rm);
     }
