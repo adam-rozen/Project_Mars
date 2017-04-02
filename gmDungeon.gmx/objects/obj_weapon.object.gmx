@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Parameters (may need to edit)
 weaponGen = irandom_range(1, 1000);
+buc = scr_weaponBUC();
 if (weaponGen &lt;= 12)
 {
     instance_change(obj_orcishDagger, true);
