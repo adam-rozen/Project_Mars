@@ -322,7 +322,6 @@
     <room>rooms\roomWear</room>
     <room>rooms\roomTakeOff</room>
     <room>rooms\roomQuiver</room>
-    <room>rooms\roomRest</room>
   </rooms>
   <constants number="10">
     <constant name="movespeed">32</constant>
