@@ -33,7 +33,6 @@ mc = 1;
 effect = "magic resistance";
 price = 60;
 weight = 10;
-itemType = "armor";
 </string>
           </argument>
         </arguments>

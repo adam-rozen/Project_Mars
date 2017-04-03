@@ -25,14 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>name = "plate mail";
-appearance = name;
-slot = "body armor";
-ac = 7;
-mc = 2;
+            <string>name = "Uruk-hai shield";
+appearance = "white-eyed shield";
+slot = "shield";
+ac = 1;
+mc = 0;
 effect = "none";
-price = 600;
-weight = 450;
+price = 7;
+weight = 50;
 </string>
           </argument>
         </arguments>

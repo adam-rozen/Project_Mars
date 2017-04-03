@@ -33,7 +33,6 @@ mc = 2;
 effect = "slippery";
 price = 50;
 weight = 10;
-itemType = "armor";
 </string>
           </argument>
         </arguments>

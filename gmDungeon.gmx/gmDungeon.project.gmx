@@ -219,6 +219,24 @@
           <object>objects\obj_helmet</object>
           <object>objects\obj_orcishHelm</object>
           <object>objects\obj_helmOfBrilliance</object>
+          <object>objects\obj_helmOfOppositeAlignment</object>
+          <object>objects\obj_helmOfTelepathy</object>
+          <object>objects\obj_dwarvishIronHelm</object>
+        </objects>
+        <objects name="gloves">
+          <object>objects\obj_leatherGloves</object>
+          <object>objects\obj_gauntletsOfDexterity</object>
+          <object>objects\obj_gauntletsOfFumbling</object>
+          <object>objects\obj_gauntletsOfPower</object>
+        </objects>
+        <objects name="shields">
+          <object>objects\obj_smallShield</object>
+          <object>objects\obj_orcishShield</object>
+          <object>objects\obj_Uruk_haiShield</object>
+          <object>objects\obj_elvenShield</object>
+          <object>objects\obj_dwarvishRoundshield</object>
+          <object>objects\obj_largeShield</object>
+          <object>objects\obj_shieldOfReflection</object>
         </objects>
       </objects>
       <objects name="tools">

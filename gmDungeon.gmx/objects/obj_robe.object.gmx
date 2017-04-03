@@ -33,7 +33,6 @@ mc = 2;
 effect = "enhanced spellcasting";
 price = 50;
 weight = 15;
-itemType = "armor";
 </string>
           </argument>
         </arguments>

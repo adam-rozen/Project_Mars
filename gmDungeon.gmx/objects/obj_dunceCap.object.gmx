@@ -33,7 +33,6 @@ mc = 0;
 effect = "stupid";
 price = 1;
 weight = 4;
-itemType = "armor";
 </string>
           </argument>
         </arguments>

@@ -33,7 +33,6 @@ mc = 0;
 effect = "none";
 price = 10;
 weight = 30;
-itemType = "armor";
 </string>
           </argument>
         </arguments>

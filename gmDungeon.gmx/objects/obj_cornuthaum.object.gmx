@@ -33,7 +33,6 @@ mc = 1;
 effect = "wizBoost";
 price = 80;
 weight = 4;
-itemType = "armor";
 </string>
           </argument>
         </arguments>

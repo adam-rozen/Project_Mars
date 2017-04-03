@@ -33,7 +33,6 @@ mc = 0;
 effect = "shop markup";
 price = 2;
 weight = 5;
-itemType = "armor";
 </string>
           </argument>
         </arguments>

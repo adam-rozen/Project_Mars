@@ -25,14 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>name = "plate mail";
-appearance = name;
-slot = "body armor";
-ac = 7;
-mc = 2;
+            <string>name = "leather gloves";
+appearance = global.glovesAppearance[0];
+slot = "gloves";
+ac = 1;
+mc = 0;
 effect = "none";
-price = 600;
-weight = 450;
+price = 8;
+weight = 10;
 </string>
           </argument>
         </arguments>
