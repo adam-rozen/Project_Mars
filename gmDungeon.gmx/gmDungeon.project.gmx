@@ -246,6 +246,9 @@
           <object>objects\obj_levitationBoots</object>
           <object>objects\obj_jumpingBoots</object>
           <object>objects\obj_speedBoots</object>
+          <object>objects\obj_waterWalkingBoots</object>
+          <object>objects\obj_highBoots</object>
+          <object>objects\obj_ironShoes</object>
         </objects>
       </objects>
       <objects name="tools">
