@@ -238,6 +238,15 @@
           <object>objects\obj_largeShield</object>
           <object>objects\obj_shieldOfReflection</object>
         </objects>
+        <objects name="boots">
+          <object>objects\obj_lowBoots</object>
+          <object>objects\obj_elvenBoots</object>
+          <object>objects\obj_kickingBoots</object>
+          <object>objects\obj_fumbleBoots</object>
+          <object>objects\obj_levitationBoots</object>
+          <object>objects\obj_jumpingBoots</object>
+          <object>objects\obj_speedBoots</object>
+        </objects>
       </objects>
       <objects name="tools">
         <object>objects\obj_toolTemplate</object>
