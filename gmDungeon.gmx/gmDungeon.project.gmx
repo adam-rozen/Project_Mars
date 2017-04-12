@@ -21,7 +21,6 @@
     <sprite>sprites\spr_armor</sprite>
     <sprite>sprites\spr_ring</sprite>
     <sprite>sprites\spr_wand</sprite>
-    <sprite>sprites\spr_boulder</sprite>
     <sprite>sprites\spr_upstairs</sprite>
     <sprite>sprites\spr_downstairs</sprite>
     <sprite>sprites\spr_floor</sprite>
@@ -82,7 +81,6 @@
       <object>objects\obj_amulet</object>
       <object>objects\obj_gem</object>
       <object>objects\obj_gold</object>
-      <object>objects\obj_boulder</object>
       <objects name="weapons">
         <object>objects\obj_aklys</object>
         <object>objects\obj_arrow</object>
@@ -326,6 +324,10 @@
     <object>objects\obj_quiver</object>
     <object>objects\obj_spell</object>
     <object>objects\obj_wield</object>
+    <object>objects\obj_wear</object>
+    <object>objects\obj_takeOff</object>
+    <object>objects\obj_putOn</object>
+    <object>objects\obj_remove</object>
     <object>objects\obj_read</object>
   </objects>
   <rooms name="rooms">

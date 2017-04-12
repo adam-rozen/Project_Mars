@@ -688,6 +688,18 @@ if (keyboard_check_released(ord("R")) &amp;&amp; global.p_turn)
     global.rm = room;
     room_goto(roomRead);
 }
+//Take Off
+if (keyboard_check_released(ord("T")) &amp;&amp; global.p_turn)
+{
+    global.rm = room;
+    room_goto(roomTakeOff);
+}
+//Read
+if (keyboard_check_released(ord("R")) &amp;&amp; global.p_turn)
+{
+    global.rm = room;
+    room_goto(roomRead);
+}
 //Quaff
 if (keyboard_check_released(ord("Q")) &amp;&amp; global.p_turn)
 {
@@ -700,8 +712,26 @@ if (keyboard_check_released(ord("U")) &amp;&amp; global.p_turn)
     global.rm = room;
     room_goto(roomQuiver);
 }
-//Rest
+//Wear
+if (keyboard_check_released(ord("E")) &amp;&amp; global.p_turn)
+{
+    global.rm = room;
+    room_goto(roomWear);
+}
+//Put On
 if (keyboard_check_released(ord("P")) &amp;&amp; global.p_turn)
+{
+    global.rm = room;
+    room_goto(roomPutOn);
+}
+//Remove
+if (keyboard_check_released(ord("O")) &amp;&amp; global.p_turn)
+{
+    global.rm = room;
+    room_goto(roomRemove);
+}
+//Rest
+if (keyboard_check_released(vk_numpad5) &amp;&amp; global.p_turn)
 {
     endPlayerTurn();
 }
