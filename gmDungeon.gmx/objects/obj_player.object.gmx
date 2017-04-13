@@ -738,7 +738,8 @@ if (keyboard_check_released(vk_numpad5) &amp;&amp; global.p_turn)
 //Fire
 if (keyboard_check_released(ord("F")) &amp;&amp; global.p_turn)
 {
-    fire();
+    array = direction();
+    fire(array[0], array[1]);
 }
 </string>
           </argument>
