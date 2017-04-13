@@ -669,7 +669,7 @@ if (keyboard_check_released(ord("I")) &amp;&amp; global.p_turn)
 }
 if (keyboard_check_released(ord("V")) &amp;&amp; global.p_turn)
 {
-    instance_create(x, y, obj_weapon);
+    instance_create(x, y, obj_potion);
 }
 //Save
 if (keyboard_check_released(ord("S")) &amp;&amp; global.p_turn)

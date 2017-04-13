@@ -21,6 +21,18 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
             }
             if (spl == "force bolt spell")
                 addToSpell("Force Bolt");
+            if (spl == "healing spell")
+                addToSpell("Healing");
+            if (spl == "identify spell")
+                addToSpell("Identify");
+            if (spl == "create monster spell")
+                addToSpell("Create Monster");
+            if (spl == "sleep spell")
+                addToSpell("Create Monster");
+            if (spl == "teleport away spell")
+                addToSpell("Teleport Away");
+            if (spl == "cancellation spell")
+                addToSpell("Cancellation");
             print("You add the " + spl + " to your repertoire");
             ini_close();
             room_goto(global.rm);
