@@ -20,7 +20,7 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " weaponType")
         temp.weight = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " weight", "")));
         temp.weaponType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " weaponType", ""));
         temp.itemType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " itemType", ""));
-        print("You set " + temp.name + " in quiver.");+
+        print("You set " + temp.name + " in quiver.");
         ini_close();
         room_goto(global.rm);
     }
