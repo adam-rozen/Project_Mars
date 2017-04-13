@@ -154,7 +154,6 @@
         <object>objects\obj_yumi</object>
       </objects>
       <objects name="armor">
-        <object>objects\obj_armorTemplate</object>
         <objects name="shirts">
           <object>objects\obj_hawaiianShirt</object>
           <object>objects\obj_tShirt</object>
@@ -281,7 +280,6 @@
         <object>objects\obj_potionOfGainAbility</object>
         <object>objects\obj_potionOfGainLevel</object>
         <object>objects\obj_potionOfParalysis</object>
-        <object>objects\obj_potionTemplate</object>
       </objects>
       <objects name="scrolls">
         <object>objects\obj_scrollOfIdentify</object>
@@ -295,6 +293,17 @@
       </objects>
       <objects name="rings">
         <object>objects\obj_ringTemplate</object>
+        <object>objects\obj_ringOfHunger</object>
+        <object>objects\obj_ringOfProtection</object>
+        <object>objects\obj_ringOfStealth</object>
+        <object>objects\obj_ringOfGainConstitition</object>
+        <object>objects\obj_ringOfGainStrength</object>
+        <object>objects\obj_ringOfIncreaseAccuracy</object>
+        <object>objects\obj_ringOfIncreaseDamage</object>
+        <object>objects\obj_ringOfRegeneration</object>
+        <object>objects\obj_ringOfSlowDigestion</object>
+        <object>objects\obj_ringOfTeleportation</object>
+        <object>objects\obj_ringOfTeleportControl</object>
       </objects>
     </objects>
     <objects name="monsters">
