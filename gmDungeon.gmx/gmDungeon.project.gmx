@@ -306,6 +306,12 @@
         <object>objects\obj_ringOfTeleportation</object>
         <object>objects\obj_ringOfTeleportControl</object>
       </objects>
+      <objects name="amulets">
+        <object>objects\obj_amuletOfESP</object>
+        <object>objects\obj_amuletOfLifeSaving</object>
+        <object>objects\obj_amuletOfRestfulSleep</object>
+        <object>objects\obj_amuletOfStrangulation</object>
+      </objects>
     </objects>
     <objects name="monsters">
       <object>objects\obj_kobold</object>
