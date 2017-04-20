@@ -263,7 +263,7 @@ global.p_turn = true;
           <argument>
             <kind>1</kind>
             <string>///Zoom
-if (keyboard_check(ord('P'))) {
+if (keyboard_check(ord('L'))) {
     view_wview = view_wport * 4;
     view_hview = view_hport * 4;
 } else {

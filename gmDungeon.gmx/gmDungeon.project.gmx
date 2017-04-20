@@ -11,7 +11,6 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_gold</sprite>
     <sprite>sprites\spr_spellbook</sprite>
-    <sprite>sprites\spr_gem</sprite>
     <sprite>sprites\spr_weapon</sprite>
     <sprite>sprites\spr_tool</sprite>
     <sprite>sprites\spr_scroll</sprite>
@@ -80,7 +79,6 @@
       <object>objects\obj_wand</object>
       <object>objects\obj_ring</object>
       <object>objects\obj_amulet</object>
-      <object>objects\obj_gem</object>
       <object>objects\obj_gold</object>
       <objects name="weapons">
         <object>objects\obj_aklys</object>
@@ -106,6 +104,7 @@
         <object>objects\obj_dwarvishSpear</object>
         <object>objects\obj_elvenArrow</object>
         <object>objects\obj_elvenBow</object>
+        <object>objects\obj_flintstone</object>
         <object>objects\obj_elvenBroadsword</object>
         <object>objects\obj_elvenDagger</object>
         <object>objects\obj_elvenShortSword</object>
@@ -217,14 +216,12 @@
           <object>objects\obj_helmet</object>
           <object>objects\obj_orcishHelm</object>
           <object>objects\obj_helmOfBrilliance</object>
-          <object>objects\obj_helmOfOppositeAlignment</object>
           <object>objects\obj_helmOfTelepathy</object>
           <object>objects\obj_dwarvishIronHelm</object>
         </objects>
         <objects name="gloves">
           <object>objects\obj_leatherGloves</object>
           <object>objects\obj_gauntletsOfDexterity</object>
-          <object>objects\obj_gauntletsOfFumbling</object>
           <object>objects\obj_gauntletsOfPower</object>
         </objects>
         <objects name="shields">
@@ -234,17 +231,13 @@
           <object>objects\obj_elvenShield</object>
           <object>objects\obj_dwarvishRoundshield</object>
           <object>objects\obj_largeShield</object>
-          <object>objects\obj_shieldOfReflection</object>
         </objects>
         <objects name="boots">
           <object>objects\obj_lowBoots</object>
           <object>objects\obj_elvenBoots</object>
           <object>objects\obj_kickingBoots</object>
-          <object>objects\obj_fumbleBoots</object>
-          <object>objects\obj_levitationBoots</object>
           <object>objects\obj_jumpingBoots</object>
           <object>objects\obj_speedBoots</object>
-          <object>objects\obj_waterWalkingBoots</object>
           <object>objects\obj_highBoots</object>
           <object>objects\obj_ironShoes</object>
         </objects>
@@ -256,29 +249,15 @@
         <object>objects\obj_potionOfWater</object>
         <object>objects\obj_potionOfBooze</object>
         <object>objects\obj_potionOfFruitJuice</object>
-        <object>objects\obj_potionOfSeeInvisible</object>
         <object>objects\obj_potionOfSickness</object>
         <object>objects\obj_potionOfConfusion</object>
         <object>objects\obj_potionOfExtraHealing</object>
-        <object>objects\obj_potionOfHallucination</object>
         <object>objects\obj_potionOfHealing</object>
-        <object>objects\obj_holyWater</object>
-        <object>objects\obj_unholyWater</object>
-        <object>objects\obj_potionOfRestoreAbility</object>
         <object>objects\obj_potionOfSleeping</object>
-        <object>objects\obj_potionOfBlindness</object>
         <object>objects\obj_potionOfGainEnergy</object>
-        <object>objects\obj_potionOfInvisibility</object>
-        <object>objects\obj_potionOfMonsterDetection</object>
-        <object>objects\obj_potionOfObjectDetection</object>
-        <object>objects\obj_potionOfEnlightenment</object>
         <object>objects\obj_potionOfFullHealing</object>
-        <object>objects\obj_potionOfLevitation</object>
-        <object>objects\obj_potionOfPolymorph</object>
-        <object>objects\obj_potionOfSpeed</object>
         <object>objects\obj_potionOfAcid</object>
         <object>objects\obj_potionOfOil</object>
-        <object>objects\obj_potionOfGainAbility</object>
         <object>objects\obj_potionOfGainLevel</object>
         <object>objects\obj_potionOfParalysis</object>
       </objects>

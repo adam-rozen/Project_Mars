@@ -1,3 +1,5 @@
+xMovespeed = argument0;
+yMovespeed = argument1;
 zap = false;
 pw -= 5;
 range = irandom_range(6, 13);
