@@ -72,7 +72,6 @@
       <object>objects\obj_weapon</object>
       <object>objects\obj_armor</object>
       <object>objects\obj_comestible</object>
-      <object>objects\obj_tool</object>
       <object>objects\obj_potion</object>
       <object>objects\obj_scroll</object>
       <object>objects\obj_spellbook</object>
@@ -242,9 +241,6 @@
           <object>objects\obj_ironShoes</object>
         </objects>
       </objects>
-      <objects name="tools">
-        <object>objects\obj_toolTemplate</object>
-      </objects>
       <objects name="potions">
         <object>objects\obj_potionOfWater</object>
         <object>objects\obj_potionOfBooze</object>
@@ -266,13 +262,14 @@
         <object>objects\obj_scrollOfDestroyArmor</object>
         <object>objects\obj_scrollOfFire</object>
         <object>objects\obj_scrollOfCreateMonster</object>
-        <object>objects\obj_scrollTemplate</object>
       </objects>
       <objects name="wands">
-        <object>objects\obj_wandTemplate</object>
+        <object>objects\obj_wandOfStriking</object>
+        <object>objects\obj_wandOfCold</object>
+        <object>objects\obj_wandOfFire</object>
+        <object>objects\obj_wandOfLightning</object>
       </objects>
       <objects name="rings">
-        <object>objects\obj_ringTemplate</object>
         <object>objects\obj_ringOfHunger</object>
         <object>objects\obj_ringOfProtection</object>
         <object>objects\obj_ringOfStealth</object>

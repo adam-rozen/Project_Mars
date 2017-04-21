@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_item</parentName>
+  <parentName>obj_wand</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,19 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Parameters
-name = choose("glass", "oak", "copper", "aluminum", "short", "spiked", "balsa", "ebony",
-    "silver", "uranium", "runed", "jeweled", "crystal", "marble", "platinum", "iron",
-    "long", "maple", "tin", "iridium", "steel", "curved", "pine", "brass", "zinc",
-    "hexagonal", "forked") + " wand";
+            <string>name = "wand of cold";
+appearance = global.wandAppearance[1];
+effect = "cold";
+price = 175;
 weight = 7;
-itemType = "wand";
-description = "wand of " + choose("light", "nothing", "digging", "enlightenment",
-    "locking", "magic missile", "make invisible", "opening", "probing",
-    "secret door detection", "slow monster", "speed monster", "striking", 
-    "undead turning", "cold", "fire", "lightning", "sleep", "cancellation",
-    "create monster", "polymorph", "teleportation", "death", "wishing");
-amount = 1;
 </string>
           </argument>
         </arguments>
