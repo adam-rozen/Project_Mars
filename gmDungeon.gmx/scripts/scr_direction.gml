@@ -1,3 +1,4 @@
+print("In what direction?");
 xMovespeed = -1;
 yMovespeed = -1;
 while (xMovespeed == -1 and yMovespeed == -1)

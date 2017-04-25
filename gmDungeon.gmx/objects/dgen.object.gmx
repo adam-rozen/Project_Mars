@@ -416,10 +416,6 @@ repeat(rnum)
         {
             instance_create(genSpotX, genSpotY, obj_comestible);
         }
-        else if (itemGen &lt;= 48)
-        {
-            instance_create(genSpotX, genSpotY, obj_tool);
-        }
         else if (itemGen &lt;= 64)
         {
             instance_create(genSpotX, genSpotY, obj_potion);

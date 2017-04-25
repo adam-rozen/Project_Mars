@@ -99,7 +99,7 @@ if (scrollGen &lt;= 18)
 }
 else if (scrollGen &lt;= 22.5)
 {
-    instance_change(obj_scrollOfDestroyArmor, true);
+    instance_change(obj_scrollOfTeleportation, true);
 }
 else if (scrollGen &lt;= 25.5)
 {

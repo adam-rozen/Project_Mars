@@ -32,11 +32,7 @@ name = choose("glass", "oak", "copper", "aluminum", "short", "spiked", "balsa", 
     "hexagonal", "forked") + " wand";
 weight = 7;
 itemType = "wand";
-description = "wand of " + choose("light", "nothing", "digging", "enlightenment",
-    "locking", "magic missile", "make invisible", "opening", "probing",
-    "secret door detection", "slow monster", "speed monster", "striking", 
-    "undead turning", "cold", "fire", "lightning", "sleep", "cancellation",
-    "create monster", "polymorph", "teleportation", "death", "wishing");
+description = "wand of " + choose("striking", "cold", "fire", "lightning");
 amount = 1;
 </string>
           </argument>

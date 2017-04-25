@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>name = "scroll of destroy armor";
+            <string>name = "scroll of teleportation";
 appearance = global.scrollAppearance[1];
-effect = "destroy armor";
+effect = "teleport";
 price = 100;
 weight = 5;
 itemType = "scroll";

@@ -41,7 +41,6 @@ name = choose(
     // Corpses
     "lichen corpse", "lizard corpse");
 itemType = "food";
-type = "food";
 appearance = name;
 nutrition = 0;
 switch (name)

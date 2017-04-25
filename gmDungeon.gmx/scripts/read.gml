@@ -774,6 +774,7 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                                 break;
                         }*/
                 case "destroy armor":
+                    
                     break;
                 case "create monster":
                     _x = 32 * irandom_range(obj_player.x-96, obj_player.x+96);

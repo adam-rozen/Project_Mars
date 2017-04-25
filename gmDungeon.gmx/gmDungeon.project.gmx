@@ -259,7 +259,7 @@
       </objects>
       <objects name="scrolls">
         <object>objects\obj_scrollOfIdentify</object>
-        <object>objects\obj_scrollOfDestroyArmor</object>
+        <object>objects\obj_scrollOfTeleportation</object>
         <object>objects\obj_scrollOfFire</object>
         <object>objects\obj_scrollOfCreateMonster</object>
       </objects>
@@ -322,6 +322,7 @@
     <object>objects\obj_remove</object>
     <object>objects\obj_read</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
     <room>rooms\room1</room>

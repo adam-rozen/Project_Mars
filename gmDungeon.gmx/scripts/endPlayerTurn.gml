@@ -1,40 +1,42 @@
-turn++;
-if (turn mod 10 == 0)
+obj_player.turn++;
+if (obj_player.turn mod 10 == 0)
 {
-    if (hp < maxHP)
+    if (obj_player.hp < obj_player.maxHP)
     {
-        hp += 1;
+        obj_player.hp += 1;
     }
 }
 if (global.class == "wizard")
 {
-    if (turn mod 18 == 0)
+    if (obj_player.turn mod 18 == 0)
     {
-       if (pw < maxPW)
+       if (obj_player.pw < obj_player.maxPW)
        {
-           pw += 1;
+           obj_player.pw += 1;
        }
     }
 }
 else
 {
-    if (turn mod 24 == 0)
+    if (obj_player.turn mod 24 == 0)
     {
-       if (pw < maxPW)
+       if (obj_player.pw < obj_player.maxPW)
        {
-           pw += 1;
+           obj_player.pw += 1;
        }
     }
 }
-if (confused > 0)
+if (obj_player.confused > 0)
 {
-    confused -= 1;
+    obj_player.confused -= 1;
 }
-if (playerNutrition > 0)
-    playerNutrition--;
+if (place_meeting(600, 600, obj_amulet))
+    obj_player.playerNutrition--;
+if (obj_player.playerNutrition > 0)
+    obj_player.playerNutrition--;
 else
 {
     print("Your hunger damages you.");
-    hp--;
+    obj_player.hp--;
 }
 global.p_turn = false;
