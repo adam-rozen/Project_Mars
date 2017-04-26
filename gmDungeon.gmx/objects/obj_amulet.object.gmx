@@ -26,45 +26,29 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
-name = choose("circular", "triangular", "concave", "spherical", "pyramidal",
-    "hexagonal", "oval", "square", "octagonal") + " amulet";
 itemType = "amulet";
-description = "amulet of " + choose("change", "change","change","change","change","change",
-    "change","change","change","change","change","change","change","change","change",
-    "change","change","change","change","change","change","change","change","change",
-    "change","change","ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP",
-    "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP",
-    "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP", "ESP",
-    "ESP", "ESP", "life saving", "life saving", "life saving", "life saving",
-    "life saving", "life saving", "life saving", "life saving", "life saving",
-    "life saving", "life saving", "life saving", "life saving", "life saving",
-    "life saving", "magical breathing", "magical breathing", "magical breathing",
-    "magical breathing", "magical breathing", "magical breathing", "magical breathing",
-    "magical breathing", "magical breathing", "magical breathing", "magical breathing",
-    "magical breathing", "magical breathing", "reflection", "reflection", "reflection",
-    "reflection", "reflection", "reflection", "reflection", "reflection", "reflection",
-    "reflection", "reflection", "reflection", "reflection", "reflection", "reflection",
-    "restful sleep", "restful sleep", "restful sleep", "restful sleep", "restful sleep",
-    "restful sleep", "restful sleep", "restful sleep", "restful sleep", "restful sleep",
-    "restful sleep", "restful sleep", "restful sleep", "restful sleep", "restful sleep",
-    "restful sleep", "restful sleep", "restful sleep", "restful sleep", "restful sleep",
-    "restful sleep", "restful sleep", "restful sleep", "restful sleep", "restful sleep",
-    "restful sleep", "restful sleep", "strangulation", "strangulation", "strangulation",
-    "strangulation", "strangulation", "strangulation", "strangulation", "strangulation",
-    "strangulation", "strangulation", "strangulation", "strangulation", "strangulation",
-    "strangulation", "strangulation", "strangulation", "strangulation", "strangulation",
-    "strangulation", "strangulation", "strangulation", "strangulation", "strangulation",
-    "strangulation", "strangulation", "strangulation", "unchanging", "unchanging", 
-    "unchanging", "unchanging", "unchanging", "unchanging", "unchanging", "unchanging",
-    "unchanging", "versus poison", "versus poison", "versus poison", "versus poison",
-    "versus poison", "versus poison", "versus poison", "versus poison", "versus poison",
-    "versus poison", "versus poison", "versus poison", "versus poison", "versus poison",
-    "versus poison", "versus poison", "versus poison", "versus poison", "versus poison",
-    "versus poison", "versus poison", "versus poison", "versus poison", "versus poison",
-    "versus poison", "versus poison", "versus poison", "versus poison", "versus poison",
-    "versus poison", "versus poison", "versus poison", "versus poison");
 price = 150;
-amount = 1;
+amuletGen = random_range(1, 52);
+if (amuletGen &lt;= 17.5)
+{
+    buc = scr_amuletBUC(false);
+    instance_change(obj_amuletOfESP, true);
+}
+else if (amuletGen &lt;= 25)
+{
+    buc = scr_amuletBUC(false);
+    instance_change(obj_amuletOfLifeSaving, true);
+}
+else if (amuletGen &lt;= 38.5)
+{
+    buc = scr_amuletBUC(true);
+    instance_change(obj_amuletOfRestfulSleep, true);
+}
+else
+{
+    buc = scr_amuletBUC(true);
+    instance_change(obj_amuletOfStrangulation, true);
+}
 </string>
           </argument>
         </arguments>

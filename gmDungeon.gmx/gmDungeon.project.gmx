@@ -64,6 +64,7 @@
     <script>scripts\scr_direction.gml</script>
     <script>scripts\scr_potion_scrollBUC.gml</script>
     <script>scripts\scr_ringBUC.gml</script>
+    <script>scripts\scr_amuletBUC.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
