@@ -92,6 +92,7 @@ else
     }
 }
 amount = 1; */
+buc = scr_scrollBUC();
 scrollGen = random_range(1, 30);
 if (scrollGen &lt;= 18)
 {
