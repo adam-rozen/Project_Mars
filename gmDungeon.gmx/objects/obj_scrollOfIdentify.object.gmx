@@ -29,8 +29,6 @@
 appearance = global.scrollAppearance[0];
 effect = "identify";
 price = 20;
-weight = 5;
-itemType = "scroll";
 </string>
           </argument>
         </arguments>

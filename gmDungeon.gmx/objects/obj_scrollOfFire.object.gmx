@@ -29,8 +29,6 @@
 appearance = global.scrollAppearance[2];
 effect = "fire";
 price = 100;
-weight = 5;
-itemType = "scroll";
 </string>
           </argument>
         </arguments>

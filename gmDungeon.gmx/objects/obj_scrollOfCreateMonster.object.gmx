@@ -29,8 +29,6 @@
 appearance = global.scrollAppearance[3];
 effect = "create monster";
 price = 200;
-weight = 5;
-itemType = "scroll";
 </string>
           </argument>
         </arguments>

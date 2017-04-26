@@ -62,7 +62,8 @@
     <script>scripts\rest.gml</script>
     <script>scripts\scr_weaponBUC.gml</script>
     <script>scripts\scr_direction.gml</script>
-    <script>scripts\scr_scrollBUC.gml</script>
+    <script>scripts\scr_potion_scrollBUC.gml</script>
+    <script>scripts\scr_ringBUC.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontArial</font>
@@ -274,7 +275,7 @@
         <object>objects\obj_ringOfHunger</object>
         <object>objects\obj_ringOfProtection</object>
         <object>objects\obj_ringOfStealth</object>
-        <object>objects\obj_ringOfGainConstitition</object>
+        <object>objects\obj_ringOfGainConstitution</object>
         <object>objects\obj_ringOfGainStrength</object>
         <object>objects\obj_ringOfIncreaseAccuracy</object>
         <object>objects\obj_ringOfIncreaseDamage</object>

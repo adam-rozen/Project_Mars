@@ -26,73 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
-/*name = choose("zelgo mer", "pratyavayah", "elbib yloh", "yum yum", "andova begarin",
-    "velox neb", "read me", "ko bate", "gnik sisi vle", "ghoti", "xor ota",
-    "juyed awk yacc", "daiyen fooels", "verr yed horre", "kernod wel", "kirje",
-    "foobie bletch", "etaoin shrdlu", "abra ka dabra", "hapax legomenon", "zlorfik", 
-    "nr 9", "lep gex ven zea", "venzar borgavve", "elam ebow", "ve forbryderne", "temov",
-    "lorem ipsum", "ashpd sodalg", "eiris sazun idisi", "vas corp bet mani", 
-    "xixaxa xoxaxa xuxaxa", "prirutsenie", "tharr", "duam xnaht", "hackem muche",
-    "garven deh", "fnord", "mapiro mahama diromat", "phol ende wodan", 
-    "strc prst skrz krk", "unlabeled", "stamped") + " scroll";
+weight = 5;
+buc = scr_potion_scrollBUC();
 itemType = "scroll";
-if (name == "unlabeled scroll")
-{
-    description = "scroll of blank paper";
-    price = 60;
-}
-else if (name == "stamped scroll")
-{
-    description = "scroll of mail";
-    price = 0;
-}
-else
-{
-    description = "scroll of " + choose("identify", "light", "enchant weapon",
-                "enchant armor", "remove curse", "confuse monster", "destroy armor", 
-                "fire", "food detection", "gold detection", "magic mapping", 
-                "scare monster", "teleportation", "amnesia", "create monster", "earth", 
-                "taming", "charging", "genocide", "punishment", "stinking cloud"); 
-    price = 0;
-    switch (description)
-    {
-        case "scroll of identify":
-            price = 20;
-            break;
-        case "scroll of light":
-            price = 50;
-            break;
-        case "scroll of blank paper":
-        case "scroll of enchant weapon":
-            price = 60;
-            break;
-        case "scroll of enchant armor":
-        case "scroll of remove curse":
-            price = 80;
-            break;
-        case "scroll of confuse monster":
-        case "scroll of destroy armor":
-        case "scroll of fire":
-        case "scroll of food detection":
-        case "scroll of gold detection":
-        case "scroll of magic mapping":
-        case "scroll of scare monster":
-        case "scroll of teleportation":
-            price = 100;
-            break;
-        case "scroll of anmesia":
-        case "scroll of create monster":
-        case "scroll of earth":
-        case "scroll of taming":
-            price = 200;
-            break;
-        default:
-            price = 300;
-            break;
-    }
-}
-amount = 1; */
-buc = scr_scrollBUC();
 scrollGen = random_range(1, 30);
 if (scrollGen &lt;= 18)
 {
