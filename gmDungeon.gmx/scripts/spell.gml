@@ -16,24 +16,6 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
                 print("You don't have enough energy to cast that spell.");
             }
             break;
-        case "Create Monster":
-            if (obj_player.pw >= 10)
-            {
-                obj_player.pw -= 10;
-                _x = 32 * irandom_range(obj_player.x-96, obj_player.x+96);
-                _y = 32 * irandom_range(obj_player.y-96, obj_player.y+96);
-                while (place_meeting(_x, _y, obj_entity))
-                {
-                    _x = 32 * irandom_range(obj_player.x-96, obj_player.x+96);
-                    _y = 32 * irandom_range(obj_player.y-96, obj_player.y+96);
-                }
-                instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
-            }
-            else
-            {
-                print("You don't have enough energy to cast that spell!");
-            }
-            break;
         case "Healing":
             if (obj_player.pw >= 5)
             {
@@ -55,7 +37,8 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
             break;
         case "Identify":
             if obj_player.pw >= 15
-                {
+            {
+                obj_player.pw -= 15
                 buc = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " ", ""));
                 var a;
                 if (buc == "uncursed")
@@ -786,6 +769,7 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
         case "Teleport Away":
             if obj_player.pw >= 30
             {
+                obj_player.pw -= 30
                 _x = 32 * irandom_range(0, 31)
                 _y = 32 * irandom_range(0, 31)
                 while (place_meeting(_x, _y, obj_entity) || place_meeting(_x, _y, obj_wall))
@@ -802,6 +786,7 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
         case "Sleep":
             if obj_player.pw >=5
             {
+                obj_player.pw -= 5
                 obj_player.sleep = irandom_range((obj_player.level/2)+1,((obj_player.level/2)+1)*25)
                 endPlayerTurn()
             }
