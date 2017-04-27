@@ -266,6 +266,15 @@
         <object>objects\obj_scrollOfFire</object>
         <object>objects\obj_scrollOfCreateMonster</object>
       </objects>
+      <objects name="spellbooks">
+        <object>objects\obj_spellbookOfForceBolt</object>
+        <object>objects\obj_spellbookOfHealing</object>
+        <object>objects\obj_spellbookOfIdentify</object>
+        <object>objects\obj_spellbookOfCreateMonster</object>
+        <object>objects\obj_spellbookOfSleep</object>
+        <object>objects\obj_spellbookOfTeleportAway</object>
+        <object>objects\obj_spellbookOfCancellation</object>
+      </objects>
       <objects name="wands">
         <object>objects\obj_wandOfStriking</object>
         <object>objects\obj_wandOfCold</object>
