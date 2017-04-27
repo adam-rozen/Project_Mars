@@ -28,7 +28,7 @@
             <string>///Parameters
 weight = 3;
 itemType = "ring";
-ringGen = irandom_range(1, 11);
+ringGen = irandom_range(1, 6);
 switch(ringGen)
 {
     case 1:
@@ -45,35 +45,15 @@ switch(ringGen)
         break;
     case 4:
         buc = scr_ringBUC(false);
-        instance_change(obj_ringOfGainConstitution, true);
+        instance_change(obj_ringOfIncreaseDamage, true);
         break;
     case 5:
         buc = scr_ringBUC(false);
-        instance_change(obj_ringOfGainStrength, true);
-        break;
-    case 6:
-        buc = scr_ringBUC(false);
-        instance_change(obj_ringOfIncreaseAccuracy, true);
-        break;
-    case 7:
-        buc = scr_ringBUC(false);
-        instance_change(obj_ringOfIncreaseDamage, true);
-        break;
-    case 8:
-        buc = scr_ringBUC(false);
         instance_change(obj_ringOfRegeneration, true);
         break;
-    case 9:
-        buc = scr_ringBUC(false);
-        instance_change(obj_ringOfSlowDigestion, true);
-        break;
-    case 10:
+    case 6:
         buc = scr_ringBUC(true);
         instance_change(obj_ringOfTeleportation, true);
-        break;
-    case 11:
-        buc = scr_ringBUC(false);
-        instance_change(obj_ringOfTeleportControl, true);
         break;
 }
 </string>
