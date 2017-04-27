@@ -285,14 +285,9 @@
         <object>objects\obj_ringOfHunger</object>
         <object>objects\obj_ringOfProtection</object>
         <object>objects\obj_ringOfStealth</object>
-        <object>objects\obj_ringOfGainConstitution</object>
-        <object>objects\obj_ringOfGainStrength</object>
-        <object>objects\obj_ringOfIncreaseAccuracy</object>
         <object>objects\obj_ringOfIncreaseDamage</object>
         <object>objects\obj_ringOfRegeneration</object>
-        <object>objects\obj_ringOfSlowDigestion</object>
         <object>objects\obj_ringOfTeleportation</object>
-        <object>objects\obj_ringOfTeleportControl</object>
       </objects>
       <objects name="amulets">
         <object>objects\obj_amuletOfESP</object>

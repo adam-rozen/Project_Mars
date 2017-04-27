@@ -9,8 +9,8 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
         {
             book = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " description", "")); 
             book = string_replace(book, "spellbook of ", "");
-            spl = "";
-            switch(book)
+            spl = book + " spell";
+            /*switch(book)
             {
                 case "force bolt":
                     spl = "force bolt spell";
@@ -18,7 +18,19 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                 case "healing":
                     spl = "healing spell";
                     break;
-            }
+                case "sleep":
+                    spl = "sleep spell"
+                    break
+                case "identify":
+                    spl = "identify spell"
+                    break
+                case "create monster":
+                    spl = "create monster spell"
+                    break;
+                case "teleport away":
+                    spl = "teleport away spell"
+                    break;
+            }*/
             if (spl == "force bolt spell")
                 addToSpell("Force Bolt");
             if (spl == "healing spell")
@@ -28,14 +40,10 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
             if (spl == "create monster spell")
                 addToSpell("Create Monster");
             if (spl == "sleep spell")
-                addToSpell("Create Monster");
+                addToSpell("Sleep");
             if (spl == "teleport away spell")
                 addToSpell("Teleport Away");
-            if (spl == "cancellation spell")
-                addToSpell("Cancellation");
             print("You add the " + spl + " to your repertoire");
-            ini_close();
-            room_goto(global.rm);
         }
         else if (choose(0,0,1) == 1)
         {
@@ -773,8 +781,16 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                                 global.scrollAppearance[t] = str + "create monster";
                                 break;
                         }*/
-                case "destroy armor":
-                    
+                case "teleportation":
+                    _x = 32 * irandom_range(0, 31)
+                    _y = 32 * irandom_range(0, 31)
+                    while (place_meeting(_x, _y, obj_entity) || place_meeting(_x, _y, obj_wall))
+                    {
+                        _x = 32 * irandom_range(0, 31)
+                        _y = 32 * irandom_range(0, 31)
+                    }
+                    obj_player.x = _x
+                    obj_player.y = _y
                     break;
                 case "create monster":
                     _x = 32 * irandom_range(obj_player.x-96, obj_player.x+96);
@@ -821,9 +837,21 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                         instance_create(_x, _y, choose(obj_orc, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_newt, obj_rat, obj_rat, obj_kobold, obj_kobold, obj_zombie, obj_zombie, obj_homunculus, obj_homunculus, obj_homunculus));
                     }
                     break;
-                case "destroy armor":
+                case "teleportaion":
+                    _x = 32 * irandom_range(0, 31)
+                    _y = 32 * irandom_range(0, 31)
+                    while (place_meeting(_x, _y, obj_entity) || place_meeting(_x, _y, obj_wall))
+                    {
+                        _x = 32 * irandom_range(0, 31)
+                        _y = 32 * irandom_range(0, 31)
+                    }
+                    obj_player.x = _x
+                    obj_player.y = _y
                     break;
             }
         }
     }
 }
+ini_close();
+endPlayerTurn();
+room_goto(global.rm);
