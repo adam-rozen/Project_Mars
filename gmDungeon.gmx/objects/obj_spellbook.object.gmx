@@ -26,156 +26,37 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters (may need to edit)
-name = choose("parchment", "stained", "red", "dark green", "indigo", "plaid", "dusty",
-    "glittering", "vellum", "cloth", "orange", "turquoise", "magenta", "light brown",
-    "bronze", "shining", "ragged", "leather", "yellow", "cyan", "purple", "dark brown",
-    "copper", "dull", "dog eared", "white", "velvet", "light blue", "violet", "gray",
-    "silver", "thin", "mottled", "pink", "light green", "dark blue", "tan", "wrinkled",
-    "gold", "thick") + " spellbook";
+weight = 50;
 itemType = "spellbook";
-description = "spellbook of " + choose(
-            //Attack spellbooks
-    "force bolt", "drain life", "magic missile",
-    "cone of cold", "fireball", "finger of death", 
-            //Clerical spellbooks
-    "protection", "create monster", "remove curse", "create familiar", "turn undead", 
-            //Divination spellbooks
-    "detect monsters", "light", "detect food", "clairvoyance", "detect unseen", 
-    "identify", "detect treasure", "magic mapping", 
-            //Enchantment spellbooks
-    "sleep", "confuse monster", "slow monster", "cause fear", 
-    "charm monster", 
-            //Escape spellbooks
-    "jumping", "haste self", "invisibility", "levitation", "teleport away", 
-            //Healing spellbooks
-    "healing", "cure blindness", "cure sickness", "extra healing", 
-    "stone to flesh", "restore ability", 
-            //Matter spellbooks
-    "knock", "wizard lock", "dig", "polymorph", "cancellation");
-switch (description)
+spellbookGen = random(21.35);
+if (spellbookGen &lt; 3.56)
 {
-    case "spellbook of force bolt":
-        price = 100;
-        break;
-    case "spellbook of protection":
-        price = 100;
-        break;
-    case "spellbook of detect monsters":
-        price = 100;
-        break;
-    case "spellbook of light":
-        price = 100;
-        break;
-    case "spellbook of sleep":
-        price = 100;
-        break;
-    case "spellbook of jumping":
-        price = 100;
-        break;
-    case "spellbook of healing":
-        price = 100;
-        break;
-    case "spellbook of knock":
-        price = 100;
-        break;
-    case "spellbook of drain life":
-        price = 200;
-        break;
-    case "spellbook of magic missile":
-        price = 200;
-        break;
-    case "spellbook of create monster":
-        price = 200;
-        break;
-    case "spellbook of detect food":
-        price = 200;
-        break;
-    case "spellbook of confuse monster":
-        price = 200;
-        break;
-    case "spellbook of slow monster":
-        price = 200;
-        break;
-    case "spellbook of cure blindness":
-        price = 200;
-        break;
-    case "spellbook of wizard lock":
-        price = 200;
-        break;
-    case "spellbook of remove curse":
-        price = 300;
-        break;
-    case "spellbook of clairvoyance":
-        price = 300;
-        break;
-    case "spellbook of detect unseen":
-        price = 300;
-        break;
-    case "spellbook of identify":
-        price = 300;
-        break;
-    case "spellbook of cause fear":
-        price = 300;
-        break;
-    case "spellbook of charm monster":
-        price = 300;
-        break;
-    case "spellbook of haste self":
-        price = 300;
-        break;
-    case "spellbook of cure sickness":
-        price = 300;
-        break;
-    case "spellbook of extra healing":
-        price = 300;
-        break;
-    case "spellbook of stone to flesh":
-        price = 300;
-        break;
-    case "spellbook of cone of cold":
-        price = 400;
-        break;
-    case "spellbook of fireball":
-        price = 400;
-        break;
-    case "spellbook of detect treasure":
-        price = 400;
-        break;
-    case "spellbook of invisibility":
-        price = 400;
-        break;
-    case "spellbook of levitation":
-        price = 400;
-        break;
-    case "spellbook of restore ability":
-        price = 400;
-        break;
-    case "spellbook of magic mapping":
-        price = 500;
-        break;
-    case "spellbook of dig":
-        price = 500;
-        break;
-    case "spellbook of create familiar":
-        price = 600;
-        break;
-    case "spellbook of turn undead":
-        price = 600;
-        break;
-    case "spellbook of teleport away":
-        price = 600;
-        break;
-    case "spellbook of polymorph":
-        price = 600;
-        break;
-    case "spellbook of finger of death":
-        price = 700;
-        break;
-    case "spellbook of cancellation":
-        price = 700;
-        break;
+    instance_change(obj_spellbookOfForceBolt, true);
 }
-amount = 1;
+else if (spellbookGen &lt; 7.63)
+{
+    instance_change(obj_spellbookOfHealing, true);
+}
+else if (spellbookGen &lt; 9.66)
+{
+    instance_change(obj_spellbookOfIdentify, true);
+}
+else if (spellbookGen &lt; 13.22)
+{
+    instance_change(obj_spellbookOfCreateMonster, true);
+}
+else if (spellbookGen &lt; 18.31)
+{
+    instance_change(obj_spellbookOfSleep, true);
+}
+else if (spellbookGen &lt; 19.83)
+{
+    instance_change(obj_spellbookOfTeleportAway, true);
+}
+else
+{
+    instance_change(obj_spellbookOfCancellation, true);
+}
 </string>
           </argument>
         </arguments>
