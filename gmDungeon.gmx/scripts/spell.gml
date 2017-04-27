@@ -40,7 +40,7 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
             {
                 obj_player.pw -= 15
                 buc = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " ", ""));
-                var a;
+                a = -1
                 if (buc == "uncursed")
                     a = choose(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,3,4,52);
                 else if buc == "blessed"

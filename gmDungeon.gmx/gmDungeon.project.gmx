@@ -12,7 +12,6 @@
     <sprite>sprites\spr_gold</sprite>
     <sprite>sprites\spr_spellbook</sprite>
     <sprite>sprites\spr_weapon</sprite>
-    <sprite>sprites\spr_tool</sprite>
     <sprite>sprites\spr_scroll</sprite>
     <sprite>sprites\spr_food</sprite>
     <sprite>sprites\spr_amulet</sprite>
