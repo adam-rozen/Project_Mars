@@ -28,18 +28,18 @@
             <string>///Parameters
 itemType = "amulet";
 price = 150;
-amuletGen = random_range(1, 52);
-if (amuletGen &lt;= 17.5)
+amuletGen = random(52);
+if (amuletGen &lt; 17.5)
 {
     buc = scr_amuletBUC(false);
     instance_change(obj_amuletOfESP, true);
 }
-else if (amuletGen &lt;= 25)
+else if (amuletGen &lt; 25)
 {
     buc = scr_amuletBUC(false);
     instance_change(obj_amuletOfLifeSaving, true);
 }
-else if (amuletGen &lt;= 38.5)
+else if (amuletGen &lt; 38.5)
 {
     buc = scr_amuletBUC(true);
     instance_change(obj_amuletOfRestfulSleep, true);

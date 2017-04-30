@@ -1,12 +1,12 @@
 bad = argument0;
-genBUC = random_range(1, 100);
+genBUC = random(100);
 if (bad)
 {
-    if (genBUC <= 9)
+    if (genBUC < 9)
     {
         return "uncursed";
     }
-    else if (genBUC <= 9.5)
+    else if (genBUC < 9.5)
     {
         return "blessed";
     }
@@ -17,11 +17,11 @@ if (bad)
 }
 else
 {
-    if (genBUC <= 5)
+    if (genBUC < 5)
     {
         return "blessed";
     }
-    else if (genBUC <= 10)
+    else if (genBUC < 10)
     {
         return "cursed";
     }

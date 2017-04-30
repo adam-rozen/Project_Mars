@@ -29,20 +29,20 @@
 weight = 5;
 buc = scr_potion_scrollBUC();
 itemType = "scroll";
-scrollGen = random_range(1, 30);
-if (scrollGen &lt;= 18)
+scrollGen = random(30);
+if (scrollGen &lt; 18)
 {
     instance_change(obj_scrollOfIdentify, true);
 }
-else if (scrollGen &lt;= 22.5)
+else if (scrollGen &lt; 22.5)
 {
     instance_change(obj_scrollOfTeleportation, true);
 }
-else if (scrollGen &lt;= 25.5)
+else if (scrollGen &lt; 25.5)
 {
     instance_change(obj_scrollOfFire, true);
 }
-else if (scrollGen &lt;= 30)
+else if (scrollGen &lt; 30)
 {
     instance_change(obj_scrollOfCreateMonster, true);
 }

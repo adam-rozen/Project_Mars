@@ -26,253 +26,253 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters (may need to edit)
-weaponGen = irandom_range(1, 1000);
+weaponGen = irandom(1000);
 buc = scr_weaponBUC();
-if (weaponGen &lt;= 12)
+if (weaponGen &lt; 12)
 {
     instance_change(obj_orcishDagger, true);
 }
-else if (weaponGen &lt;= 42)
+else if (weaponGen &lt; 42)
 {
     instance_change(obj_dagger, true);
 }
-else if (weaponGen &lt;= 45)
+else if (weaponGen &lt; 45)
 {
     instance_change(obj_silverDagger, true);
 }
-else if (weaponGen &lt;= 55)
+else if (weaponGen &lt; 55)
 {
     instance_change(obj_elvenDagger, true);
 }
-else if (weaponGen &lt;= 75)
+else if (weaponGen &lt; 75)
 {
     instance_change(obj_knife, true);
 }
-else if (weaponGen &lt;= 80)
+else if (weaponGen &lt; 80)
 {
     instance_change(obj_stiletto, true);
 }
-else if (weaponGen &lt;= 120)
+else if (weaponGen &lt; 120)
 {
     instance_change(obj_axe, true);
 }
-else if (weaponGen &lt;= 130)
+else if (weaponGen &lt; 130)
 {
     instance_change(obj_battleAxe, true);
 }
-else if (weaponGen &lt;= 143)
+else if (weaponGen &lt; 143)
 {
     instance_change(obj_dwarvishMattock, true);
 }
-else if (weaponGen &lt;= 146)
+else if (weaponGen &lt; 146)
 {
     instance_change(obj_orcishShortSword, true);
 }
-else if (weaponGen &lt;= 154)
+else if (weaponGen &lt; 154)
 {
     instance_change(obj_shortSword, true);
 }
-else if (weaponGen &lt;= 156)
+else if (weaponGen &lt; 156)
 {
     instance_change(obj_dwarvishShortSword, true);
 }
-else if (weaponGen &lt;= 158)
+else if (weaponGen &lt; 158)
 {
     instance_change(obj_elvenShortSword, true);
 }
-else if (weaponGen &lt;= 166)
+else if (weaponGen &lt; 166)
 {
     instance_change(obj_broadsword, true);
 }
-else if (weaponGen &lt;= 170)
+else if (weaponGen &lt; 170)
 {
     instance_change(obj_elvenBroadsword, true);
 }
-else if (weaponGen &lt;= 220)
+else if (weaponGen &lt; 220)
 {
     instance_change(obj_longSword, true);
 }
-else if (weaponGen &lt;= 224)
+else if (weaponGen &lt; 224)
 {
     instance_change(obj_katana, true);
 }
-else if (weaponGen &lt;= 246)
+else if (weaponGen &lt; 246)
 {
     instance_change(obj_twoHandedSword, true);
 }
-else if (weaponGen &lt;= 261)
+else if (weaponGen &lt; 261)
 {
     instance_change(obj_scimitar, true);
 }
-else if (weaponGen &lt;= 267)
+else if (weaponGen &lt; 267)
 {
     instance_change(obj_silverSaber, true);
 }
-else if (weaponGen &lt;= 279)
+else if (weaponGen &lt; 279)
 {
     instance_change(obj_club, true);
 }
-else if (weaponGen &lt;= 287)
+else if (weaponGen &lt; 287)
 {
     instance_change(obj_aklys, true);
 }
-else if (weaponGen &lt;= 327)
+else if (weaponGen &lt; 327)
 {
     instance_change(obj_mace, true);
 }
-else if (weaponGen &lt;= 339)
+else if (weaponGen &lt; 339)
 {
     instance_change(obj_morningStar, true);
 }
-else if (weaponGen &lt;= 379)
+else if (weaponGen &lt; 379)
 {
     instance_change(obj_flail, true);
 }
-else if (weaponGen &lt;= 394)
+else if (weaponGen &lt; 394)
 {
     instance_change(obj_warHammer, true);
 }
-else if (weaponGen &lt;= 405)
+else if (weaponGen &lt; 405)
 {
     instance_change(obj_quarterstaff, true);
 }
-else if (weaponGen &lt;= 413)
+else if (weaponGen &lt; 413)
 {
     instance_change(obj_halberd, true);
 }
-else if (weaponGen &lt;= 417)
+else if (weaponGen &lt; 417)
 {
     instance_change(obj_bardiche, true);
 }
-else if (weaponGen &lt;= 421)
+else if (weaponGen &lt; 421)
 {
     instance_change(obj_billGuisarme, true);
 }
-else if (weaponGen &lt;= 426)
+else if (weaponGen &lt; 426)
 {
     instance_change(obj_ranseur, true);
 }
-else if (weaponGen &lt;= 430)
+else if (weaponGen &lt; 430)
 {
     instance_change(obj_voulge, true);
 }
-else if (weaponGen &lt;= 436)
+else if (weaponGen &lt; 436)
 {
     instance_change(obj_guisarme, true);
 }
-else if (weaponGen &lt;= 441)
+else if (weaponGen &lt; 441)
 {
     instance_change(obj_lucernHammer, true);
 }
-else if (weaponGen &lt;= 446)
+else if (weaponGen &lt; 446)
 {
     instance_change(obj_spetum, true);
 }
-else if (weaponGen &lt;= 450)
+else if (weaponGen &lt; 450)
 {
     instance_change(obj_becDeCorbin, true);
 }
-else if (weaponGen &lt;= 458)
+else if (weaponGen &lt; 458)
 {
     instance_change(obj_glaive, true);
 }
-else if (weaponGen &lt;= 464)
+else if (weaponGen &lt; 464)
 {
     instance_change(obj_fauchard, true);
 }
-else if (weaponGen &lt;= 469)
+else if (weaponGen &lt; 469)
 {
     instance_change(obj_partisan, true);
 }
-else if (weaponGen &lt;= 482)
+else if (weaponGen &lt; 482)
 {
     instance_change(obj_orcishSpear, true);
 }
-else if (weaponGen &lt;= 532)
+else if (weaponGen &lt; 532)
 {
     instance_change(obj_spear, true);
 }
-else if (weaponGen &lt;= 534)
+else if (weaponGen &lt; 534)
 {
     instance_change(obj_silverSpear, true);
 }
-else if (weaponGen &lt;= 544)
+else if (weaponGen &lt; 544)
 {
     instance_change(obj_elvenSpear, true);
 }
-else if (weaponGen &lt;= 556)
+else if (weaponGen &lt; 556)
 {
     instance_change(obj_dwarvishSpear, true);
 }
-else if (weaponGen &lt;= 566)
+else if (weaponGen &lt; 566)
 {
     instance_change(obj_javelin, true);
 }
-else if (weaponGen &lt;= 574)
+else if (weaponGen &lt; 574)
 {
     instance_change(obj_trident, true);
 }
-else if (weaponGen &lt;= 578)
+else if (weaponGen &lt; 578)
 {
     instance_change(obj_lance, true);
 }
-else if (weaponGen &lt;= 590)
+else if (weaponGen &lt; 590)
 {
     instance_change(obj_orcishBow, true);
 }
-else if (weaponGen &lt;= 610)
+else if (weaponGen &lt; 610)
 {
     instance_change(obj_orcishArrow, true);
 }
-else if (weaponGen &lt;= 634)
+else if (weaponGen &lt; 634)
 {
     instance_change(obj_bow, true);
 }
-else if (weaponGen &lt;= 689)
+else if (weaponGen &lt; 689)
 {
     instance_change(obj_arrow, true);
 }
-else if (weaponGen &lt;= 701)
+else if (weaponGen &lt; 701)
 {
     instance_change(obj_elvenBow, true);
 }
-else if (weaponGen &lt;= 721)
+else if (weaponGen &lt; 721)
 {
     instance_change(obj_elvenArrow, true);
 }
-else if (weaponGen &lt;= 736)
+else if (weaponGen &lt; 736)
 {
     instance_change(obj_ya, true);
 }
-else if (weaponGen &lt;= 748)
+else if (weaponGen &lt; 748)
 {
     instance_change(obj_silverArrow, true);
 }
-else if (weaponGen &lt;= 788)
+else if (weaponGen &lt; 788)
 {
     instance_change(obj_sling, true);
 }
-else if (weaponGen &lt;= 833)
+else if (weaponGen &lt; 833)
 {
     instance_change(obj_crossbow, true);
 }
-else if (weaponGen &lt;= 888)
+else if (weaponGen &lt; 888)
 {
     instance_change(obj_crossbowBolt, true);
 }
-else if (weaponGen &lt;= 948)
+else if (weaponGen &lt; 948)
 {
     instance_change(obj_dart, true);
 }
-else if (weaponGen &lt;= 983)
+else if (weaponGen &lt; 983)
 {
     instance_change(obj_shuriken, true);
 }
-else if (weaponGen &lt;= 998)
+else if (weaponGen &lt; 998)
 {
     instance_change(obj_boomerang, true);
 }
-else if (weaponGen &lt;= 1000)
+else if (weaponGen &lt; 1000)
 {
     instance_change(obj_bullwhip, true);
 }
