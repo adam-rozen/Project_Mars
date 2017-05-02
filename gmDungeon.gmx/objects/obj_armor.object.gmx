@@ -97,6 +97,58 @@ else if (armorGen &lt; 670)
 {
     instance_change(obj_crystalPlateMail, true);
 }
+else if (armorGen &lt; 678)
+{
+    instance_change(obj_orcishCloak, true);
+}
+else if (armorGen &lt; 686)
+{
+    instance_change(obj_dwarvishCloak, true);
+}
+else if (armorGen &lt; 694)
+{
+    instance_change(obj_leatherCloak, true);
+}
+else if (armorGen &lt; 702)
+{
+    instance_change(obj_elvenCloak, true);
+}
+else if (armorGen &lt; 705)
+{
+    instance_change(obj_robe, true);
+}
+else if (armorGen &lt; 714)
+{
+    instance_change(obj_cloakOfProtection, true);
+}
+else if (armorGen &lt; 716)
+{
+    instance_change(obj_dentedPot, true);
+}
+else if (armorGen &lt; 722)
+{
+    instance_change(obj_elvenLeatherHelm, true);
+}
+else if (armorGen &lt; 732)
+{
+    instance_change(obj_helmet, true);
+}
+else if (armorGen &lt; 738)
+{
+    instance_change(obj_orcishHelm, true);
+}
+else if (armorGen &lt; 744)
+{
+    instance_change(obj_helmOfBrilliance, true);
+}
+else if (armorGen &lt; 746)
+{
+    instance_change(obj_helmOfTelepathy, true);
+}
+else if (armorGen &lt; 752)
+{
+    instance_change(obj_dwarvishIronHelm, true);
+}
 </string>
           </argument>
         </arguments>
