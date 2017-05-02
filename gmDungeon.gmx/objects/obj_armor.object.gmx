@@ -25,367 +25,78 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>itemType = "armor";
-type = choose("Shirt", "Suit", "Dragon Suit", "Cloak", "Helm", "Glove", "Shield", "Boot");
-switch(type)
+            <string>///Parameters
+bad = false;
+itemType = "armor";
+armorGen = random(1000);
+if (armorGen &lt; 8)
 {
-    case "Shirt":
-        name = choose("Hawaiian shirt", "T-shirt");
-        description = name;
-        switch (description)
-        {
-            case "Hawaiian shirt":
-                price = 3;
-                break;
-            case "T-shirt":
-                price = 2;
-                break;
-        }
-        break;
-    
-    case "Suit":
-        name = choose("leather jacket", "leather armor", "orcish ring mail",
-            "studded leather armor", "ring mail", "scale mail", "orcish chain mail",
-            "chain mail", "elven mithril-coat", "splint mail", "banded mail", 
-            "dwarvish mithril-coat", "bronze plate mail", "plate mail",
-            "crystal plate mail");
-        description = name;
-        switch (description)
-        {
-            case "leather jacket":
-                price = 10;
-                break;
-            case "leather armor":
-                price = 5;
-                break;
-            case "orcish ring mail":
-                description = "crude ring mail";
-                price = 80;
-                break;
-            case "studded leather armor":
-                price = 15;
-                break;
-            case "ring mail":
-                price = 100;
-                break;
-            case "scale mail":
-                price = 45;
-                break;
-            case "orcish chain mail":
-                description = "crude chain mail";
-                price = 75;
-                break;
-            case "chain mail":
-                price = 75;
-                break;
-            case "elven mithril-coat":
-                price = 240;
-                break;
-            case "splint mail":
-                price = 80;
-                break;
-            case "banded mail":
-                price = 90;
-                break;
-            case "dwarvish mithril-coat":
-                price = 240;
-                break;
-            case "bronze plate mail":
-                price = 400;
-                break;
-            case "plate mail":
-                price = 600;
-                break;
-            case "crystal plate mail":
-                price = 820;
-                break;
-        }
-        break;
-        
-    case "Dragon Suit":
-        name = choose("dragon scales", "dragon scale mail");
-        description = name;
-        switch (description)
-        {
-            case "dragon scales":
-                price = 500;
-                break;
-            case "dragon scale mail":
-                price = 900;
-                break;
-        }
-        break;
-        
-    case "Cloak":
-        name = choose("mummy wrapping", "orcish cloak", "dwarvish cloak", "leather cloak", 
-            "oilskin cloak", "alchemy smock", "elven cloak", "robe",
-        // Cloaks that have randomized appearances
-            "cloak of displacement", "cloak of invisibility", "cloak of magic resistance", 
-            "cloak of protection");
-        
-        if (name == "cloak of displacement")
-            {
-                description = choose("tattered cape", "ornamental cope", "opera cloak",
-                    "piece of cloth");
-                price = 50;
-            }
-            
-            else if (name == "cloak of invisibility")
-                {
-                    description = choose("tattered cape", "ornamental cope", "opera cloak",
-                        "piece of cloth");
-                    price = 60;
-                }
-                
-                else if (name == "cloak of magic resistance")
-                    {
-                        description = choose("tattered cape", "ornamental cope", "opera cloak",
-                            "piece of cloth");
-                        price = 60;
-                    }
-                    
-                    else if (name == "cloak of protection")
-                        {
-                            description = choose("tattered cape", "ornamental cope", "opera cloak",
-                                "piece of cloth");
-                            price = 50;
-                        }
-                        
-        else
-        {
-            description = name;
-            switch (description)
-            {
-                case "mummy wrapping":
-                    price = 2;
-                    break;
-                case "orcish cloak":
-                    description = "coarse mantelet";
-                    price = 40;
-                    break;
-                case "dwarvish cloak":
-                    description = "hooded cloak";
-                    price = 50;
-                    break;
-                case "leather cloak":
-                    price = 50;
-                    break;
-                case "oilskin cloak":
-                    description = "slippery cloak";
-                    price = 50;
-                    break;
-                case "alchemy smock":
-                    description = "apron";
-                    price = 50;
-                    break;
-                case "elven cloak":
-                    description = "faded pall";
-                    price = 60;
-                    break;
-                case "robe":
-                    price = 50;
-                    break;
-            }
-        }
-        break;
-        
-    case "Helm":
-        name = choose("fedora", "dunce cap", "cornuthaum", "dented pot", "elven leather helm",
-            "orcish helm", "dwarvish iron helm",
-        // Helms that have randomized appearances
-            "helmet", "helm of brilliance", "helm of opposite alignment", 
-            "helm of telepathy");
-        if (name == "helmet")
-            {
-                description = choose("plumed", "etched", "crested", "visored") + 
-                    " helmet";
-                price = 10;
-            }
-            
-            else if (name == "helm of brilliance")
-                {
-                    description = choose("plumed", "etched", "crested", "visored") + 
-                        " helmet";
-                    price = 50;
-                }
-                
-                else if (name == "helm of opposite alignment")
-                    {
-                        description = choose("plumed", "etched", "crested", "visored") + 
-                            " helmet";
-                        price = 50;
-                    }
-                    
-                    else if (name == "helm of telepathy")
-                        {
-                            description = choose("plumed", "etched", "crested", "visored") + 
-                                " helmet";
-                            price = 50;
-                        }
-        
-        else
-        {
-            description = name;
-            switch (description)
-            {
-                case "fedora":
-                    price = 1;
-                    break;
-                case "dunce cap":
-                    description = "conical hat";
-                    price = 1;
-                    break;
-                case "cornuthaum":
-                    description = "conical hat";
-                    price = 80;
-                    break;
-                case "dented pot": 
-                    price = 8;
-                    break;
-                case "elven leather helm":
-                    description = "leather hat";
-                    price = 8;
-                    break;
-                case "orcish helm":
-                    description = "iron skull cap";
-                    price = 10;
-                    break;
-                case "dwarvish iron helm":
-                    description = "hard hat";
-                    price = 20;
-                    break;
-            }
-        }
-        break;
-        
-    case "Glove":
-        name = choose("leather gloves", "gauntlets of dexterity", "gauntlets of fumbling",
-            "gauntlets of power");
-        description = choose("old gloves", "padded gloves", "riding gloves",
-            "fencing gloves");
-        switch (name)
-        {
-            case "leather gloves":
-                price = 8;
-                break;
-            case "gauntlets of dexterity":
-                price = 50;
-                break;
-            case "gauntlets of fumbling":
-                price = 50;
-                break;
-            case "gauntlets of power":
-                price = 50;
-                break;
-        }
-        break;
-    
-    case "Shield":
-        name = choose("small shield", "orcish shield", "Uruk-hai shield", "elven shield", 
-            "dwarvish roundshield", "large shield", "shield of reflection");
-        description = name;
-        switch (description)
-        {
-            case "small shield":
-                price = 3;
-                break;
-            case "orcish shield":
-                description = "red-eyed shield";
-                price = 7;
-                break;
-            case "Uruk-hai shield":
-                description = "white-handed shield";
-                price = 7;
-                break;
-            case "elven shield":
-                description = "blue and green shield";
-                price = 7;
-            case "dwarvish roundshield":
-                description = "large round shield";
-                price = 10;
-                break;
-            case "large shield":
-                price = 10;
-                break;
-            case "shield of reflection":
-                description = "polished silver shield";
-                price = 50;
-                break;
-        }
-        break;
-        
-    case "Boot":
-        name = choose("low boots", "high boots", "iron shoes", 
-        // Boots that have randomized appearance
-            "elven boots", "kicking boots", "fumble boots", "levitation boots", 
-            "jumping boots", "speed boots", "water walking boots", 
-            );
-        if (name == "elven boots")
-            {
-                description = choose("mud", "hiking", "snow", "combat", "riding", 
-                    "jungle", "buckled") + " boots";
-                price = 8;
-            }
-            
-            else if (name == "kicking boots")
-            {
-                description = choose("mud", "hiking", "snow", "combat", "riding", 
-                    "jungle", "buckled") + " boots";
-                price = 8;
-            }
-                else if (name == "fumble boots")
-                {
-                    description = choose("mud", "hiking", "snow", "combat", "riding", 
-                        "jungle", "buckled") + " boots";
-                    price = 30;
-                }
-                    else if (name == "levitation boots")
-                    {
-                        description = choose("mud", "hiking", "snow", "combat", "riding", 
-                            "jungle", "buckled") + " boots";
-                        price = 30;
-                    }
-                        else if (name == "jumping boots")
-                        {
-                            description = choose("mud", "hiking", "snow", "combat", 
-                                "riding", "jungle", "buckled") + " boots";
-                            price = 50;
-                        }
-                            else if (name == "speed boots")
-                            {
-                                description = choose("mud", "hiking", "snow", "combat",  
-                                    "riding", "jungle", "buckled") + " boots";
-                                price = 50;
-                            }
-                                else if (name == "water walking boots")
-                                {
-                                    description = choose("mud", "hiking", "snow",  
-                                        "combat", "riding", "jungle", "buckled") 
-                                        + " boots";
-                                    price = 50;
-                                }
-        else
-        {
-            description = name;
-            switch (description)
-            {
-                case "low boots":
-                    description = "walking shoes";
-                    price = 8;
-                    break;
-                case "high boots":
-                    description = "jackboots";
-                    price = 12;
-                    break;
-                case "iron shoes":
-                    description = "hard shoes";
-                    price = 16;
-                    break;
-            }
-        }
-        break;
+    instance_change(obj_hawaiianShirt, true);
 }
-amount = 1;
+else if (armorGen &lt; 10)
+{
+    instance_change(obj_tShirt, true);
+}
+else if (armorGen &lt; 22)
+{
+    instance_change(obj_leatherJacket, true);
+}
+else if (armorGen &lt; 104)
+{
+    instance_change(obj_leatherArmor, true);
+}
+else if (armorGen &lt; 124)
+{
+    instance_change(obj_orcishRingMail, true);
+}
+else if (armorGen &lt; 196)
+{
+    instance_change(obj_studdedLeatherArmor, true);
+}
+else if (armorGen &lt; 268)
+{
+    instance_change(obj_ringMail, true);
+}
+else if (armorGen &lt; 340)
+{
+    instance_change(obj_scaleMail, true);
+}
+else if (armorGen &lt; 360)
+{
+    instance_change(obj_orcishChainMail, true);
+}
+else if (armorGen &lt; 432)
+{
+    instance_change(obj_chainMail, true);
+}
+else if (armorGen &lt; 447)
+{
+    instance_change(obj_elvenMithrilCoat, true);
+}
+else if (armorGen &lt; 509)
+{
+    instance_change(obj_splintMail, true);
+}
+else if (armorGen &lt; 581)
+{
+    instance_change(obj_bandedMail, true);
+}
+else if (armorGen &lt; 591)
+{
+    instance_change(obj_dwarvishMithrilCoat, true);
+}
+else if (armorGen &lt; 616)
+{
+    instance_change(obj_bronzePlateMail, true);
+}
+else if (armorGen &lt; 660)
+{
+    instance_change(obj_plateMail, true);
+}
+else if (armorGen &lt; 670)
+{
+    instance_change(obj_crystalPlateMail, true);
+}
 </string>
           </argument>
         </arguments>
