@@ -28,7 +28,7 @@
             <string>///Parameters
 bad = false;
 itemType = "armor";
-armorGen = random(1000);
+armorGen = random(866);
 if (armorGen &lt; 8)
 {
     instance_change(obj_hawaiianShirt, true);
@@ -148,6 +148,58 @@ else if (armorGen &lt; 746)
 else if (armorGen &lt; 752)
 {
     instance_change(obj_dwarvishIronHelm, true);
+}
+else if (armorGen &lt; 768)
+{
+    instance_change(obj_leatherGloves, true);
+}
+else if (armorGen &lt; 776)
+{
+    instance_change(obj_gauntletsOfDexterity, true);
+}
+else if (armorGen &lt; 784)
+{
+    instance_change(obj_gauntletsOfPower, true);
+}
+else if (armorGen &lt; 790)
+{
+    instance_change(obj_smallShield, true);
+}
+else if (armorGen &lt; 792)
+{
+    instance_change(obj_orcishShield, true);
+}
+else if (armorGen &lt; 794)
+{
+    instance_change(obj_Uruk_haiShield, true);
+}
+else if (armorGen &lt; 796)
+{
+    instance_change(obj_elvenShield, true);
+}
+else if (armorGen &lt; 800)
+{
+    instance_change(obj_dwarvishRoundshield, true);
+}
+else if (armorGen &lt; 807)
+{
+    instance_change(obj_largeShield, true);
+}
+else if (armorGen &lt; 832)
+{
+    instance_change(obj_lowBoots, true);
+}
+else if (armorGen &lt; 844)
+{
+    instance_change(obj_elvenBoots, true);
+}
+else if (armorGen &lt; 859)
+{
+    instance_change(obj_highBoots, true);
+}
+else if (armorGen &lt; 866)
+{
+    instance_change(obj_ironShoes, true);
 }
 </string>
           </argument>
