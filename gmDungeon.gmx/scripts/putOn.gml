@@ -44,7 +44,7 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
         }
         else
         {
-            temp = instance_create(600, 600, obj_ring);
+            temp = instance_create(600, 600, obj_amulet);
             temp.name = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " name", ""));
             temp.appearance = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " appearance", ""));
             temp.price = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " price", "")));

@@ -7,35 +7,75 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
         temp = 0;
         if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "cloak")
         {
-            with instance_position(600, 600, obj_robe)
+            if position_meeting(600, 600, obj_robe)
             {
-                instance_destroy();
+                print("You are already wearing something there");
+                exit;
             }
-            temp = instance_create(600, 600, obj_robe);
+            else temp = instance_create(600, 600, obj_robe);
         }
-        if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "body armor")
+        else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "body armor")
         {
-            with instance_position(600, 600, obj_leatherJacket)
+            if position_meeting(600, 600, obj_leatherJacket)
             {
-                instance_destroy();
+                print("You are already wearing something there");
+                exit;
             }
-            temp = instance_create(600, 600, obj_leatherJacket);
+            else temp = instance_create(600, 600, obj_leatherJacket);
         }
-        if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "shirt")
+        else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "shirt")
         {
-            with instance_position(600, 600, obj_tShirt)
+            if position_meeting(600, 600, obj_tShirt)
             {
-                instance_destroy();
+                print("You are already wearing something there");
+                exit;
             }
-            temp = instance_create(600, 600, obj_tShirt);
+            else temp = instance_create(600, 600, obj_tShirt);
         }
-        if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "helm")
+        else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "helm")
         {
-            with instance_position(600, 600, obj_helmet)
+            if position_meeting(600, 600, obj_helmet)
             {
-                instance_destroy();
+                print("You are already wearing something there");
+                exit;
             }
-            temp = instance_create(600, 600, obj_helmet);
+            else temp = instance_create(600, 600, obj_helmet);
+        }
+        else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "helm")
+        {
+            if position_meeting(600, 600, obj_helmet)
+            {
+                print("You are already wearing something there");
+                exit;
+            }
+            else temp = instance_create(600, 600, obj_helmet);
+        }
+        else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "gloves")
+        {
+            if position_meeting(600, 600, obj_leatherGloves)
+            {
+                print("You are already wearing something there");
+                exit;
+            }
+            else temp = instance_create(600, 600, obj_leatherGloves);
+        }
+        else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "shield")
+        {
+            if position_meeting(600, 600, obj_smallShield)
+            {
+                print("You are already wearing something there");
+                exit;
+            }
+            else temp = instance_create(600, 600, obj_smallShield);
+        }
+        else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "boots")
+        {
+            if position_meeting(600, 600, obj_lowBoots)
+            {
+                print("You are already wearing something there");
+                exit;
+            }
+            else temp = instance_create(600, 600, obj_lowBoots);
         }
         temp.name = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " name", ""));
         temp.appearance = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " appearance", ""));
