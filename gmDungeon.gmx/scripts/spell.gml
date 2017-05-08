@@ -772,7 +772,7 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
                 obj_player.pw -= 30
                 _x = 32 * irandom_range(0, 31)
                 _y = 32 * irandom_range(0, 31)
-                while (place_meeting(_x, _y, obj_entity) || place_meeting(_x, _y, obj_wall))
+                while (place_meeting(_x, _y, obj_entity) or place_meeting(_x, _y, obj_wall))
                 {
                     _x = 32 * irandom_range(0, 31)
                     _y = 32 * irandom_range(0, 31)

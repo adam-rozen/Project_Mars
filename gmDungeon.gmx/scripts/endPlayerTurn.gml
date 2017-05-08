@@ -31,6 +31,30 @@ else
        }
     }
 }
+if instance_place(600, 600, obj_ring).name == "ring of teleportation" and irandom_range(1,85) == 1
+{
+    _x = 32 * irandom_range(0, 31)
+    _y = 32 * irandom_range(0, 31)
+    while (place_meeting(_x, _y, obj_entity) or place_meeting(_x, _y, obj_wall))
+    {
+        _x = 32 * irandom_range(0, 31)
+        _y = 32 * irandom_range(0, 31)
+    }
+    obj_player.x = _x
+    obj_player.y = _y
+}
+if instance_place(650, 650, obj_ring).name == "ring of teleportation" and irandom_range(1,85) == 1
+{
+    _x = 32 * irandom_range(0, 31)
+    _y = 32 * irandom_range(0, 31)
+    while (place_meeting(_x, _y, obj_entity) or place_meeting(_x, _y, obj_wall))
+    {
+        _x = 32 * irandom_range(0, 31)
+        _y = 32 * irandom_range(0, 31)
+    }
+    obj_player.x = _x
+    obj_player.y = _y
+}
 if (obj_player.confused > 0)
 {
     obj_player.confused -= 1;
