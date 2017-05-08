@@ -61,7 +61,7 @@
             <kind>1</kind>
             <string>///Destroy if no health otherwise move
 found = true;
-if (global.class == "Rogue")
+if (global.class == "Rogue" or (global.class == "Monk" and obj_player.level &gt;=5) or (global.class == "Ranger" and obj_player.level &gt;=7) or (global.class == "Barbarian" and obj_player.level &gt;=15) or (global.class == "Samurai" and obj_player.level &gt;=15) or global.class == "Valkyrie" or gloabl.class == "Acheologist" or instance_place(600, 600, obj_ring).name == "ring of stealth" or instance_place(650, 650, obj_ring).name == "ring of stealth" or instance_place(600, 600, obj_lowBoots).name == "elven boots" or instance_place(600, 600, obj_robe).name == "elven cloak")
 {
     if (choose(1, 2, 3, 4) == 1)
     {
