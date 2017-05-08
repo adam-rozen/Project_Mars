@@ -17,7 +17,7 @@ if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
         {
             targetNum = 10 + irandom_range(target.ac, -1) + level;
         }
-        temp = instance_position(600, 600, obj_player);
+        temp = instance_position(600, 600, obj_weapon);
         if ((irandom_range(1, 20) + toHitBonus) < targetNum)
         {
             if (target.size == "tiny" || target.size == "small" || target.size = "medium")
@@ -58,10 +58,12 @@ if (!place_meeting(x + xMovespeed, y + yMovespeed, obj_wall))
             if (target.hp > 0)
             {
                 print("You hit the " + target.name + "!");
+                obj_player.playerNutrition--;
             }
             else
             {
                 print("You kill the " + target.name + "!");
+                obj_player.playerNutrition--;
                 xp += target.xp;
                 if (xp > maxXP[level])
                 {
