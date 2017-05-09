@@ -26,14 +26,24 @@
           <argument>
             <kind>1</kind>
             <string>///Parameters
-name = choose("glass", "oak", "copper", "aluminum", "short", "spiked", "balsa", "ebony",
-    "silver", "uranium", "runed", "jeweled", "crystal", "marble", "platinum", "iron",
-    "long", "maple", "tin", "iridium", "steel", "curved", "pine", "brass", "zinc",
-    "hexagonal", "forked") + " wand";
-weight = 7;
+wandGen = random(19.5);
 itemType = "wand";
-description = "wand of " + choose("striking", "cold", "fire", "lightning");
-amount = 1;
+if (wandGen &lt; 7.5)
+{
+    instance_change(obj_wandOfStriking, true);
+}
+else if (wandGen &lt; 11.5)
+{
+    instance_change(obj_wandOfCold, true);
+}
+else if (wandGen &lt; 15.5)
+{
+    instance_change(obj_wandOfFire, true);
+}
+else if (wandGen &lt; 19.5)
+{
+    instance_change(obj_wandOfLightning, true);
+}
 </string>
           </argument>
         </arguments>
