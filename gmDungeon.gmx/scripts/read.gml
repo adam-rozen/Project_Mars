@@ -7,9 +7,9 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
     {
         if (obj_player.confused == 0)
         {
-            book = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " description", "")); 
+            var book = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " description", "")); 
             book = string_replace(book, "spellbook of ", "");
-            spl = book + " spell";
+            var spl = book + " spell";
             /*switch(book)
             {
                 case "force bolt":
@@ -33,15 +33,15 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
             }*/
             if (spl == "force bolt spell")
                 addToSpell("Force Bolt");
-            if (spl == "healing spell")
+            else if (spl == "healing spell")
                 addToSpell("Healing");
-            if (spl == "identify spell")
+            else if (spl == "identify spell")
                 addToSpell("Identify");
-            if (spl == "create monster spell")
+            else if (spl == "create monster spell")
                 addToSpell("Create Monster");
-            if (spl == "sleep spell")
+            else if (spl == "sleep spell")
                 addToSpell("Sleep");
-            if (spl == "teleport away spell")
+            else if (spl == "teleport away spell")
                 addToSpell("Teleport Away");
             print("You add the " + spl + " to your repertoire");
         }
@@ -63,18 +63,17 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
     {
         if (obj_player.confused == 0)
         {
-            spl = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " effect", ""));
-            show_debug_message(spl);
+            var spl = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " effect", ""));
             print("You read a scroll of " + spl);
             switch(spl)
             {
                 case "fire":
-                    buc = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " ", ""));
+                    buc = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " buc", ""));
                     print("The scroll erupts in a tower of flame!");
                     obj_player.hp -= (2 * (irandom_range(1,3)+irandom_range(1,3)+irandom_range(1,3)+2)+1)/3;
                     break;
                 case "identify":
-                    buc = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " ", ""));
+                    buc = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " buc", ""));
                     a = -1;
                     if (buc == "uncursed")
                         a = choose(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,3,4,52);
@@ -840,7 +839,7 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
                 case "teleportaion":
                     _x = 32 * irandom_range(0, 31)
                     _y = 32 * irandom_range(0, 31)
-                    while (place_meeting(_x, _y, obj_entity) || place_meeting(_x, _y, obj_wall))
+                    while (place_meeting(_x, _y, obj_entity) or place_meeting(_x, _y, obj_wall))
                     {
                         _x = 32 * irandom_range(0, 31)
                         _y = 32 * irandom_range(0, 31)

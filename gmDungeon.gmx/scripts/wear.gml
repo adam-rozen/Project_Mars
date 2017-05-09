@@ -82,11 +82,11 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
         temp.slot = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", ""));
         temp.ac = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " mc", "")));
         temp.mc = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " mc", "")));
-        temp.damageLarge[0] = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " damageLarge[0]", "")));
-        temp.effect = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " effect", "")));
+        temp.effect = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " effect", ""));
         temp.price = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " price", "")));
         temp.weight = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " weight", "")));
         temp.itemType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " itemType", ""));
+        temp.buc = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " buc", "")); 
         print("You wield the " + temp.name);
         ini_close();
         room_goto(global.rm);

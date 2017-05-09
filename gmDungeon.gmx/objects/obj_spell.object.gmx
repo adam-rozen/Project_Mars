@@ -65,11 +65,109 @@ if (room_get_name(room) == "roomSpell")
             switch(key)
             {
                 case ord("A"):
-                    spell(0)
+                    b = 0;
+                    spell(b);
                     break;
                 case ord("B"):
-                    spell(1)
-                    break;         
+                    b = 1;
+                    spell(b);
+                    break;    
+                case ord("C"):
+                    b = 2;
+                    spell(b);
+                    break;    
+                case ord("D"):
+                    b = 3;
+                    spell(b);
+                    break;    
+                case ord("E"):
+                    b = 4;
+                    spell(b);
+                    break;    
+                case ord("F"):
+                    b = 5;
+                    spell(b);
+                    break;    
+                case ord("G"):
+                    b = 6;
+                    spell(b);
+                    break;    
+                case ord("H"):
+                    b = 7;
+                    spell(b);
+                    break;    
+                case ord("I"):
+                    b = 8;
+                    spell(b);
+                    break;    
+                case ord("J"):
+                    b = 9;
+                    spell(b);
+                    break;    
+                case ord("K"):
+                    b = 10;
+                    spell(b);
+                    break;    
+                case ord("L"):
+                    b = 11;
+                    spell(b);
+                    break;    
+                case ord("M"):
+                    b = 12;
+                    spell(b);
+                    break;    
+                case ord("N"):
+                    b = 13
+                    spell(b);
+                    break;    
+                case ord("O"):
+                    b = 14
+                    spell(b);
+                    break;    
+                case ord("P"):
+                    b = 15
+                    spell(b);
+                    break;    
+                case ord("Q"):
+                    b = 16
+                    spell(b);
+                    break;    
+                case ord("R"):
+                    b = 17
+                    spell(b);
+                    break;    
+                case ord("S"):
+                    b = 18
+                    spell(b);
+                    break;    
+                case ord("T"):
+                    b = 19
+                    spell(b);
+                    break;    
+                case ord("U"):
+                    b = 20
+                    spell(b);
+                    break;    
+                case ord("V"):
+                    b = 21
+                    spell(b);
+                    break;    
+                case ord("W"):
+                    b = 22
+                    spell(b);
+                    break;    
+                case ord("X"):
+                    b = 23
+                    spell(b);
+                    break;    
+                case ord("Y"):
+                    b = 24
+                    spell(b);
+                    break;    
+                case ord("Z"):
+                    b = 25
+                    spell(b);
+                    break;        
             }
         }
     }
