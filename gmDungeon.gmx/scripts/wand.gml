@@ -70,10 +70,54 @@ if ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType")
                     }
                     break;
                 case "fire":
-                
+                    range = irandom_range(6, 13);
+                    damage = irandom_range(1, 6) + irandom_range(1, 6) + irandom_range(1, 6) + irandom_range(1, 6) + irandom_range(1, 6) + irandom_range(1, 6);
+                    for(i = 1; i < range; i++)
+                    {
+                        target = instance_place(x + (i * xMovespeed), y + (i * yMovespeed), obj_entity);
+                        if (target != noone)
+                        {
+                            target.hp -= damage;
+                            if (target.hp > 0)
+                                print("Kapow!");
+                            else
+                            {
+                                print("You kill the " + target.name + "!");
+                                xp += target.xp;
+                                levelUp();
+                            }
+                        }
+                        target2 = instance_place(x + (i * xMovespeed), y + (i * yMovespeed), obj_wall);
+                        if (target2 != noone)
+                        {
+                            break;
+                        }
+                    }
                     break;
                 case "lightning":
-                
+                    range = irandom_range(6, 13);
+                    damage = irandom_range(1, 6) + irandom_range(1, 6) + irandom_range(1, 6) + irandom_range(1, 6) + irandom_range(1, 6) + irandom_range(1, 6);
+                    for(i = 1; i < range; i++)
+                    {
+                        target = instance_place(x + (i * xMovespeed), y + (i * yMovespeed), obj_entity);
+                        if (target != noone)
+                        {
+                            target.hp -= damage;
+                            if (target.hp > 0)
+                                print("Kapow!");
+                            else
+                            {
+                                print("You kill the " + target.name + "!");
+                                xp += target.xp;
+                                levelUp();
+                            }
+                        }
+                        target2 = instance_place(x + (i * xMovespeed), y + (i * yMovespeed), obj_wall);
+                        if (target2 != noone)
+                        {
+                            break;
+                        }
+                    }
                     break;
             }
         }
