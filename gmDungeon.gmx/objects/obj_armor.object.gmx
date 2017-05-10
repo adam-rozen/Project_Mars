@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Parameters
 bad = false;
+buc = scr_armorBUC(bad);
 itemType = "armor";
 armorGen = random(866);
 if (armorGen &lt; 8)
