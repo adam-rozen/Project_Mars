@@ -6,7 +6,7 @@ if (obj_player.turn mod 10 == 0)
         obj_player.hp += 1;
     }
 }
-else if instance_place(600, 600, obj_ring).name == "ring of regeneration"
+else if (place_meeting(600, 600, obj_ring) and instance_place(600, 600, obj_ring).name == "ring of regeneration") or (place_meeting(650, 650, obj_ring) and instance_place(650, 650, obj_ring).name == "ring of regeneration")
     if (obj_player.hp < obj_player.maxHP)
     {
         obj_player.hp += 1;
@@ -31,7 +31,7 @@ else
        }
     }
 }
-if instance_place(600, 600, obj_ring).name == "ring of teleportation" and irandom_range(1,85) == 1
+if place_meeting(600, 600, obj_ring) and instance_place(600, 600, obj_ring).name == "ring of teleportation" and irandom_range(1,85) == 1
 {
     _x = 32 * irandom_range(0, 31)
     _y = 32 * irandom_range(0, 31)
@@ -43,7 +43,7 @@ if instance_place(600, 600, obj_ring).name == "ring of teleportation" and irando
     obj_player.x = _x
     obj_player.y = _y
 }
-if instance_place(650, 650, obj_ring).name == "ring of teleportation" and irandom_range(1,85) == 1
+if place_meeting(650, 650, obj_ring) and instance_place(650, 650, obj_ring).name == "ring of teleportation" and irandom_range(1,85) == 1
 {
     _x = 32 * irandom_range(0, 31)
     _y = 32 * irandom_range(0, 31)
@@ -59,13 +59,13 @@ if (obj_player.confused > 0)
 {
     obj_player.confused -= 1;
 }
-if instance_place(600, 600, obj_ring).name == "ring of hunger" and obj_player.turn mod 2 == 0
+if place_meeting(600, 600, obj_ring) and instance_place(600, 600, obj_ring).name == "ring of hunger" and obj_player.turn mod 2 == 0
     obj_player.playerNutrition--;
-if instance_place(600, 600, obj_ring).name == "ring of regeneration" and obj_player.turn mod 2 == 1
+if place_meeting(600, 600, obj_ring) and instance_place(600, 600, obj_ring).name == "ring of regeneration" and obj_player.turn mod 2 == 1
     obj_player.playerNutrition--;
-if instance_place(650, 650, obj_ring).name == "ring of hunger" and obj_player.turn mod 2 == 0
+if place_meeting(650, 650, obj_ring) and instance_place(650, 650, obj_ring).name == "ring of hunger" and obj_player.turn mod 2 == 0
     obj_player.playerNutrition--;
-if instance_place(650, 650, obj_ring).name == "ring of regeneration" and obj_player.turn mod 2 == 1
+if place_meeting(650, 650, obj_ring) and instance_place(650, 650, obj_ring).name == "ring of regeneration" and obj_player.turn mod 2 == 1
     obj_player.playerNutrition--;
 if place_meeting(600, 600, obj_ring) and obj_player.turn mod 20 == 0
     obj_player.playerNutrition--;
