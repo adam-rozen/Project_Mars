@@ -9,7 +9,7 @@ if (argument0.itemType == "armor")
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " ac"), base64_encode(string(argument0.ac)));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " itemType"), base64_encode(argument0.itemType));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " name"), base64_encode(argument0.name));
-    //ini_write_string(base64_encode("Player Inventory"), (string(i) + " appearance"), base64_encode(argument0.appearance));
+    ini_write_string(base64_encode("Player Inventory"), (string(i) + " appearance"), base64_encode(argument0.appearance));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " price"), base64_encode(string(argument0.price)));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " mc"), base64_encode(string(argument0.mc)));
     //ini_write_string(base64_encode("Player Inventory"), (string(i) + " slot"), base64_encode(string(argument0.slot)));
@@ -39,16 +39,14 @@ else if (argument0.itemType == "weapon")
 }
 else if (argument0.itemType == "wand")
 {
-    ini_write_string(base64_encode("Player Inventory"), (string(i) + " description"), base64_encode(argument0.description));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " name"), base64_encode(argument0.name));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " itemType"), base64_encode(argument0.itemType));
-    ini_write_string(base64_encode("Player Inventory"), (string(i) + " amount"), base64_encode(string(argument0.amount)));
     //ini_write_string(base64_encode("Player Inventory"), (string(i) + " buc"), base64_encode(argument0.buc));
     ini_write_string(base64_encode("Player Inventory"), (string(i) + " weight"), base64_encode(string(argument0.weight)));
-    //ini_write_string(base64_encode("Player Inventory"), (string(i) + " effect"), base64_encode(argument0.effect));
-    //ini_write_string(base64_encode("Player Inventory"), (string(i) + " appearance"), base64_encode(argument0.appearance));
-    //ini_write_string(base64_encode("Player Inventory"), (string(i) + " charges"), base64_encode(argument0.charges));
-    //ini_write_string(base64_encode("Player Inventory"), (string(i) + " price"), base64_encode(argument0.price));
+    ini_write_string(base64_encode("Player Inventory"), (string(i) + " effect"), base64_encode(argument0.effect));
+    ini_write_string(base64_encode("Player Inventory"), (string(i) + " appearance"), base64_encode(argument0.appearance));
+    ini_write_string(base64_encode("Player Inventory"), (string(i) + " charges"), base64_encode(argument0.charges));
+    ini_write_string(base64_encode("Player Inventory"), (string(i) + " price"), base64_encode(argument0.price));
 
 }
 else if (argument0.itemType == "amulet")

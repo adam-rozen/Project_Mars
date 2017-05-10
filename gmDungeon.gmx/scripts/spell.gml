@@ -8,6 +8,7 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
         case "Force Bolt":
             if (pw >= 5)
             {
+                room_goto(global.rm);
                 dir = scr_direction();
                 forceBolt(dir[0], dir[1]);
             }
@@ -20,7 +21,7 @@ if (ini_key_exists(base64_encode("Player Spell"), string(b) + " name"))
             if (obj_player.pw >= 5)
             {
                 obj_player.pw -= 5;
-                hpGain = irandom_range(6, 24);
+                hpGain = irandom_range(1, 4) + irandom_range(1, 4) + irandom_range(1, 4) + irandom_range(1, 4);
                 if obj_player.maxHP < hpGain + obj_player.hp
                 {
                     obj_player.hp = maxHP;

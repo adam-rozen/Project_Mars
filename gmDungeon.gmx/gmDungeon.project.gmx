@@ -57,6 +57,7 @@
     <script>scripts\remove.gml</script>
     <script>scripts\wear.gml</script>
     <script>scripts\takeOff.gml</script>
+    <script>scripts\wand.gml</script>
     <script>scripts\quiver.gml</script>
     <script>scripts\rest.gml</script>
     <script>scripts\scr_weaponBUC.gml</script>
@@ -311,6 +312,7 @@
     <object>objects\obj_quaff</object>
     <object>objects\obj_quiver</object>
     <object>objects\obj_spell</object>
+    <object>objects\obj_useWand</object>
     <object>objects\obj_wield</object>
     <object>objects\obj_wear</object>
     <object>objects\obj_takeOff</object>
@@ -341,6 +343,7 @@
     <room>rooms\roomRemove</room>
     <room>rooms\roomWear</room>
     <room>rooms\roomTakeOff</room>
+    <room>rooms\roomWand</room>
     <room>rooms\roomQuiver</room>
   </rooms>
   <constants number="10">
