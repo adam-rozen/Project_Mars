@@ -694,12 +694,6 @@ if (keyboard_check_released(ord("T")) &amp;&amp; global.p_turn)
     global.rm = room;
     room_goto(roomTakeOff);
 }
-//Read
-if (keyboard_check_released(ord("R")) &amp;&amp; global.p_turn)
-{
-    global.rm = room;
-    room_goto(roomRead);
-}
 //Quaff
 if (keyboard_check_released(ord("Q")) &amp;&amp; global.p_turn)
 {
@@ -740,6 +734,16 @@ if (keyboard_check_released(ord("F")) &amp;&amp; global.p_turn)
 {
     array = scr_direction();
     fire(array[0], array[1]);
+}
+//Eat
+if (keyboard_check_released(ord("H")) &amp;&amp; global.p_turn)
+{
+    global.rm = room;
+    room_goto(roomEat);
+}
+if (keyboard_check_released(ord("V")) &amp;&amp; global.p_turn)
+{
+    instance_create(x, y, obj_armor);
 }
 </string>
           </argument>

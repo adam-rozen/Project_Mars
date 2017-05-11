@@ -272,7 +272,7 @@ else if (weaponGen &lt; 998)
 {
     instance_change(obj_boomerang, true);
 }
-else if (weaponGen &lt; 1000)
+else if (weaponGen &lt;= 1000)
 {
     instance_change(obj_bullwhip, true);
 }

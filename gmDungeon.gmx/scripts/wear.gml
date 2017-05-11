@@ -41,15 +41,6 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
             }
             else temp = instance_create(600, 600, obj_helmet);
         }
-        else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "helm")
-        {
-            if position_meeting(600, 600, obj_helmet)
-            {
-                print("You are already wearing something there");
-                exit;
-            }
-            else temp = instance_create(600, 600, obj_helmet);
-        }
         else if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " slot", "")) == "gloves")
         {
             if position_meeting(600, 600, obj_leatherGloves)
@@ -87,7 +78,7 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
         temp.weight = real(base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " weight", "")));
         temp.itemType = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " itemType", ""));
         temp.buc = base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " buc", "")); 
-        print("You wield the " + temp.name);
+        print("You wear the " + temp.name);
         ini_close();
         room_goto(global.rm);
     }
