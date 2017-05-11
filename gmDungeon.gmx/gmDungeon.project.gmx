@@ -58,6 +58,7 @@
     <script>scripts\wear.gml</script>
     <script>scripts\takeOff.gml</script>
     <script>scripts\wand.gml</script>
+    <script>scripts\eat.gml</script>
     <script>scripts\quiver.gml</script>
     <script>scripts\rest.gml</script>
     <script>scripts\scr_weaponBUC.gml</script>
@@ -317,6 +318,7 @@
     <object>objects\obj_wear</object>
     <object>objects\obj_takeOff</object>
     <object>objects\obj_putOn</object>
+    <object>objects\obj_eat</object>
     <object>objects\obj_remove</object>
     <object>objects\obj_read</object>
   </objects>
@@ -344,6 +346,7 @@
     <room>rooms\roomWear</room>
     <room>rooms\roomTakeOff</room>
     <room>rooms\roomWand</room>
+    <room>rooms\roomEat</room>
     <room>rooms\roomQuiver</room>
   </rooms>
   <constants number="10">

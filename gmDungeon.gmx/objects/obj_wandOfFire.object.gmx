@@ -28,6 +28,7 @@
             <string>name = "wand of fire";
 appearance = global.wandAppearance[2];
 effect = "fire";
+charges = 8;
 price = 175;
 weight = 7;
 </string>

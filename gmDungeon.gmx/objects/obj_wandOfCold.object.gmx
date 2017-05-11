@@ -28,6 +28,7 @@
             <string>name = "wand of cold";
 appearance = global.wandAppearance[1];
 effect = "cold";
+charges = 8;
 price = 175;
 weight = 7;
 </string>
