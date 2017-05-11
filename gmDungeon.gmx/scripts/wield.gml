@@ -4,7 +4,7 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
 {
     if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " itemType", "")) == "weapon")
     {
-        if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " buc", "")) == "false")
+        if (base64_decode(ini_read_string(base64_encode("Player Inventory"), string(b) + " buc", "")) != "cursed")
         {
             with instance_position(600, 600, obj_dagger)
             {
@@ -31,4 +31,6 @@ if (ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType"))
     {
         print("You can't do that, your wielded weapon is cursed!")
     }
+    ini_close();
+    room_goto(global.rm);
 }
