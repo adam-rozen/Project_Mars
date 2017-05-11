@@ -75,4 +75,5 @@ if (place_meeting(600, 600, obj_amulet) and obj_player.turn mod 20 == 0)
     obj_player.playerNutrition--;
 obj_player.playerNutrition--;
 if obj_player.playerNutrition <= -30
+    obj_player.hp -= 1;
 global.p_turn = false;

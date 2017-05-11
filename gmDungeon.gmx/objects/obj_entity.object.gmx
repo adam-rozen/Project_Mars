@@ -105,6 +105,9 @@ else if d != noone
         if (choose(1, 2, 3, 4) == 1)
             found = false;
 }
+else if (global.class == "Rogue" or (global.class == "Monk" and obj_player.level &gt;=5) or (global.class == "Ranger" and obj_player.level &gt;=7) or (global.class == "Barbarian" and obj_player.level &gt;=15) or (global.class == "Samurai" and obj_player.level &gt;=15) or global.class == "Valkyrie" or global.class == "Acheologist")
+        if (choose(1, 2, 3, 4) == 1)
+            found = false;
 if (hp &lt;= 0)
 {
     if (gold &gt; 0)
@@ -144,6 +147,10 @@ else if (found)
     {
         randomEnemyMove(1, 2, 3, 4, 6, 7, 8, 9);
     }
+}
+else if (!global.p_turn &amp;&amp; !moved)
+{
+    randomEnemyMove(1, 2, 3, 4, 6, 7, 8, 9);
 }
 </string>
           </argument>
