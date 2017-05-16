@@ -263,7 +263,7 @@ global.p_turn = true;
           <argument>
             <kind>1</kind>
             <string>///Zoom
-if (keyboard_check(ord('L')) and (instance_place(obj_amulet,600, 600).name == "amulet Of ESP" or instance_place(obj_helmet,600, 600).name == "helm of telepathy")) {
+if (keyboard_check(ord('L')) and ((place_meeting(600, 600, obj_amulet) and instance_place(600, 600, obj_amulet).name == "amulet Of ESP") or place_meeting(600, 600, obj_helmet) and instance_place(600, 600, obj_helmet).name == "helm of telepathy")) {
     view_wview = view_wport * 4;
     view_hview = view_hport * 4;
 } else {

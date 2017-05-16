@@ -43,6 +43,8 @@ name = choose(
 itemType = "food";
 appearance = name;
 nutrition = 0;
+weight = 3;
+price = 0;
 switch (name)
 {
     case "meatball":

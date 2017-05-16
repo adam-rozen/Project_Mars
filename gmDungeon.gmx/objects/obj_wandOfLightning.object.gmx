@@ -29,7 +29,6 @@
 appearance = global.wandAppearance[3];
 effect = "lightning";
 price = 175;
-weight = 7;
 charges = 8;
 </string>
           </argument>

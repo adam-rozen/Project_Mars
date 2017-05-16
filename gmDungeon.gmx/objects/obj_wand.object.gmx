@@ -28,6 +28,7 @@
             <string>///Parameters
 wandGen = random(19.5);
 itemType = "wand";
+weight = 7;
 if (wandGen &lt; 7.5)
 {
     instance_change(obj_wandOfStriking, true);

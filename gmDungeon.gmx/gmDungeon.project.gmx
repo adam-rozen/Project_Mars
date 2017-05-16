@@ -76,8 +76,8 @@
     <objects name="items">
       <object>objects\obj_weapon</object>
       <object>objects\obj_armor</object>
-      <object>objects\obj_comestible</object>
       <object>objects\obj_potion</object>
+      <object>objects\obj_comestible</object>
       <object>objects\obj_scroll</object>
       <object>objects\obj_spellbook</object>
       <object>objects\obj_wand</object>
