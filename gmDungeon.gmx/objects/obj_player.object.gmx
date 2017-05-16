@@ -741,10 +741,6 @@ if (keyboard_check_released(ord("H")) &amp;&amp; global.p_turn)
     global.rm = room;
     room_goto(roomEat);
 }
-if (keyboard_check_released(ord("V")) &amp;&amp; global.p_turn)
-{
-    instance_create(x, y, obj_armor);
-}
 </string>
           </argument>
         </arguments>

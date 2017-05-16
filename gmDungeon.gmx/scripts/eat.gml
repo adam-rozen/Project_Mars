@@ -10,5 +10,7 @@ if ini_key_exists(base64_encode("Player Inventory"), string(b) + " itemType")
         ini_key_delete(base64_encode("Player Inventory"), string(b) + " price")
         ini_key_delete(base64_encode("Player Inventory"), string(b) + " appearance")
         ini_key_delete(base64_encode("Player Inventory"), string(b) + " itemType")
+        ini_close();
+        room_goto(global.rm);
     }
 }
