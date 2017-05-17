@@ -37,20 +37,7 @@ for (a = 0; a <= instance_number(obj_enemy); a++)
     ini_write_string(base64_encode("Enemy Values"), string(a) + " name", base64_encode(string(ida.name)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " gold", base64_encode(string(ida.gold)));
     ini_write_string(base64_encode("Enemy Values"), string(a) + " moved", base64_encode(string(ida.moved)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode(string(ida.maxHP)));    
-    /*ini_write_string(base64_encode("Enemy Values"), string(a) + " ac", base64_encode(string(ida.ac)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " size", base64_encode(string(ida.size)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " nutrition", base64_encode(string(ida.nutrition)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " weight", base64_encode(string(ida.weight)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " genocidable", base64_encode(string(ida.genocidable)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " frequency", base64_encode(string(ida.frequency)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " alignment", base64_encode(string(ida.alignment)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " mr", base64_encode(string(ida.mr)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " mSpeed", base64_encode(string(ida.mSpeed)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " level", base64_encode(string(ida.level)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " difficulty", base64_encode(string(ida.difficulty)));
-    ini_write_string(base64_encode("Enemy Values"), string(a) + " damage", base64_encode(string(ida.damage)));*/
-
+    ini_write_string(base64_encode("Enemy Values"), string(a) + " maxHP", base64_encode(string(ida.maxHP)));
 }
 ini_write_string(base64_encode("Dungeon Properties"), "world_w", base64_encode(string(31)));
 ini_write_string(base64_encode("Dungeon Properties"), "world_h", base64_encode(string(31)));
